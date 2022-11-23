@@ -47,7 +47,7 @@ create table miejsce (
 create table [data] (
 	id_data int primary key not null,
 	rok int not null,
-	miesiac enum not null,
+	miesiac varchar(20) not null CHECK (miesiac IN('styczeñ', 'luty', 'marzec', 'kwiecieñ', 'maj', 'czerwiec', 'lipiec', 'sierpieñ', 'wrzesieñ', 'paŸdziernik', 'listopad', 'grudzieñ')) DEFAULT 'styczeñ',
 	dzien int not null,
 )
 
