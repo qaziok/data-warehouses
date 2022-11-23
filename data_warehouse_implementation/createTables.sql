@@ -39,7 +39,7 @@ create table miejsce (
 	typ varchar(20) not null CHECK (typ IN('paczkomat', 'sortownia')) DEFAULT 'sortownia',
 	miasto Varchar(40) not null,
 	region Varchar(40) not null,
-	ilosc_pracownikow varchar(30) not null CHECK (ilosc_pracownikow IN('', 'ma³a', 'œrednia', 'du¿a')) DEFAULT 'œrednia',
+	ilosc_pracownikow varchar(30) CHECK (ilosc_pracownikow IN('', 'ma³a', 'œrednia', 'du¿a')) DEFAULT 'œrednia',
 	data_wstawienia date,
 	data_deaktywacji date
 );
