@@ -16,14 +16,14 @@ create table paczka(
 
 create table typ(
 	id_typ int primary key not null,
-	typ_typu varchar(80) not null CHECK (typ_typu IN(“Paczka odebrana przez kuriera”, “Paczka w trasie”, “Paczka dostarczona do celu”, “Paczka odebrana w sortowni”, “Paczka zatwierdzona w sortowni”, “Paczka przygotowana do transportu”, “Paczka wydana do transportu”)) DEFAULT 'lekka'
+	typ_typu varchar(80) not null CHECK (typ_typu IN('Paczka odebrana przez kuriera', 'Paczka w trasie', 'Paczka dostarczona do celu', 'Paczka odebrana w sortowni', 'Paczka zatwierdzona w sortowni', 'Paczka przygotowana do transportu', 'Paczka wydana do transportu')) DEFAULT 'Paczka odebrana przez kuriera'
 )
 
 create table pracownik (
 	id_pracownik int primary key not null,
 	nr_pracownika int not null,
-	wynagrodzenie enum not null,
-	wiek enum,
+	wynagrodzenie varchar(20) not null CHECK (wynagrodzenie IN('b.ma³e', 'ma³e', 'œrednie', 'du¿e', 'b.du¿e')) DEFAULT 'œrednie',
+	wiek varchar(20) not null CHECK (wiek IN('(0,20>', '(20,25>', '(25,30>', '(30,35>', '(35,40>', '(40,50>', '(50,60>', '(60,inf)')) DEFAULT '(0,20>',
 	data_wstawienia date,
 	data_deaktywacji date
 )
@@ -36,10 +36,10 @@ create table zlecenie (
 create table miejsce (
 	id_miejsce int primary key not null,
 	nr_miejse int not null,
-	typ enum not null,
+	typ varchar(20) not null CHECK (typ IN('paczkomat', 'sortownia')) DEFAULT 'sortownia',
 	miasto Varchar(40) not null,
 	region Varchar(40) not null,
-	ilosc_pracownikow enum not null,
+	ilosc_pracownikow varchar(30) not null CHECK (ilosc_pracownikow IN('', 'ma³a', 'œrednia', 'du¿a')) DEFAULT 'œrednia',
 	data_wstawienia date,
 	data_deaktywacji date
 )
