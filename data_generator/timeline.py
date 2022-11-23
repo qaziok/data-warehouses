@@ -4,12 +4,8 @@ from database import Database
 from helpful.functions import random_hour, days
 
 T0 = datetime.datetime(2020, 1, 1)
-T1 = datetime.datetime(2022, 1, 1)
-T2 = datetime.datetime(2024, 1, 1)
-
-HOW_MANY_ORDERS = 1000
-HOW_MANY_PEOPLE_TO_EMPLOY = 300
-HOW_MANY_PEOPLE_TO_DISMISS = 250
+T1 = datetime.datetime(2021, 1, 1)
+T2 = datetime.datetime(2022, 1, 1)
 
 
 def loop(db, iterator):

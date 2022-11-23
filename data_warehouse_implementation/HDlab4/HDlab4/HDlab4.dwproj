@@ -6,10 +6,75 @@
     <Name>HDlab4.database</Name>
     <FullPath>HDlab4.database</FullPath>
   </Database>
+  <Cubes>
+    <ProjectItem>
+      <Name>Out Postdw.cube</Name>
+      <FullPath>Out Postdw.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>Out Postdw.partitions</Name>
+          <FullPath>Out Postdw.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+  </Cubes>
+  <Dimensions>
+    <ProjectItem>
+      <Name>Data.dim</Name>
+      <FullPath>Data.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Paczka.dim</Name>
+      <FullPath>Paczka.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Miejsce.dim</Name>
+      <FullPath>Miejsce.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Typ.dim</Name>
+      <FullPath>Typ.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Zlecenie.dim</Name>
+      <FullPath>Zlecenie.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Pracownik.dim</Name>
+      <FullPath>Pracownik.dim</FullPath>
+    </ProjectItem>
+  </Dimensions>
+  <DataSources>
+    <ProjectItem>
+      <Name>Out Postdw.ds</Name>
+      <FullPath>Out Postdw.ds</FullPath>
+    </ProjectItem>
+  </DataSources>
+  <DataSourceViews>
+    <ProjectItem>
+      <Name>Out Postdw.dsv</Name>
+      <FullPath>Out Postdw.dsv</FullPath>
+    </ProjectItem>
+  </DataSourceViews>
   <Configurations>
     <Configuration>
       <Name>Development</Name>
-      <Options />
+      <Options>
+        <ConnectionMappings>
+          <ConfigurationSetting>
+            <Id>Out Postdw</Id>
+            <Name>Out Postdw</Name>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=LAPTOP-ICCJFQSQ;Integrated Security=SSPI;Initial Catalog=OutPostdw</Value>
+          </ConfigurationSetting>
+        </ConnectionMappings>
+        <ConnectionSecurityMappings>
+          <ConfigurationSetting>
+            <Id>Out Postdw</Id>
+            <Name>Out Postdw</Name>
+            <Value xsi:type="xsd:int">0</Value>
+          </ConfigurationSetting>
+        </ConnectionSecurityMappings>
+      </Options>
     </Configuration>
   </Configurations>
 </Project>
