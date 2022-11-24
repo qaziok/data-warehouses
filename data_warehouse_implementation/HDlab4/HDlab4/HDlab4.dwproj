@@ -64,7 +64,7 @@
           <ConfigurationSetting>
             <Id>Out Postdw</Id>
             <Name>Out Postdw</Name>
-            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=LAPTOP-ICCJFQSQ;Integrated Security=SSPI;Initial Catalog=OutPostdw</Value>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=LAPTOP-46GI6A46;Integrated Security=SSPI;Initial Catalog=OutPostdw</Value>
           </ConfigurationSetting>
         </ConnectionMappings>
         <ConnectionSecurityMappings>
