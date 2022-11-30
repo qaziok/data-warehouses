@@ -1,6 +1,6 @@
-﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="02a0648d-addc-467a-8c30-55ccf8ce9468" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
-  <ID>Pracownik</ID>
-  <Name>Pracownik</Name>
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="b6689e52-52e5-436a-8e38-6efc947fc9f3" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Typ</ID>
+  <Name>Typ</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
   <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
   <Annotations>
@@ -42,26 +42,26 @@
   </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
-  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="8ea2bb3e-9875-4cb9-9752-70997c87ea61">
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="d6b69656-e4a9-438b-abbd-52f54f58a16e">
     <DataSourceViewID>OutPostdw</DataSourceViewID>
   </Source>
-  <ErrorConfiguration dwd:design-time-name="b3adc89d-fe1a-4751-a083-3688e7d94035">
+  <ErrorConfiguration dwd:design-time-name="c34419f4-8c8c-4c8e-aeda-c2cea3304cb8">
     <KeyNotFound>ReportAndStop</KeyNotFound>
     <KeyDuplicate>ReportAndStop</KeyDuplicate>
     <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
   </ErrorConfiguration>
   <CurrentStorageMode>Molap</CurrentStorageMode>
   <Attributes>
-    <Attribute dwd:design-time-name="1f26bd11-c481-431c-adbd-7df45cc69e80">
-      <ID>Id Pracownik</ID>
-      <Name>Id Pracownik</Name>
+    <Attribute dwd:design-time-name="fb4b88cb-8457-4c94-8e37-45b9b63af01b">
+      <ID>Id Typ</ID>
+      <Name>Id Typ</Name>
       <Usage>Key</Usage>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="e6e9cd43-4404-42d3-ac2e-f068df3ae662">
+        <KeyColumn dwd:design-time-name="95b1fb52-1f85-4658-adfe-2074fea2fc64">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="0050a360-4e13-4ea7-b2f3-2645d30ea86c">
-            <TableID>dbo_pracownik</TableID>
-            <ColumnID>id_pracownik</ColumnID>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5953d005-cadf-4a41-97e6-38be7721e019">
+            <TableID>dbo_typ</TableID>
+            <ColumnID>id_typ</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
