@@ -1,17 +1,17 @@
-﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="f94aa0f7-5eed-4924-8391-f9099537d175" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="1c2d766c-44d6-4f96-bf9a-ff74b388c296" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>OutPostdw</ID>
   <MeasureGroups>
     <MeasureGroup>
       <ID>Etap</ID>
       <Partitions>
-        <Partition dwd:design-time-name="b749f308-f5e8-452d-9408-c25a890f87ed">
+        <Partition dwd:design-time-name="6b52a93c-948b-40a6-840b-a37c75fdaefc">
           <ID>Etap</ID>
           <Name>Etap</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="a856c6dd-ec2d-4e90-95b7-b1b750d34766">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="68926957-8cb7-410f-bf84-e85c64fac3b2">
             <DataSourceViewID>OutPostdw</DataSourceViewID>
             <TableID>dbo_etap</TableID>
           </Source>
@@ -24,16 +24,36 @@
     <MeasureGroup>
       <ID>Podsumowanie Mies</ID>
       <Partitions>
-        <Partition dwd:design-time-name="c940f949-55d6-473d-8e91-f1c8082ff6b2">
+        <Partition dwd:design-time-name="573e750d-84b1-49f2-b7a1-990f642db9ca">
           <ID>Podsumowanie Mies</ID>
           <Name>Podsumowanie Mies</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="6d6aee18-16fd-428d-a232-f3dc4343dc0c">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="09a4c62b-48c3-4b31-aebc-2f1e679a13bc">
             <DataSourceViewID>OutPostdw</DataSourceViewID>
             <TableID>dbo_podsumowanie_mies</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Etap 1</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="a6d3902a-66f6-4b8a-8a9b-9623e9f0bba9">
+          <ID>Etap</ID>
+          <Name>Etap</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="d92e7dbe-b942-4841-b9b3-92aa6f66074f">
+            <DataSourceViewID>OutPostdw</DataSourceViewID>
+            <TableID>dbo_etap</TableID>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
