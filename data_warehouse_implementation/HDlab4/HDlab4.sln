@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.33027.164
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "HDlab4", "HDlab4\HDlab4.dwproj", "{77A47976-B5BD-429D-9499-DFC33EF20F2C}"
 EndProject
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "OutPostIntegreationService", "..\ETL\OutPostIntegreationService\OutPostIntegreationService.dtproj", "{D451AC98-E481-42F4-A6E6-775E3729046B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Development|Default = Development|Default
@@ -13,6 +15,8 @@ Global
 		{77A47976-B5BD-429D-9499-DFC33EF20F2C}.Development|Default.ActiveCfg = Development
 		{77A47976-B5BD-429D-9499-DFC33EF20F2C}.Development|Default.Build.0 = Development
 		{77A47976-B5BD-429D-9499-DFC33EF20F2C}.Development|Default.Deploy.0 = Development
+		{D451AC98-E481-42F4-A6E6-775E3729046B}.Development|Default.ActiveCfg = Development
+		{D451AC98-E481-42F4-A6E6-775E3729046B}.Development|Default.Build.0 = Development
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
