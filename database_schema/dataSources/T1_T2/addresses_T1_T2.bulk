@@ -1,0 +1,2817 @@
+1|PoznaÒ|Lisia|737|51.14942|15.00835
+2|GoleniÛw|Dworska|50|50.20528|19.27498
+3|Wo≥omin|Wiklinowa|06|54.60528|18.34717
+4|Jelenia GÛra|Liliowa|585|54.58048|16.86194
+5|Grodzisk Mazowiecki|Fio≥kowa|220|50.5107|18.30056
+6|Boles≥awiec|KsiÍøycowa|856|50.5107|18.30056
+7|Ko≥o|Starowiejska|32|54.60528|18.34717
+8|OstrÛw Mazowiecka|Zboøowa|121|50.20528|19.27498
+9|Zabrze|Morelowa|26|51.14942|15.00835
+10|RacibÛrz|Staffa|92|54.58048|16.86194
+11|£Ûdü|Staffa|53|50.20528|19.27498
+12|Starachowice|Skrajna|31|51.14942|15.00835
+13|Bielsko-Bia≥a|Jaworowa|650|50.5107|18.30056
+14|Skarøysko-Kamienna|Browarna|94|50.20528|19.27498
+15|Wπgrowiec|Miarki|39|50.86079|17.4674
+16|£aziska GÛrne|Ogrodowa|165|51.14942|15.00835
+17|Skierniewice|Wiπzowa|595|50.86079|17.4674
+18|Malbork|KusociÒskiego|80|50.86079|17.4674
+19|ZamoúÊ|Kasztanowa|293|50.20528|19.27498
+20|Lublin|Storczykowa|93|54.58048|16.86194
+21|PiotrkÛw Trybunalski|JagielloÒska|62|50.86079|17.4674
+22|MyszkÛw|Wysoka|72|50.86079|17.4674
+23|WyszkÛw|Nadrzeczna|26|50.20528|19.27498
+24|Bytom|Zau≥ek|99|54.58048|16.86194
+25|Zawiercie|Wiπzowa|39|54.58048|16.86194
+26|MyszkÛw|Matejki|78|50.86079|17.4674
+27|Olkusz|Grabowa|35|51.14942|15.00835
+28|åwiÍtoch≥owice|Grunwaldzka|082|50.86079|17.4674
+29|WieluÒ|Jaworowa|08|50.20528|19.27498
+30|Cieszyn|£anowa|51|50.5107|18.30056
+31|Koúcian|Makowa|69|54.60528|18.34717
+32|Pruszcz GdaÒski|Ko≥≥πtaja|67|50.20528|19.27498
+33|ChrzanÛw|Miodowa|28|54.60528|18.34717
+34|Wπgrowiec|Koralowa|899|50.5107|18.30056
+35|Wπgrowiec|Cedrowa|26|50.5107|18.30056
+36|Wa≥brzych|Leúna|431|50.5107|18.30056
+37|Nowy Sπcz|Tylna|94|50.20528|19.27498
+38|CzÍstochowa|Rubinowa|44|54.58048|16.86194
+39|Siemianowice ålπskie|Szarych SzeregÛw|98|54.58048|16.86194
+40|Wodzis≥aw ålπski|åciegiennego|56|50.5107|18.30056
+41|Turek|Lwowska|64|50.20528|19.27498
+42|Sosnowiec|Kraszewskiego|911|50.5107|18.30056
+43|Starachowice|Pszenna|06|54.58048|16.86194
+44|Bielawa|Fabryczna|50|54.60528|18.34717
+45|£aziska GÛrne|Kolejowa|48|51.14942|15.00835
+46|W≥oc≥awek|S≥owicza|002|50.20528|19.27498
+47|ZambrÛw|Truskawkowa|84|54.58048|16.86194
+48|Police|Ma≥a|79|50.20528|19.27498
+49|Sopot|Boles≥awa Krzywoustego|823|50.5107|18.30056
+50|Sanok|Ja≥owcowa|445|50.5107|18.30056
+51|Øary|Kamienna|279|50.20528|19.27498
+52|ØyrardÛw|Øurawia|851|50.86079|17.4674
+53|Reda|KsiÍøycowa|259|50.86079|17.4674
+54|PoznaÒ|Agrestowa|97|54.58048|16.86194
+55|Mys≥owice|årednia|75|50.86079|17.4674
+56|Police|Wrzosowa|96|50.86079|17.4674
+57|Miko≥Ûw|Wodna|56|54.58048|16.86194
+58|Siemianowice ålπskie|Zachodnia|25|54.60528|18.34717
+59|£omøa|Kwiatowa|336|54.60528|18.34717
+60|Lublin|Diamentowa|39|54.60528|18.34717
+61|Bochnia|Tysiπclecia|435|50.20528|19.27498
+62|Opole|Fio≥kowa|12|50.5107|18.30056
+63|Sosnowiec|Morska|24|54.58048|16.86194
+64|G≥ogÛw|W≥adys≥awa Jagie≥≥y|09|51.14942|15.00835
+65|åwiÍtoch≥owice|Listopada|003|50.5107|18.30056
+66|Skawina|Wroc≥awska|71|54.58048|16.86194
+67|Skierniewice|S≥owianska|937|50.86079|17.4674
+68|Radom|Bociania|763|54.58048|16.86194
+69|Skarøysko-Kamienna|Rybacka|39|50.20528|19.27498
+70|I≥awa|W≥adys≥awa £okietka|26|54.58048|16.86194
+71|Stalowa Wola|Kalinowa|857|50.5107|18.30056
+72|Chojnice|Polna|626|50.20528|19.27498
+73|åwidnica|Koralowa|824|51.14942|15.00835
+74|Giøycko|årednia|942|50.5107|18.30056
+75|Pruszcz GdaÒski|Rzeczna|61|54.60528|18.34717
+76|Sochaczew|Zachodnia|112|50.5107|18.30056
+77|G≥ogÛw|årodkowa|510|50.20528|19.27498
+78|åwiecie|W≥adys≥awa Jagie≥≥y|88|50.86079|17.4674
+79|Bielawa|Orla|57|51.14942|15.00835
+80|Sopot|Plater|12|51.14942|15.00835
+81|Radom|Konstytucji 3 Maja|45|50.5107|18.30056
+82|Lubliniec|Orkana|653|54.60528|18.34717
+83|Ko≥obrzeg|Ba≥tycka|81|51.14942|15.00835
+84|RacibÛrz|Azaliowa|05|51.14942|15.00835
+85|Bia≥ogard|Morska|511|51.14942|15.00835
+86|åwidnica|Mokra|22|54.60528|18.34717
+87|Koszalin|Wierzbowa|23|50.20528|19.27498
+88|Kalisz|WyszyÒskiego|484|54.60528|18.34717
+89|Starachowice|Kruczkowskiego|69|50.20528|19.27498
+90|Sochaczew|Wysoka|62|50.86079|17.4674
+91|Bochnia|Nadrzeczna|416|51.14942|15.00835
+92|PoznaÒ|Fredry|769|50.20528|19.27498
+93|P≥oÒsk|Brzozowa|88|50.86079|17.4674
+94|KrakÛw|Morska|381|50.20528|19.27498
+95|Pszczyna|Szarych SzeregÛw|26|50.20528|19.27498
+96|Nowa Ruda|KusociÒskiego|51|54.58048|16.86194
+97|MyszkÛw|Wypoczynkowa|57|50.86079|17.4674
+98|S≥upsk|WspÛlna|34|51.14942|15.00835
+99|ChrzanÛw|Szeroka|505|50.5107|18.30056
+100|Piekary ålπskie|Lwowska|938|50.5107|18.30056
+101|ZamoúÊ|Koralowa|13|50.86079|17.4674
+102|DzierøoniÛw|Storczykowa|26|51.14942|15.00835
+103|Tczew|Wiπzowa|12|54.58048|16.86194
+104|Nowy DwÛr Mazowiecki|Baczynskiego|549|54.58048|16.86194
+105|Pabianice|Szkolna|50|50.20528|19.27498
+106|KÍtrzyn|SybirakÛw|70|54.58048|16.86194
+107|Ruda ålπska|Kielecka|04|50.5107|18.30056
+108|Boles≥awiec|Krokusowa|61|54.60528|18.34717
+109|S≥upsk|Lotnicza|25|54.58048|16.86194
+110|Tarnobrzeg|Tartaczna|15|50.86079|17.4674
+111|Szczecin|Magnoliowa|215|54.58048|16.86194
+112|Zgorzelec|Stycznia|08|50.5107|18.30056
+113|Skierniewice|DÍbowa|51|54.58048|16.86194
+114|Wa≥brzych|Krasickiego|23|50.20528|19.27498
+115|Piekary ålπskie|Jaworowa|14|50.5107|18.30056
+116|ChrzanÛw|Chopina|03|50.20528|19.27498
+117|KnurÛw|Zielna|95|50.86079|17.4674
+118|Pu≥awy|Kolorowa|11|50.5107|18.30056
+119|PiotrkÛw Trybunalski|Azaliowa|67|50.20528|19.27498
+120|ØyrardÛw|Wybickiego|29|54.60528|18.34717
+121|Ruda ålπska|Spacerowa|26|54.60528|18.34717
+122|Suwa≥ki|Modrzewiowa|684|54.60528|18.34717
+123|P≥oÒsk|Zau≥ek|982|51.14942|15.00835
+124|PoznaÒ|Wojska Polskiego|705|50.20528|19.27498
+125|Jaros≥aw|Nowowiejska|756|50.86079|17.4674
+126|Ko≥o|Rumiankowa|82|54.58048|16.86194
+127|Bartoszyce|Tulipanowa|35|50.86079|17.4674
+128|Skawina|åwierczewskiego|21|51.14942|15.00835
+129|Siemianowice ålπskie|Poprzeczna|251|50.5107|18.30056
+130|£aziska GÛrne|Wodna|793|54.58048|16.86194
+131|Øary|Kaliska|68|50.5107|18.30056
+132|Zawiercie|Jesionowa|134|50.5107|18.30056
+133|SwarzÍdz|Korfantego|188|54.58048|16.86194
+134|Szczytno|Nadbrzeøna|69|50.5107|18.30056
+135|Ostrowiec åwiÍtokrzyski|Rajska|92|50.5107|18.30056
+136|Marki|Szafirowa|71|50.20528|19.27498
+137|Szczytno|Brzoskwiniowa|20|50.5107|18.30056
+138|AugustÛw|Mieszka I|700|50.5107|18.30056
+139|PoznaÒ|£πkowa|48|50.20528|19.27498
+140|Lubin|Dzia≥kowa|740|50.20528|19.27498
+141|Zπbki|Øurawia|76|50.86079|17.4674
+142|åwinoujúcie|Podleúna|670|50.20528|19.27498
+143|OstrÛw Wielkopolski|DaszyÒskiego|10|51.14942|15.00835
+144|Kwidzyn|PowstaÒcÛw|81|54.58048|16.86194
+145|JastrzÍbie-ZdrÛj|Øeglarska|831|54.58048|16.86194
+146|PiastÛw|Sk≥odowskiej-Curie|426|54.60528|18.34717
+147|Radomsko|KosynierÛw|34|54.60528|18.34717
+148|Warszawa|Kolejowa|505|50.5107|18.30056
+149|MiÒsk Mazowiecki|Asnyka|512|50.86079|17.4674
+150|Skarøysko-Kamienna|Turystyczna|77|54.58048|16.86194
+151|Katowice|Stroma|13|54.60528|18.34717
+152|KnurÛw|WyszyÒskiego|70|51.14942|15.00835
+153|åwidnik|DÍbowa|199|54.60528|18.34717
+154|Kielce|Narcyzowa|36|50.86079|17.4674
+155|Jelenia GÛra|Staszica|86|50.86079|17.4674
+156|Cieszyn|Rybacka|06|51.14942|15.00835
+157|OstrÛda|Spacerowa|99|51.14942|15.00835
+158|Piekary ålπskie|Lotnicza|89|54.58048|16.86194
+159|RzeszÛw|Letnia|613|50.5107|18.30056
+160|Jaros≥aw|Lwowska|164|50.86079|17.4674
+161|TarnÛw|Stycznia|53|50.86079|17.4674
+162|Nowy Targ|Klonowa|873|54.58048|16.86194
+163|W≥oc≥awek|Cicha|11|51.14942|15.00835
+164|Ko≥o|Azaliowa|12|54.58048|16.86194
+165|O≥awa|Morcinka|24|51.14942|15.00835
+166|LÍbork|Szpitalna|77|54.58048|16.86194
+167|Zπbki|Urocza|410|54.58048|16.86194
+168|Koszalin|Lipowa|44|54.60528|18.34717
+169|Gniezno|Floriana|85|51.14942|15.00835
+170|Giøycko|Kreta|46|50.20528|19.27498
+171|Sanok|Skrajna|07|54.58048|16.86194
+172|OúwiÍcim|OdrzaÒska|30|50.5107|18.30056
+173|Bydgoszcz|Na≥kowskiej|56|50.5107|18.30056
+174|Miko≥Ûw|Cmentarna|17|50.86079|17.4674
+175|Pi≥a|Boczna|727|50.5107|18.30056
+176|M≥awa|Popie≥uszki|17|50.20528|19.27498
+177|Chojnice|Tulipanowa|76|50.5107|18.30056
+178|åroda Wielkopolska|Boczna|48|50.86079|17.4674
+179|Pi≥a|JarzÍbinowa|85|54.58048|16.86194
+180|Wo≥omin|Hutnicza|20|54.58048|16.86194
+181|Jaros≥aw|Spokojna|306|54.58048|16.86194
+182|CiechanÛw|Wiπzowa|47|51.14942|15.00835
+183|Legnica|Sosnowa|65|50.86079|17.4674
+184|ChorzÛw|Wa≥owa|36|54.60528|18.34717
+185|Skawina|Kreta|08|50.20528|19.27498
+186|Sandomierz|Poprzeczna|85|50.5107|18.30056
+187|Jarocin|Grzybowa|12|51.14942|15.00835
+188|£owicz|Piaskowa|06|54.60528|18.34717
+189|K≥odzko|Kamienna|24|51.14942|15.00835
+190|Tarnobrzeg|Lawendowa|29|54.58048|16.86194
+191|Tczew|èrÛdlana|861|50.5107|18.30056
+192|GoleniÛw|BatalionÛw Ch≥opskich|524|54.60528|18.34717
+193|Bielsk Podlaski|Warszawska|057|54.58048|16.86194
+194|Ko≥obrzeg|Jasna|020|50.5107|18.30056
+195|Cieszyn|Krucza|98|50.86079|17.4674
+196|RzeszÛw|Nadbrzeøna|151|51.14942|15.00835
+197|DÍbica|Skrajna|05|54.58048|16.86194
+198|Bytom|Narutowicza|243|54.58048|16.86194
+199|Sochaczew|Koúcielna|88|54.60528|18.34717
+200|Jarocin|Tartaczna|276|54.58048|16.86194
+201|P≥oÒsk|S≥oneczna|19|51.14942|15.00835
+202|£ukÛw|Korczaka|617|50.20528|19.27498
+203|Leszno|Srebrna|901|50.5107|18.30056
+204|Inowroc≥aw|£πkowa|48|54.60528|18.34717
+205|Kluczbork|Paderewskiego|394|51.14942|15.00835
+206|Szczytno|Polna|01|51.14942|15.00835
+207|CiechanÛw|åwierczewskiego|94|50.20528|19.27498
+208|KnurÛw|Korfantego|948|54.60528|18.34717
+209|Mys≥owice|årednia|85|54.60528|18.34717
+210|Skierniewice|Wilcza|03|54.58048|16.86194
+211|Legnica|Jesionowa|157|54.58048|16.86194
+212|£owicz|Kaszubska|06|50.5107|18.30056
+213|ZamoúÊ|Czarnieckiego|02|51.14942|15.00835
+214|Jas≥o|Ga≥czynskiego|68|50.86079|17.4674
+215|P≥ock|Zielna|537|50.5107|18.30056
+216|Bi≥goraj|GÛrnicza|62|50.86079|17.4674
+217|Lubin|Krokusowa|33|50.86079|17.4674
+218|Szczecinek|ZwyciÍstwa|69|54.60528|18.34717
+219|E≥k|Andersa|78|54.58048|16.86194
+220|Mys≥owice|Rajska|22|50.86079|17.4674
+221|PruszkÛw|Piaskowa|807|54.60528|18.34717
+222|åwidnica|Solidarnosci|58|50.5107|18.30056
+223|LuboÒ|Cisowa|73|54.60528|18.34717
+224|Ko≥o|Klonowa|517|51.14942|15.00835
+225|Kraúnik|Dπbrowskiej|230|54.60528|18.34717
+226|MiÒsk Mazowiecki|Opolska|895|50.86079|17.4674
+227|W≥oc≥awek|Piekarska|78|50.86079|17.4674
+228|PoznaÒ|Harcerska|72|50.20528|19.27498
+229|Tarnobrzeg|Rataja|227|54.60528|18.34717
+230|Jarocin|D≥uga|00|54.60528|18.34717
+231|Polkowice|Armii Krajowej|50|51.14942|15.00835
+232|Nowy DwÛr Mazowiecki|JastrzÍbia|750|51.14942|15.00835
+233|Bartoszyce|BorÛwkowa|10|50.5107|18.30056
+234|Szczytno|Rybacka|10|50.20528|19.27498
+235|Jarocin|JagielloÒska|270|54.58048|16.86194
+236|Bartoszyce|Zielna|01|51.14942|15.00835
+237|Stalowa Wola|W≥adys≥awa £okietka|503|51.14942|15.00835
+238|Skawina|Ko≥≥πtaja|281|50.5107|18.30056
+239|Bytom|Myúliwska|702|50.86079|17.4674
+240|Nowy Sπcz|Lotnicza|18|50.20528|19.27498
+241|O≥awa|Strumykowa|04|51.14942|15.00835
+242|Pszczyna|Parkowa|60|50.20528|19.27498
+243|Siemianowice ålπskie|Wiosenna|73|54.60528|18.34717
+244|£owicz|WyszyÒskiego|92|50.86079|17.4674
+245|Bi≥goraj|Piastowska|493|51.14942|15.00835
+246|Szczecin|Swierkowa|795|54.58048|16.86194
+247|Inowroc≥aw|Letniskowa|169|54.60528|18.34717
+248|Mielec|Nieca≥a|30|50.5107|18.30056
+249|åwinoujúcie|Wiklinowa|57|54.58048|16.86194
+250|CzÍstochowa|Bukowa|32|50.5107|18.30056
+251|Øywiec|Mostowa|39|51.14942|15.00835
+252|Kalisz|Dobra|43|54.60528|18.34717
+253|Wejherowo|Porzeczkowa|82|50.86079|17.4674
+254|åwiecie|Wrzosowa|705|54.60528|18.34717
+255|S≥upsk|Pi≥sudskiego|46|50.5107|18.30056
+256|Jaworzno|Koúciuszki|28|50.86079|17.4674
+257|BÍdzin|Plater|02|50.86079|17.4674
+258|Wodzis≥aw ålπski|Okrzei|24|54.58048|16.86194
+259|K≥odzko|Go≥Íbia|97|54.60528|18.34717
+260|Gdynia|WrÛblewskiego|59|50.5107|18.30056
+261|åwiÍtoch≥owice|Podleúna|28|54.60528|18.34717
+262|GoleniÛw|Letniskowa|07|50.5107|18.30056
+263|Radomsko|WspÛlna|75|50.5107|18.30056
+264|LÍbork|Morelowa|66|50.86079|17.4674
+265|Lublin|Øytnia|14|54.60528|18.34717
+266|Sandomierz|KosynierÛw|41|50.5107|18.30056
+267|TomaszÛw Mazowiecki|Wilcza|490|54.60528|18.34717
+268|I≥awa|PÛ≥nocna|02|50.86079|17.4674
+269|Jelenia GÛra|Widokowa|75|54.60528|18.34717
+270|TomaszÛw Mazowiecki|Wieniawskiego|057|54.58048|16.86194
+271|Stalowa Wola|Turkusowa|40|50.20528|19.27498
+272|Starachowice|Rzeczna|24|50.5107|18.30056
+273|Mys≥owice|Wrzosowa|78|54.58048|16.86194
+274|Starachowice|Pogodna|36|51.14942|15.00835
+275|Mielec|Klonowa|96|54.60528|18.34717
+276|Szczecinek|Øabia|85|51.14942|15.00835
+277|Polkowice|Sawickiej|73|54.60528|18.34717
+278|Kluczbork|Boczna|968|50.20528|19.27498
+279|Bielsk Podlaski|Stolarska|55|54.60528|18.34717
+280|DÍbica|Nadbrzeøna|65|50.5107|18.30056
+281|JastrzÍbie-ZdrÛj|Lotnicza|127|50.20528|19.27498
+282|Inowroc≥aw|Fredry|632|54.58048|16.86194
+283|Starogard GdaÒski|Kamienna|89|50.86079|17.4674
+284|Ostro≥Íka|KsiÍøycowa|273|50.5107|18.30056
+285|Zgorzelec|Lipca|16|50.5107|18.30056
+286|DÍbica|WaryÒskiego|51|54.58048|16.86194
+287|Bielsko-Bia≥a|DÍbowa|82|50.5107|18.30056
+288|Wejherowo|Poziomkowa|99|54.58048|16.86194
+289|PiotrkÛw Trybunalski|BorÛwkowa|280|50.86079|17.4674
+290|£aziska GÛrne|Przemys≥owa|07|50.86079|17.4674
+291|Grodzisk Mazowiecki|Daleka|934|54.58048|16.86194
+292|Kluczbork|Skrajna|49|50.86079|17.4674
+293|Nowy Sπcz|Letniskowa|62|54.60528|18.34717
+294|Gliwice|Srebrna|603|50.20528|19.27498
+295|Jarocin|Wiπzowa|82|50.5107|18.30056
+296|Boles≥awiec|Okulickiego|39|50.20528|19.27498
+297|GdaÒsk|Pocztowa|87|54.58048|16.86194
+298|Elblπg|Parkowa|716|50.86079|17.4674
+299|Øory|KraÒcowa|300|50.5107|18.30056
+300|Rybnik|Dworcowa|328|50.86079|17.4674
+301|Stargard SzczeciÒski|Per≥owa|87|50.86079|17.4674
+302|Elblπg|Øurawia|49|54.58048|16.86194
+303|GorzÛw Wielkopolski|Grottgera|237|50.20528|19.27498
+304|Che≥m|Szkolna|069|50.5107|18.30056
+305|Olsztyn|Orzeszkowej|216|54.58048|16.86194
+306|Gliwice|Narcyzowa|06|50.20528|19.27498
+307|Marki|Orkana|096|50.20528|19.27498
+308|Warszawa|Lelewela|80|50.86079|17.4674
+309|DzierøoniÛw|Rolnicza|37|51.14942|15.00835
+310|DzierøoniÛw|Lipowa|16|50.20528|19.27498
+311|£owicz|Skargi|57|54.60528|18.34717
+312|PiastÛw|Moniuszki|97|50.20528|19.27498
+313|BÍdzin|JarzÍbinowa|227|50.20528|19.27498
+314|Wodzis≥aw ålπski|W≥adys≥awa Jagie≥≥y|089|50.86079|17.4674
+315|P≥oÒsk|årodkowa|47|54.58048|16.86194
+316|Gorlice|Zielna|706|51.14942|15.00835
+317|Zgierz|Boczna|91|50.5107|18.30056
+318|Cieszyn|Jeøynowa|01|50.5107|18.30056
+319|Koúcierzyna|Liliowa|02|51.14942|15.00835
+320|Lublin|Handlowa|497|54.58048|16.86194
+321|Nowy Sπcz|Nadrzeczna|842|50.20528|19.27498
+322|Koszalin|Che≥moÒskiego|126|54.58048|16.86194
+323|LÍbork|Pomorska|34|54.58048|16.86194
+324|Bydgoszcz|Stycznia|583|54.60528|18.34717
+325|Ko≥o|Okrzei|40|50.86079|17.4674
+326|Opole|D≥uga|55|54.60528|18.34717
+327|Konin|Owocowa|73|50.86079|17.4674
+328|Zakopane|Sienkiewicza|46|50.5107|18.30056
+329|Bochnia|Orla|28|50.5107|18.30056
+330|Elblπg|Rycerska|23|54.58048|16.86194
+331|E≥k|Reja|92|54.58048|16.86194
+332|Jaros≥aw|Modrzewiowa|74|50.20528|19.27498
+333|Zakopane|Owocowa|545|50.20528|19.27498
+334|Reda|Skoúna|526|50.5107|18.30056
+335|TomaszÛw Mazowiecki|Orzechowa|555|50.5107|18.30056
+336|Wroc≥aw|Turkusowa|31|50.20528|19.27498
+337|Sopot|G≥ogowa|14|54.58048|16.86194
+338|Chojnice|Pa≥acowa|860|50.20528|19.27498
+339|Ruda ålπska|Kraszewskiego|28|50.20528|19.27498
+340|Øory|årednia|40|54.60528|18.34717
+341|Siemianowice ålπskie|Niepodleg≥oúci|23|50.20528|19.27498
+342|DÍbica|Rynek|07|51.14942|15.00835
+343|OúwiÍcim|Sawickiej|400|50.86079|17.4674
+344|Suwa≥ki|Kolonia|843|50.5107|18.30056
+345|Skierniewice|Mickiewicza|657|54.58048|16.86194
+346|Legnica|Skargi|030|54.60528|18.34717
+347|Tarnowskie GÛry|Jasna|74|50.20528|19.27498
+348|Miko≥Ûw|Truskawkowa|567|54.58048|16.86194
+349|Wodzis≥aw ålπski|Wπska|89|54.60528|18.34717
+350|Zgierz|Mostowa|51|50.20528|19.27498
+351|ToruÒ|Kazimierza Wielkiego|73|50.5107|18.30056
+352|Kluczbork|Jesionowa|441|54.60528|18.34717
+353|Inowroc≥aw|Witosa|595|50.20528|19.27498
+354|OstrÛw Wielkopolski|Straøacka|30|54.58048|16.86194
+355|ChorzÛw|Rycerska|439|50.20528|19.27498
+356|Czerwionka-Leszczyny|Malczewskiego|965|50.20528|19.27498
+357|Pszczyna|Chopina|42|50.5107|18.30056
+358|Szczecinek|Harcerska|561|50.86079|17.4674
+359|Bielsko-Bia≥a|Lubelska|471|50.86079|17.4674
+360|Grodzisk Mazowiecki|Che≥moÒskiego|32|50.86079|17.4674
+361|Starogard GdaÒski|Listopada|20|50.86079|17.4674
+362|Gorlice|GÛrna|287|50.5107|18.30056
+363|Kraúnik|Wodna|75|50.5107|18.30056
+364|Pruszcz GdaÒski|GÛrska|76|50.86079|17.4674
+365|Nysa|Pocztowa|51|50.20528|19.27498
+366|TomaszÛw Mazowiecki|JaskÛ≥cza|637|50.86079|17.4674
+367|Brodnica|Moniuszki|31|54.60528|18.34717
+368|Chojnice|£anowa|21|54.60528|18.34717
+369|Sosnowiec|Porzeczkowa|161|54.60528|18.34717
+370|Oleúnica|Cegielniana|154|50.86079|17.4674
+371|Piekary ålπskie|Rzemieúlnicza|47|51.14942|15.00835
+372|Wejherowo|W≥adys≥awa £okietka|824|50.86079|17.4674
+373|Zgorzelec|Kossaka|57|54.58048|16.86194
+374|Wa≥brzych|Diamentowa|484|50.86079|17.4674
+375|OstrÛw Mazowiecka|Szmaragdowa|75|50.5107|18.30056
+376|Lublin|Zapolskiej|07|50.20528|19.27498
+377|RzeszÛw|Cicha|094|51.14942|15.00835
+378|Lublin|Mi≥osza|94|54.58048|16.86194
+379|£aziska GÛrne|Robotnicza|22|50.86079|17.4674
+380|Szczecin|Korczaka|79|50.86079|17.4674
+381|S≥upsk|Strzelecka|348|50.86079|17.4674
+382|Bia≥ystok|GÛrnicza|05|54.58048|16.86194
+383|Ko≥obrzeg|Daleka|270|50.20528|19.27498
+384|ØagaÒ|Broniewskiego|98|51.14942|15.00835
+385|Tarnobrzeg|SpÛ≥dzielcza|45|54.60528|18.34717
+386|åwinoujúcie|Sadowa|43|50.5107|18.30056
+387|Grudziπdz|Okrzei|60|50.20528|19.27498
+388|ChorzÛw|Fredry|12|51.14942|15.00835
+389|Pabianice|Rataja|59|50.5107|18.30056
+390|Ruda ålπska|Kazimierza Wielkiego|03|50.20528|19.27498
+391|Jawor|Cegielniana|381|50.86079|17.4674
+392|WieluÒ|Kruczkowskiego|59|51.14942|15.00835
+393|Police|£πczna|20|54.60528|18.34717
+394|Nysa|Borowa|37|50.20528|19.27498
+395|ZambrÛw|Jab≥oniowa|78|54.58048|16.86194
+396|ChrzanÛw|Sawickiej|910|50.20528|19.27498
+397|Nowy Targ|Szarych SzeregÛw|863|50.86079|17.4674
+398|Nowa SÛl|Kaszubska|654|50.5107|18.30056
+399|Nysa|Grabowa|28|50.5107|18.30056
+400|Wa≥brzych|PoznaÒska|48|51.14942|15.00835
+401|Sosnowiec|Pi≥sudskiego|41|50.5107|18.30056
+402|Zgierz|Dzia≥kowa|06|50.5107|18.30056
+403|åwidnik|Boles≥awa Krzywoustego|38|50.20528|19.27498
+404|GoleniÛw|Morcinka|57|50.20528|19.27498
+405|Police|Kochanowskiego|34|54.58048|16.86194
+406|Sochaczew|Kolonia|25|54.60528|18.34717
+407|Skawina|Bociania|77|51.14942|15.00835
+408|Olsztyn|Skoúna|75|50.20528|19.27498
+409|AugustÛw|Ludowa|548|51.14942|15.00835
+410|Starogard GdaÒski|Warszawska|17|54.60528|18.34717
+411|Lubliniec|Staszica|56|50.20528|19.27498
+412|Boles≥awiec|Grottgera|64|50.86079|17.4674
+413|Suwa≥ki|Jana|45|51.14942|15.00835
+414|Koúcierzyna|Dπbrowskiego|34|54.58048|16.86194
+415|Pi≥a|W≥adys≥awa £okietka|58|51.14942|15.00835
+416|Bochnia|Azaliowa|29|54.58048|16.86194
+417|AugustÛw|Wiejska|22|50.5107|18.30056
+418|åwidnik|Orkana|66|51.14942|15.00835
+419|Chojnice|Wiúlana|299|50.20528|19.27498
+420|KÍtrzyn|Okrzei|07|51.14942|15.00835
+421|Reda|Pomorska|317|50.20528|19.27498
+422|RzeszÛw|Zamkowa|40|50.20528|19.27498
+423|Tarnowskie GÛry|Liliowa|01|50.86079|17.4674
+424|Nowy DwÛr Mazowiecki|Rynek|25|50.20528|19.27498
+425|Konin|Moniuszki|66|50.20528|19.27498
+426|Ostrowiec åwiÍtokrzyski|Stolarska|935|54.60528|18.34717
+427|Wodzis≥aw ålπski|Bursztynowa|85|50.86079|17.4674
+428|Stargard SzczeciÒski|Szmaragdowa|67|50.20528|19.27498
+429|BÍdzin|Zau≥ek|441|50.5107|18.30056
+430|Jawor|Lwowska|94|54.58048|16.86194
+431|Lubin|Kopernika|351|54.60528|18.34717
+432|P≥ock|BorÛwkowa|07|50.86079|17.4674
+433|Gliwice|Krucza|147|50.5107|18.30056
+434|KnurÛw|SzczÍúliwa|78|54.60528|18.34717
+435|S≥upsk|Kolorowa|41|51.14942|15.00835
+436|KÍdzierzyn-Koüle|Orzeszkowej|775|54.60528|18.34717
+437|Chojnice|Pa≥acowa|28|54.60528|18.34717
+438|Zawiercie|Kopernika|08|51.14942|15.00835
+439|Piaseczno|Matejki|014|50.5107|18.30056
+440|Siemianowice ålπskie|Zielona|818|54.58048|16.86194
+441|Radom|Dπbrowskiej|060|54.60528|18.34717
+442|Brodnica|Kopernika|71|50.20528|19.27498
+443|Oleúnica|MakuszyÒskiego|212|50.86079|17.4674
+444|£Ûdü|Korfantego|47|50.86079|17.4674
+445|Nowa SÛl|Lazurowa|69|50.20528|19.27498
+446|ToruÒ|Kaliska|936|50.20528|19.27498
+447|Pruszcz GdaÒski|Poprzeczna|01|50.86079|17.4674
+448|OstrÛw Wielkopolski|Tartaczna|84|54.58048|16.86194
+449|Bia≥ystok|Po≥udniowa|862|50.20528|19.27498
+450|Bielawa|ToruÒska|80|54.58048|16.86194
+451|Turek|Mazowiecka|90|50.20528|19.27498
+452|Ruda ålπska|Floriana|67|50.86079|17.4674
+453|Ko≥obrzeg|SpÛ≥dzielcza|890|50.20528|19.27498
+454|Inowroc≥aw|Podwale|93|50.86079|17.4674
+455|Konin|Dπbrowskiej|96|54.60528|18.34717
+456|Olkusz|W≥adys≥awa Jagie≥≥y|356|50.20528|19.27498
+457|Jelenia GÛra|Bema|939|51.14942|15.00835
+458|Wodzis≥aw ålπski|Narcyzowa|10|50.5107|18.30056
+459|Tychy|M≥yÒska|64|50.86079|17.4674
+460|Jaworzno|OkrÍøna|036|51.14942|15.00835
+461|ZduÒska Wola|Fredry|03|50.20528|19.27498
+462|åwinoujúcie|Nadbrzeøna|29|54.60528|18.34717
+463|Katowice|Zakπtek|05|54.60528|18.34717
+464|Bielsko-Bia≥a|Podwale|89|50.86079|17.4674
+465|Pu≥awy|Rybacka|618|50.5107|18.30056
+466|LubartÛw|Magnoliowa|02|50.86079|17.4674
+467|Øary|Przechodnia|35|50.86079|17.4674
+468|Koszalin|W≥adys≥awa £okietka|16|50.86079|17.4674
+469|Zawiercie|Zamkowa|27|50.86079|17.4674
+470|Cieszyn|Towarowa|86|50.20528|19.27498
+471|Tarnobrzeg|Kruczkowskiego|85|54.58048|16.86194
+472|ØagaÒ|Wiúlana|149|50.86079|17.4674
+473|PiotrkÛw Trybunalski|GlÛwna|763|50.86079|17.4674
+474|BÍdzin|Sokola|316|50.20528|19.27498
+475|Tychy|Brzoskwiniowa|46|50.5107|18.30056
+476|ØyrardÛw|Andersa|178|50.20528|19.27498
+477|I≥awa|Jagodowa|970|54.58048|16.86194
+478|Turek|Ceglana|908|54.58048|16.86194
+479|Oleúnica|Armii Krajowej|73|54.58048|16.86194
+480|BÍdzin|Grzybowa|606|50.5107|18.30056
+481|WieluÒ|Szpitalna|66|54.60528|18.34717
+482|DzierøoniÛw|Dobra|949|54.60528|18.34717
+483|Wroc≥aw|Wiúniowa|40|50.86079|17.4674
+484|Kwidzyn|JagielloÒska|382|50.86079|17.4674
+485|Szczytno|Handlowa|681|51.14942|15.00835
+486|Reda|PowstaÒcÛw Wielkopolskich|50|50.86079|17.4674
+487|Szczytno|årednia|96|50.5107|18.30056
+488|CzÍstochowa|Øeglarska|000|51.14942|15.00835
+489|CzÍstochowa|Szpitalna|443|51.14942|15.00835
+490|Bielawa|Diamentowa|27|51.14942|15.00835
+491|Ruda ålπska|Rolnicza|95|50.20528|19.27498
+492|Gorlice|Nowowiejska|16|51.14942|15.00835
+493|Krosno|Wysoka|17|54.58048|16.86194
+494|åwinoujúcie|Krzywa|92|54.60528|18.34717
+495|Bia≥ogard|Mostowa|903|50.5107|18.30056
+496|I≥awa|KraÒcowa|77|54.60528|18.34717
+497|OstrÛw Mazowiecka|Turystyczna|800|50.5107|18.30056
+498|P≥oÒsk|Dojazdowa|696|54.58048|16.86194
+499|Szczecinek|Ga≥czynskiego|32|50.5107|18.30056
+500|Siemianowice ålπskie|Z≥ota|428|51.14942|15.00835
+501|DzierøoniÛw|Narcyzowa|540|50.86079|17.4674
+502|Radom|Gajowa|04|50.86079|17.4674
+503|Otwock|Kaliska|36|51.14942|15.00835
+504|Jarocin|Mokra|51|50.20528|19.27498
+505|Ko≥obrzeg|Magnoliowa|85|51.14942|15.00835
+506|Sandomierz|Rybacka|96|50.86079|17.4674
+507|Suwa≥ki|Sienkiewicza|739|51.14942|15.00835
+508|Lubliniec|Plaøowa|48|50.86079|17.4674
+509|KÍdzierzyn-Koüle|Grzybowa|19|50.5107|18.30056
+510|åwinoujúcie|G≥owackiego|18|50.20528|19.27498
+511|Ko≥o|Øurawia|66|51.14942|15.00835
+512|Bielsk Podlaski|Sienkiewicza|903|50.5107|18.30056
+513|Grodzisk Mazowiecki|Ptasia|47|50.86079|17.4674
+514|Bielsk Podlaski|Pomorska|57|50.5107|18.30056
+515|GorzÛw Wielkopolski|Jeøynowa|711|50.5107|18.30056
+516|Starogard GdaÒski|Zakole|485|54.60528|18.34717
+517|Kutno|Lipca|90|50.86079|17.4674
+518|Lubliniec|Pszenna|53|50.5107|18.30056
+519|LubartÛw|Ciasna|394|50.20528|19.27498
+520|PiotrkÛw Trybunalski|Porzeczkowa|65|54.58048|16.86194
+521|Wa≥cz|Jesionowa|46|50.5107|18.30056
+522|Oleúnica|Graniczna|549|50.20528|19.27498
+523|Krotoszyn|Lawendowa|12|50.20528|19.27498
+524|KÍtrzyn|Wojska Polskiego|91|50.5107|18.30056
+525|£Ûdü|Rzeczna|81|50.5107|18.30056
+526|Øory|Mi≥osza|653|50.5107|18.30056
+527|Kielce|Miarki|60|50.20528|19.27498
+528|LÍbork|GÛrna|14|50.86079|17.4674
+529|Sanok|Jagodowa|29|50.20528|19.27498
+530|P≥oÒsk|Poprzeczna|196|54.58048|16.86194
+531|Grudziπdz|Rataja|65|54.58048|16.86194
+532|GoleniÛw|Wczasowa|10|50.20528|19.27498
+533|Jaros≥aw|M≥ynarska|98|50.86079|17.4674
+534|WyszkÛw|GdaÒska|55|51.14942|15.00835
+535|GoleniÛw|Krasickiego|155|50.86079|17.4674
+536|Sieradz|Nowa|800|54.58048|16.86194
+537|TarnÛw|Pogodna|991|50.5107|18.30056
+538|£Ûdü|Staszica|265|50.5107|18.30056
+539|Leszno|Rumiankowa|855|54.58048|16.86194
+540|Bi≥goraj|Krzywa|15|50.5107|18.30056
+541|Kutno|M≥yÒska|223|50.5107|18.30056
+542|åwiÍtoch≥owice|Wiatraczna|92|54.58048|16.86194
+543|Konin|Kruczkowskiego|08|50.86079|17.4674
+544|Stalowa Wola|Liliowa|84|51.14942|15.00835
+545|Nowy Sπcz|£πkowa|91|50.86079|17.4674
+546|Bielsk Podlaski|Konopnickiej|86|50.86079|17.4674
+547|I≥awa|Ceglana|86|54.60528|18.34717
+548|ChorzÛw|Cyprysowa|10|51.14942|15.00835
+549|KÍtrzyn|Mieszka I|91|50.20528|19.27498
+550|RacibÛrz|Kruczkowskiego|85|51.14942|15.00835
+551|Mielec|Promienna|674|50.86079|17.4674
+552|Bartoszyce|Orzeszkowej|29|54.60528|18.34717
+553|Gliwice|Pu≥askiego|45|51.14942|15.00835
+554|Turek|PowstaÒcÛw|11|50.5107|18.30056
+555|KrakÛw|Sokola|192|54.58048|16.86194
+556|Øary|Kaszubska|95|51.14942|15.00835
+557|Kwidzyn|Po≥udniowa|403|50.86079|17.4674
+558|Jelenia GÛra|Prosta|845|50.5107|18.30056
+559|Bytom|Grottgera|862|50.20528|19.27498
+560|Bartoszyce|Orkana|93|54.58048|16.86194
+561|ZambrÛw|Wiosenna|142|54.60528|18.34717
+562|Lublin|Mieszka I|207|50.86079|17.4674
+563|LÍbork|Cegielniana|225|54.58048|16.86194
+564|Tczew|Tylna|79|50.20528|19.27498
+565|RacibÛrz|Rzemieúlnicza|40|50.20528|19.27498
+566|Jawor|ToruÒska|27|50.5107|18.30056
+567|£omøa|Morska|368|54.58048|16.86194
+568|Polkowice|Truskawkowa|32|50.5107|18.30056
+569|Nowy Targ|Z≥ota|207|54.58048|16.86194
+570|Zabrze|Øabia|34|54.60528|18.34717
+571|WyszkÛw|Czereúniowa|74|54.60528|18.34717
+572|KrakÛw|Broniewskiego|00|54.58048|16.86194
+573|Bartoszyce|Mi≥osza|457|51.14942|15.00835
+574|Polkowice|Brzechwy|70|50.5107|18.30056
+575|Czeladü|Wyzwolenia|50|54.58048|16.86194
+576|Sopot|Prosta|33|54.58048|16.86194
+577|Sopot|Weso≥a|15|50.86079|17.4674
+578|åwiÍtoch≥owice|Piastowska|401|50.86079|17.4674
+579|Che≥m|Polna|78|51.14942|15.00835
+580|Przemyúl|Baczynskiego|86|50.20528|19.27498
+581|Gliwice|S≥oneczna|22|54.58048|16.86194
+582|CzÍstochowa|ToruÒska|21|54.58048|16.86194
+583|Turek|Szymanowskiego|82|50.5107|18.30056
+584|ChorzÛw|Tulipanowa|706|50.5107|18.30056
+585|S≥upsk|Stawowa|78|50.5107|18.30056
+586|Olsztyn|CzÍstochowska|86|54.60528|18.34717
+587|Gorlice|Kolorowa|01|50.86079|17.4674
+588|Be≥chatÛw|Kaszubska|110|54.58048|16.86194
+589|GdaÒsk|G≥ogowa|35|54.58048|16.86194
+590|Bia≥ystok|Zakole|014|50.20528|19.27498
+591|Mielec|Wilcza|961|51.14942|15.00835
+592|Turek|Rumiankowa|69|51.14942|15.00835
+593|Szczytno|Piekarska|268|50.5107|18.30056
+594|Chojnice|Opolska|238|54.58048|16.86194
+595|Wo≥omin|Prusa|70|50.86079|17.4674
+596|£owicz|Zapolskiej|927|54.58048|16.86194
+597|Police|Parkowa|259|54.58048|16.86194
+598|Przemyúl|Rumiankowa|94|50.5107|18.30056
+599|Bia≥a Podlaska|èrÛdlana|87|51.14942|15.00835
+600|M≥awa|Stroma|965|50.20528|19.27498
+601|åwiebodzice|Malczewskiego|86|54.58048|16.86194
+602|Be≥chatÛw|Opolska|94|51.14942|15.00835
+603|LuboÒ|Azaliowa|91|54.58048|16.86194
+604|Police|Jana III Sobieskiego|940|54.60528|18.34717
+605|Pszczyna|PodgÛrna|54|54.58048|16.86194
+606|Cieszyn|CzÍstochowska|080|50.86079|17.4674
+607|Katowice|Solidarnosci|92|54.58048|16.86194
+608|Wa≥cz|Zapolskiej|897|50.86079|17.4674
+609|PruszkÛw|Skrajna|057|50.5107|18.30056
+610|WieluÒ|Sucharskiego|944|50.20528|19.27498
+611|Marki|Sikorskiego|901|54.58048|16.86194
+612|Lublin|Pomorska|02|50.86079|17.4674
+613|Krotoszyn|ZwyciÍstwa|52|51.14942|15.00835
+614|Bia≥a Podlaska|Kasprowicza|233|50.86079|17.4674
+615|Wa≥cz|S≥onecznikowa|255|54.60528|18.34717
+616|Sieradz|Zdrojowa|10|50.5107|18.30056
+617|Gorlice|Dworska|33|54.60528|18.34717
+618|åwidnik|Rzemieúlnicza|27|54.60528|18.34717
+619|Nowy Targ|OdrzaÒska|55|51.14942|15.00835
+620|Wa≥brzych|Asnyka|83|50.86079|17.4674
+621|M≥awa|Lisia|87|50.86079|17.4674
+622|AugustÛw|Wiejska|16|50.20528|19.27498
+623|Miko≥Ûw|Øeromskiego|624|54.58048|16.86194
+624|Jas≥o|Tuwima|90|50.5107|18.30056
+625|LuboÒ|Malczewskiego|16|54.58048|16.86194
+626|Radom|Grzybowa|68|54.58048|16.86194
+627|WieluÒ|Morcinka|05|54.60528|18.34717
+628|S≥upsk|Fredry|55|50.20528|19.27498
+629|Czerwionka-Leszczyny|Lipca|729|51.14942|15.00835
+630|Øary|Liliowa|26|50.86079|17.4674
+631|LÍbork|Wolnoúci|853|50.20528|19.27498
+632|Zawiercie|Dworska|29|54.58048|16.86194
+633|Otwock|Ja≥owcowa|499|50.5107|18.30056
+634|Mys≥owice|Krucza|87|54.60528|18.34717
+635|K≥odzko|Bursztynowa|26|54.60528|18.34717
+636|Zπbki|Willowa|123|50.5107|18.30056
+637|Opole|ålπska|028|50.20528|19.27498
+638|Wo≥omin|Parkowa|54|50.86079|17.4674
+639|Sieradz|Che≥moÒskiego|57|51.14942|15.00835
+640|£aziska GÛrne|Ceglana|88|54.58048|16.86194
+641|OstrÛda|Poziomkowa|68|54.60528|18.34717
+642|Tarnobrzeg|Straøacka|519|50.86079|17.4674
+643|AugustÛw|Kruczkowskiego|15|50.86079|17.4674
+644|Bi≥goraj|Bukowa|50|54.60528|18.34717
+645|Lubin|Kasprowicza|48|50.20528|19.27498
+646|W≥oc≥awek|Spokojna|82|50.5107|18.30056
+647|Bytom|Kruczkowskiego|59|50.20528|19.27498
+648|PiastÛw|PartyzantÛw|106|54.58048|16.86194
+649|Boles≥awiec|Maczka|678|54.60528|18.34717
+650|Kutno|Ba≥tycka|30|51.14942|15.00835
+651|Gdynia|Okulickiego|91|54.58048|16.86194
+652|Polkowice|Dworska|31|54.58048|16.86194
+653|Lublin|Sowia|754|51.14942|15.00835
+654|£owicz|Staszica|19|54.60528|18.34717
+655|Legnica|Pa≥acowa|90|54.60528|18.34717
+656|Malbork|Mazurska|78|50.86079|17.4674
+657|Oleúnica|Ludowa|130|51.14942|15.00835
+658|S≥upsk|Mokra|58|50.5107|18.30056
+659|Kluczbork|G≥ogowa|31|50.20528|19.27498
+660|åwinoujúcie|RÛzana|141|50.5107|18.30056
+661|Przemyúl|Rzeczna|223|51.14942|15.00835
+662|Kutno|Dπbrowskiego|56|54.58048|16.86194
+663|Lubliniec|Kamienna|95|50.20528|19.27498
+664|Nowa Ruda|Dobra|02|54.58048|16.86194
+665|RacibÛrz|Wiklinowa|60|51.14942|15.00835
+666|ChorzÛw|Malinowa|909|50.5107|18.30056
+667|ToruÒ|Brzoskwiniowa|85|54.60528|18.34717
+668|RzeszÛw|Boczna|70|54.60528|18.34717
+669|WieluÒ|Plaøowa|69|50.20528|19.27498
+670|SwarzÍdz|Sucharskiego|855|51.14942|15.00835
+671|OúwiÍcim|Podleúna|15|50.86079|17.4674
+672|ChorzÛw|Rzeczna|291|54.58048|16.86194
+673|GorzÛw Wielkopolski|Po≥udniowa|430|50.20528|19.27498
+674|Starachowice|Pa≥acowa|347|50.5107|18.30056
+675|Jaros≥aw|Wypoczynkowa|85|54.60528|18.34717
+676|Nowy Sπcz|Klasztorna|99|51.14942|15.00835
+677|åwiÍtoch≥owice|Mieszka I|27|50.20528|19.27498
+678|ChrzanÛw|Krasickiego|29|50.5107|18.30056
+679|G≥ogÛw|Wπska|12|50.20528|19.27498
+680|Miko≥Ûw|Wczasowa|30|50.86079|17.4674
+681|Pabianice|Boles≥awa Chrobrego|87|54.60528|18.34717
+682|Sochaczew|ålπska|22|50.5107|18.30056
+683|Leszno|Rolna|81|50.5107|18.30056
+684|Starachowice|Bursztynowa|50|50.86079|17.4674
+685|£Ûdü|SybirakÛw|29|54.58048|16.86194
+686|E≥k|årednia|11|54.58048|16.86194
+687|Wrzeúnia|BatalionÛw Ch≥opskich|57|54.58048|16.86194
+688|Pi≥a|Bociania|349|50.86079|17.4674
+689|Brodnica|Tartaczna|42|50.20528|19.27498
+690|Kraúnik|S≥owianska|757|54.60528|18.34717
+691|Bielawa|Kasztanowa|20|50.5107|18.30056
+692|Nowa Ruda|Narutowicza|71|54.60528|18.34717
+693|Nowa Ruda|Nowowiejska|462|50.86079|17.4674
+694|Sanok|Graniczna|650|51.14942|15.00835
+695|Sochaczew|Dπbrowskiej|01|54.58048|16.86194
+696|Mielec|Szarych SzeregÛw|98|54.60528|18.34717
+697|Lublin|Wilcza|19|54.60528|18.34717
+698|OstrÛda|Majowa|78|50.20528|19.27498
+699|Kalisz|Øeromskiego|36|50.5107|18.30056
+700|Ko≥o|Jana Paw≥a II|23|51.14942|15.00835
+701|O≥awa|GlÛwna|280|50.5107|18.30056
+702|£omøa|Ludowa|36|50.20528|19.27498
+703|Sosnowiec|Norwida|49|50.86079|17.4674
+704|Sosnowiec|OdrzaÒska|42|50.86079|17.4674
+705|Nowa SÛl|Cyprysowa|85|50.20528|19.27498
+706|Lubin|Jana III Sobieskiego|687|54.60528|18.34717
+707|KnurÛw|Kasztanowa|57|51.14942|15.00835
+708|Nysa|Targowa|22|50.86079|17.4674
+709|årem|Letnia|073|54.58048|16.86194
+710|£Ûdü|Dπbrowskiej|073|54.60528|18.34717
+711|TomaszÛw Mazowiecki|Mokra|98|51.14942|15.00835
+712|Sandomierz|Norwida|94|54.58048|16.86194
+713|Bydgoszcz|Chmielna|174|50.86079|17.4674
+714|£Ûdü|Plaøowa|27|54.60528|18.34717
+715|Kluczbork|Wiúlana|109|51.14942|15.00835
+716|Reda|Miarki|65|51.14942|15.00835
+717|Kalisz|Poziomkowa|44|50.20528|19.27498
+718|Malbork|Dzia≥kowa|37|54.58048|16.86194
+719|Pszczyna|Armii Krajowej|03|54.58048|16.86194
+720|Inowroc≥aw|Kolonia|20|50.5107|18.30056
+721|Skawina|Skrajna|86|50.20528|19.27498
+722|Ko≥obrzeg|ToruÒska|58|54.58048|16.86194
+723|GorzÛw Wielkopolski|Konwaliowa|423|50.86079|17.4674
+724|Gliwice|Ogrodowa|85|50.86079|17.4674
+725|Zπbki|WrÛblewskiego|841|54.58048|16.86194
+726|Skawina|Fabryczna|643|50.20528|19.27498
+727|TarnÛw|Cmentarna|94|51.14942|15.00835
+728|KnurÛw|Lisia|692|50.20528|19.27498
+729|OúwiÍcim|Olchowa|613|54.58048|16.86194
+730|Jarocin|Sawickiej|29|54.60528|18.34717
+731|Tarnobrzeg|Lotnicza|307|51.14942|15.00835
+732|Sosnowiec|Widokowa|336|51.14942|15.00835
+733|S≥upsk|KrÛtka|89|51.14942|15.00835
+734|Skarøysko-Kamienna|RÛzana|80|51.14942|15.00835
+735|Zabrze|SpÛ≥dzielcza|12|51.14942|15.00835
+736|Czerwionka-Leszczyny|Øurawia|570|54.60528|18.34717
+737|Bydgoszcz|Brzechwy|48|54.60528|18.34717
+738|Leszno|Kowalska|06|50.86079|17.4674
+739|O≥awa|Ba≥tycka|19|50.86079|17.4674
+740|Pabianice|Nowowiejska|15|50.86079|17.4674
+741|Ko≥obrzeg|Podmiejska|805|50.5107|18.30056
+742|Piaseczno|Skargi|472|54.60528|18.34717
+743|Ruda ålπska|Rzeczna|01|50.20528|19.27498
+744|Wa≥cz|Bema|98|51.14942|15.00835
+745|Pszczyna|Øabia|93|54.58048|16.86194
+746|Lublin|KiliÒskiego|96|50.5107|18.30056
+747|Mys≥owice|Plater|682|51.14942|15.00835
+748|Bartoszyce|Reymonta|50|54.58048|16.86194
+749|Lubliniec|Wπska|03|50.86079|17.4674
+750|S≥upsk|Porzeczkowa|70|54.60528|18.34717
+751|Olkusz|Lawendowa|11|50.5107|18.30056
+752|Krotoszyn|Browarna|000|54.60528|18.34717
+753|Brodnica|TÍczowa|446|54.60528|18.34717
+754|Wroc≥aw|Konarskiego|040|54.60528|18.34717
+755|Skarøysko-Kamienna|Jagodowa|86|54.58048|16.86194
+756|KÍdzierzyn-Koüle|Rynek|96|50.86079|17.4674
+757|£ukÛw|Wieniawskiego|96|54.58048|16.86194
+758|Koúcierzyna|W≥adys≥awa Jagie≥≥y|72|50.20528|19.27498
+759|Grudziπdz|Okulickiego|67|51.14942|15.00835
+760|OstrÛw Mazowiecka|Dworska|161|50.5107|18.30056
+761|Siemianowice ålπskie|Robotnicza|19|50.86079|17.4674
+762|P≥oÒsk|Ptasia|09|54.60528|18.34717
+763|WieluÒ|Kraszewskiego|77|50.86079|17.4674
+764|åwinoujúcie|Daleka|32|50.20528|19.27498
+765|DzierøoniÛw|Brzoskwiniowa|329|50.20528|19.27498
+766|Szczecin|WyspiaÒskiego|86|54.58048|16.86194
+767|Bia≥ystok|Owocowa|06|50.5107|18.30056
+768|Kraúnik|Pomorska|25|50.20528|19.27498
+769|Oleúnica|Armii Krajowej|89|51.14942|15.00835
+770|Radomsko|Wodna|49|50.86079|17.4674
+771|GoleniÛw|Pomorska|675|50.5107|18.30056
+772|MyszkÛw|Wierzbowa|29|54.58048|16.86194
+773|Zakopane|Koúcielna|65|51.14942|15.00835
+774|GoleniÛw|Morcinka|25|50.5107|18.30056
+775|Kwidzyn|S≥onecznikowa|13|54.58048|16.86194
+776|Kraúnik|PowstaÒcÛw Wielkopolskich|774|54.58048|16.86194
+777|Bielsko-Bia≥a|Chopina|23|50.86079|17.4674
+778|Ko≥obrzeg|KrÛtka|933|50.20528|19.27498
+779|Siemianowice ålπskie|Asnyka|134|51.14942|15.00835
+780|Tarnobrzeg|KusociÒskiego|94|51.14942|15.00835
+781|KÍdzierzyn-Koüle|Dworska|28|50.86079|17.4674
+782|GdaÒsk|Pogodna|55|50.5107|18.30056
+783|Dπbrowa GÛrnicza|Poniatowskiego|04|51.14942|15.00835
+784|£owicz|Gajowa|163|50.86079|17.4674
+785|Zawiercie|Cyprysowa|12|54.58048|16.86194
+786|GdaÒsk|M≥ynarska|940|50.86079|17.4674
+787|Brodnica|Bema|91|50.5107|18.30056
+788|OstrÛw Wielkopolski|Witosa|65|54.60528|18.34717
+789|Mielec|KrasiÒskiego|48|50.20528|19.27498
+790|Wodzis≥aw ålπski|Klasztorna|567|51.14942|15.00835
+791|Øary|Konstytucji 3 Maja|43|50.5107|18.30056
+792|Koúcian|Kolejowa|625|50.20528|19.27498
+793|Szczecinek|Miodowa|189|50.5107|18.30056
+794|Sandomierz|Rzeczna|46|51.14942|15.00835
+795|Kluczbork|Tysiπclecia|936|54.60528|18.34717
+796|Wo≥omin|Poprzeczna|547|54.60528|18.34717
+797|Police|D≥uga|15|50.86079|17.4674
+798|Jas≥o|Maja|61|50.20528|19.27498
+799|Kwidzyn|KusociÒskiego|783|51.14942|15.00835
+800|TomaszÛw Mazowiecki|Krasickiego|92|50.86079|17.4674
+801|ChrzanÛw|Lelewela|876|51.14942|15.00835
+802|Gdynia|Z≥ota|515|54.60528|18.34717
+803|åwidnica|Lipca|56|51.14942|15.00835
+804|Ko≥o|Ciasna|369|51.14942|15.00835
+805|K≥odzko|Magnoliowa|861|50.5107|18.30056
+806|WyszkÛw|Ceglana|426|54.58048|16.86194
+807|Warszawa|Spacerowa|598|54.60528|18.34717
+808|Lublin|Drzyma≥y|353|51.14942|15.00835
+809|O≥awa|Sosnowa|474|51.14942|15.00835
+810|Grodzisk Mazowiecki|Skrajna|97|54.60528|18.34717
+811|åwidnik|Tuwima|429|50.5107|18.30056
+812|Marki|DaszyÒskiego|81|54.58048|16.86194
+813|Nowa SÛl|Wojska Polskiego|12|50.20528|19.27498
+814|åwinoujúcie|Dworcowa|24|54.58048|16.86194
+815|£owicz|Przemys≥owa|58|50.5107|18.30056
+816|SwarzÍdz|Agrestowa|364|50.86079|17.4674
+817|Lublin|Grunwaldzka|71|50.20528|19.27498
+818|PiotrkÛw Trybunalski|PartyzantÛw|673|50.20528|19.27498
+819|Ostrowiec åwiÍtokrzyski|Rataja|415|54.58048|16.86194
+820|Øory|Grabowa|449|54.58048|16.86194
+821|Zgorzelec|Szmaragdowa|867|54.60528|18.34717
+822|Zielona GÛra|Kaliska|43|50.5107|18.30056
+823|Koúcian|Wybickiego|07|50.5107|18.30056
+824|Czerwionka-Leszczyny|Harcerska|781|51.14942|15.00835
+825|Sosnowiec|Kalinowa|74|50.5107|18.30056
+826|Pi≥a|Szkolna|826|50.86079|17.4674
+827|P≥ock|Klonowa|722|50.20528|19.27498
+828|Bia≥ogard|Ja≥owcowa|72|54.58048|16.86194
+829|Suwa≥ki|KusociÒskiego|624|54.60528|18.34717
+830|Nowy Targ|ålπska|992|54.60528|18.34717
+831|Jaworzno|Mi≥a|705|51.14942|15.00835
+832|Skarøysko-Kamienna|JastrzÍbia|11|50.5107|18.30056
+833|Nowy DwÛr Mazowiecki|Akacjowa|55|51.14942|15.00835
+834|E≥k|Po≥udniowa|54|54.60528|18.34717
+835|ChorzÛw|Dzia≥kowa|44|50.20528|19.27498
+836|LubartÛw|Dπbrowskiego|343|54.60528|18.34717
+837|Sieradz|Morelowa|866|50.86079|17.4674
+838|£ukÛw|Cmentarna|520|51.14942|15.00835
+839|K≥odzko|Jeziorna|93|50.5107|18.30056
+840|Bielawa|SzczÍúliwa|841|50.20528|19.27498
+841|Bydgoszcz|Rzemieúlnicza|47|50.86079|17.4674
+842|Marki|Wiπzowa|85|51.14942|15.00835
+843|åwiebodzice|Jod≥owa|29|50.5107|18.30056
+844|Olsztyn|Piekarska|84|54.60528|18.34717
+845|Nowy DwÛr Mazowiecki|Wschodnia|87|50.5107|18.30056
+846|Krosno|Podmiejska|78|51.14942|15.00835
+847|LÍbork|Gajowa|43|50.5107|18.30056
+848|Czerwionka-Leszczyny|S≥owicza|58|50.86079|17.4674
+849|Czechowice-Dziedzice|årodkowa|50|50.20528|19.27498
+850|Szczytno|Ludowa|881|51.14942|15.00835
+851|Szczecin|Wa≥owa|10|51.14942|15.00835
+852|Konin|£anowa|309|50.5107|18.30056
+853|Olsztyn|Ceglana|681|54.58048|16.86194
+854|Øary|Jana Paw≥a II|371|50.5107|18.30056
+855|Turek|Myúliwska|80|50.86079|17.4674
+856|Inowroc≥aw|W≥adys≥awa £okietka|660|50.5107|18.30056
+857|Øory|SybirakÛw|01|54.60528|18.34717
+858|Olsztyn|Boczna|262|54.58048|16.86194
+859|Starogard GdaÒski|Rejtana|768|50.5107|18.30056
+860|KÍtrzyn|Ja≥owcowa|626|50.20528|19.27498
+861|Bydgoszcz|Boles≥awa Chrobrego|864|50.86079|17.4674
+862|TarnÛw|Jana|47|51.14942|15.00835
+863|Brzeg|Ja≥owcowa|94|54.58048|16.86194
+864|Sosnowiec|OkrÍøna|06|50.20528|19.27498
+865|RacibÛrz|Przechodnia|44|50.5107|18.30056
+866|GdaÒsk|åciegiennego|004|50.86079|17.4674
+867|Øory|Storczykowa|73|50.20528|19.27498
+868|Wroc≥aw|Kolonia|21|54.58048|16.86194
+869|Pabianice|Krakowska|851|54.60528|18.34717
+870|Suwa≥ki|Wschodnia|930|50.5107|18.30056
+871|£omøa|Rolna|55|50.86079|17.4674
+872|JastrzÍbie-ZdrÛj|Poprzeczna|35|54.60528|18.34717
+873|Siemianowice ålπskie|OdrzaÒska|205|50.20528|19.27498
+874|Sandomierz|Dworska|61|50.20528|19.27498
+875|BÍdzin|Lipowa|18|50.20528|19.27498
+876|Jelenia GÛra|Wojciecha|20|50.20528|19.27498
+877|åwiÍtoch≥owice|Baczynskiego|38|50.86079|17.4674
+878|Pu≥awy|Jaworowa|57|50.86079|17.4674
+879|Tczew|Asnyka|12|50.20528|19.27498
+880|Cieszyn|Jaúminowa|40|50.5107|18.30056
+881|Nowy Sπcz|Chopina|620|51.14942|15.00835
+882|Gorlice|Paderewskiego|52|50.86079|17.4674
+883|Jarocin|Dworska|17|50.86079|17.4674
+884|Suwa≥ki|Kolejowa|699|54.60528|18.34717
+885|Bytom|Spacerowa|78|50.20528|19.27498
+886|Piekary ålπskie|Browarna|34|51.14942|15.00835
+887|GorzÛw Wielkopolski|JarzÍbinowa|36|51.14942|15.00835
+888|Ko≥o|Nadbrzeøna|10|50.5107|18.30056
+889|Wπgrowiec|Bociania|04|51.14942|15.00835
+890|JastrzÍbie-ZdrÛj|Szkolna|11|54.58048|16.86194
+891|Szczecinek|Skargi|49|50.86079|17.4674
+892|Ko≥obrzeg|Wiklinowa|40|54.60528|18.34717
+893|Malbork|ZwyciÍstwa|79|50.20528|19.27498
+894|LÍbork|Malinowa|24|50.20528|19.27498
+895|Mys≥owice|Strzelecka|01|54.60528|18.34717
+896|Leszno|Spokojna|885|50.86079|17.4674
+897|Bia≥ystok|Brzechwy|99|50.20528|19.27498
+898|Bia≥a Podlaska|Handlowa|013|51.14942|15.00835
+899|Koúcierzyna|Stycznia|494|54.60528|18.34717
+900|Skarøysko-Kamienna|Zielona|45|50.20528|19.27498
+901|E≥k|Ptasia|23|54.58048|16.86194
+902|Ruda ålπska|Boles≥awa Krzywoustego|53|50.20528|19.27498
+903|Pu≥awy|Stolarska|19|50.20528|19.27498
+904|Legnica|Øwirowa|028|54.60528|18.34717
+905|Wa≥brzych|Wilcza|744|50.86079|17.4674
+906|Be≥chatÛw|Cisowa|609|54.60528|18.34717
+907|P≥ock|Sucharskiego|32|51.14942|15.00835
+908|Sochaczew|RÛzana|30|50.20528|19.27498
+909|Zπbki|W≥adys≥awa £okietka|75|50.20528|19.27498
+910|Giøycko|Zamkowa|99|54.60528|18.34717
+911|Zakopane|Wojska Polskiego|502|50.20528|19.27498
+912|Pi≥a|TÍczowa|895|54.60528|18.34717
+913|Bia≥ystok|S≥onecznikowa|936|50.86079|17.4674
+914|Øary|Okrzei|74|54.58048|16.86194
+915|Elblπg|CzÍstochowska|63|54.60528|18.34717
+916|Wrzeúnia|Brzozowa|360|50.20528|19.27498
+917|Tczew|Dobra|11|50.20528|19.27498
+918|Otwock|Po≥udniowa|474|50.5107|18.30056
+919|Wπgrowiec|Zacisze|28|54.60528|18.34717
+920|Nowa Ruda|GlÛwna|54|50.5107|18.30056
+921|Otwock|Harcerska|70|50.86079|17.4674
+922|Nowy Sπcz|Ja≥owcowa|33|50.86079|17.4674
+923|P≥oÒsk|Dπbrowskiej|149|51.14942|15.00835
+924|CzÍstochowa|Wiúniowa|28|54.58048|16.86194
+925|Kluczbork|Wilcza|240|50.86079|17.4674
+926|Øary|Rubinowa|898|54.60528|18.34717
+927|Pruszcz GdaÒski|Wczasowa|61|51.14942|15.00835
+928|åwidnica|Rzemieúlnicza|872|54.60528|18.34717
+929|Polkowice|Diamentowa|85|50.5107|18.30056
+930|DzierøoniÛw|Skargi|88|51.14942|15.00835
+931|Bielsk Podlaski|Topolowa|08|50.5107|18.30056
+932|Brzeg|Spacerowa|88|54.60528|18.34717
+933|Zawiercie|Poniatowskiego|275|50.20528|19.27498
+934|Giøycko|Spacerowa|35|51.14942|15.00835
+935|Giøycko|Rycerska|12|51.14942|15.00835
+936|Mys≥owice|Orla|27|54.60528|18.34717
+937|Oleúnica|Dolna|32|51.14942|15.00835
+938|åwidnica|Jaworowa|00|50.86079|17.4674
+939|Tarnobrzeg|Kaliska|91|50.20528|19.27498
+940|årem|WrÛblewskiego|75|50.86079|17.4674
+941|PiotrkÛw Trybunalski|Piaskowa|464|50.20528|19.27498
+942|S≥upsk|Øeglarska|96|50.86079|17.4674
+943|Gniezno|Radosna|22|50.86079|17.4674
+944|Oleúnica|Jana Paw≥a II|832|50.5107|18.30056
+945|Bia≥ystok|Piaskowa|83|50.86079|17.4674
+946|GorzÛw Wielkopolski|TÍczowa|348|54.58048|16.86194
+947|Wa≥brzych|Szmaragdowa|792|50.5107|18.30056
+948|Otwock|Krokusowa|76|54.60528|18.34717
+949|Jaros≥aw|Jana|13|54.58048|16.86194
+950|Wejherowo|£anowa|27|50.20528|19.27498
+951|Skierniewice|BorÛwkowa|662|54.58048|16.86194
+952|JastrzÍbie-ZdrÛj|Konstytucji 3 Maja|86|54.58048|16.86194
+953|Tczew|Irysowa|092|54.60528|18.34717
+954|Elblπg|Jana Sobieskiego|89|51.14942|15.00835
+955|TarnÛw|Handlowa|67|54.60528|18.34717
+956|GoleniÛw|Wrzosowa|136|50.20528|19.27498
+957|Giøycko|Rumiankowa|31|54.60528|18.34717
+958|Zielona GÛra|Zaciszna|54|54.58048|16.86194
+959|DÍbica|Drzyma≥y|153|51.14942|15.00835
+960|Tczew|Paderewskiego|28|50.5107|18.30056
+961|OstrÛw Mazowiecka|Graniczna|37|50.86079|17.4674
+962|Kielce|Brzechwy|835|51.14942|15.00835
+963|Szczytno|Wiúlana|91|54.60528|18.34717
+964|Legionowo|Narcyzowa|484|50.20528|19.27498
+965|P≥ock|Podleúna|13|51.14942|15.00835
+966|Dπbrowa GÛrnicza|Boczna|34|54.58048|16.86194
+967|Dπbrowa GÛrnicza|Sawickiej|193|50.20528|19.27498
+968|Gniezno|Swierkowa|832|54.58048|16.86194
+969|Kalisz|Kreta|03|50.86079|17.4674
+970|Nowy Sπcz|M≥ynarska|138|50.20528|19.27498
+971|Skawina|Letniskowa|15|50.86079|17.4674
+972|åwidnica|D≥uga|988|50.86079|17.4674
+973|Tarnobrzeg|Wczasowa|074|54.60528|18.34717
+974|Bytom|Wojciecha|08|50.86079|17.4674
+975|Zπbki|Jesienna|09|54.58048|16.86194
+976|Tychy|Krasickiego|996|54.58048|16.86194
+977|Bielawa|GÛrna|39|54.60528|18.34717
+978|Pszczyna|WspÛlna|531|54.58048|16.86194
+979|Piekary ålπskie|W≥adys≥awa £okietka|14|54.58048|16.86194
+980|Jelenia GÛra|Targowa|22|50.5107|18.30056
+981|Bielawa|Rubinowa|16|54.58048|16.86194
+982|Olsztyn|£abÍdzia|71|54.60528|18.34717
+983|Kalisz|KsiÍøycowa|91|50.20528|19.27498
+984|OstrÛw Mazowiecka|Stycznia|57|51.14942|15.00835
+985|Zgierz|Wieniawskiego|909|50.86079|17.4674
+986|Stargard SzczeciÒski|Morelowa|92|51.14942|15.00835
+987|E≥k|Tulipanowa|49|54.60528|18.34717
+988|Czerwionka-Leszczyny|Strumykowa|10|50.20528|19.27498
+989|Bielawa|GlÛwna|16|54.60528|18.34717
+990|Siedlce|Rataja|49|51.14942|15.00835
+991|åwidnik|åciegiennego|21|54.60528|18.34717
+992|Tarnowskie GÛry|Strumykowa|26|50.20528|19.27498
+993|Wa≥cz|Rzeczna|05|54.60528|18.34717
+994|PruszkÛw|Kossaka|49|50.20528|19.27498
+995|Pszczyna|Dobra|986|54.58048|16.86194
+996|Siedlce|Wiatraczna|454|50.5107|18.30056
+997|Sosnowiec|Wysoka|88|54.58048|16.86194
+998|Jaros≥aw|Kossaka|49|54.58048|16.86194
+999|CzÍstochowa|Prusa|00|50.20528|19.27498
+1000|Szczecin|Pi≥sudskiego|22|54.60528|18.34717
+1001|Olsztyn|Rzeczna|51|54.60528|18.34717
+1002|Boles≥awiec|Jesionowa|390|54.60528|18.34717
+1003|Wrzeúnia|Lazurowa|389|50.20528|19.27498
+1004|Zπbki|Jana|722|50.5107|18.30056
+1005|Pi≥a|Okrzei|31|54.60528|18.34717
+1006|RzeszÛw|Rajska|88|50.20528|19.27498
+1007|KÍdzierzyn-Koüle|Zacisze|78|50.20528|19.27498
+1008|Malbork|Nieca≥a|498|51.14942|15.00835
+1009|Wa≥cz|Sikorskiego|81|54.58048|16.86194
+1010|£owicz|Diamentowa|41|50.5107|18.30056
+1011|RacibÛrz|Truskawkowa|694|50.86079|17.4674
+1012|P≥ock|Szafirowa|18|50.20528|19.27498
+1013|Legionowo|Niepodleg≥oúci|889|54.60528|18.34717
+1014|Jarocin|Cedrowa|31|54.60528|18.34717
+1015|RzeszÛw|Bema|54|50.20528|19.27498
+1016|Nowa Ruda|Broniewskiego|037|54.58048|16.86194
+1017|KnurÛw|Pomorska|603|54.60528|18.34717
+1018|Elblπg|Drzyma≥y|285|54.58048|16.86194
+1019|Chojnice|Storczykowa|282|50.5107|18.30056
+1020|Elblπg|KraÒcowa|16|54.60528|18.34717
+1021|P≥oÒsk|Wodna|63|50.20528|19.27498
+1022|£omøa|Koralowa|74|50.86079|17.4674
+1023|DzierøoniÛw|Sowia|41|54.60528|18.34717
+1024|Jas≥o|Browarna|70|50.86079|17.4674
+1025|OstrÛda|PiÍkna|81|50.20528|19.27498
+1026|Bartoszyce|Urocza|53|51.14942|15.00835
+1027|W≥oc≥awek|Tylna|830|54.60528|18.34717
+1028|Mielec|Strzelecka|375|51.14942|15.00835
+1029|Pi≥a|WspÛlna|990|51.14942|15.00835
+1030|Sosnowiec|Stroma|66|51.14942|15.00835
+1031|GorzÛw Wielkopolski|DaszyÒskiego|94|54.58048|16.86194
+1032|WyszkÛw|Letniskowa|08|50.86079|17.4674
+1033|Cieszyn|KusociÒskiego|90|50.20528|19.27498
+1034|CiechanÛw|Øwirowa|93|51.14942|15.00835
+1035|Kwidzyn|Sarnia|72|50.5107|18.30056
+1036|WieluÒ|Sowia|56|51.14942|15.00835
+1037|Ostrowiec åwiÍtokrzyski|Daleka|232|50.5107|18.30056
+1038|Gniezno|S≥owianska|331|50.86079|17.4674
+1039|Bia≥ystok|Piastowska|478|50.20528|19.27498
+1040|Nowa SÛl|Korfantego|94|50.5107|18.30056
+1041|OúwiÍcim|Bema|77|50.86079|17.4674
+1042|Wπgrowiec|Ja≥owcowa|938|54.60528|18.34717
+1043|Bochnia|Reja|04|50.86079|17.4674
+1044|Tychy|Magnoliowa|782|54.60528|18.34717
+1045|LÍbork|Wysoka|60|50.5107|18.30056
+1046|Wa≥cz|Kolorowa|60|51.14942|15.00835
+1047|Brzeg|Ciasna|133|51.14942|15.00835
+1048|TomaszÛw Mazowiecki|Szymanowskiego|280|50.86079|17.4674
+1049|RzeszÛw|Urocza|939|50.20528|19.27498
+1050|AugustÛw|Mickiewicza|44|50.20528|19.27498
+1051|Koszalin|Piastowska|99|50.86079|17.4674
+1052|Jaworzno|Parkowa|667|50.86079|17.4674
+1053|M≥awa|Mazowiecka|65|54.60528|18.34717
+1054|Jawor|Tuwima|227|51.14942|15.00835
+1055|Starachowice|Harcerska|64|50.20528|19.27498
+1056|Malbork|Rumiankowa|50|54.60528|18.34717
+1057|Cieszyn|Graniczna|181|51.14942|15.00835
+1058|Suwa≥ki|Kwiatowa|475|50.86079|17.4674
+1059|Gliwice|Lisia|563|50.86079|17.4674
+1060|Krotoszyn|£anowa|595|50.20528|19.27498
+1061|Pszczyna|Rubinowa|146|50.5107|18.30056
+1062|Be≥chatÛw|Stawowa|93|54.58048|16.86194
+1063|LuboÒ|Drzyma≥y|47|54.58048|16.86194
+1064|JastrzÍbie-ZdrÛj|Jagodowa|264|54.60528|18.34717
+1065|G≥ogÛw|Swierkowa|165|50.86079|17.4674
+1066|Przemyúl|åwierczewskiego|46|50.5107|18.30056
+1067|ZamoúÊ|Koúciuszki|39|54.60528|18.34717
+1068|CiechanÛw|PartyzantÛw|41|54.60528|18.34717
+1069|£Ûdü|Boles≥awa Krzywoustego|634|50.86079|17.4674
+1070|ChrzanÛw|Daleka|76|50.20528|19.27498
+1071|åwiecie|Zboøowa|91|50.5107|18.30056
+1072|CzÍstochowa|G≥ogowa|06|50.5107|18.30056
+1073|Kraúnik|Kowalska|046|50.5107|18.30056
+1074|Czerwionka-Leszczyny|DaszyÒskiego|279|50.86079|17.4674
+1075|BÍdzin|Szewska|33|50.20528|19.27498
+1076|Sanok|Czarnieckiego|141|54.58048|16.86194
+1077|Giøycko|Jana Paw≥a II|037|51.14942|15.00835
+1078|Legnica|Brzoskwiniowa|79|51.14942|15.00835
+1079|Piaseczno|Boczna|79|54.60528|18.34717
+1080|Nowy Targ|Zboøowa|54|50.86079|17.4674
+1081|Kielce|Mokra|02|54.60528|18.34717
+1082|Suwa≥ki|Orzechowa|81|51.14942|15.00835
+1083|ZamoúÊ|Poprzeczna|898|50.20528|19.27498
+1084|Giøycko|Stolarska|50|51.14942|15.00835
+1085|Konin|Ma≥a|288|50.5107|18.30056
+1086|Boles≥awiec|Koúcielna|68|51.14942|15.00835
+1087|Turek|Wiúniowa|971|50.5107|18.30056
+1088|Jaworzno|M≥yÒska|76|54.58048|16.86194
+1089|Bi≥goraj|Stawowa|58|50.5107|18.30056
+1090|Police|Lelewela|89|54.58048|16.86194
+1091|Pszczyna|Skoúna|28|50.20528|19.27498
+1092|Giøycko|Rubinowa|74|54.58048|16.86194
+1093|ZamoúÊ|Wiosenna|776|54.60528|18.34717
+1094|S≥upsk|SzczÍúliwa|878|50.5107|18.30056
+1095|Ko≥o|Wiatraczna|66|50.86079|17.4674
+1096|Kalisz|Poziomkowa|03|50.20528|19.27498
+1097|WyszkÛw|Ga≥czynskiego|42|54.60528|18.34717
+1098|Brzeg|Stawowa|57|50.20528|19.27498
+1099|Nowy DwÛr Mazowiecki|Kopernika|622|50.20528|19.27498
+1100|Olkusz|Ko≥≥πtaja|119|50.86079|17.4674
+1101|Suwa≥ki|Drzyma≥y|15|50.86079|17.4674
+1102|Ko≥obrzeg|Zielona|67|50.20528|19.27498
+1103|Øory|Osiedlowa|90|50.86079|17.4674
+1104|PruszkÛw|PowstaÒcÛw ålπskich|22|51.14942|15.00835
+1105|Jas≥o|Szpitalna|59|54.60528|18.34717
+1106|LuboÒ|PowstaÒcÛw|477|54.60528|18.34717
+1107|CzÍstochowa|Wiosenna|285|50.86079|17.4674
+1108|Nowy DwÛr Mazowiecki|D≥ugosza|56|50.5107|18.30056
+1109|Dπbrowa GÛrnicza|Srebrna|278|50.86079|17.4674
+1110|Turek|Wojciecha|80|54.60528|18.34717
+1111|G≥ogÛw|Narutowicza|70|50.5107|18.30056
+1112|E≥k|Azaliowa|412|50.5107|18.30056
+1113|£aziska GÛrne|Osiedlowa|82|54.58048|16.86194
+1114|Sandomierz|Radosna|81|50.5107|18.30056
+1115|W≥oc≥awek|Klonowa|740|54.58048|16.86194
+1116|JastrzÍbie-ZdrÛj|Parkowa|84|50.86079|17.4674
+1117|Piaseczno|Rolna|232|50.20528|19.27498
+1118|Legnica|Wodna|68|50.86079|17.4674
+1119|Be≥chatÛw|Rubinowa|54|54.58048|16.86194
+1120|Piaseczno|Jaúminowa|72|51.14942|15.00835
+1121|Pszczyna|Øeglarska|45|51.14942|15.00835
+1122|Jawor|Dolna|97|50.5107|18.30056
+1123|WyszkÛw|Gajowa|70|54.58048|16.86194
+1124|Opole|Liliowa|93|54.58048|16.86194
+1125|Zielona GÛra|Prusa|281|50.5107|18.30056
+1126|Polkowice|Wolnoúci|87|54.58048|16.86194
+1127|ToruÒ|Bema|09|50.20528|19.27498
+1128|Inowroc≥aw|Turkusowa|590|50.5107|18.30056
+1129|£aziska GÛrne|Wolnoúci|82|51.14942|15.00835
+1130|Tychy|Modrzewiowa|30|54.58048|16.86194
+1131|£owicz|Miarki|41|54.58048|16.86194
+1132|Koszalin|Øwirki i Wigury|25|54.58048|16.86194
+1133|Tarnowskie GÛry|W≥adys≥awa Jagie≥≥y|947|50.86079|17.4674
+1134|GorzÛw Wielkopolski|Topolowa|28|50.20528|19.27498
+1135|Stargard SzczeciÒski|Strumykowa|67|50.20528|19.27498
+1136|TarnÛw|Jadwigi|380|50.86079|17.4674
+1137|Czerwionka-Leszczyny|Boles≥awa Krzywoustego|44|50.5107|18.30056
+1138|Sandomierz|Prosta|06|54.58048|16.86194
+1139|Kielce|Staszica|53|50.20528|19.27498
+1140|Kielce|Bydgoska|070|51.14942|15.00835
+1141|Sosnowiec|Ogrodowa|576|54.58048|16.86194
+1142|ChorzÛw|S≥owicza|48|50.5107|18.30056
+1143|Czerwionka-Leszczyny|Sucharskiego|04|50.5107|18.30056
+1144|JastrzÍbie-ZdrÛj|Wieniawskiego|868|50.86079|17.4674
+1145|I≥awa|Per≥owa|74|50.20528|19.27498
+1146|Szczecin|Jod≥owa|23|50.86079|17.4674
+1147|G≥ogÛw|Szeroka|16|50.86079|17.4674
+1148|Wo≥omin|S≥onecznikowa|146|51.14942|15.00835
+1149|Brzeg|Piaskowa|17|54.60528|18.34717
+1150|Tarnowskie GÛry|Podwale|455|50.86079|17.4674
+1151|RacibÛrz|Porzeczkowa|614|50.5107|18.30056
+1152|Jas≥o|Ptasia|07|50.20528|19.27498
+1153|GdaÒsk|JastrzÍbia|79|54.58048|16.86194
+1154|Bartoszyce|Øabia|47|50.86079|17.4674
+1155|Rumia|Parkowa|924|54.58048|16.86194
+1156|ØagaÒ|årodkowa|24|50.5107|18.30056
+1157|Olkusz|Skargi|187|50.86079|17.4674
+1158|Reda|Przechodnia|637|50.20528|19.27498
+1159|£Ûdü|Bociania|674|50.20528|19.27498
+1160|Chojnice|Armii Krajowej|12|54.60528|18.34717
+1161|Øory|Popie≥uszki|44|50.86079|17.4674
+1162|TomaszÛw Mazowiecki|Orla|771|54.60528|18.34717
+1163|OstrÛw Mazowiecka|Szarych SzeregÛw|96|50.86079|17.4674
+1164|£aziska GÛrne|Cicha|583|54.60528|18.34717
+1165|Jawor|BatalionÛw Ch≥opskich|118|54.60528|18.34717
+1166|Bochnia|Grzybowa|753|50.5107|18.30056
+1167|AugustÛw|Stroma|932|50.20528|19.27498
+1168|PoznaÒ|Sarnia|53|54.60528|18.34717
+1169|Ostrowiec åwiÍtokrzyski|Kamienna|16|54.58048|16.86194
+1170|ChorzÛw|Dπbrowskiego|72|54.60528|18.34717
+1171|Otwock|Majowa|39|50.86079|17.4674
+1172|Bartoszyce|Jeøynowa|00|54.58048|16.86194
+1173|åwidnica|Browarna|912|50.5107|18.30056
+1174|Nowy DwÛr Mazowiecki|Srebrna|87|50.20528|19.27498
+1175|Jarocin|Øurawia|168|50.86079|17.4674
+1176|Pabianice|Wiejska|33|54.60528|18.34717
+1177|Szczytno|Piwna|063|50.20528|19.27498
+1178|Che≥m|Wierzbowa|05|51.14942|15.00835
+1179|Zgorzelec|Makowa|668|54.60528|18.34717
+1180|Legnica|Wysoka|05|50.86079|17.4674
+1181|Oleúnica|£πczna|483|51.14942|15.00835
+1182|Jawor|Zachodnia|17|54.60528|18.34717
+1183|Jelenia GÛra|Stefana Batorego|246|54.60528|18.34717
+1184|Pabianice|Leszczynowa|271|54.60528|18.34717
+1185|MyszkÛw|Mokra|10|51.14942|15.00835
+1186|Czechowice-Dziedzice|Ciasna|86|50.5107|18.30056
+1187|Pruszcz GdaÒski|Kasztanowa|18|50.5107|18.30056
+1188|PoznaÒ|årodkowa|70|54.58048|16.86194
+1189|Szczecinek|Zielona|096|54.58048|16.86194
+1190|Mielec|Øeromskiego|465|51.14942|15.00835
+1191|Miko≥Ûw|Poniatowskiego|32|50.86079|17.4674
+1192|Inowroc≥aw|Tuwima|069|50.20528|19.27498
+1193|DzierøoniÛw|S≥owackiego|99|50.20528|19.27498
+1194|Gdynia|Staffa|11|51.14942|15.00835
+1195|Cieszyn|Ga≥czynskiego|38|54.58048|16.86194
+1196|Legionowo|Øabia|01|54.58048|16.86194
+1197|PoznaÒ|Sosnowa|92|54.60528|18.34717
+1198|Skawina|£πczna|30|54.58048|16.86194
+1199|TomaszÛw Mazowiecki|Mazurska|59|54.60528|18.34717
+1200|Chojnice|Mi≥a|312|54.58048|16.86194
+1201|Ostrowiec åwiÍtokrzyski|Skrajna|346|51.14942|15.00835
+1202|Sochaczew|Sportowa|87|54.58048|16.86194
+1203|Malbork|Kochanowskiego|86|54.58048|16.86194
+1204|Zabrze|G≥ogowa|31|50.86079|17.4674
+1205|Wodzis≥aw ålπski|Cicha|99|51.14942|15.00835
+1206|Ko≥o|Kasztanowa|11|50.20528|19.27498
+1207|Legionowo|Sk≥adowa|12|50.86079|17.4674
+1208|Lubliniec|Lwowska|29|54.60528|18.34717
+1209|Zgorzelec|Konwaliowa|02|50.86079|17.4674
+1210|Tarnobrzeg|Kasztanowa|38|51.14942|15.00835
+1211|£aziska GÛrne|Korczaka|09|54.58048|16.86194
+1212|Skierniewice|Plater|401|50.20528|19.27498
+1213|DÍbica|Andersa|98|50.20528|19.27498
+1214|ZambrÛw|Storczykowa|96|50.5107|18.30056
+1215|G≥ogÛw|Kopernika|398|50.5107|18.30056
+1216|Wodzis≥aw ålπski|Nieca≥a|47|51.14942|15.00835
+1217|Tczew|Sowia|09|50.20528|19.27498
+1218|Dπbrowa GÛrnicza|Sawickiej|95|54.60528|18.34717
+1219|£owicz|Po≥udniowa|919|54.58048|16.86194
+1220|OstrÛw Wielkopolski|Pomorska|374|50.5107|18.30056
+1221|Tczew|Zapolskiej|35|50.20528|19.27498
+1222|Pi≥a|WrÛblewskiego|98|54.58048|16.86194
+1223|Wa≥cz|Zamkowa|321|54.58048|16.86194
+1224|Øory|Dworcowa|344|50.5107|18.30056
+1225|Jas≥o|JastrzÍbia|292|50.5107|18.30056
+1226|Sandomierz|Starowiejska|03|50.86079|17.4674
+1227|ChorzÛw|TÍczowa|668|54.58048|16.86194
+1228|åroda Wielkopolska|Cyprysowa|703|50.86079|17.4674
+1229|Zabrze|KosynierÛw|25|51.14942|15.00835
+1230|Gliwice|Narcyzowa|79|50.20528|19.27498
+1231|Olkusz|Gajowa|054|50.20528|19.27498
+1232|Konin|Nieca≥a|680|54.60528|18.34717
+1233|WieluÒ|Kolonia|72|50.5107|18.30056
+1234|Ko≥obrzeg|Tuwima|10|51.14942|15.00835
+1235|åwidnica|Rzeczna|59|50.20528|19.27498
+1236|Lublin|Strumykowa|24|54.58048|16.86194
+1237|Miko≥Ûw|Wysoka|36|51.14942|15.00835
+1238|ToruÒ|Szmaragdowa|79|50.5107|18.30056
+1239|Bia≥ystok|Olchowa|00|54.60528|18.34717
+1240|Che≥m|Mi≥a|16|54.60528|18.34717
+1241|Bi≥goraj|Szmaragdowa|890|50.20528|19.27498
+1242|Legnica|Kolejowa|213|54.58048|16.86194
+1243|Kluczbork|Orla|54|50.86079|17.4674
+1244|DÍbica|Chabrowa|97|51.14942|15.00835
+1245|AugustÛw|Orla|22|54.58048|16.86194
+1246|ZamoúÊ|Staszica|107|51.14942|15.00835
+1247|Siemianowice ålπskie|Weso≥a|076|50.86079|17.4674
+1248|Øywiec|PiÍkna|93|51.14942|15.00835
+1249|Nowy Sπcz|PiÍkna|15|54.60528|18.34717
+1250|PruszkÛw|Wieniawskiego|08|54.58048|16.86194
+1251|Starachowice|Kossaka|82|54.58048|16.86194
+1252|Bartoszyce|Agrestowa|59|50.20528|19.27498
+1253|GdaÒsk|Hutnicza|063|54.58048|16.86194
+1254|Zawiercie|Rolna|549|51.14942|15.00835
+1255|Konin|PiÍkna|778|50.20528|19.27498
+1256|ØagaÒ|Konarskiego|18|50.20528|19.27498
+1257|Olsztyn|Solidarnosci|03|50.86079|17.4674
+1258|TarnÛw|Liliowa|21|51.14942|15.00835
+1259|KÍtrzyn|Listopada|511|50.86079|17.4674
+1260|W≥oc≥awek|S≥oneczna|66|51.14942|15.00835
+1261|Nysa|Liliowa|56|50.5107|18.30056
+1262|£aziska GÛrne|Parkowa|65|54.58048|16.86194
+1263|årem|Radosna|21|50.86079|17.4674
+1264|Bartoszyce|Nadrzeczna|288|54.58048|16.86194
+1265|RzeszÛw|Kreta|162|54.58048|16.86194
+1266|Bia≥a Podlaska|Rataja|39|54.60528|18.34717
+1267|Sanok|Baczynskiego|87|50.20528|19.27498
+1268|MyszkÛw|Wolnoúci|90|50.20528|19.27498
+1269|I≥awa|Kochanowskiego|33|54.58048|16.86194
+1270|Tczew|Olchowa|866|51.14942|15.00835
+1271|TarnÛw|Ga≥czynskiego|13|50.86079|17.4674
+1272|Bielsk Podlaski|Sokola|761|50.86079|17.4674
+1273|PruszkÛw|Reymonta|21|54.58048|16.86194
+1274|Elblπg|Kielecka|67|50.20528|19.27498
+1275|O≥awa|Pa≥acowa|277|50.86079|17.4674
+1276|Kraúnik|Rolna|32|54.60528|18.34717
+1277|Øywiec|Grunwaldzka|181|50.5107|18.30056
+1278|åwiÍtoch≥owice|Wπska|84|54.60528|18.34717
+1279|Piaseczno|Ba≥tycka|51|54.60528|18.34717
+1280|S≥upsk|Przemys≥owa|768|50.5107|18.30056
+1281|ØagaÒ|Fabryczna|64|51.14942|15.00835
+1282|Be≥chatÛw|KusociÒskiego|24|50.5107|18.30056
+1283|WieluÒ|Sienkiewicza|98|54.58048|16.86194
+1284|Grodzisk Mazowiecki|Tulipanowa|320|50.86079|17.4674
+1285|Wroc≥aw|Narutowicza|45|50.20528|19.27498
+1286|Zgierz|Rybacka|84|50.86079|17.4674
+1287|CzÍstochowa|Okrzei|86|50.86079|17.4674
+1288|Skarøysko-Kamienna|Zacisze|76|54.58048|16.86194
+1289|Szczecin|Strumykowa|05|50.20528|19.27498
+1290|Pabianice|Porzeczkowa|73|54.58048|16.86194
+1291|RacibÛrz|S≥owianska|592|54.60528|18.34717
+1292|Pszczyna|Z≥ota|61|54.60528|18.34717
+1293|Przemyúl|Daleka|70|50.5107|18.30056
+1294|Wo≥omin|Szafirowa|60|50.20528|19.27498
+1295|PiotrkÛw Trybunalski|Kreta|734|54.60528|18.34717
+1296|£ukÛw|Zau≥ek|33|54.60528|18.34717
+1297|BÍdzin|Porzeczkowa|156|50.20528|19.27498
+1298|Siedlce|Rycerska|247|50.20528|19.27498
+1299|OstrÛda|Cegielniana|904|50.5107|18.30056
+1300|åwiebodzice|JagielloÒska|830|50.20528|19.27498
+1301|Bi≥goraj|Øytnia|348|50.86079|17.4674
+1302|P≥ock|Dojazdowa|595|54.58048|16.86194
+1303|Piaseczno|Stawowa|29|50.86079|17.4674
+1304|Siemianowice ålπskie|Øwirowa|46|50.5107|18.30056
+1305|Dπbrowa GÛrnicza|Willowa|29|51.14942|15.00835
+1306|OstrÛw Mazowiecka|Poprzeczna|13|50.20528|19.27498
+1307|LubartÛw|ålπska|729|51.14942|15.00835
+1308|£ukÛw|Szmaragdowa|87|54.60528|18.34717
+1309|Siedlce|Bociania|07|54.58048|16.86194
+1310|OstrÛda|Szewska|17|54.60528|18.34717
+1311|Konin|Kazimierza Wielkiego|74|54.58048|16.86194
+1312|JastrzÍbie-ZdrÛj|Sarnia|79|51.14942|15.00835
+1313|Jawor|Urocza|34|50.20528|19.27498
+1314|RzeszÛw|Turkusowa|97|50.5107|18.30056
+1315|ChorzÛw|Rolna|50|51.14942|15.00835
+1316|KÍdzierzyn-Koüle|Cedrowa|11|50.20528|19.27498
+1317|LÍbork|Diamentowa|24|54.58048|16.86194
+1318|KÍtrzyn|Piwna|88|51.14942|15.00835
+1319|ChorzÛw|Turystyczna|643|50.20528|19.27498
+1320|Olsztyn|Rubinowa|69|54.58048|16.86194
+1321|G≥ogÛw|SpÛ≥dzielcza|641|54.60528|18.34717
+1322|GdaÒsk|KsiÍøycowa|262|51.14942|15.00835
+1323|Jawor|Hallera|610|50.86079|17.4674
+1324|Wroc≥aw|Lazurowa|022|50.86079|17.4674
+1325|åwidnik|Tulipanowa|662|50.20528|19.27498
+1326|PiastÛw|Jaworowa|32|50.86079|17.4674
+1327|Giøycko|PowstaÒcÛw ålπskich|489|51.14942|15.00835
+1328|MiÒsk Mazowiecki|Kielecka|25|54.60528|18.34717
+1329|Turek|Zielona|92|50.5107|18.30056
+1330|Nysa|Daleka|58|54.60528|18.34717
+1331|Wroc≥aw|PiÍkna|968|50.86079|17.4674
+1332|Wo≥omin|Lazurowa|462|54.60528|18.34717
+1333|Bielsko-Bia≥a|Wojska Polskiego|882|50.86079|17.4674
+1334|Czerwionka-Leszczyny|Skrajna|162|54.58048|16.86194
+1335|Sosnowiec|Wczasowa|60|51.14942|15.00835
+1336|Czerwionka-Leszczyny|Kwiatowa|71|50.20528|19.27498
+1337|Gorlice|WyszyÒskiego|235|54.58048|16.86194
+1338|ZambrÛw|Jana Paw≥a II|27|54.58048|16.86194
+1339|Giøycko|Floriana|32|51.14942|15.00835
+1340|ToruÒ|Zacisze|11|50.5107|18.30056
+1341|SwarzÍdz|Brzechwy|90|50.86079|17.4674
+1342|Tychy|Skoúna|68|50.86079|17.4674
+1343|LuboÒ|GdaÒska|34|54.58048|16.86194
+1344|TarnÛw|Staffa|443|54.58048|16.86194
+1345|årem|Rataja|92|54.58048|16.86194
+1346|Legnica|Ludowa|187|50.20528|19.27498
+1347|Tarnobrzeg|S≥owianska|99|54.58048|16.86194
+1348|Czechowice-Dziedzice|årodkowa|45|50.20528|19.27498
+1349|CiechanÛw|Grunwaldzka|390|54.60528|18.34717
+1350|Wejherowo|Radosna|295|50.20528|19.27498
+1351|ØagaÒ|Przechodnia|14|50.5107|18.30056
+1352|£Ûdü|Ciasna|48|54.60528|18.34717
+1353|Pruszcz GdaÒski|Wiejska|80|50.20528|19.27498
+1354|Bi≥goraj|Boles≥awa Chrobrego|79|54.58048|16.86194
+1355|BÍdzin|Poniatowskiego|133|54.60528|18.34717
+1356|Kwidzyn|D≥ugosza|666|54.58048|16.86194
+1357|Kutno|Pi≥sudskiego|598|50.86079|17.4674
+1358|Boles≥awiec|Widok|02|50.86079|17.4674
+1359|Lubin|Zdrojowa|41|50.20528|19.27498
+1360|ZambrÛw|Kowalska|474|50.5107|18.30056
+1361|KÍdzierzyn-Koüle|Bydgoska|994|50.86079|17.4674
+1362|Czerwionka-Leszczyny|Narutowicza|453|50.5107|18.30056
+1363|Øory|Bydgoska|170|50.86079|17.4674
+1364|Wroc≥aw|Narcyzowa|87|54.60528|18.34717
+1365|Bielawa|£abÍdzia|21|50.20528|19.27498
+1366|åwidnica|Wa≥owa|57|51.14942|15.00835
+1367|WieluÒ|Stawowa|843|50.5107|18.30056
+1368|Wπgrowiec|GdaÒska|96|50.20528|19.27498
+1369|Pu≥awy|KusociÒskiego|02|54.60528|18.34717
+1370|Miko≥Ûw|Makowa|32|50.20528|19.27498
+1371|Ruda ålπska|Maja|494|50.20528|19.27498
+1372|£omøa|Orzeszkowej|20|50.5107|18.30056
+1373|CiechanÛw|Solidarnosci|95|51.14942|15.00835
+1374|E≥k|Malczewskiego|03|50.86079|17.4674
+1375|Malbork|Szafirowa|38|54.60528|18.34717
+1376|Brodnica|PowstaÒcÛw ålπskich|46|50.5107|18.30056
+1377|Jawor|£anowa|31|54.58048|16.86194
+1378|Stargard SzczeciÒski|Szewska|88|54.58048|16.86194
+1379|Pruszcz GdaÒski|Nowowiejska|20|50.86079|17.4674
+1380|Pszczyna|Grabowa|502|51.14942|15.00835
+1381|TomaszÛw Mazowiecki|Storczykowa|96|50.20528|19.27498
+1382|Pabianice|Lotnicza|68|50.20528|19.27498
+1383|Pu≥awy|Weso≥a|665|51.14942|15.00835
+1384|PiastÛw|Liliowa|092|50.5107|18.30056
+1385|Ostrowiec åwiÍtokrzyski|Graniczna|368|50.20528|19.27498
+1386|Radom|PowstaÒcÛw ålπskich|03|54.60528|18.34717
+1387|Gliwice|Wieniawskiego|13|50.20528|19.27498
+1388|K≥odzko|S≥owackiego|807|50.20528|19.27498
+1389|PruszkÛw|Orkana|61|54.58048|16.86194
+1390|Stargard SzczeciÒski|SzczÍúliwa|45|54.58048|16.86194
+1391|Wa≥brzych|Mickiewicza|89|50.5107|18.30056
+1392|Lubliniec|Orzeszkowej|64|50.86079|17.4674
+1393|LÍbork|KosynierÛw|762|50.5107|18.30056
+1394|Tczew|KrÛlewska|83|54.60528|18.34717
+1395|LuboÒ|Øeromskiego|068|50.20528|19.27498
+1396|Skarøysko-Kamienna|Ludowa|95|50.5107|18.30056
+1397|Szczytno|Lotnicza|51|50.86079|17.4674
+1398|Tczew|Szpitalna|47|50.86079|17.4674
+1399|£ukÛw|Weso≥a|44|54.58048|16.86194
+1400|Leszno|Kolonia|52|51.14942|15.00835
+1401|Wejherowo|Kalinowa|37|50.5107|18.30056
+1402|RzeszÛw|GlÛwna|90|50.5107|18.30056
+1403|Suwa≥ki|Sadowa|12|50.5107|18.30056
+1404|Bielsk Podlaski|Wa≥owa|20|50.5107|18.30056
+1405|Ruda ålπska|Listopada|68|51.14942|15.00835
+1406|Krotoszyn|Pi≥sudskiego|32|50.86079|17.4674
+1407|OstrÛda|D≥ugosza|06|50.86079|17.4674
+1408|Starachowice|Korczaka|952|54.58048|16.86194
+1409|Sosnowiec|Leúna|56|51.14942|15.00835
+1410|GorzÛw Wielkopolski|Widok|24|51.14942|15.00835
+1411|Nowy DwÛr Mazowiecki|S≥onecznikowa|60|54.60528|18.34717
+1412|Kalisz|Zdrojowa|10|50.5107|18.30056
+1413|Police|ToruÒska|71|50.86079|17.4674
+1414|TarnÛw|Wiosenna|474|50.20528|19.27498
+1415|Konin|Wiatraczna|365|54.58048|16.86194
+1416|JastrzÍbie-ZdrÛj|£πkowa|39|54.58048|16.86194
+1417|WieluÒ|Czarnieckiego|159|50.20528|19.27498
+1418|Rumia|Radosna|574|50.20528|19.27498
+1419|Tczew|Brzoskwiniowa|871|50.20528|19.27498
+1420|Police|Listopada|99|51.14942|15.00835
+1421|Ostro≥Íka|Morelowa|92|54.58048|16.86194
+1422|ChorzÛw|Jagodowa|49|54.58048|16.86194
+1423|Marki|Krakowska|56|50.5107|18.30056
+1424|Reda|Zachodnia|78|54.60528|18.34717
+1425|PiastÛw|Nieca≥a|63|54.58048|16.86194
+1426|Kraúnik|Po≥udniowa|050|50.86079|17.4674
+1427|Katowice|Krakowska|34|51.14942|15.00835
+1428|Boles≥awiec|Tulipanowa|43|50.5107|18.30056
+1429|Bartoszyce|Asnyka|23|54.60528|18.34717
+1430|Jaworzno|Wczasowa|13|54.60528|18.34717
+1431|Nowa Ruda|Podleúna|64|50.20528|19.27498
+1432|Legionowo|£πkowa|22|50.5107|18.30056
+1433|Che≥m|Piekarska|85|51.14942|15.00835
+1434|Wπgrowiec|Szafirowa|148|54.58048|16.86194
+1435|Oleúnica|åciegiennego|32|50.20528|19.27498
+1436|ZduÒska Wola|Jadwigi|983|50.86079|17.4674
+1437|Radomsko|Ma≥a|072|54.58048|16.86194
+1438|Konin|Akacjowa|759|50.5107|18.30056
+1439|Inowroc≥aw|Krakowska|123|50.86079|17.4674
+1440|Wrzeúnia|ålπska|34|54.60528|18.34717
+1441|Nowa SÛl|Wiatraczna|46|50.5107|18.30056
+1442|Wroc≥aw|Szkolna|21|54.58048|16.86194
+1443|Cieszyn|Brzozowa|09|50.20528|19.27498
+1444|Øywiec|Graniczna|84|50.20528|19.27498
+1445|Chojnice|Radosna|424|54.58048|16.86194
+1446|Skierniewice|Olchowa|673|50.5107|18.30056
+1447|ToruÒ|Zaciszna|09|51.14942|15.00835
+1448|Zgorzelec|Strumykowa|261|54.58048|16.86194
+1449|KÍtrzyn|ToruÒska|230|51.14942|15.00835
+1450|Lubliniec|Lotnicza|76|50.20528|19.27498
+1451|Stargard SzczeciÒski|Mostowa|831|50.5107|18.30056
+1452|ØyrardÛw|Stycznia|94|54.60528|18.34717
+1453|LuboÒ|Øurawia|13|50.86079|17.4674
+1454|Stalowa Wola|Agrestowa|336|51.14942|15.00835
+1455|Police|W≥adys≥awa £okietka|871|50.5107|18.30056
+1456|åroda Wielkopolska|Bociania|56|54.58048|16.86194
+1457|I≥awa|Konarskiego|684|54.60528|18.34717
+1458|Krosno|Staffa|40|50.5107|18.30056
+1459|£Ûdü|Klasztorna|74|50.5107|18.30056
+1460|Reda|Kreta|759|50.5107|18.30056
+1461|Tarnowskie GÛry|Graniczna|451|51.14942|15.00835
+1462|Jaros≥aw|Sucharskiego|827|51.14942|15.00835
+1463|Bydgoszcz|Lwowska|228|51.14942|15.00835
+1464|ZduÒska Wola|Warszawska|72|50.5107|18.30056
+1465|Pszczyna|Jab≥oniowa|97|54.60528|18.34717
+1466|Bydgoszcz|Rybacka|808|54.58048|16.86194
+1467|Kluczbork|Kasztanowa|01|50.20528|19.27498
+1468|OstrÛw Wielkopolski|Sarnia|44|51.14942|15.00835
+1469|Wroc≥aw|GÛrnicza|22|51.14942|15.00835
+1470|Koszalin|Szeroka|80|50.5107|18.30056
+1471|G≥ogÛw|Orla|18|50.20528|19.27498
+1472|PoznaÒ|Zau≥ek|187|51.14942|15.00835
+1473|O≥awa|Mokra|47|50.5107|18.30056
+1474|Kutno|Strzelecka|83|54.60528|18.34717
+1475|Sosnowiec|Widok|75|50.20528|19.27498
+1476|P≥oÒsk|RÛzana|585|50.20528|19.27498
+1477|Jaworzno|Dolna|49|54.60528|18.34717
+1478|CzÍstochowa|Orzechowa|92|54.60528|18.34717
+1479|£ukÛw|Sokola|649|50.86079|17.4674
+1480|KÍdzierzyn-Koüle|Pogodna|80|54.58048|16.86194
+1481|GdaÒsk|Klasztorna|431|50.86079|17.4674
+1482|Bia≥ogard|Wiejska|87|50.5107|18.30056
+1483|Stalowa Wola|Zaciszna|20|54.58048|16.86194
+1484|Sopot|Orla|476|51.14942|15.00835
+1485|Zgierz|Miarki|71|54.58048|16.86194
+1486|Bochnia|Okulickiego|753|54.58048|16.86194
+1487|Starogard GdaÒski|Srebrna|42|51.14942|15.00835
+1488|ØyrardÛw|Sarnia|87|51.14942|15.00835
+1489|Lubin|Witosa|89|54.58048|16.86194
+1490|£Ûdü|PodgÛrna|81|50.86079|17.4674
+1491|Przemyúl|Wiejska|69|51.14942|15.00835
+1492|Jelenia GÛra|Nadbrzeøna|45|50.20528|19.27498
+1493|Elblπg|Fabryczna|91|51.14942|15.00835
+1494|Boles≥awiec|Ko≥≥πtaja|02|50.86079|17.4674
+1495|ToruÒ|Straøacka|683|50.20528|19.27498
+1496|Koszalin|Lawendowa|473|51.14942|15.00835
+1497|åroda Wielkopolska|Kaszubska|46|54.60528|18.34717
+1498|BÍdzin|Brzechwy|39|54.58048|16.86194
+1499|WyszkÛw|Reja|60|54.58048|16.86194
+1500|Pi≥a|Boczna|31|54.60528|18.34717
+1501|Koúcierzyna|Sportowa|28|50.20528|19.27498
+1502|Kwidzyn|SzczÍúliwa|546|50.20528|19.27498
+1503|Pi≥a|Jagodowa|487|51.14942|15.00835
+1504|ChrzanÛw|Ciasna|92|50.86079|17.4674
+1505|ChorzÛw|£anowa|83|50.86079|17.4674
+1506|KÍdzierzyn-Koüle|Krakowska|840|50.5107|18.30056
+1507|Sandomierz|Widokowa|53|51.14942|15.00835
+1508|Stalowa Wola|Korfantego|08|50.20528|19.27498
+1509|KÍtrzyn|Podleúna|52|51.14942|15.00835
+1510|Bi≥goraj|Armii Krajowej|46|51.14942|15.00835
+1511|åroda Wielkopolska|Storczykowa|487|50.20528|19.27498
+1512|BÍdzin|Jasna|32|50.86079|17.4674
+1513|Marki|Wiatraczna|46|50.5107|18.30056
+1514|åwiÍtoch≥owice|Zaciszna|333|54.58048|16.86194
+1515|Radom|Ko≥≥πtaja|929|54.58048|16.86194
+1516|Nowy Sπcz|Radosna|11|51.14942|15.00835
+1517|Nysa|Grunwaldzka|78|50.86079|17.4674
+1518|Kraúnik|Agrestowa|341|50.86079|17.4674
+1519|Olsztyn|Handlowa|65|51.14942|15.00835
+1520|ZamoúÊ|KsiÍøycowa|39|54.60528|18.34717
+1521|MyszkÛw|Kochanowskiego|497|50.20528|19.27498
+1522|Legionowo|Kolejowa|02|51.14942|15.00835
+1523|W≥oc≥awek|Ga≥czynskiego|46|54.60528|18.34717
+1524|ChrzanÛw|Broniewskiego|84|50.20528|19.27498
+1525|Police|Wiejska|88|54.60528|18.34717
+1526|ZduÒska Wola|Tulipanowa|441|50.20528|19.27498
+1527|SwarzÍdz|Swierkowa|61|51.14942|15.00835
+1528|ToruÒ|Makowa|877|50.5107|18.30056
+1529|P≥ock|Podmiejska|68|51.14942|15.00835
+1530|£ukÛw|Listopada|832|50.86079|17.4674
+1531|åwidnik|Malczewskiego|966|50.86079|17.4674
+1532|RzeszÛw|Kamienna|51|50.86079|17.4674
+1533|Bia≥ogard|Reja|629|50.20528|19.27498
+1534|RacibÛrz|Kasztanowa|01|51.14942|15.00835
+1535|Ko≥obrzeg|Miodowa|95|54.60528|18.34717
+1536|Olkusz|Szarych SzeregÛw|02|50.20528|19.27498
+1537|Pabianice|Kamienna|27|54.58048|16.86194
+1538|Chojnice|PowstaÒcÛw ålπskich|51|54.60528|18.34717
+1539|Krotoszyn|Niepodleg≥oúci|12|54.58048|16.86194
+1540|PoznaÒ|Dπbrowskiego|47|50.5107|18.30056
+1541|Police|S≥owicza|134|50.20528|19.27498
+1542|Czechowice-Dziedzice|M≥yÒska|39|54.58048|16.86194
+1543|G≥ogÛw|Skrajna|772|50.20528|19.27498
+1544|Wa≥brzych|Jadwigi|78|54.58048|16.86194
+1545|Siemianowice ålπskie|Zakole|00|54.60528|18.34717
+1546|Wa≥cz|Øeromskiego|41|50.20528|19.27498
+1547|Kielce|Kielecka|73|54.58048|16.86194
+1548|Lublin|Wojska Polskiego|743|50.20528|19.27498
+1549|Nowy Targ|Orzechowa|12|50.20528|19.27498
+1550|ØagaÒ|Makowa|553|50.20528|19.27498
+1551|P≥oÒsk|Leszczynowa|89|50.5107|18.30056
+1552|Øory|Zacisze|02|54.58048|16.86194
+1553|KÍtrzyn|Rybacka|650|50.5107|18.30056
+1554|Wroc≥aw|Jana Paw≥a II|90|50.5107|18.30056
+1555|Wroc≥aw|Grunwaldzka|923|54.60528|18.34717
+1556|Suwa≥ki|Chmielna|344|50.86079|17.4674
+1557|TarnÛw|Mostowa|05|54.58048|16.86194
+1558|Piaseczno|Cicha|95|54.58048|16.86194
+1559|RzeszÛw|Jaúminowa|535|51.14942|15.00835
+1560|åwiÍtoch≥owice|WrÛblewskiego|86|54.58048|16.86194
+1561|Wejherowo|Ceglana|91|50.86079|17.4674
+1562|£aziska GÛrne|GdaÒska|14|50.5107|18.30056
+1563|Chojnice|Lipca|68|54.60528|18.34717
+1564|Lubliniec|Koralowa|08|50.86079|17.4674
+1565|Nysa|OdrzaÒska|939|54.60528|18.34717
+1566|RacibÛrz|Zacisze|80|50.20528|19.27498
+1567|GdaÒsk|Rolna|21|50.5107|18.30056
+1568|£owicz|Lazurowa|572|50.20528|19.27498
+1569|Koszalin|Willowa|390|50.86079|17.4674
+1570|£owicz|Tylna|96|51.14942|15.00835
+1571|Radom|Swierkowa|747|50.5107|18.30056
+1572|ZduÒska Wola|Po≥udniowa|26|50.20528|19.27498
+1573|Starachowice|Hutnicza|74|50.86079|17.4674
+1574|Skarøysko-Kamienna|Kopernika|419|54.60528|18.34717
+1575|Reda|Koúcielna|42|50.86079|17.4674
+1576|Pu≥awy|DaszyÒskiego|602|51.14942|15.00835
+1577|Katowice|Sportowa|307|50.86079|17.4674
+1578|åwiebodzice|ZwyciÍstwa|468|50.20528|19.27498
+1579|Bi≥goraj|Wolnoúci|97|50.20528|19.27498
+1580|Gliwice|PartyzantÛw|292|54.58048|16.86194
+1581|Sieradz|Wyzwolenia|42|51.14942|15.00835
+1582|Zπbki|Torowa|136|50.86079|17.4674
+1583|OstrÛw Mazowiecka|Floriana|33|50.20528|19.27498
+1584|Siedlce|KsiÍøycowa|979|50.5107|18.30056
+1585|Grudziπdz|KrÛtka|07|50.20528|19.27498
+1586|JastrzÍbie-ZdrÛj|PodgÛrna|40|54.58048|16.86194
+1587|Zgierz|Skargi|46|50.20528|19.27498
+1588|Jelenia GÛra|Sikorskiego|02|54.60528|18.34717
+1589|åwidnik|Podwale|71|50.86079|17.4674
+1590|KnurÛw|Pi≥sudskiego|796|51.14942|15.00835
+1591|Gorlice|Cedrowa|39|50.5107|18.30056
+1592|Katowice|Straøacka|693|50.86079|17.4674
+1593|Øory|Turkusowa|89|50.5107|18.30056
+1594|Warszawa|Lelewela|95|54.58048|16.86194
+1595|Jas≥o|Jagodowa|968|50.20528|19.27498
+1596|P≥oÒsk|Brzozowa|53|50.20528|19.27498
+1597|DÍbica|Pocztowa|23|54.60528|18.34717
+1598|Szczecinek|Sucharskiego|22|50.20528|19.27498
+1599|Olsztyn|G≥owackiego|70|54.60528|18.34717
+1600|Nowy Sπcz|Kasztanowa|04|54.60528|18.34717
+1601|Marki|Okulickiego|31|50.86079|17.4674
+1602|ZduÒska Wola|Kaliska|35|50.5107|18.30056
+1603|Brodnica|Towarowa|96|50.5107|18.30056
+1604|GorzÛw Wielkopolski|Reja|61|50.5107|18.30056
+1605|Koúcian|Parkowa|37|50.20528|19.27498
+1606|JastrzÍbie-ZdrÛj|Spacerowa|42|50.20528|19.27498
+1607|ØyrardÛw|Øabia|91|50.86079|17.4674
+1608|Bielsko-Bia≥a|Hutnicza|29|54.60528|18.34717
+1609|PruszkÛw|CzÍstochowska|503|54.58048|16.86194
+1610|Gdynia|Cisowa|17|54.60528|18.34717
+1611|Lubin|Radosna|29|50.20528|19.27498
+1612|Szczecin|Prosta|962|54.58048|16.86194
+1613|I≥awa|Myúliwska|49|50.20528|19.27498
+1614|W≥oc≥awek|Wysoka|74|54.58048|16.86194
+1615|Nowa Ruda|Traugutta|38|51.14942|15.00835
+1616|Jelenia GÛra|Wybickiego|615|50.86079|17.4674
+1617|KrakÛw|Staszica|295|54.60528|18.34717
+1618|Konin|PodgÛrna|62|54.60528|18.34717
+1619|AugustÛw|Orkana|882|50.20528|19.27498
+1620|Legionowo|Osiedlowa|04|50.5107|18.30056
+1621|TomaszÛw Mazowiecki|Chopina|105|50.20528|19.27498
+1622|Bochnia|Rolna|336|54.58048|16.86194
+1623|Pu≥awy|Nadrzeczna|87|50.86079|17.4674
+1624|Kwidzyn|Piekarska|46|50.86079|17.4674
+1625|Oleúnica|Morelowa|911|54.58048|16.86194
+1626|Dπbrowa GÛrnicza|Kochanowskiego|813|50.20528|19.27498
+1627|Kwidzyn|JastrzÍbia|473|50.86079|17.4674
+1628|åwidnica|Promienna|337|50.20528|19.27498
+1629|Miko≥Ûw|Dworcowa|77|50.5107|18.30056
+1630|Bielsk Podlaski|Podwale|06|50.5107|18.30056
+1631|Wπgrowiec|G≥owackiego|78|50.86079|17.4674
+1632|Szczecin|Widok|75|50.86079|17.4674
+1633|Øary|Orzeszkowej|23|54.60528|18.34717
+1634|RzeszÛw|£abÍdzia|58|50.86079|17.4674
+1635|£owicz|PowstaÒcÛw ålπskich|27|50.5107|18.30056
+1636|ØagaÒ|Kolorowa|929|50.5107|18.30056
+1637|BÍdzin|S≥owianska|385|50.5107|18.30056
+1638|åwiebodzice|Jeøynowa|079|51.14942|15.00835
+1639|Cieszyn|Opolska|32|54.58048|16.86194
+1640|Bielsko-Bia≥a|Reja|93|50.5107|18.30056
+1641|Ostrowiec åwiÍtokrzyski|Swierkowa|19|50.5107|18.30056
+1642|åwidnik|Makowa|64|54.58048|16.86194
+1643|Gliwice|Stycznia|26|50.86079|17.4674
+1644|Piekary ålπskie|Fredry|30|51.14942|15.00835
+1645|Kluczbork|Orla|27|54.58048|16.86194
+1646|Opole|Okrzei|99|50.20528|19.27498
+1647|Bielsk Podlaski|Okrzei|777|54.58048|16.86194
+1648|Szczecinek|Stawowa|44|50.20528|19.27498
+1649|ChrzanÛw|KraÒcowa|28|50.20528|19.27498
+1650|Zabrze|Andersa|46|51.14942|15.00835
+1651|Che≥m|£πczna|61|54.60528|18.34717
+1652|Bia≥ystok|Kolorowa|00|54.60528|18.34717
+1653|I≥awa|Graniczna|025|54.58048|16.86194
+1654|Wa≥brzych|Wiosenna|72|54.60528|18.34717
+1655|Bia≥ystok|Krzywa|965|51.14942|15.00835
+1656|K≥odzko|Kwiatowa|55|54.58048|16.86194
+1657|PoznaÒ|D≥uga|23|54.60528|18.34717
+1658|ZambrÛw|Z≥ota|19|54.58048|16.86194
+1659|Lublin|Korfantego|49|54.60528|18.34717
+1660|Czerwionka-Leszczyny|Bukowa|572|50.86079|17.4674
+1661|Bydgoszcz|GlÛwna|28|54.58048|16.86194
+1662|Sandomierz|WspÛlna|34|50.20528|19.27498
+1663|Czeladü|Traugutta|00|54.60528|18.34717
+1664|Mys≥owice|Kaliska|72|50.20528|19.27498
+1665|Legnica|SzczÍúliwa|49|54.58048|16.86194
+1666|ToruÒ|Piwna|94|50.86079|17.4674
+1667|Opole|Cyprysowa|267|50.5107|18.30056
+1668|Koúcian|Malinowa|04|50.20528|19.27498
+1669|Wrzeúnia|Jod≥owa|76|54.58048|16.86194
+1670|Piekary ålπskie|Porzeczkowa|83|50.5107|18.30056
+1671|åwiecie|Kowalska|940|50.20528|19.27498
+1672|Oleúnica|PartyzantÛw|409|50.86079|17.4674
+1673|DÍbica|Wierzbowa|18|50.5107|18.30056
+1674|Bielawa|Podleúna|85|50.86079|17.4674
+1675|Jarocin|Konstytucji 3 Maja|99|50.86079|17.4674
+1676|E≥k|Wilcza|18|50.20528|19.27498
+1677|£omøa|Rumiankowa|088|50.5107|18.30056
+1678|Sochaczew|Stroma|71|54.60528|18.34717
+1679|Dπbrowa GÛrnicza|Fabryczna|56|50.86079|17.4674
+1680|Jas≥o|Zakole|08|50.20528|19.27498
+1681|Szczecinek|Grabowa|94|51.14942|15.00835
+1682|£aziska GÛrne|Wa≥owa|65|50.5107|18.30056
+1683|Opole|Szafirowa|262|54.60528|18.34717
+1684|Bielsk Podlaski|Kasztanowa|22|54.60528|18.34717
+1685|Marki|Prosta|27|50.20528|19.27498
+1686|Turek|Tylna|19|50.86079|17.4674
+1687|Sopot|PartyzantÛw|481|51.14942|15.00835
+1688|Stalowa Wola|Pocztowa|72|54.60528|18.34717
+1689|ChrzanÛw|Dzia≥kowa|82|50.86079|17.4674
+1690|Szczecinek|M≥yÒska|90|54.60528|18.34717
+1691|Sochaczew|S≥owianska|19|54.58048|16.86194
+1692|Gorlice|Dojazdowa|53|54.58048|16.86194
+1693|CzÍstochowa|Rumiankowa|26|54.58048|16.86194
+1694|Miko≥Ûw|Opolska|449|51.14942|15.00835
+1695|Brodnica|Dworcowa|424|50.20528|19.27498
+1696|£omøa|RÛzana|98|50.20528|19.27498
+1697|Elblπg|Lawendowa|26|50.5107|18.30056
+1698|Nowa SÛl|OkrÍøna|24|54.60528|18.34717
+1699|KnurÛw|Grzybowa|46|50.20528|19.27498
+1700|Ko≥obrzeg|S≥onecznikowa|703|50.5107|18.30056
+1701|Czechowice-Dziedzice|Rejtana|549|50.5107|18.30056
+1702|Kraúnik|Malczewskiego|07|50.86079|17.4674
+1703|Turek|Piekarska|41|54.60528|18.34717
+1704|Stargard SzczeciÒski|Brzozowa|765|51.14942|15.00835
+1705|Jarocin|Bociania|11|50.20528|19.27498
+1706|Wroc≥aw|Browarna|778|54.58048|16.86194
+1707|Zgorzelec|Malinowa|675|50.86079|17.4674
+1708|P≥ock|Bukowa|48|54.60528|18.34717
+1709|Warszawa|Leszczynowa|936|50.86079|17.4674
+1710|Jaworzno|Kasztanowa|37|54.60528|18.34717
+1711|Koúcian|Podleúna|93|54.58048|16.86194
+1712|Stargard SzczeciÒski|PodgÛrna|49|50.86079|17.4674
+1713|Bartoszyce|Tartaczna|65|50.20528|19.27498
+1714|Lubin|Lipca|48|50.86079|17.4674
+1715|JastrzÍbie-ZdrÛj|Stycznia|76|54.60528|18.34717
+1716|KÍdzierzyn-Koüle|Øurawia|711|54.58048|16.86194
+1717|Olkusz|Krucza|64|54.60528|18.34717
+1718|Gliwice|Pocztowa|007|50.86079|17.4674
+1719|Wroc≥aw|Kowalska|54|54.60528|18.34717
+1720|åwiÍtoch≥owice|Lipowa|759|50.5107|18.30056
+1721|Zgierz|Boles≥awa Krzywoustego|89|54.60528|18.34717
+1722|LuboÒ|£anowa|45|51.14942|15.00835
+1723|KrakÛw|Kaszubska|08|50.86079|17.4674
+1724|Reda|Zielona|173|50.5107|18.30056
+1725|MyszkÛw|Straøacka|34|54.58048|16.86194
+1726|ZamoúÊ|Wiatraczna|734|50.86079|17.4674
+1727|Tychy|Myúliwska|96|51.14942|15.00835
+1728|Bi≥goraj|Starowiejska|156|51.14942|15.00835
+1729|Szczecin|ToruÒska|56|50.20528|19.27498
+1730|Tczew|Øeglarska|597|51.14942|15.00835
+1731|Inowroc≥aw|Øwirowa|33|50.5107|18.30056
+1732|åwidnica|Øabia|75|50.5107|18.30056
+1733|Radom|Ptasia|328|54.58048|16.86194
+1734|Mys≥owice|Poziomkowa|72|50.86079|17.4674
+1735|PruszkÛw|Krucza|75|51.14942|15.00835
+1736|Wodzis≥aw ålπski|Gajowa|26|50.86079|17.4674
+1737|Kielce|Zielona|90|54.60528|18.34717
+1738|åwiebodzice|Urocza|998|51.14942|15.00835
+1739|Piaseczno|SpÛ≥dzielcza|84|50.5107|18.30056
+1740|ToruÒ|Willowa|84|50.20528|19.27498
+1741|SwarzÍdz|Rajska|41|50.86079|17.4674
+1742|W≥oc≥awek|Kopernika|27|50.5107|18.30056
+1743|Bielsko-Bia≥a|TÍczowa|239|50.86079|17.4674
+1744|Nowy Sπcz|Fredry|756|50.20528|19.27498
+1745|Lublin|Rynek|31|51.14942|15.00835
+1746|ZduÒska Wola|Kaszubska|10|50.86079|17.4674
+1747|OstrÛw Wielkopolski|Wiejska|51|54.60528|18.34717
+1748|SwarzÍdz|DÍbowa|902|54.58048|16.86194
+1749|Sopot|Podmiejska|54|50.20528|19.27498
+1750|Wa≥brzych|CzÍstochowska|33|54.60528|18.34717
+1751|GdaÒsk|Moniuszki|81|54.60528|18.34717
+1752|Kalisz|WyszyÒskiego|372|50.86079|17.4674
+1753|Kluczbork|Szafirowa|74|50.86079|17.4674
+1754|RacibÛrz|Jod≥owa|357|50.86079|17.4674
+1755|Nowy DwÛr Mazowiecki|D≥ugosza|82|54.58048|16.86194
+1756|Siedlce|Dobra|65|54.58048|16.86194
+1757|GoleniÛw|Wojska Polskiego|17|54.60528|18.34717
+1758|Turek|Wiklinowa|856|54.60528|18.34717
+1759|MyszkÛw|Swierkowa|209|54.60528|18.34717
+1760|Zgierz|Zaciszna|31|50.20528|19.27498
+1761|Bydgoszcz|PowstaÒcÛw|97|50.86079|17.4674
+1762|åroda Wielkopolska|Øytnia|19|50.20528|19.27498
+1763|Ko≥o|årodkowa|28|50.86079|17.4674
+1764|Wrzeúnia|Zaciszna|03|50.20528|19.27498
+1765|Piaseczno|Poprzeczna|572|51.14942|15.00835
+1766|Gdynia|G≥ogowa|00|51.14942|15.00835
+1767|Siemianowice ålπskie|Skoúna|84|51.14942|15.00835
+1768|MiÒsk Mazowiecki|Kasprowicza|773|50.20528|19.27498
+1769|åroda Wielkopolska|SpÛ≥dzielcza|55|54.58048|16.86194
+1770|åwiÍtoch≥owice|Konstytucji 3 Maja|747|54.58048|16.86194
+1771|Pi≥a|Narutowicza|41|51.14942|15.00835
+1772|Ruda ålπska|Øurawia|64|51.14942|15.00835
+1773|Sieradz|Øurawia|50|51.14942|15.00835
+1774|Nowy DwÛr Mazowiecki|BorÛwkowa|13|54.60528|18.34717
+1775|Ostrowiec åwiÍtokrzyski|Wysoka|51|51.14942|15.00835
+1776|Wejherowo|Prosta|500|51.14942|15.00835
+1777|Zielona GÛra|Lipca|151|50.5107|18.30056
+1778|Jarocin|Øabia|067|50.5107|18.30056
+1779|Grudziπdz|Koúciuszki|708|51.14942|15.00835
+1780|OstrÛda|Rubinowa|76|50.5107|18.30056
+1781|S≥upsk|KusociÒskiego|21|51.14942|15.00835
+1782|TarnÛw|Stolarska|753|51.14942|15.00835
+1783|£aziska GÛrne|Mi≥a|88|50.86079|17.4674
+1784|Giøycko|GÛrna|59|50.5107|18.30056
+1785|P≥oÒsk|Porzeczkowa|86|50.20528|19.27498
+1786|Warszawa|Krzywa|48|54.58048|16.86194
+1787|Kluczbork|Wysoka|918|50.20528|19.27498
+1788|Ostro≥Íka|Wiπzowa|116|51.14942|15.00835
+1789|Øywiec|Miodowa|08|50.5107|18.30056
+1790|Tarnobrzeg|Handlowa|62|54.58048|16.86194
+1791|Warszawa|Przemys≥owa|61|50.5107|18.30056
+1792|Przemyúl|Moniuszki|10|50.86079|17.4674
+1793|Siedlce|Miodowa|604|50.86079|17.4674
+1794|BÍdzin|Orzechowa|64|50.20528|19.27498
+1795|JastrzÍbie-ZdrÛj|Porzeczkowa|310|54.60528|18.34717
+1796|åroda Wielkopolska|D≥ugosza|92|54.58048|16.86194
+1797|Bielsko-Bia≥a|Podmiejska|00|51.14942|15.00835
+1798|Jaworzno|Ba≥tycka|47|54.58048|16.86194
+1799|Krosno|OdrzaÒska|315|50.86079|17.4674
+1800|Grodzisk Mazowiecki|Mieszka I|020|54.58048|16.86194
+1801|Jarocin|Letniskowa|92|54.60528|18.34717
+1802|KrakÛw|Kolorowa|17|54.60528|18.34717
+1803|Ruda ålπska|Øwirowa|95|50.20528|19.27498
+1804|Pszczyna|Konopnickiej|70|54.60528|18.34717
+1805|Radomsko|Krokusowa|10|54.60528|18.34717
+1806|Piaseczno|Bydgoska|56|54.60528|18.34717
+1807|Gniezno|Leszczynowa|23|51.14942|15.00835
+1808|Lubin|JagielloÒska|94|50.86079|17.4674
+1809|GoleniÛw|Nadrzeczna|59|54.60528|18.34717
+1810|Radomsko|Jana Paw≥a II|29|50.20528|19.27498
+1811|ØagaÒ|Straøacka|379|50.86079|17.4674
+1812|Bia≥ystok|Polna|58|50.20528|19.27498
+1813|PiastÛw|Myúliwska|30|54.58048|16.86194
+1814|Lublin|Wczasowa|77|54.60528|18.34717
+1815|DzierøoniÛw|Rynek|02|54.60528|18.34717
+1816|M≥awa|Lazurowa|13|50.5107|18.30056
+1817|Jawor|Sk≥adowa|992|50.20528|19.27498
+1818|ØyrardÛw|G≥owackiego|50|51.14942|15.00835
+1819|Lublin|Dworska|43|54.60528|18.34717
+1820|Chojnice|£πkowa|18|50.5107|18.30056
+1821|RzeszÛw|Plater|77|51.14942|15.00835
+1822|Dπbrowa GÛrnicza|Ptasia|23|50.5107|18.30056
+1823|Elblπg|Lotnicza|20|50.20528|19.27498
+1824|ZambrÛw|Dworcowa|76|50.20528|19.27498
+1825|DzierøoniÛw|Piwna|41|54.58048|16.86194
+1826|Bia≥a Podlaska|Reymonta|435|54.58048|16.86194
+1827|MyszkÛw|Opolska|69|50.20528|19.27498
+1828|Kraúnik|Rubinowa|45|51.14942|15.00835
+1829|£Ûdü|Niepodleg≥oúci|941|54.58048|16.86194
+1830|KrakÛw|Miodowa|528|54.60528|18.34717
+1831|RacibÛrz|Magnoliowa|072|54.60528|18.34717
+1832|ChrzanÛw|£πkowa|17|50.86079|17.4674
+1833|Legnica|Rajska|096|50.86079|17.4674
+1834|PiastÛw|Fio≥kowa|78|54.60528|18.34717
+1835|Rumia|GÛrnicza|20|54.58048|16.86194
+1836|ZamoúÊ|£anowa|951|54.58048|16.86194
+1837|Nowa Ruda|£πczna|14|51.14942|15.00835
+1838|Rumia|Boles≥awa Chrobrego|56|54.58048|16.86194
+1839|Brzeg|Øwirki i Wigury|15|50.5107|18.30056
+1840|Øary|Wczasowa|91|50.20528|19.27498
+1841|Bia≥ogard|Miodowa|88|54.60528|18.34717
+1842|Szczecinek|Podwale|966|54.58048|16.86194
+1843|KÍtrzyn|JagielloÒska|125|54.60528|18.34717
+1844|Jarocin|Poprzeczna|44|50.20528|19.27498
+1845|Police|PÛ≥nocna|32|54.58048|16.86194
+1846|Wo≥omin|Andersa|37|50.20528|19.27498
+1847|Szczecin|Zaciszna|476|54.58048|16.86194
+1848|Inowroc≥aw|KrasiÒskiego|87|51.14942|15.00835
+1849|Jelenia GÛra|Wiatraczna|789|50.5107|18.30056
+1850|Starachowice|G≥ogowa|52|50.5107|18.30056
+1851|Kraúnik|Konstytucji 3 Maja|611|50.20528|19.27498
+1852|Bielsko-Bia≥a|Morska|20|50.5107|18.30056
+1853|Reda|Korczaka|18|51.14942|15.00835
+1854|GdaÒsk|Ciasna|88|51.14942|15.00835
+1855|åwiÍtoch≥owice|Wrzosowa|19|50.5107|18.30056
+1856|Tychy|Strzelecka|875|54.60528|18.34717
+1857|Siedlce|Wierzbowa|81|54.58048|16.86194
+1858|Ko≥o|Makowa|088|50.20528|19.27498
+1859|£ukÛw|BorÛwkowa|26|50.86079|17.4674
+1860|Police|Bociania|448|54.58048|16.86194
+1861|PoznaÒ|Na≥kowskiej|28|51.14942|15.00835
+1862|BÍdzin|Liliowa|10|50.5107|18.30056
+1863|Øary|£abÍdzia|47|50.86079|17.4674
+1864|Legionowo|Wolnoúci|64|54.58048|16.86194
+1865|Stargard SzczeciÒski|Ja≥owcowa|27|51.14942|15.00835
+1866|Radom|Osiedlowa|496|50.20528|19.27498
+1867|Gorlice|PodgÛrna|73|54.58048|16.86194
+1868|Suwa≥ki|Maczka|568|51.14942|15.00835
+1869|Rybnik|Polna|062|50.86079|17.4674
+1870|Sochaczew|PowstaÒcÛw|51|50.5107|18.30056
+1871|Radom|Zacisze|04|50.5107|18.30056
+1872|åwidnica|Opolska|90|50.86079|17.4674
+1873|Tarnobrzeg|Miarki|14|50.86079|17.4674
+1874|Grodzisk Mazowiecki|Broniewskiego|094|54.58048|16.86194
+1875|ChorzÛw|Szeroka|900|54.58048|16.86194
+1876|£aziska GÛrne|Ba≥tycka|39|54.60528|18.34717
+1877|åwiÍtoch≥owice|KrÛlewska|21|50.5107|18.30056
+1878|Czerwionka-Leszczyny|Grzybowa|86|50.86079|17.4674
+1879|Piekary ålπskie|Czarnieckiego|68|54.60528|18.34717
+1880|Skierniewice|Torowa|96|50.86079|17.4674
+1881|Konin|Pu≥askiego|039|54.58048|16.86194
+1882|£ukÛw|Straøacka|35|50.5107|18.30056
+1883|Szczytno|Przechodnia|29|54.58048|16.86194
+1884|Ostro≥Íka|Drzyma≥y|651|50.5107|18.30056
+1885|SwarzÍdz|Wroc≥awska|445|54.60528|18.34717
+1886|Starachowice|Nieca≥a|25|50.20528|19.27498
+1887|Legnica|Nowa|33|51.14942|15.00835
+1888|Stalowa Wola|Konopnickiej|348|50.5107|18.30056
+1889|PruszkÛw|Dobra|98|54.60528|18.34717
+1890|Øory|Stroma|99|51.14942|15.00835
+1891|WieluÒ|Pa≥acowa|72|50.86079|17.4674
+1892|ZduÒska Wola|Øeglarska|28|50.20528|19.27498
+1893|RzeszÛw|Mokra|50|54.60528|18.34717
+1894|Bielsk Podlaski|Lipowa|92|51.14942|15.00835
+1895|Kluczbork|Szafirowa|516|50.86079|17.4674
+1896|OstrÛw Wielkopolski|åwierczewskiego|40|50.20528|19.27498
+1897|Pruszcz GdaÒski|Andersa|54|54.58048|16.86194
+1898|TomaszÛw Mazowiecki|Kolejowa|76|54.60528|18.34717
+1899|Sieradz|Jana|403|50.86079|17.4674
+1900|Piaseczno|Miarki|26|51.14942|15.00835
+1901|Dπbrowa GÛrnicza|JagielloÒska|829|51.14942|15.00835
+1902|Skarøysko-Kamienna|Klonowa|94|50.5107|18.30056
+1903|Opole|Chmielna|34|50.86079|17.4674
+1904|TomaszÛw Mazowiecki|Brzoskwiniowa|472|54.60528|18.34717
+1905|Jawor|Wierzbowa|76|50.20528|19.27498
+1906|åwinoujúcie|Wiejska|09|50.86079|17.4674
+1907|KÍdzierzyn-Koüle|WspÛlna|574|54.58048|16.86194
+1908|Czerwionka-Leszczyny|Stawowa|14|54.60528|18.34717
+1909|E≥k|PoznaÒska|17|54.60528|18.34717
+1910|Lublin|S≥owackiego|942|50.20528|19.27498
+1911|Jawor|Skoúna|77|50.86079|17.4674
+1912|Koúcierzyna|Zau≥ek|59|54.58048|16.86194
+1913|LuboÒ|Mostowa|88|50.86079|17.4674
+1914|CzÍstochowa|Che≥moÒskiego|19|54.60528|18.34717
+1915|Gliwice|Tuwima|471|54.60528|18.34717
+1916|OstrÛw Mazowiecka|KrÛlewska|282|50.5107|18.30056
+1917|TomaszÛw Mazowiecki|JastrzÍbia|03|50.20528|19.27498
+1918|Rybnik|Cmentarna|01|50.20528|19.27498
+1919|Nowy Sπcz|Krucza|274|50.5107|18.30056
+1920|Pruszcz GdaÒski|Szeroka|30|54.60528|18.34717
+1921|ChrzanÛw|Piekarska|54|51.14942|15.00835
+1922|PiotrkÛw Trybunalski|Rubinowa|035|54.60528|18.34717
+1923|Katowice|Poprzeczna|401|50.86079|17.4674
+1924|Wodzis≥aw ålπski|Zielona|45|54.58048|16.86194
+1925|£owicz|KrasiÒskiego|85|50.86079|17.4674
+1926|Bia≥a Podlaska|KiliÒskiego|459|50.5107|18.30056
+1927|ZamoúÊ|Mostowa|17|51.14942|15.00835
+1928|Malbork|Zapolskiej|958|50.86079|17.4674
+1929|Krotoszyn|SpÛ≥dzielcza|06|51.14942|15.00835
+1930|Koúcian|Pomorska|75|50.86079|17.4674
+1931|I≥awa|S≥owianska|725|51.14942|15.00835
+1932|Sopot|G≥owackiego|85|50.20528|19.27498
+1933|Rybnik|Floriana|72|50.20528|19.27498
+1934|Inowroc≥aw|Konopnickiej|28|54.58048|16.86194
+1935|Wπgrowiec|Popie≥uszki|37|54.58048|16.86194
+1936|ToruÒ|Morcinka|76|50.20528|19.27498
+1937|Dπbrowa GÛrnicza|Nieca≥a|77|50.20528|19.27498
+1938|Gorlice|Boles≥awa Krzywoustego|44|54.60528|18.34717
+1939|E≥k|Wiosenna|57|54.60528|18.34717
+1940|Turek|Orzechowa|44|54.58048|16.86194
+1941|ToruÒ|Bydgoska|90|50.86079|17.4674
+1942|Rumia|GÛrska|700|54.60528|18.34717
+1943|Miko≥Ûw|Øeglarska|11|50.5107|18.30056
+1944|P≥ock|Wiúlana|706|54.58048|16.86194
+1945|Pi≥a|Zielna|94|54.58048|16.86194
+1946|S≥upsk|Stroma|52|50.86079|17.4674
+1947|Wodzis≥aw ålπski|Kasztanowa|64|50.20528|19.27498
+1948|ToruÒ|RÛzana|70|50.5107|18.30056
+1949|PoznaÒ|PowstaÒcÛw ålπskich|28|51.14942|15.00835
+1950|SwarzÍdz|W≥adys≥awa £okietka|13|54.60528|18.34717
+1951|OúwiÍcim|Krokusowa|654|50.86079|17.4674
+1952|Starogard GdaÒski|Sosnowa|24|50.20528|19.27498
+1953|OstrÛw Mazowiecka|Wierzbowa|532|54.58048|16.86194
+1954|Zgorzelec|Zamkowa|22|51.14942|15.00835
+1955|Bi≥goraj|Daleka|54|50.20528|19.27498
+1956|Wrzeúnia|Drzyma≥y|80|54.60528|18.34717
+1957|Nysa|Jana Sobieskiego|29|54.58048|16.86194
+1958|PiotrkÛw Trybunalski|Chmielna|01|54.58048|16.86194
+1959|Radomsko|Czarnieckiego|66|51.14942|15.00835
+1960|Jawor|M≥yÒska|86|50.86079|17.4674
+1961|PruszkÛw|Rolna|573|50.86079|17.4674
+1962|ZamoúÊ|Korfantego|42|54.60528|18.34717
+1963|Krosno|Orla|300|51.14942|15.00835
+1964|LÍbork|Piwna|785|54.60528|18.34717
+1965|Tarnobrzeg|Poniatowskiego|54|54.58048|16.86194
+1966|GorzÛw Wielkopolski|Zamkowa|211|54.60528|18.34717
+1967|Elblπg|Hutnicza|22|54.60528|18.34717
+1968|Pi≥a|Poprzeczna|65|50.86079|17.4674
+1969|Bia≥a Podlaska|Jeziorna|68|50.86079|17.4674
+1970|PiotrkÛw Trybunalski|Krakowska|89|54.58048|16.86194
+1971|LuboÒ|Zdrojowa|71|54.58048|16.86194
+1972|Wa≥cz|ToruÒska|990|50.20528|19.27498
+1973|Cieszyn|Wiejska|02|50.20528|19.27498
+1974|AugustÛw|Stolarska|07|50.20528|19.27498
+1975|Cieszyn|Jeziorna|801|51.14942|15.00835
+1976|Bielsko-Bia≥a|Pocztowa|975|54.58048|16.86194
+1977|KÍdzierzyn-Koüle|Wroc≥awska|09|50.86079|17.4674
+1978|Ostro≥Íka|Kasprowicza|85|54.58048|16.86194
+1979|Ostro≥Íka|ToruÒska|90|50.86079|17.4674
+1980|£aziska GÛrne|Jana III Sobieskiego|21|50.20528|19.27498
+1981|Siemianowice ålπskie|Leszczynowa|94|51.14942|15.00835
+1982|GoleniÛw|Torowa|48|50.20528|19.27498
+1983|K≥odzko|Zaciszna|94|54.60528|18.34717
+1984|CzÍstochowa|Promienna|43|50.20528|19.27498
+1985|KÍdzierzyn-Koüle|Kazimierza Wielkiego|63|54.58048|16.86194
+1986|Marki|Bydgoska|53|51.14942|15.00835
+1987|OúwiÍcim|PodgÛrna|735|54.60528|18.34717
+1988|£omøa|Kossaka|86|54.60528|18.34717
+1989|åwidnica|Staszica|09|51.14942|15.00835
+1990|Brzeg|JarzÍbinowa|622|50.86079|17.4674
+1991|Reda|PowstaÒcÛw Wielkopolskich|61|50.5107|18.30056
+1992|Bia≥a Podlaska|Wiklinowa|917|50.20528|19.27498
+1993|Jas≥o|Tysiπclecia|711|50.5107|18.30056
+1994|Bia≥ogard|Jadwigi|52|54.58048|16.86194
+1995|TarnÛw|Po≥udniowa|176|50.86079|17.4674
+1996|KÍtrzyn|Stawowa|49|50.86079|17.4674
+1997|Nowy DwÛr Mazowiecki|Grunwaldzka|00|50.5107|18.30056
+1998|Przemyúl|Orla|297|50.20528|19.27498
+1999|Tychy|Mi≥osza|92|50.5107|18.30056
+2000|Leszno|Hutnicza|08|54.58048|16.86194
+2001|S≥upsk|Truskawkowa|75|54.58048|16.86194
+2002|Starogard GdaÒski|Rataja|15|51.14942|15.00835
+2003|Sochaczew|Tysiπclecia|97|54.60528|18.34717
+2004|Grodzisk Mazowiecki|CzÍstochowska|70|54.60528|18.34717
+2005|TarnÛw|JaskÛ≥cza|86|51.14942|15.00835
+2006|Mielec|Ga≥czynskiego|449|51.14942|15.00835
+2007|Gniezno|Mazowiecka|26|50.20528|19.27498
+2008|Kalisz|Wiatraczna|112|50.86079|17.4674
+2009|W≥oc≥awek|Podleúna|99|51.14942|15.00835
+2010|Skawina|Kalinowa|72|54.58048|16.86194
+2011|Che≥m|Przemys≥owa|598|50.20528|19.27498
+2012|Katowice|Irysowa|850|50.20528|19.27498
+2013|Krotoszyn|Dzia≥kowa|82|50.86079|17.4674
+2014|Police|JarzÍbinowa|16|54.60528|18.34717
+2015|ØyrardÛw|Ko≥≥πtaja|76|50.20528|19.27498
+2016|Elblπg|WrÛblewskiego|923|54.58048|16.86194
+2017|Wa≥cz|Listopada|80|50.5107|18.30056
+2018|åwiecie|Rzemieúlnicza|63|50.20528|19.27498
+2019|PiotrkÛw Trybunalski|Orzechowa|82|50.5107|18.30056
+2020|MiÒsk Mazowiecki|Klasztorna|47|54.60528|18.34717
+2021|Konin|Wilcza|72|54.58048|16.86194
+2022|Wroc≥aw|Z≥ota|12|50.86079|17.4674
+2023|Zabrze|Letniskowa|61|50.20528|19.27498
+2024|Suwa≥ki|Pu≥askiego|00|50.20528|19.27498
+2025|Siemianowice ålπskie|Zapolskiej|177|50.5107|18.30056
+2026|Police|Solidarnosci|24|54.58048|16.86194
+2027|ZamoúÊ|Wysoka|97|51.14942|15.00835
+2028|Lublin|BatalionÛw Ch≥opskich|24|50.5107|18.30056
+2029|Elblπg|Krasickiego|32|54.60528|18.34717
+2030|BÍdzin|£anowa|62|50.86079|17.4674
+2031|Øory|Wybickiego|14|50.86079|17.4674
+2032|SwarzÍdz|Stroma|37|50.20528|19.27498
+2033|GoleniÛw|Rzeczna|62|50.20528|19.27498
+2034|MiÒsk Mazowiecki|Pa≥acowa|50|54.58048|16.86194
+2035|Lublin|Sportowa|17|51.14942|15.00835
+2036|OstrÛw Wielkopolski|Skrajna|04|50.86079|17.4674
+2037|Pruszcz GdaÒski|Wroc≥awska|56|54.58048|16.86194
+2038|G≥ogÛw|Armii Krajowej|707|50.20528|19.27498
+2039|Nowa Ruda|Sarnia|26|50.86079|17.4674
+2040|O≥awa|Czarnieckiego|49|51.14942|15.00835
+2041|Kalisz|Grabowa|34|50.86079|17.4674
+2042|Pi≥a|Poprzeczna|61|54.60528|18.34717
+2043|Zawiercie|Skoúna|53|54.60528|18.34717
+2044|Piaseczno|Na≥kowskiej|99|50.20528|19.27498
+2045|Che≥m|Kolonia|05|50.20528|19.27498
+2046|Jaworzno|Torowa|892|50.86079|17.4674
+2047|Lubliniec|årodkowa|82|51.14942|15.00835
+2048|Sosnowiec|Liliowa|51|51.14942|15.00835
+2049|Zielona GÛra|SpÛ≥dzielcza|711|51.14942|15.00835
+2050|Tarnowskie GÛry|Bociania|482|54.58048|16.86194
+2051|Brzeg|Szafirowa|614|50.20528|19.27498
+2052|Sochaczew|GlÛwna|90|50.20528|19.27498
+2053|Zielona GÛra|Rycerska|48|54.60528|18.34717
+2054|ToruÒ|åwierczewskiego|92|50.5107|18.30056
+2055|Pi≥a|Ma≥a|74|54.60528|18.34717
+2056|Sieradz|KrÛlewska|45|54.58048|16.86194
+2057|Skawina|Okulickiego|454|54.58048|16.86194
+2058|ChorzÛw|Niepodleg≥oúci|158|50.5107|18.30056
+2059|K≥odzko|Sowia|73|50.20528|19.27498
+2060|Koúcierzyna|Wojska Polskiego|31|50.5107|18.30056
+2061|RacibÛrz|Wiklinowa|04|51.14942|15.00835
+2062|Skarøysko-Kamienna|Wπska|453|50.5107|18.30056
+2063|KnurÛw|Szmaragdowa|20|54.58048|16.86194
+2064|Turek|Kwiatowa|20|54.60528|18.34717
+2065|Øory|Zdrojowa|39|50.86079|17.4674
+2066|Radom|Konwaliowa|566|50.20528|19.27498
+2067|Nowa Ruda|Lubelska|553|54.60528|18.34717
+2068|Reda|Mazowiecka|09|51.14942|15.00835
+2069|KÍtrzyn|S≥onecznikowa|06|50.86079|17.4674
+2070|Pszczyna|Armii Krajowej|99|51.14942|15.00835
+2071|åroda Wielkopolska|Kolorowa|74|54.60528|18.34717
+2072|PiotrkÛw Trybunalski|Spokojna|553|54.58048|16.86194
+2073|Szczytno|Grottgera|189|50.5107|18.30056
+2074|Bartoszyce|Handlowa|949|51.14942|15.00835
+2075|LÍbork|ålπska|00|50.86079|17.4674
+2076|Be≥chatÛw|SpÛ≥dzielcza|990|54.60528|18.34717
+2077|Nowa SÛl|Lisia|00|50.20528|19.27498
+2078|Øary|Kielecka|85|51.14942|15.00835
+2079|årem|Jasna|680|54.58048|16.86194
+2080|Sieradz|Øytnia|12|51.14942|15.00835
+2081|Kalisz|Jagodowa|344|54.58048|16.86194
+2082|Siemianowice ålπskie|Wczasowa|294|51.14942|15.00835
+2083|CiechanÛw|Cmentarna|83|50.86079|17.4674
+2084|ChrzanÛw|KrÛtka|828|50.5107|18.30056
+2085|Chojnice|Jana III Sobieskiego|604|54.60528|18.34717
+2086|Grodzisk Mazowiecki|Wiπzowa|04|50.5107|18.30056
+2087|Mys≥owice|G≥ogowa|48|54.58048|16.86194
+2088|Bia≥ogard|Pu≥askiego|37|51.14942|15.00835
+2089|Starachowice|Letniskowa|34|54.60528|18.34717
+2090|KnurÛw|Øeglarska|88|50.86079|17.4674
+2091|Rumia|DÍbowa|740|50.5107|18.30056
+2092|Bia≥a Podlaska|KraÒcowa|72|54.60528|18.34717
+2093|K≥odzko|Jesienna|34|50.86079|17.4674
+2094|I≥awa|Podmiejska|68|54.58048|16.86194
+2095|Szczecinek|Wierzbowa|722|50.20528|19.27498
+2096|Sandomierz|Kopernika|19|50.86079|17.4674
+2097|WieluÒ|Jadwigi|07|54.58048|16.86194
+2098|JastrzÍbie-ZdrÛj|Kalinowa|104|50.86079|17.4674
+2099|Czechowice-Dziedzice|Ma≥a|512|51.14942|15.00835
+2100|Sochaczew|Jeziorna|32|54.58048|16.86194
+2101|Kraúnik|Wybickiego|98|50.20528|19.27498
+2102|Boles≥awiec|Kasztanowa|53|50.86079|17.4674
+2103|Grudziπdz|M≥ynarska|896|51.14942|15.00835
+2104|Øary|Rybacka|604|54.58048|16.86194
+2105|Sosnowiec|Ceglana|66|51.14942|15.00835
+2106|åwiecie|årodkowa|31|51.14942|15.00835
+2107|ToruÒ|Jana III Sobieskiego|619|54.60528|18.34717
+2108|Sosnowiec|PowstaÒcÛw ålπskich|87|50.5107|18.30056
+2109|Lubin|Poziomkowa|773|54.60528|18.34717
+2110|Turek|GlÛwna|23|51.14942|15.00835
+2111|ChorzÛw|Czarnieckiego|435|50.20528|19.27498
+2112|£omøa|Kopernika|21|54.60528|18.34717
+2113|W≥oc≥awek|Witosa|87|54.60528|18.34717
+2114|Stargard SzczeciÒski|CzÍstochowska|629|54.58048|16.86194
+2115|Elblπg|KusociÒskiego|970|51.14942|15.00835
+2116|DÍbica|KrÛlewska|21|51.14942|15.00835
+2117|£ukÛw|Sportowa|822|54.58048|16.86194
+2118|LubartÛw|Lazurowa|141|54.58048|16.86194
+2119|Warszawa|Podleúna|42|50.20528|19.27498
+2120|Wodzis≥aw ålπski|Wybickiego|50|54.60528|18.34717
+2121|Jelenia GÛra|Liliowa|86|54.58048|16.86194
+2122|Czeladü|Wiosenna|99|50.86079|17.4674
+2123|£aziska GÛrne|Pszenna|555|54.60528|18.34717
+2124|TarnÛw|S≥owianska|202|54.60528|18.34717
+2125|Starachowice|Wilcza|97|50.5107|18.30056
+2126|Brodnica|SybirakÛw|706|51.14942|15.00835
+2127|W≥oc≥awek|PartyzantÛw|01|51.14942|15.00835
+2128|ZamoúÊ|Strzelecka|835|54.58048|16.86194
+2129|Czeladü|Reja|02|50.5107|18.30056
+2130|Przemyúl|Rolnicza|47|51.14942|15.00835
+2131|M≥awa|£abÍdzia|33|51.14942|15.00835
+2132|Wa≥brzych|Dojazdowa|938|51.14942|15.00835
+2133|Wπgrowiec|Wojciecha|362|50.86079|17.4674
+2134|Kalisz|Kreta|982|50.5107|18.30056
+2135|Katowice|Zamkowa|08|51.14942|15.00835
+2136|Gniezno|Orkana|30|50.86079|17.4674
+2137|Bydgoszcz|KiliÒskiego|90|54.58048|16.86194
+2138|Tczew|Brzechwy|488|54.58048|16.86194
+2139|Bytom|Jana Sobieskiego|634|50.86079|17.4674
+2140|ØyrardÛw|SpÛ≥dzielcza|58|50.5107|18.30056
+2141|Malbork|S≥owianska|190|54.60528|18.34717
+2142|Skarøysko-Kamienna|Grzybowa|56|50.86079|17.4674
+2143|£omøa|Kazimierza Wielkiego|85|51.14942|15.00835
+2144|TarnÛw|Paderewskiego|37|54.60528|18.34717
+2145|S≥upsk|Towarowa|91|54.58048|16.86194
+2146|Zgorzelec|Wierzbowa|089|54.58048|16.86194
+2147|DÍbica|Szarych SzeregÛw|55|50.86079|17.4674
+2148|Piekary ålπskie|Ludowa|633|54.60528|18.34717
+2149|åwidnica|Bydgoska|31|54.60528|18.34717
+2150|Zawiercie|Rycerska|95|50.86079|17.4674
+2151|Che≥m|Rynek|33|51.14942|15.00835
+2152|Szczecin|Brzozowa|99|50.5107|18.30056
+2153|Jas≥o|Baczynskiego|79|54.58048|16.86194
+2154|årem|Staffa|104|51.14942|15.00835
+2155|Bielsko-Bia≥a|Rzemieúlnicza|52|50.5107|18.30056
+2156|DÍbica|Poprzeczna|74|54.58048|16.86194
+2157|£aziska GÛrne|Rolna|50|50.5107|18.30056
+2158|åwinoujúcie|Makowa|45|51.14942|15.00835
+2159|Opole|Szymanowskiego|57|51.14942|15.00835
+2160|Gliwice|Malczewskiego|11|50.5107|18.30056
+2161|TarnÛw|Brzozowa|53|50.5107|18.30056
+2162|Kalisz|Wiatraczna|73|50.5107|18.30056
+2163|Olkusz|Orzeszkowej|49|50.5107|18.30056
+2164|SwarzÍdz|Plaøowa|176|54.60528|18.34717
+2165|GdaÒsk|Sk≥odowskiej-Curie|93|50.5107|18.30056
+2166|Szczytno|Pszenna|746|50.86079|17.4674
+2167|åwiÍtoch≥owice|Øytnia|31|54.60528|18.34717
+2168|Brodnica|ålπska|14|50.86079|17.4674
+2169|Giøycko|Malczewskiego|213|50.20528|19.27498
+2170|OstrÛw Mazowiecka|KrÛlewska|376|54.60528|18.34717
+2171|MiÒsk Mazowiecki|£πczna|02|54.60528|18.34717
+2172|Pu≥awy|Ma≥a|95|51.14942|15.00835
+2173|CzÍstochowa|Willowa|59|50.5107|18.30056
+2174|PiotrkÛw Trybunalski|Wierzbowa|412|50.20528|19.27498
+2175|Tczew|Cisowa|81|51.14942|15.00835
+2176|Jaros≥aw|Podmiejska|437|54.58048|16.86194
+2177|I≥awa|Øeglarska|83|50.20528|19.27498
+2178|åroda Wielkopolska|Szkolna|40|54.60528|18.34717
+2179|Wroc≥aw|Paderewskiego|326|51.14942|15.00835
+2180|Legionowo|Zau≥ek|98|54.60528|18.34717
+2181|åwiÍtoch≥owice|Sportowa|80|50.86079|17.4674
+2182|Wo≥omin|Pu≥askiego|46|50.20528|19.27498
+2183|OstrÛw Mazowiecka|Dzia≥kowa|366|50.20528|19.27498
+2184|Bytom|RÛzana|06|54.60528|18.34717
+2185|Mielec|Tulipanowa|17|50.86079|17.4674
+2186|Piekary ålπskie|GlÛwna|34|50.5107|18.30056
+2187|Brodnica|Wczasowa|51|54.60528|18.34717
+2188|åwidnica|Torowa|48|51.14942|15.00835
+2189|CiechanÛw|S≥owicza|817|50.86079|17.4674
+2190|Oleúnica|Øwirki i Wigury|80|50.5107|18.30056
+2191|årem|£πkowa|99|54.60528|18.34717
+2192|LuboÒ|Koúcielna|62|54.58048|16.86194
+2193|OstrÛw Mazowiecka|Norwida|14|54.58048|16.86194
+2194|Stalowa Wola|Morcinka|749|50.86079|17.4674
+2195|Olkusz|Listopada|87|50.5107|18.30056
+2196|Wπgrowiec|Kolejowa|72|50.86079|17.4674
+2197|Zabrze|Rolna|015|51.14942|15.00835
+2198|Konin|Widok|743|54.60528|18.34717
+2199|Wejherowo|Truskawkowa|292|50.20528|19.27498
+2200|Leszno|Koúcielna|390|51.14942|15.00835
+2201|Bielsk Podlaski|Traugutta|93|54.60528|18.34717
+2202|P≥ock|Øeromskiego|16|51.14942|15.00835
+2203|Czeladü|Sowia|09|54.58048|16.86194
+2204|Gorlice|Swierkowa|210|54.58048|16.86194
+2205|Inowroc≥aw|Pomorska|26|54.60528|18.34717
+2206|Grodzisk Mazowiecki|Plaøowa|363|51.14942|15.00835
+2207|Starachowice|Konwaliowa|76|50.20528|19.27498
+2208|Radom|Fabryczna|75|50.86079|17.4674
+2209|Elblπg|Pomorska|48|51.14942|15.00835
+2210|RzeszÛw|Leúna|014|50.20528|19.27498
+2211|ZambrÛw|Che≥moÒskiego|734|50.5107|18.30056
+2212|Sieradz|ToruÒska|64|51.14942|15.00835
+2213|Opole|Rzemieúlnicza|04|54.58048|16.86194
+2214|£owicz|Mazowiecka|834|54.58048|16.86194
+2215|Legionowo|Jeziorna|68|50.5107|18.30056
+2216|Sosnowiec|Nadrzeczna|25|54.60528|18.34717
+2217|Bydgoszcz|Wieniawskiego|363|54.60528|18.34717
+2218|Jaworzno|SzczÍúliwa|89|50.86079|17.4674
+2219|Olsztyn|Borowa|39|54.60528|18.34717
+2220|Olsztyn|Bursztynowa|623|51.14942|15.00835
+2221|Øory|Konarskiego|25|54.58048|16.86194
+2222|Wo≥omin|Leszczynowa|77|54.60528|18.34717
+2223|Be≥chatÛw|Boles≥awa Krzywoustego|44|50.86079|17.4674
+2224|Szczytno|S≥owianska|23|50.5107|18.30056
+2225|Turek|Czereúniowa|63|50.5107|18.30056
+2226|RacibÛrz|Stycznia|82|51.14942|15.00835
+2227|Bytom|Mazowiecka|364|50.5107|18.30056
+2228|OúwiÍcim|Nadrzeczna|32|54.58048|16.86194
+2229|Miko≥Ûw|Przechodnia|670|54.60528|18.34717
+2230|Zabrze|Wiatraczna|397|51.14942|15.00835
+2231|Wejherowo|JastrzÍbia|35|50.20528|19.27498
+2232|Wejherowo|WaryÒskiego|19|50.20528|19.27498
+2233|DÍbica|Sosnowa|15|50.5107|18.30056
+2234|Olkusz|PartyzantÛw|328|50.86079|17.4674
+2235|Krosno|Wyzwolenia|31|50.20528|19.27498
+2236|Ostro≥Íka|Letnia|59|51.14942|15.00835
+2237|Gliwice|Dworska|71|50.20528|19.27498
+2238|OstrÛw Wielkopolski|Daleka|86|50.20528|19.27498
+2239|Nowa SÛl|JaskÛ≥cza|51|54.58048|16.86194
+2240|DÍbica|Okrzei|26|54.58048|16.86194
+2241|Stalowa Wola|Popie≥uszki|33|50.20528|19.27498
+2242|Zgorzelec|Solidarnosci|32|54.58048|16.86194
+2243|Nowy DwÛr Mazowiecki|Listopada|91|54.60528|18.34717
+2244|ToruÒ|Weso≥a|278|50.20528|19.27498
+2245|Radom|Osiedlowa|76|50.5107|18.30056
+2246|Krotoszyn|W≥adys≥awa Jagie≥≥y|633|54.60528|18.34717
+2247|Tarnobrzeg|Sosnowa|512|54.60528|18.34717
+2248|BÍdzin|KrasiÒskiego|980|50.20528|19.27498
+2249|Dπbrowa GÛrnicza|DÍbowa|98|50.5107|18.30056
+2250|Czeladü|Spacerowa|244|54.58048|16.86194
+2251|Wo≥omin|Pogodna|22|50.5107|18.30056
+2252|Kraúnik|Widok|18|50.5107|18.30056
+2253|Jarocin|Go≥Íbia|34|50.5107|18.30056
+2254|Nowa SÛl|Traugutta|301|50.5107|18.30056
+2255|KÍdzierzyn-Koüle|PowstaÒcÛw ålπskich|041|50.20528|19.27498
+2256|Wo≥omin|Cegielniana|075|54.58048|16.86194
+2257|Zawiercie|Owocowa|59|54.60528|18.34717
+2258|ZambrÛw|årodkowa|80|50.86079|17.4674
+2259|Zgorzelec|Fabryczna|84|54.58048|16.86194
+2260|Oleúnica|Kazimierza Wielkiego|11|50.5107|18.30056
+2261|K≥odzko|Kalinowa|04|51.14942|15.00835
+2262|MiÒsk Mazowiecki|Cicha|00|50.86079|17.4674
+2263|Wodzis≥aw ålπski|Traugutta|117|50.20528|19.27498
+2264|Bia≥ystok|Pogodna|674|50.5107|18.30056
+2265|K≥odzko|Morcinka|08|51.14942|15.00835
+2266|P≥oÒsk|Chmielna|24|50.5107|18.30056
+2267|M≥awa|Tuwima|52|54.58048|16.86194
+2268|Sopot|Grabowa|48|54.58048|16.86194
+2269|Police|DÍbowa|966|51.14942|15.00835
+2270|Sieradz|BatalionÛw Ch≥opskich|795|50.5107|18.30056
+2271|Bydgoszcz|Grzybowa|351|54.60528|18.34717
+2272|Nowy Sπcz|Okrzei|803|54.58048|16.86194
+2273|MiÒsk Mazowiecki|KrÛtka|76|50.20528|19.27498
+2274|Bia≥a Podlaska|Dzia≥kowa|03|50.5107|18.30056
+2275|Kwidzyn|Tulipanowa|65|54.58048|16.86194
+2276|Dπbrowa GÛrnicza|Storczykowa|81|54.58048|16.86194
+2277|Grudziπdz|Orkana|15|51.14942|15.00835
+2278|åwiÍtoch≥owice|D≥uga|094|50.5107|18.30056
+2279|Szczecin|Wiúniowa|394|54.60528|18.34717
+2280|Sanok|Nadrzeczna|88|50.5107|18.30056
+2281|Pi≥a|Gajowa|80|54.60528|18.34717
+2282|P≥oÒsk|årednia|445|50.86079|17.4674
+2283|Tarnobrzeg|Poniatowskiego|395|54.58048|16.86194
+2284|P≥ock|Rzemieúlnicza|99|50.20528|19.27498
+2285|Koszalin|Opolska|430|50.5107|18.30056
+2286|PoznaÒ|Strzelecka|67|51.14942|15.00835
+2287|Suwa≥ki|Zakπtek|96|50.5107|18.30056
+2288|Rumia|Kamienna|186|54.58048|16.86194
+2289|Lublin|Myúliwska|55|50.5107|18.30056
+2290|Tychy|Øurawia|762|50.5107|18.30056
+2291|årem|Diamentowa|554|51.14942|15.00835
+2292|Przemyúl|Krucza|81|50.20528|19.27498
+2293|Chojnice|Piwna|84|50.86079|17.4674
+2294|KnurÛw|Skrajna|565|54.60528|18.34717
+2295|KnurÛw|Lwowska|92|50.5107|18.30056
+2296|MiÒsk Mazowiecki|Lipowa|673|50.5107|18.30056
+2297|Wrzeúnia|Kaszubska|54|54.60528|18.34717
+2298|ZambrÛw|S≥oneczna|73|50.5107|18.30056
+2299|PiastÛw|Bankowa|15|50.20528|19.27498
+2300|PiotrkÛw Trybunalski|Koúcielna|87|50.86079|17.4674
+2301|Ostrowiec åwiÍtokrzyski|Ceglana|967|50.86079|17.4674
+2302|OstrÛw Wielkopolski|Leszczynowa|05|50.86079|17.4674
+2303|Sieradz|Øabia|874|51.14942|15.00835
+2304|Lubliniec|WaryÒskiego|45|50.20528|19.27498
+2305|E≥k|Pa≥acowa|77|54.58048|16.86194
+2306|Bia≥ystok|Jesionowa|85|50.5107|18.30056
+2307|Leszno|Zaciszna|961|50.20528|19.27498
+2308|Piaseczno|Leúna|585|51.14942|15.00835
+2309|ØagaÒ|Wojciecha|06|50.86079|17.4674
+2310|Wodzis≥aw ålπski|£πkowa|042|54.60528|18.34717
+2311|OstrÛw Wielkopolski|Øeromskiego|60|50.86079|17.4674
+2312|Suwa≥ki|BatalionÛw Ch≥opskich|553|50.20528|19.27498
+2313|Bielsk Podlaski|Wschodnia|803|50.86079|17.4674
+2314|PruszkÛw|Zboøowa|89|50.5107|18.30056
+2315|LubartÛw|Øurawia|04|54.60528|18.34717
+2316|åwiebodzice|Sk≥odowskiej-Curie|967|50.5107|18.30056
+2317|Miko≥Ûw|Chmielna|907|50.5107|18.30056
+2318|Ostrowiec åwiÍtokrzyski|Irysowa|89|50.5107|18.30056
+2319|OstrÛw Mazowiecka|Zdrojowa|74|51.14942|15.00835
+2320|Wejherowo|Truskawkowa|04|50.5107|18.30056
+2321|RacibÛrz|S≥oneczna|583|54.58048|16.86194
+2322|Jaros≥aw|Piaskowa|07|50.20528|19.27498
+2323|Suwa≥ki|Chmielna|75|51.14942|15.00835
+2324|Kielce|£abÍdzia|17|51.14942|15.00835
+2325|LubartÛw|Niepodleg≥oúci|413|54.58048|16.86194
+2326|Oleúnica|Urocza|19|50.86079|17.4674
+2327|Dπbrowa GÛrnicza|Koúciuszki|566|51.14942|15.00835
+2328|GdaÒsk|Kreta|87|50.86079|17.4674
+2329|Ko≥o|Promienna|10|50.20528|19.27498
+2330|Przemyúl|Plater|45|50.20528|19.27498
+2331|Reda|Agrestowa|22|50.20528|19.27498
+2332|Nowy DwÛr Mazowiecki|Czereúniowa|58|50.86079|17.4674
+2333|P≥oÒsk|KusociÒskiego|76|51.14942|15.00835
+2334|OstrÛda|KsiÍøycowa|106|50.20528|19.27498
+2335|Stalowa Wola|GÛrska|26|50.86079|17.4674
+2336|Malbork|Szeroka|005|54.58048|16.86194
+2337|årem|KrÛtka|44|51.14942|15.00835
+2338|P≥ock|Bankowa|977|54.60528|18.34717
+2339|Pi≥a|Dπbrowskiego|815|51.14942|15.00835
+2340|Inowroc≥aw|Wybickiego|058|50.86079|17.4674
+2341|Lublin|JaskÛ≥cza|180|54.58048|16.86194
+2342|Koúcian|Graniczna|20|51.14942|15.00835
+2343|Ostrowiec åwiÍtokrzyski|Wypoczynkowa|62|50.86079|17.4674
+2344|åwiecie|Konwaliowa|27|50.5107|18.30056
+2345|Gdynia|Ja≥owcowa|371|50.5107|18.30056
+2346|Ruda ålπska|Leúna|29|54.60528|18.34717
+2347|Legnica|Radosna|58|51.14942|15.00835
+2348|Mys≥owice|Lazurowa|05|54.58048|16.86194
+2349|Boles≥awiec|Olchowa|25|50.5107|18.30056
+2350|Szczecinek|PowstaÒcÛw ålπskich|89|51.14942|15.00835
+2351|Krotoszyn|Brzechwy|513|50.20528|19.27498
+2352|Bia≥ystok|PowstaÒcÛw ålπskich|32|50.5107|18.30056
+2353|Wrzeúnia|Wroc≥awska|67|54.58048|16.86194
+2354|Oleúnica|Wczasowa|39|50.86079|17.4674
+2355|Zakopane|Brzechwy|20|54.60528|18.34717
+2356|Zielona GÛra|Jana III Sobieskiego|52|54.60528|18.34717
+2357|GdaÒsk|Targowa|745|50.5107|18.30056
+2358|W≥oc≥awek|Jaworowa|58|50.5107|18.30056
+2359|M≥awa|årednia|17|54.58048|16.86194
+2360|Pabianice|Jab≥oniowa|72|50.20528|19.27498
+2361|Zgierz|Browarna|87|50.20528|19.27498
+2362|ChrzanÛw|Korczaka|73|50.20528|19.27498
+2363|Sanok|Koralowa|21|54.58048|16.86194
+2364|Kwidzyn|Mi≥a|873|50.20528|19.27498
+2365|Bytom|Zamkowa|04|50.5107|18.30056
+2366|Zielona GÛra|Diamentowa|25|50.5107|18.30056
+2367|Nowa Ruda|Solidarnosci|353|50.5107|18.30056
+2368|Bydgoszcz|Reymonta|43|54.60528|18.34717
+2369|Sopot|Z≥ota|15|50.86079|17.4674
+2370|Skierniewice|Wysoka|01|54.60528|18.34717
+2371|Ostro≥Íka|KusociÒskiego|24|50.86079|17.4674
+2372|CiechanÛw|GÛrnicza|278|50.20528|19.27498
+2373|AugustÛw|Owocowa|86|51.14942|15.00835
+2374|åwinoujúcie|Kruczkowskiego|98|51.14942|15.00835
+2375|Giøycko|WaryÒskiego|224|50.86079|17.4674
+2376|LÍbork|PoznaÒska|94|51.14942|15.00835
+2377|W≥oc≥awek|Konstytucji 3 Maja|52|54.60528|18.34717
+2378|£aziska GÛrne|Chopina|72|54.60528|18.34717
+2379|Skawina|S≥onecznikowa|31|54.60528|18.34717
+2380|Szczytno|KraÒcowa|928|51.14942|15.00835
+2381|Legnica|Robotnicza|53|51.14942|15.00835
+2382|Rybnik|Malinowa|15|51.14942|15.00835
+2383|Ostro≥Íka|Kamienna|62|50.86079|17.4674
+2384|åwidnica|Olchowa|525|50.5107|18.30056
+2385|Szczecinek|Hutnicza|039|50.86079|17.4674
+2386|OúwiÍcim|Mostowa|333|50.5107|18.30056
+2387|åwidnica|Øeglarska|59|50.86079|17.4674
+2388|ZamoúÊ|Sucharskiego|72|50.86079|17.4674
+2389|Pi≥a|D≥ugosza|43|54.58048|16.86194
+2390|Zgierz|Warszawska|04|50.20528|19.27498
+2391|Legionowo|Sowia|86|54.60528|18.34717
+2392|£aziska GÛrne|Andersa|558|50.5107|18.30056
+2393|TomaszÛw Mazowiecki|Stolarska|78|50.86079|17.4674
+2394|Sandomierz|Szewska|219|50.5107|18.30056
+2395|Stargard SzczeciÒski|WrÛblewskiego|706|51.14942|15.00835
+2396|Zπbki|Wilcza|417|54.60528|18.34717
+2397|GoleniÛw|Wieniawskiego|09|50.86079|17.4674
+2398|GoleniÛw|Rzemieúlnicza|737|50.20528|19.27498
+2399|Gniezno|Wodna|78|50.5107|18.30056
+2400|Nowy DwÛr Mazowiecki|Sokola|52|51.14942|15.00835
+2401|Kluczbork|Lipca|46|50.5107|18.30056
+2402|Tarnobrzeg|Storczykowa|52|51.14942|15.00835
+2403|Kraúnik|Agrestowa|27|51.14942|15.00835
+2404|Cieszyn|Skrajna|23|50.86079|17.4674
+2405|Szczytno|Parkowa|102|54.58048|16.86194
+2406|Ruda ålπska|Kossaka|178|54.58048|16.86194
+2407|SwarzÍdz|Malinowa|44|54.60528|18.34717
+2408|Wa≥brzych|Sk≥adowa|415|50.5107|18.30056
+2409|Sopot|Pomorska|844|50.20528|19.27498
+2410|Øywiec|Wiklinowa|88|50.20528|19.27498
+2411|Pabianice|Sosnowa|68|50.5107|18.30056
+2412|Tychy|Pu≥askiego|37|50.20528|19.27498
+2413|Wa≥cz|Krokusowa|935|50.86079|17.4674
+2414|Pu≥awy|Krucza|64|51.14942|15.00835
+2415|Suwa≥ki|Zakπtek|86|50.86079|17.4674
+2416|Siemianowice ålπskie|Stroma|99|50.20528|19.27498
+2417|GoleniÛw|Willowa|61|50.20528|19.27498
+2418|Wa≥brzych|Sosnowa|12|54.58048|16.86194
+2419|Brzeg|Miarki|275|50.86079|17.4674
+2420|Zakopane|Jana III Sobieskiego|418|54.58048|16.86194
+2421|£owicz|Na≥kowskiej|70|50.5107|18.30056
+2422|Elblπg|Rzeczna|40|54.58048|16.86194
+2423|Wo≥omin|Kolonia|17|54.58048|16.86194
+2424|Jas≥o|Dπbrowskiej|91|54.58048|16.86194
+2425|Inowroc≥aw|Narutowicza|56|54.60528|18.34717
+2426|Kutno|Wojska Polskiego|92|54.58048|16.86194
+2427|Wodzis≥aw ålπski|Wyzwolenia|79|54.60528|18.34717
+2428|Opole|Hutnicza|32|54.60528|18.34717
+2429|PoznaÒ|G≥ogowa|07|50.86079|17.4674
+2430|Mys≥owice|Staffa|078|51.14942|15.00835
+2431|Brzeg|M≥ynarska|57|50.5107|18.30056
+2432|Bielawa|Sikorskiego|62|51.14942|15.00835
+2433|Zπbki|Rumiankowa|391|51.14942|15.00835
+2434|åwinoujúcie|Maja|337|51.14942|15.00835
+2435|PruszkÛw|Weso≥a|40|54.60528|18.34717
+2436|Szczytno|JarzÍbinowa|795|51.14942|15.00835
+2437|Mys≥owice|S≥onecznikowa|81|50.20528|19.27498
+2438|Skawina|Staffa|43|54.58048|16.86194
+2439|Olkusz|Kielecka|66|50.20528|19.27498
+2440|Czechowice-Dziedzice|Krucza|90|50.20528|19.27498
+2441|Giøycko|Wyzwolenia|25|51.14942|15.00835
+2442|Skierniewice|Rataja|84|54.60528|18.34717
+2443|Wroc≥aw|Lipca|84|50.86079|17.4674
+2444|åwiebodzice|Cmentarna|23|54.58048|16.86194
+2445|Cieszyn|PodgÛrna|573|54.58048|16.86194
+2446|ChorzÛw|Wiatraczna|79|50.5107|18.30056
+2447|Elblπg|Szymanowskiego|906|50.20528|19.27498
+2448|ØagaÒ|Polna|71|51.14942|15.00835
+2449|åwiecie|Sarnia|70|54.58048|16.86194
+2450|Wa≥brzych|Nadbrzeøna|473|50.86079|17.4674
+2451|KnurÛw|Sienkiewicza|55|54.58048|16.86194
+2452|Piekary ålπskie|ZwyciÍstwa|07|50.5107|18.30056
+2453|Zakopane|Pa≥acowa|86|54.60528|18.34717
+2454|RacibÛrz|JaskÛ≥cza|26|54.60528|18.34717
+2455|ØyrardÛw|Traugutta|81|54.58048|16.86194
+2456|RzeszÛw|Stawowa|14|50.20528|19.27498
+2457|Tarnobrzeg|Lubelska|340|54.58048|16.86194
+2458|Brzeg|Poniatowskiego|69|50.20528|19.27498
+2459|GdaÒsk|Koúcielna|563|54.60528|18.34717
+2460|Konin|Jana Sobieskiego|49|50.5107|18.30056
+2461|Øywiec|Browarna|84|50.5107|18.30056
+2462|ZambrÛw|årodkowa|43|50.20528|19.27498
+2463|Lubliniec|Wojska Polskiego|891|50.86079|17.4674
+2464|Sochaczew|èrÛdlana|588|50.20528|19.27498
+2465|£aziska GÛrne|Lawendowa|342|50.20528|19.27498
+2466|Zielona GÛra|Szafirowa|610|54.58048|16.86194
+2467|Wo≥omin|Po≥udniowa|01|50.5107|18.30056
+2468|Zielona GÛra|S≥owicza|92|50.20528|19.27498
+2469|Zielona GÛra|Rolnicza|81|50.86079|17.4674
+2470|Nowa SÛl|Urocza|81|54.58048|16.86194
+2471|TomaszÛw Mazowiecki|Radosna|845|50.20528|19.27498
+2472|Starogard GdaÒski|Cyprysowa|75|54.60528|18.34717
+2473|Giøycko|Wierzbowa|90|50.20528|19.27498
+2474|Olsztyn|Zielna|280|51.14942|15.00835
+2475|Kalisz|Spokojna|08|50.20528|19.27498
+2476|Ko≥obrzeg|Turkusowa|20|50.20528|19.27498
+2477|ToruÒ|Jesionowa|41|50.20528|19.27498
+2478|Dπbrowa GÛrnicza|Jana Paw≥a II|49|50.20528|19.27498
+2479|Nowy DwÛr Mazowiecki|Robotnicza|19|50.5107|18.30056
+2480|Øory|Irysowa|59|50.86079|17.4674
+2481|Jas≥o|Piwna|37|54.58048|16.86194
+2482|Zgorzelec|Piwna|07|50.86079|17.4674
+2483|ZamoúÊ|JastrzÍbia|145|54.60528|18.34717
+2484|Czerwionka-Leszczyny|Krokusowa|24|50.5107|18.30056
+2485|Bydgoszcz|Owocowa|87|54.58048|16.86194
+2486|£omøa|Sosnowa|26|50.86079|17.4674
+2487|LÍbork|BorÛwkowa|058|51.14942|15.00835
+2488|KÍtrzyn|Witosa|99|50.20528|19.27498
+2489|Øary|BatalionÛw Ch≥opskich|700|51.14942|15.00835
+2490|Wodzis≥aw ålπski|Hallera|02|54.60528|18.34717
+2491|Jaros≥aw|Grottgera|44|50.5107|18.30056
+2492|Opole|D≥ugosza|79|54.60528|18.34717
+2493|Zgierz|Ogrodowa|25|54.60528|18.34717
+2494|Sandomierz|Staszica|10|51.14942|15.00835
+2495|Szczecinek|Øwirowa|87|50.86079|17.4674
+2496|Szczecinek|Poprzeczna|976|54.60528|18.34717
+2497|Sosnowiec|Olchowa|37|51.14942|15.00835
+2498|Nowa SÛl|Sawickiej|84|51.14942|15.00835
+2499|WyszkÛw|Majowa|463|54.60528|18.34717
+2500|TarnÛw|Zamkowa|79|54.58048|16.86194
+2501|Gdynia|Modrzewiowa|618|50.86079|17.4674
+2502|KÍtrzyn|Owocowa|894|50.86079|17.4674
+2503|Kluczbork|Moniuszki|177|51.14942|15.00835
+2504|Zgorzelec|Jana|360|51.14942|15.00835
+2505|Brodnica|Sucharskiego|13|50.86079|17.4674
+2506|åwiebodzice|Liliowa|42|54.58048|16.86194
+2507|OúwiÍcim|B≥Íkitna|57|50.20528|19.27498
+2508|RzeszÛw|Cyprysowa|013|50.5107|18.30056
+2509|LÍbork|Øabia|95|50.86079|17.4674
+2510|Piaseczno|Kopernika|271|54.60528|18.34717
+2511|Skierniewice|Boles≥awa Krzywoustego|046|50.86079|17.4674
+2512|åwiebodzice|Floriana|68|50.5107|18.30056
+2513|Tychy|Sosnowa|841|50.20528|19.27498
+2514|Giøycko|Dπbrowskiego|94|54.58048|16.86194
+2515|Oleúnica|Dworska|476|50.86079|17.4674
+2516|Pabianice|Konwaliowa|89|54.60528|18.34717
+2517|Bielsko-Bia≥a|Jana Paw≥a II|85|54.60528|18.34717
+2518|Starachowice|Poprzeczna|659|50.5107|18.30056
+2519|Reda|Asnyka|04|54.60528|18.34717
+2520|Brodnica|Konarskiego|51|50.20528|19.27498
+2521|ZduÒska Wola|Pocztowa|13|51.14942|15.00835
+2522|Nowa Ruda|Dolna|773|54.60528|18.34717
+2523|Zawiercie|Wrzosowa|05|54.58048|16.86194
+2524|Nowa Ruda|Stawowa|610|51.14942|15.00835
+2525|PiastÛw|Rumiankowa|99|50.5107|18.30056
+2526|Starogard GdaÒski|Paderewskiego|43|50.20528|19.27498
+2527|Øory|Hutnicza|15|50.20528|19.27498
+2528|MiÒsk Mazowiecki|Ja≥owcowa|91|54.58048|16.86194
+2529|Krotoszyn|Cicha|207|50.20528|19.27498
+2530|Opole|Rejtana|83|50.5107|18.30056
+2531|KnurÛw|Widokowa|957|54.58048|16.86194
+2532|PruszkÛw|KusociÒskiego|75|50.5107|18.30056
+2533|Wπgrowiec|Morcinka|06|51.14942|15.00835
+2534|ØagaÒ|Orzeszkowej|49|51.14942|15.00835
+2535|Kalisz|Bociania|17|54.58048|16.86194
+2536|Kielce|Pu≥askiego|869|51.14942|15.00835
+2537|ChorzÛw|Szymanowskiego|52|54.60528|18.34717
+2538|JastrzÍbie-ZdrÛj|Malczewskiego|73|50.5107|18.30056
+2539|Koúcierzyna|Agrestowa|422|54.60528|18.34717
+2540|Bytom|Agrestowa|60|54.58048|16.86194
+2541|DzierøoniÛw|Narutowicza|443|50.86079|17.4674
+2542|M≥awa|Armii Krajowej|95|51.14942|15.00835
+2543|K≥odzko|Cyprysowa|27|50.5107|18.30056
+2544|OstrÛw Mazowiecka|Strzelecka|94|54.58048|16.86194
+2545|Zπbki|Opolska|438|51.14942|15.00835
+2546|Inowroc≥aw|Wybickiego|60|50.86079|17.4674
+2547|CiechanÛw|Lipca|390|51.14942|15.00835
+2548|Pi≥a|Brzechwy|428|50.20528|19.27498
+2549|Pi≥a|èrÛdlana|61|50.86079|17.4674
+2550|Gdynia|Drzyma≥y|55|54.58048|16.86194
+2551|S≥upsk|Krakowska|618|50.20528|19.27498
+2552|Legnica|Fredry|441|50.5107|18.30056
+2553|GorzÛw Wielkopolski|S≥owicza|537|54.58048|16.86194
+2554|Ruda ålπska|Traugutta|036|50.5107|18.30056
+2555|Piaseczno|Wiatraczna|85|50.20528|19.27498
+2556|Leszno|Orzechowa|567|50.86079|17.4674
+2557|GorzÛw Wielkopolski|åwierczewskiego|13|51.14942|15.00835
+2558|MiÒsk Mazowiecki|Listopada|13|50.5107|18.30056
+2559|årem|Nowowiejska|960|54.58048|16.86194
+2560|Zgorzelec|S≥oneczna|56|51.14942|15.00835
+2561|Kluczbork|Wiosenna|83|50.20528|19.27498
+2562|Boles≥awiec|PodgÛrna|68|50.20528|19.27498
+2563|RacibÛrz|Jana III Sobieskiego|13|50.20528|19.27498
+2564|Malbork|Osiedlowa|775|51.14942|15.00835
+2565|Bielsko-Bia≥a|Rynek|02|54.58048|16.86194
+2566|Nowy Targ|Szpitalna|642|50.5107|18.30056
+2567|KnurÛw|Szarych SzeregÛw|425|50.86079|17.4674
+2568|Siemianowice ålπskie|Wiúniowa|94|50.20528|19.27498
+2569|Zπbki|Polna|163|54.60528|18.34717
+2570|Wa≥cz|Popie≥uszki|03|50.86079|17.4674
+2571|Kluczbork|Øeglarska|69|50.5107|18.30056
+2572|Bartoszyce|Lipowa|46|54.58048|16.86194
+2573|JastrzÍbie-ZdrÛj|Wiklinowa|04|51.14942|15.00835
+2574|M≥awa|Dπbrowskiej|543|50.86079|17.4674
+2575|WieluÒ|Floriana|66|54.58048|16.86194
+2576|PruszkÛw|Cisowa|01|50.86079|17.4674
+2577|Elblπg|Szafirowa|10|50.20528|19.27498
+2578|Pszczyna|KrÛlewska|53|54.58048|16.86194
+2579|Kielce|S≥onecznikowa|21|50.5107|18.30056
+2580|ZambrÛw|Zielona|04|50.5107|18.30056
+2581|Zabrze|TÍczowa|917|50.86079|17.4674
+2582|Skawina|Srebrna|72|51.14942|15.00835
+2583|Legionowo|Pi≥sudskiego|080|51.14942|15.00835
+2584|åwinoujúcie|Czarnieckiego|296|50.5107|18.30056
+2585|CiechanÛw|KsiÍøycowa|40|54.58048|16.86194
+2586|Krosno|Przemys≥owa|955|51.14942|15.00835
+2587|Zawiercie|Radosna|44|50.5107|18.30056
+2588|Cieszyn|Zacisze|23|50.20528|19.27498
+2589|Tychy|Fredry|103|50.86079|17.4674
+2590|Jelenia GÛra|S≥owianska|49|54.58048|16.86194
+2591|£omøa|Sokola|00|50.20528|19.27498
+2592|Bia≥a Podlaska|Szkolna|48|50.5107|18.30056
+2593|Zabrze|PowstaÒcÛw Wielkopolskich|294|50.20528|19.27498
+2594|OstrÛw Mazowiecka|Rzeczna|345|50.86079|17.4674
+2595|KrakÛw|Chmielna|83|54.60528|18.34717
+2596|OstrÛda|Lipca|82|50.5107|18.30056
+2597|OstrÛw Wielkopolski|Czereúniowa|51|54.58048|16.86194
+2598|åroda Wielkopolska|Wolnoúci|82|54.58048|16.86194
+2599|Grudziπdz|Poprzeczna|049|50.20528|19.27498
+2600|Rybnik|Towarowa|58|50.20528|19.27498
+2601|Turek|Orla|56|50.5107|18.30056
+2602|MiÒsk Mazowiecki|Wiatraczna|59|50.20528|19.27498
+2603|Nowy DwÛr Mazowiecki|Pi≥sudskiego|15|54.60528|18.34717
+2604|Che≥m|Wiejska|39|54.60528|18.34717
+2605|Turek|Prusa|29|50.5107|18.30056
+2606|ChorzÛw|Kolonia|93|51.14942|15.00835
+2607|Police|Brzechwy|67|54.60528|18.34717
+2608|Marki|Wysoka|62|50.20528|19.27498
+2609|Bia≥ogard|Kalinowa|586|51.14942|15.00835
+2610|Gliwice|Skargi|14|54.60528|18.34717
+2611|Kutno|Paderewskiego|23|54.60528|18.34717
+2612|Dπbrowa GÛrnicza|Tulipanowa|79|50.86079|17.4674
+2613|CiechanÛw|£abÍdzia|414|54.58048|16.86194
+2614|Øary|Wolnoúci|17|50.20528|19.27498
+2615|G≥ogÛw|Swierkowa|647|50.86079|17.4674
+2616|Bydgoszcz|Urocza|47|50.86079|17.4674
+2617|G≥ogÛw|Podleúna|67|54.58048|16.86194
+2618|Kielce|SzczÍúliwa|448|50.5107|18.30056
+2619|Katowice|Koralowa|03|50.5107|18.30056
+2620|TarnÛw|Rubinowa|43|51.14942|15.00835
+2621|åwidnica|Kowalska|277|50.20528|19.27498
+2622|Olkusz|Wodna|580|50.86079|17.4674
+2623|Gorlice|Wczasowa|84|50.5107|18.30056
+2624|Ko≥o|Mazowiecka|15|50.86079|17.4674
+2625|ZambrÛw|Jadwigi|13|50.5107|18.30056
+2626|Gdynia|Prosta|037|50.5107|18.30056
+2627|Pabianice|Kruczkowskiego|329|51.14942|15.00835
+2628|Legnica|Szafirowa|23|51.14942|15.00835
+2629|Bia≥ogard|Prusa|04|51.14942|15.00835
+2630|Piaseczno|Wolnoúci|04|54.60528|18.34717
+2631|ØagaÒ|Mieszka I|48|51.14942|15.00835
+2632|Wrzeúnia|Øurawia|007|54.58048|16.86194
+2633|GoleniÛw|Wiejska|707|50.5107|18.30056
+2634|Katowice|Plaøowa|67|54.58048|16.86194
+2635|Bielsk Podlaski|Wybickiego|05|50.86079|17.4674
+2636|Lubin|Stefana Batorego|92|50.5107|18.30056
+2637|Tychy|Wiπzowa|93|54.58048|16.86194
+2638|Tarnobrzeg|Boles≥awa Chrobrego|730|51.14942|15.00835
+2639|Ko≥o|Tartaczna|029|50.20528|19.27498
+2640|Ostrowiec åwiÍtokrzyski|Paderewskiego|268|50.86079|17.4674
+2641|Wodzis≥aw ålπski|Orkana|968|54.58048|16.86194
+2642|Tczew|Straøacka|266|50.20528|19.27498
+2643|Szczytno|Szymanowskiego|39|54.58048|16.86194
+2644|LubartÛw|Morska|491|51.14942|15.00835
+2645|PruszkÛw|Sawickiej|17|54.60528|18.34717
+2646|TarnÛw|Rycerska|591|50.86079|17.4674
+2647|£aziska GÛrne|Konarskiego|77|51.14942|15.00835
+2648|Leszno|Widokowa|25|50.5107|18.30056
+2649|Kluczbork|Tysiπclecia|991|51.14942|15.00835
+2650|Wroc≥aw|Towarowa|00|54.60528|18.34717
+2651|SwarzÍdz|Klasztorna|22|51.14942|15.00835
+2652|Bielsk Podlaski|Letniskowa|10|50.86079|17.4674
+2653|P≥ock|Leszczynowa|04|50.86079|17.4674
+2654|Ostro≥Íka|Daleka|42|51.14942|15.00835
+2655|Nowy DwÛr Mazowiecki|SybirakÛw|18|54.60528|18.34717
+2656|Sieradz|Cedrowa|21|50.20528|19.27498
+2657|Wπgrowiec|Dobra|36|50.86079|17.4674
+2658|Grodzisk Mazowiecki|Podwale|04|50.5107|18.30056
+2659|Sopot|Øeromskiego|558|51.14942|15.00835
+2660|Zakopane|Wilcza|813|50.86079|17.4674
+2661|DzierøoniÛw|Dobra|71|50.5107|18.30056
+2662|W≥oc≥awek|Solidarnosci|53|50.86079|17.4674
+2663|PruszkÛw|Miodowa|85|54.58048|16.86194
+2664|Katowice|Stroma|846|54.60528|18.34717
+2665|Gdynia|Jagodowa|59|51.14942|15.00835
+2666|£owicz|Øwirowa|13|50.86079|17.4674
+2667|Szczecinek|Olchowa|88|54.58048|16.86194
+2668|Gliwice|Ogrodowa|04|50.20528|19.27498
+2669|SwarzÍdz|Wschodnia|94|54.60528|18.34717
+2670|Sieradz|Konopnickiej|278|50.20528|19.27498
+2671|WyszkÛw|Tulipanowa|84|54.60528|18.34717
+2672|Olkusz|£abÍdzia|40|50.20528|19.27498
+2673|Elblπg|Grzybowa|96|50.86079|17.4674
+2674|£ukÛw|Pszenna|012|54.60528|18.34717
+2675|GorzÛw Wielkopolski|Topolowa|575|54.58048|16.86194
+2676|LuboÒ|Sportowa|46|50.5107|18.30056
+2677|Zgierz|Øeromskiego|10|50.5107|18.30056
+2678|Rumia|Topolowa|07|50.20528|19.27498
+2679|Warszawa|Rajska|75|51.14942|15.00835
+2680|Kluczbork|Pszenna|66|50.5107|18.30056
+2681|årem|Porzeczkowa|286|54.58048|16.86194
+2682|M≥awa|Konwaliowa|81|51.14942|15.00835
+2683|Police|Tartaczna|916|54.60528|18.34717
+2684|ØagaÒ|W≥adys≥awa Jagie≥≥y|88|54.60528|18.34717
+2685|Wo≥omin|Kwiatowa|241|54.58048|16.86194
+2686|K≥odzko|Per≥owa|959|54.60528|18.34717
+2687|Ostrowiec åwiÍtokrzyski|Cicha|50|51.14942|15.00835
+2688|PoznaÒ|Tysiπclecia|56|54.58048|16.86194
+2689|Be≥chatÛw|JastrzÍbia|65|50.5107|18.30056
+2690|Dπbrowa GÛrnicza|W≥adys≥awa £okietka|96|54.58048|16.86194
+2691|Lubin|Kowalska|77|51.14942|15.00835
+2692|Zawiercie|Jasna|54|54.58048|16.86194
+2693|Kutno|PiÍkna|40|50.5107|18.30056
+2694|Marki|Jana|14|51.14942|15.00835
+2695|Wodzis≥aw ålπski|Matejki|80|50.86079|17.4674
+2696|åroda Wielkopolska|Poziomkowa|907|54.58048|16.86194
+2697|Reda|Tuwima|045|50.20528|19.27498
+2698|Ostro≥Íka|KusociÒskiego|292|54.60528|18.34717
+2699|£aziska GÛrne|Zielona|47|50.86079|17.4674
+2700|Pruszcz GdaÒski|Miodowa|20|50.5107|18.30056
+2701|Zabrze|Plater|303|54.60528|18.34717
+2702|åwiecie|Bursztynowa|38|50.86079|17.4674
+2703|M≥awa|Sk≥adowa|652|50.5107|18.30056
+2704|Chojnice|Kossaka|69|50.5107|18.30056
+2705|Grodzisk Mazowiecki|Wiúlana|60|54.60528|18.34717
+2706|Nowy Sπcz|Jana Paw≥a II|55|51.14942|15.00835
+2707|RzeszÛw|Rejtana|95|50.86079|17.4674
+2708|Legionowo|PowstaÒcÛw Wielkopolskich|55|50.86079|17.4674
+2709|Marki|BorÛwkowa|30|50.86079|17.4674
+2710|Kluczbork|KsiÍøycowa|729|50.5107|18.30056
+2711|Lubin|Szewska|93|50.20528|19.27498
+2712|Gdynia|Konopnickiej|25|50.5107|18.30056
+2713|Marki|KraÒcowa|045|51.14942|15.00835
+2714|Suwa≥ki|Zacisze|88|51.14942|15.00835
+2715|Stalowa Wola|KrasiÒskiego|74|50.86079|17.4674
+2716|Jaworzno|Szymanowskiego|96|51.14942|15.00835
+2717|Polkowice|S≥owicza|50|50.86079|17.4674
+2718|åwidnica|Weso≥a|769|50.5107|18.30056
+2719|Nowy Targ|Polna|811|50.86079|17.4674
+2720|I≥awa|Cicha|96|54.60528|18.34717
+2721|Nowy DwÛr Mazowiecki|GÛrska|114|50.86079|17.4674
+2722|GorzÛw Wielkopolski|OkrÍøna|790|54.58048|16.86194
+2723|Radom|Jana Paw≥a II|46|50.5107|18.30056
+2724|Øory|Pogodna|40|50.86079|17.4674
+2725|PruszkÛw|Wojska Polskiego|003|50.86079|17.4674
+2726|Brodnica|Koralowa|93|54.58048|16.86194
+2727|Otwock|Floriana|20|51.14942|15.00835
+2728|åwidnik|Pszenna|847|50.86079|17.4674
+2729|Wπgrowiec|Sawickiej|45|50.86079|17.4674
+2730|Tczew|Mazurska|592|50.86079|17.4674
+2731|KÍtrzyn|M≥yÒska|04|54.60528|18.34717
+2732|Grudziπdz|GdaÒska|468|50.86079|17.4674
+2733|Boles≥awiec|Rolnicza|28|50.86079|17.4674
+2734|ZduÒska Wola|Pu≥askiego|83|50.5107|18.30056
+2735|Opole|Jana Sobieskiego|249|51.14942|15.00835
+2736|ØyrardÛw|OdrzaÒska|120|54.58048|16.86194
+2737|DzierøoniÛw|Leszczynowa|13|54.58048|16.86194
+2738|Koúcian|Lotnicza|24|50.86079|17.4674
+2739|Jaworzno|Tylna|43|50.86079|17.4674
+2740|Skierniewice|OkrÍøna|089|50.86079|17.4674
+2741|Kluczbork|G≥ogowa|03|54.58048|16.86194
+2742|Cieszyn|Miarki|332|54.58048|16.86194
+2743|Bielawa|Konarskiego|83|50.20528|19.27498
+2744|£Ûdü|Stroma|03|54.58048|16.86194
+2745|Tarnobrzeg|Willowa|220|50.86079|17.4674
+2746|Jas≥o|BorÛwkowa|36|50.86079|17.4674
+2747|G≥ogÛw|Wolnoúci|93|50.86079|17.4674
+2748|Skawina|Ludowa|15|54.58048|16.86194
+2749|Siemianowice ålπskie|Szkolna|98|50.20528|19.27498
+2750|Skawina|Hallera|93|54.60528|18.34717
+2751|Krosno|Dworcowa|12|54.58048|16.86194
+2752|RzeszÛw|Nadrzeczna|547|50.20528|19.27498
+2753|JastrzÍbie-ZdrÛj|Turystyczna|359|51.14942|15.00835
+2754|Pi≥a|Hallera|12|51.14942|15.00835
+2755|Malbork|PowstaÒcÛw ålπskich|23|50.20528|19.27498
+2756|Wodzis≥aw ålπski|Che≥moÒskiego|89|50.20528|19.27498
+2757|Ostro≥Íka|Podmiejska|26|50.86079|17.4674
+2758|Zawiercie|Sosnowa|241|50.5107|18.30056
+2759|Turek|Wiatraczna|07|51.14942|15.00835
+2760|LubartÛw|G≥ogowa|543|54.60528|18.34717
+2761|Øywiec|Rolna|57|51.14942|15.00835
+2762|Bydgoszcz|Topolowa|806|50.20528|19.27498
+2763|Bielsko-Bia≥a|åwierczewskiego|12|54.60528|18.34717
+2764|£aziska GÛrne|Piwna|919|51.14942|15.00835
+2765|KrakÛw|Sikorskiego|37|51.14942|15.00835
+2766|Kalisz|Dolna|123|50.86079|17.4674
+2767|ChrzanÛw|Kaliska|492|54.58048|16.86194
+2768|TarnÛw|Truskawkowa|110|54.60528|18.34717
+2769|PiotrkÛw Trybunalski|Korfantego|66|54.58048|16.86194
+2770|Gniezno|Fredry|435|51.14942|15.00835
+2771|Zielona GÛra|WspÛlna|53|50.20528|19.27498
+2772|Wrzeúnia|Lisia|88|50.5107|18.30056
+2773|Kluczbork|Bankowa|556|54.60528|18.34717
+2774|Jas≥o|Kaliska|913|51.14942|15.00835
+2775|DÍbica|Skoúna|365|50.5107|18.30056
+2776|ØyrardÛw|Ciasna|17|54.58048|16.86194
+2777|Che≥m|Czarnieckiego|132|50.5107|18.30056
+2778|Bielsk Podlaski|Zacisze|062|54.58048|16.86194
+2779|Gniezno|Koúcielna|943|50.20528|19.27498
+2780|Giøycko|Armii Krajowej|168|51.14942|15.00835
+2781|Radomsko|Rzeczna|27|50.20528|19.27498
+2782|£owicz|Dworska|619|51.14942|15.00835
+2783|Gniezno|Ptasia|15|50.86079|17.4674
+2784|OstrÛw Mazowiecka|SzczÍúliwa|874|51.14942|15.00835
+2785|Piekary ålπskie|Rolna|907|50.86079|17.4674
+2786|GoleniÛw|Wa≥owa|87|54.58048|16.86194
+2787|Szczytno|Brzechwy|70|50.20528|19.27498
+2788|Pruszcz GdaÒski|Konwaliowa|87|50.86079|17.4674
+2789|Czerwionka-Leszczyny|Stolarska|08|54.58048|16.86194
+2790|Gniezno|Irysowa|44|50.5107|18.30056
+2791|Police|Kopernika|33|54.60528|18.34717
+2792|Pszczyna|årednia|61|50.86079|17.4674
+2793|Nowa Ruda|S≥owicza|87|50.20528|19.27498
+2794|Pi≥a|Jagodowa|27|50.20528|19.27498
+2795|OstrÛw Wielkopolski|SzczÍúliwa|54|50.20528|19.27498
+2796|KÍtrzyn|Jesienna|64|50.5107|18.30056
+2797|Wa≥cz|Rolna|749|54.60528|18.34717
+2798|Malbork|Olchowa|144|54.58048|16.86194
+2799|Gliwice|Tysiπclecia|08|50.86079|17.4674
+2800|TarnÛw|Weso≥a|996|54.58048|16.86194
+2801|Przemyúl|Øeglarska|24|50.20528|19.27498
+2802|Tczew|Kasztanowa|17|54.58048|16.86194
+2803|E≥k|PoznaÒska|38|50.5107|18.30056
+2804|Wodzis≥aw ålπski|Narcyzowa|59|54.60528|18.34717
+2805|Bydgoszcz|Lotnicza|05|54.58048|16.86194
+2806|årem|Nadrzeczna|282|50.5107|18.30056
+2807|Bochnia|Skargi|471|50.5107|18.30056
+2808|Jelenia GÛra|Rataja|99|50.20528|19.27498
+2809|ZduÒska Wola|Sarnia|484|54.58048|16.86194
+2810|KÍtrzyn|BatalionÛw Ch≥opskich|363|50.86079|17.4674
+2811|Kalisz|D≥ugosza|54|54.58048|16.86194
+2812|OstrÛda|Øwirki i Wigury|502|50.20528|19.27498
+2813|G≥ogÛw|Jagodowa|410|50.20528|19.27498
+2814|Sieradz|Radosna|97|50.20528|19.27498
+2815|Oleúnica|Tysiπclecia|002|51.14942|15.00835
+2816|ZduÒska Wola|Piaskowa|26|54.60528|18.34717
+2817|Wroc≥aw|WspÛlna|37|51.14942|15.00835

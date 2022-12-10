@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/1/2022 12:58:21 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-46GI6A46"
+  DTS:CreatorName="LAPTOP-46GI6A46\User"
+  DTS:DTSID="{EE7396E5-F526-4730-BD80-98F8A874831E}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.948.0"
+  DTS:LocaleID="1045"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{FEFCBC2D-7BB6-49EC-9F92-ACC56659CED6}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[insertIntoData.sql]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{DCF498D3-91D8-4916-8A12-4190B0C44A8A}"
+      DTS:ObjectName="insertIntoData.sql">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Users\User\Documents\sem5\HD\data-warehouses\data_warehouse_implementation\ETL\OutPostIntegreationService\scripts\insertIntoData.sql" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-46GI6A46.HDlabDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{A9BD563B-0190-43E9-8457-C8A93A25E3AA}"
+      DTS:ObjectName="LAPTOP-46GI6A46.HDlabDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=LAPTOP-46GI6A46;Initial Catalog=HDlabDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{A9BD563B-0190-43E9-8457-C8A93A25E3AA}LAPTOP-46GI6A46.HDlabDB;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-46GI6A46.OutPostdw]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{303E0267-D024-45FA-AE3F-1A38DDF323FC}"
+      DTS:ObjectName="LAPTOP-46GI6A46.OutPostdw">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=LAPTOP-46GI6A46;Initial Catalog=OutPostdw;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{303E0267-D024-45FA-AE3F-1A38DDF323FC}LAPTOP-46GI6A46.OutPostdw;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\SQL insert into data"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{088EA04E-0D5E-47E5-94A1-B0C722F9CCDA}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL insert into data"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{303E0267-D024-45FA-AE3F-1A38DDF323FC}"
+          SQLTask:SqlStmtSourceType="FileConnection"
+          SQLTask:SqlStatementSource="insertIntoData.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL insert into typ"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{C7CF5747-6D51-47A4-9800-6E682DC4B69B}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL insert into typ"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{303E0267-D024-45FA-AE3F-1A38DDF323FC}"
+          SQLTask:SqlStatementSource="INSERT INTO typ SELECT t FROM &#xA;&#x9;(VALUES ('Paczka odebrana w sortowni'), ('Paczka zatwierdzona w sortowni'), ('Paczka przygotowana do transportu'), ('Paczka wydana do transportu'))&#xA;&#x9; AS Typ(t);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="165.6,41.6"
+          Id="Package\SQL insert into typ"
+          TopLeft="510.714294411698,180.470590766326" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\SQL insert into data"
+          TopLeft="327.142862714067,181.235296659404" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
