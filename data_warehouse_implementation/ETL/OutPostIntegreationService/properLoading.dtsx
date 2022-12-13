@@ -1,0 +1,1619 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/10/2022 6:14:17 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-46GI6A46"
+  DTS:CreatorName="LAPTOP-46GI6A46\User"
+  DTS:DTSID="{1340C482-77FC-4B89-BC74-9C857E2F891E}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.948.0"
+  DTS:LocaleID="1045"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="30"
+  DTS:VersionGUID="{F74FCAF5-4190-48E5-8DF6-1B2E3C6DCB6A}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{306C28DA-AD66-422D-A4A1-920C56ACC7F1}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\User\Documents\sem5\HD\data-warehouses\database_schema\dataSources\T0_T1\workers_T0_T1.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-46GI6A46.HDlabDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{C8DBCA7B-85F9-4F66-B672-CC7388A9C8EE}"
+      DTS:ObjectName="LAPTOP-46GI6A46.HDlabDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=LAPTOP-46GI6A46;Initial Catalog=HDlabDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{C8DBCA7B-85F9-4F66-B672-CC7388A9C8EE}LAPTOP-46GI6A46.HDlabDB;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-46GI6A46.OutPostdw]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{E3B814FC-C8CF-4654-A63B-3DA7678FED4F}"
+      DTS:ObjectName="LAPTOP-46GI6A46.OutPostdw">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=LAPTOP-46GI6A46;Initial Catalog=OutPostdw;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package1-{E3B814FC-C8CF-4654-A63B-3DA7678FED4F}LAPTOP-46GI6A46.OutPostdw;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.HDlab4 analytical database]"
+      DTS:CreationName="MSOLAP100"
+      DTS:DTSID="{5A870B3B-BE11-4996-B7E3-2F1154D0454F}"
+      DTS:ObjectName="localhost.HDlab4 analytical database">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Data Source=localhost;User ID=user;Initial Catalog=HDlab4;Provider=MSOLAP.8;Impersonation Level=Impersonate;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Populating Pracownik Table"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{0BE88698-7017-4A42-B51C-C0C2640E7C9A}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Populating Pracownik Table">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Populating Pracownik Table\Initializing Pracownik"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{2C01C7FD-BA3A-43EA-BA41-30FB464C6503}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Initializing Pracownik"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel"
+                  componentClassID="Microsoft.ExcelSource"
+                  contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Excel Source"
+                  name="CEO's excel"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">Sheet1$</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.String"
+                      description="The variable that contains the SQL command to be executed."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.String"
+                      description="The mapping from parameters in the SQL command to variables."
+                      name="ParameterMapping"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                      connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Output]"
+                      name="Excel Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[id 2]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Output].ExternalColumns[id]"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[id 2]"
+                          name="id 2"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[wynagrodzenie 2]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Output].ExternalColumns[wynagrodzenie]"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[wynagrodzenie 2]"
+                          name="wynagrodzenie 2"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[data urodzenia 2]"
+                          dataType="date"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Output].ExternalColumns[data urodzenia]"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[data urodzenia 2]"
+                          name="data urodzenia 2"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Output].ExternalColumns[id]"
+                          dataType="r8"
+                          name="id" />
+                        <externalMetadataColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Output].ExternalColumns[imie]"
+                          dataType="wstr"
+                          length="255"
+                          name="imie" />
+                        <externalMetadataColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Output].ExternalColumns[nazwisko]"
+                          dataType="wstr"
+                          length="255"
+                          name="nazwisko" />
+                        <externalMetadataColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Output].ExternalColumns[data urodzenia]"
+                          dataType="date"
+                          name="data urodzenia" />
+                        <externalMetadataColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Output].ExternalColumns[płeć]"
+                          dataType="wstr"
+                          length="255"
+                          name="płeć" />
+                        <externalMetadataColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Output].ExternalColumns[stanowisko]"
+                          dataType="wstr"
+                          length="255"
+                          name="stanowisko" />
+                        <externalMetadataColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Output].ExternalColumns[sortownia]"
+                          dataType="r8"
+                          name="sortownia" />
+                        <externalMetadataColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Output].ExternalColumns[data zatrudnienia]"
+                          dataType="date"
+                          name="data zatrudnienia" />
+                        <externalMetadataColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Output].ExternalColumns[data zwolnienia]"
+                          dataType="date"
+                          name="data zwolnienia" />
+                        <externalMetadataColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Output].ExternalColumns[wynagrodzenie]"
+                          dataType="r8"
+                          name="wynagrodzenie" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Error Output]"
+                      isErrorOut="true"
+                      name="Excel Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Error Output].Columns[id]"
+                          dataType="r8"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Error Output].Columns[id]"
+                          name="id" />
+                        <outputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Error Output].Columns[wynagrodzenie]"
+                          dataType="r8"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Error Output].Columns[wynagrodzenie]"
+                          name="wynagrodzenie" />
+                        <outputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                        <outputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Error Output].Columns[data urodzenia]"
+                          dataType="date"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Error Output].Columns[data urodzenia]"
+                          name="data urodzenia" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Populating Pracownik Table\Initializing Pracownik\Data Conversion"
+                  componentClassID="Microsoft.DataConvert"
+                  contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Data Conversion"
+                  name="Data Conversion"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Populating Pracownik Table\Initializing Pracownik\Data Conversion.Inputs[Data Conversion Input]"
+                      name="Data Conversion Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Data Conversion.Inputs[Data Conversion Input].Columns[wynagrodzenie 2]"
+                          cachedDataType="r8"
+                          cachedName="wynagrodzenie 2"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[wynagrodzenie 2]" />
+                        <inputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Data Conversion.Inputs[Data Conversion Input].Columns[id 2]"
+                          cachedDataType="r8"
+                          cachedName="id 2"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[id 2]" />
+                        <inputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Data Conversion.Inputs[Data Conversion Input].Columns[data urodzenia 2]"
+                          cachedDataType="date"
+                          cachedName="data urodzenia 2"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[data urodzenia 2]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Populating Pracownik Table\Initializing Pracownik\Data Conversion.Outputs[Data Conversion Output]"
+                      exclusionGroup="1"
+                      name="Data Conversion Output"
+                      synchronousInputId="Package\Populating Pracownik Table\Initializing Pracownik\Data Conversion.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Data Conversion.Outputs[Data Conversion Output].Columns[wynagrodzenie]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\Data Conversion.Outputs[Data Conversion Output].Columns[wynagrodzenie]"
+                          name="wynagrodzenie"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[wynagrodzenie 2]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Data Conversion.Outputs[Data Conversion Output].Columns[id]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\Data Conversion.Outputs[Data Conversion Output].Columns[id]"
+                          name="id"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[id 2]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Data Conversion.Outputs[Data Conversion Output].Columns[data urodzenia]"
+                          dataType="date"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\Data Conversion.Outputs[Data Conversion Output].Columns[data urodzenia]"
+                          name="data urodzenia"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[data urodzenia 2]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Populating Pracownik Table\Initializing Pracownik\Data Conversion.Outputs[Data Conversion Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Data Conversion Error Output"
+                      synchronousInputId="Package\Populating Pracownik Table\Initializing Pracownik\Data Conversion.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Populating Pracownik Table\Initializing Pracownik\Lookup"
+                  componentClassID="Microsoft.Lookup"
+                  contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+                  description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+                  name="Lookup"
+                  usesDispositions="true"
+                  version="6">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the SQL statement that generates the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[pracownik]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommandParam"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[pracownik]) [refTable]
+where [refTable].[nr_pracownika] = ?</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the type of connection used to access the reference dataset."
+                      name="ConnectionType"
+                      typeConverter="LookupConnectionType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the cache type of the lookup table."
+                      name="CacheType"
+                      typeConverter="CacheType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                      name="NoMatchBehavior"
+                      typeConverter="LookupNoMatchBehavior">1</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                      name="NoMatchCachePercentage">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                      name="MaxMemoryUsage">25</property>
+                    <property
+                      dataType="System.Int64"
+                      description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                      name="MaxMemoryUsage64">25</property>
+                    <property
+                      dataType="System.String"
+                      description="Indicates whether to reference metadata in an XML format."
+                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_pracownik" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nr_pracownika" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="wynagrodzenie" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="wiek" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="data_wstawienia" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="data_deaktywacji" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                      name="ParameterMap">#{Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Outputs[Sort Output].Columns[id]};</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1250</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                      name="TreatDuplicateKeysAsError">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Populating Pracownik Table\Initializing Pracownik\Lookup.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[LAPTOP-46GI6A46.OutPostdw]"
+                      connectionManagerRefId="Package.ConnectionManagers[LAPTOP-46GI6A46.OutPostdw]"
+                      description="Connection manager used to access lookup data."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Populating Pracownik Table\Initializing Pracownik\Lookup.Inputs[Lookup Input]"
+                      name="Lookup Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Lookup.Inputs[Lookup Input].Columns[id]"
+                          cachedDataType="i4"
+                          cachedName="id"
+                          cachedSortKeyPosition="1"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Outputs[Sort Output].Columns[id]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table that a column joins."
+                              name="JoinToReferenceColumn">nr_pracownika</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn" />
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Populating Pracownik Table\Initializing Pracownik\Lookup.Outputs[Lookup Match Output]"
+                      errorOrTruncationOperation="Lookup"
+                      exclusionGroup="1"
+                      name="Lookup Match Output"
+                      synchronousInputId="Package\Populating Pracownik Table\Initializing Pracownik\Lookup.Inputs[Lookup Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Populating Pracownik Table\Initializing Pracownik\Lookup.Outputs[Lookup No Match Output]"
+                      description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                      exclusionGroup="1"
+                      name="Lookup No Match Output"
+                      synchronousInputId="Package\Populating Pracownik Table\Initializing Pracownik\Lookup.Inputs[Lookup Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Populating Pracownik Table\Initializing Pracownik\Lookup.Outputs[Lookup Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Lookup Error Output"
+                      synchronousInputId="Package\Populating Pracownik Table\Initializing Pracownik\Lookup.Inputs[Lookup Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Populating Pracownik Table\Initializing Pracownik\Marking is current"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Marking is current"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Populating Pracownik Table\Initializing Pracownik\Marking is current.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Populating Pracownik Table\Initializing Pracownik\Marking is current.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Populating Pracownik Table\Initializing Pracownik\Marking is current.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Marking is current.Outputs[Derived Column Output].Columns[data_wstawienia]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\Marking is current.Outputs[Derived Column Output].Columns[data_wstawienia]"
+                          name="data_wstawienia"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[GETDATE]()</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">GETDATE()</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Populating Pracownik Table\Initializing Pracownik\Marking is current.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Populating Pracownik Table\Initializing Pracownik\Marking is current.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Marking is current.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\Marking is current.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Marking is current.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\Marking is current.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Populating Pracownik Table\Initializing Pracownik\Pracownik DW"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="Pracownik DW"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[pracownik]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1250</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Populating Pracownik Table\Initializing Pracownik\Pracownik DW.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[LAPTOP-46GI6A46.OutPostdw]"
+                      connectionManagerRefId="Package.ConnectionManagers[LAPTOP-46GI6A46.OutPostdw]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Populating Pracownik Table\Initializing Pracownik\Pracownik DW.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Pracownik DW.Inputs[OLE DB Destination Input].Columns[data_wstawienia]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="data_wstawienia"
+                          externalMetadataColumnId="Package\Populating Pracownik Table\Initializing Pracownik\Pracownik DW.Inputs[OLE DB Destination Input].ExternalColumns[data_wstawienia]"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\Marking is current.Outputs[Derived Column Output].Columns[data_wstawienia]" />
+                        <inputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Pracownik DW.Inputs[OLE DB Destination Input].Columns[id]"
+                          cachedDataType="i4"
+                          cachedName="id"
+                          cachedSortKeyPosition="1"
+                          externalMetadataColumnId="Package\Populating Pracownik Table\Initializing Pracownik\Pracownik DW.Inputs[OLE DB Destination Input].ExternalColumns[nr_pracownika]"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Outputs[Sort Output].Columns[id]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Pracownik DW.Inputs[OLE DB Destination Input].ExternalColumns[id_pracownik]"
+                          dataType="i4"
+                          name="id_pracownik" />
+                        <externalMetadataColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Pracownik DW.Inputs[OLE DB Destination Input].ExternalColumns[nr_pracownika]"
+                          dataType="i4"
+                          name="nr_pracownika" />
+                        <externalMetadataColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Pracownik DW.Inputs[OLE DB Destination Input].ExternalColumns[wynagrodzenie]"
+                          codePage="1250"
+                          dataType="str"
+                          length="20"
+                          name="wynagrodzenie" />
+                        <externalMetadataColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Pracownik DW.Inputs[OLE DB Destination Input].ExternalColumns[wiek]"
+                          codePage="1250"
+                          dataType="str"
+                          length="20"
+                          name="wiek" />
+                        <externalMetadataColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Pracownik DW.Inputs[OLE DB Destination Input].ExternalColumns[data_wstawienia]"
+                          dataType="dbDate"
+                          name="data_wstawienia" />
+                        <externalMetadataColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Pracownik DW.Inputs[OLE DB Destination Input].ExternalColumns[data_deaktywacji]"
+                          dataType="dbDate"
+                          name="data_deaktywacji" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Populating Pracownik Table\Initializing Pracownik\Pracownik DW.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Populating Pracownik Table\Initializing Pracownik\Pracownik DW.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Pracownik DW.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\Pracownik DW.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Pracownik DW.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\Pracownik DW.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates"
+                  componentClassID="Microsoft.Sort"
+                  contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+                  name="Remove duplicates"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                      name="EliminateDuplicates">true</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the maximum number of threads to use for sorting."
+                      expressionType="Notify"
+                      name="MaximumThreads">-1</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Inputs[Sort Input]"
+                      name="Sort Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Inputs[Sort Input].Columns[id 2]"
+                          cachedDataType="r8"
+                          cachedName="id 2"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[id 2]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Inputs[Sort Input].Columns[imie 2]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="imie 2"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\13:invalid">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Inputs[Sort Input].Columns[nazwisko 2]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="nazwisko 2"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\14:invalid">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Inputs[Sort Input].Columns[data urodzenia 2]"
+                          cachedDataType="date"
+                          cachedName="data urodzenia 2"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[data urodzenia 2]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Inputs[Sort Input].Columns[płeć 2]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="płeć 2"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\16:invalid">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Inputs[Sort Input].Columns[stanowisko 2]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="stanowisko 2"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\17:invalid">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Inputs[Sort Input].Columns[sortownia 2]"
+                          cachedDataType="r8"
+                          cachedName="sortownia 2"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\18:invalid">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Inputs[Sort Input].Columns[data zatrudnienia 2]"
+                          cachedDataType="date"
+                          cachedName="data zatrudnienia 2"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\19:invalid">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Inputs[Sort Input].Columns[data zwolnienia 2]"
+                          cachedDataType="date"
+                          cachedName="data zwolnienia 2"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\20:invalid">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Inputs[Sort Input].Columns[wynagrodzenie 2]"
+                          cachedDataType="r8"
+                          cachedName="wynagrodzenie 2"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[wynagrodzenie 2]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Inputs[Sort Input].Columns[wynagrodzenie]"
+                          cachedDataType="r8"
+                          cachedName="wynagrodzenie"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\Data Conversion.Outputs[Data Conversion Output].Columns[wynagrodzenie]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Inputs[Sort Input].Columns[id]"
+                          cachedDataType="i4"
+                          cachedName="id"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\Data Conversion.Outputs[Data Conversion Output].Columns[id]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">1</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Outputs[Sort Output]"
+                      isSorted="true"
+                      name="Sort Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Outputs[Sort Output].Columns[id 2]"
+                          dataType="r8"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Outputs[Sort Output].Columns[id 2]"
+                          name="id 2">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[id 2]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Outputs[Sort Output].Columns[imie 2]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Outputs[Sort Output].Columns[imie 2]"
+                          name="imie 2">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\13:invalid}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Outputs[Sort Output].Columns[nazwisko 2]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Outputs[Sort Output].Columns[nazwisko 2]"
+                          name="nazwisko 2">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\14:invalid}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Outputs[Sort Output].Columns[data urodzenia 2]"
+                          dataType="date"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Outputs[Sort Output].Columns[data urodzenia 2]"
+                          name="data urodzenia 2">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[data urodzenia 2]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Outputs[Sort Output].Columns[płeć 2]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Outputs[Sort Output].Columns[płeć 2]"
+                          name="płeć 2">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\16:invalid}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Outputs[Sort Output].Columns[stanowisko 2]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Outputs[Sort Output].Columns[stanowisko 2]"
+                          name="stanowisko 2">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\17:invalid}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Outputs[Sort Output].Columns[sortownia 2]"
+                          dataType="r8"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Outputs[Sort Output].Columns[sortownia 2]"
+                          name="sortownia 2">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\18:invalid}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Outputs[Sort Output].Columns[data zatrudnienia 2]"
+                          dataType="date"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Outputs[Sort Output].Columns[data zatrudnienia 2]"
+                          name="data zatrudnienia 2">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\19:invalid}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Outputs[Sort Output].Columns[data zwolnienia 2]"
+                          dataType="date"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Outputs[Sort Output].Columns[data zwolnienia 2]"
+                          name="data zwolnienia 2">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\20:invalid}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Outputs[Sort Output].Columns[wynagrodzenie 2]"
+                          dataType="r8"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Outputs[Sort Output].Columns[wynagrodzenie 2]"
+                          name="wynagrodzenie 2">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[wynagrodzenie 2]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Outputs[Sort Output].Columns[wynagrodzenie]"
+                          dataType="r8"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Outputs[Sort Output].Columns[wynagrodzenie]"
+                          name="wynagrodzenie">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\Data Conversion.Outputs[Data Conversion Output].Columns[wynagrodzenie]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Outputs[Sort Output].Columns[id]"
+                          dataType="i4"
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Outputs[Sort Output].Columns[id]"
+                          name="id"
+                          sortKeyPosition="1">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\Data Conversion.Outputs[Data Conversion Output].Columns[id]}</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Populating Pracownik Table\Initializing Pracownik\Slowly Changing Dimension"
+                  componentClassID="Microsoft.SCD"
+                  contactInfo="Slowly Changing Dimension;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
+                  description="Updates a SQL Server Analysis Services data warehouse dimension. Update dimension records that are already present and  insert dimension records that aren't. For example, update the DimProduct table of the AdventureWorksDW OLAP database with data from the Products table in the AdventureWorks OLTP database."
+                  name="Slowly Changing Dimension"
+                  version="3">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the SELECT statement used to create a schema rowset."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the WHERE clause in the SELECT statement that selects the current row among rows with identical business keys."
+                      name="CurrentRowWhere"></property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether historical attribute updates are directed to the transformation output for changing attribute updates."
+                      name="UpdateChangingAttributeHistory">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the transformation fails when columns with fixed attributes contain changes."
+                      name="FailOnFixedAttributeChange">true</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the column name for the inferred member."
+                      name="InferredMemberIndicator"></property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether inferred member updates are detected."
+                      name="EnableInferredMember">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the transformation fails when a lookup of an existing record fails."
+                      name="FailOnLookupFailure">false</property>
+                    <property
+                      dataType="System.UInt32"
+                      description="Specifies that all rows in the input are new or the transformation detects the change type."
+                      name="IncomingRowChangeType"
+                      typeConverter="IncomingRowChangeType">1</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1250</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Populating Pracownik Table\Initializing Pracownik\Slowly Changing Dimension.Connections[LookupConnection]"
+                      description="Defines the connection to use for lookups in the dimension table"
+                      name="LookupConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Populating Pracownik Table\Initializing Pracownik\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]"
+                      name="Slowly Changing Dimension Input">
+                      <externalMetadataColumns
+                        isUsed="True" />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Populating Pracownik Table\Initializing Pracownik\Slowly Changing Dimension.Outputs[Unchanged Output]"
+                      description="Unchanged rows"
+                      exclusionGroup="1"
+                      name="Unchanged Output"
+                      synchronousInputId="Package\Populating Pracownik Table\Initializing Pracownik\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Populating Pracownik Table\Initializing Pracownik\Slowly Changing Dimension.Outputs[New Output]"
+                      description="New rows"
+                      exclusionGroup="1"
+                      name="New Output"
+                      synchronousInputId="Package\Populating Pracownik Table\Initializing Pracownik\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Populating Pracownik Table\Initializing Pracownik\Slowly Changing Dimension.Outputs[Fixed Attribute Output]"
+                      description="Rows with changes in columns tagged FixedAttribute"
+                      exclusionGroup="1"
+                      name="Fixed Attribute Output"
+                      synchronousInputId="Package\Populating Pracownik Table\Initializing Pracownik\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Populating Pracownik Table\Initializing Pracownik\Slowly Changing Dimension.Outputs[Changing Attribute Updates Output]"
+                      description="These rows contain new information for ChangingAttribute (Type 1) column changes"
+                      exclusionGroup="1"
+                      name="Changing Attribute Updates Output"
+                      synchronousInputId="Package\Populating Pracownik Table\Initializing Pracownik\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Populating Pracownik Table\Initializing Pracownik\Slowly Changing Dimension.Outputs[Historical Attribute Inserts Output]"
+                      description="HistoricalAttribute (Type 2) changes result in these new rows"
+                      exclusionGroup="2"
+                      name="Historical Attribute Inserts Output"
+                      synchronousInputId="Package\Populating Pracownik Table\Initializing Pracownik\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Populating Pracownik Table\Initializing Pracownik\Slowly Changing Dimension.Outputs[Inferred Member Updates Output]"
+                      description="Information to update unpopulated initial dimension row"
+                      exclusionGroup="1"
+                      name="Inferred Member Updates Output"
+                      synchronousInputId="Package\Populating Pracownik Table\Initializing Pracownik\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Populating Pracownik Table\Initializing Pracownik.Paths[Data Conversion Output]"
+                  endId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Inputs[Sort Input]"
+                  name="Data Conversion Output"
+                  startId="Package\Populating Pracownik Table\Initializing Pracownik\Data Conversion.Outputs[Data Conversion Output]" />
+                <path
+                  refId="Package\Populating Pracownik Table\Initializing Pracownik.Paths[Derived Column Output]"
+                  endId="Package\Populating Pracownik Table\Initializing Pracownik\Pracownik DW.Inputs[OLE DB Destination Input]"
+                  name="Derived Column Output"
+                  startId="Package\Populating Pracownik Table\Initializing Pracownik\Marking is current.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Populating Pracownik Table\Initializing Pracownik.Paths[Excel Source Output]"
+                  endId="Package\Populating Pracownik Table\Initializing Pracownik\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Excel Source Output"
+                  startId="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel.Outputs[Excel Source Output]" />
+                <path
+                  refId="Package\Populating Pracownik Table\Initializing Pracownik.Paths[Lookup Match Output]"
+                  endId="Package\Populating Pracownik Table\Initializing Pracownik\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]"
+                  name="Lookup Match Output"
+                  startId="Package\Populating Pracownik Table\Initializing Pracownik\Lookup.Outputs[Lookup Match Output]" />
+                <path
+                  refId="Package\Populating Pracownik Table\Initializing Pracownik.Paths[Lookup No Match Output]"
+                  endId="Package\Populating Pracownik Table\Initializing Pracownik\Marking is current.Inputs[Derived Column Input]"
+                  name="Lookup No Match Output"
+                  startId="Package\Populating Pracownik Table\Initializing Pracownik\Lookup.Outputs[Lookup No Match Output]" />
+                <path
+                  refId="Package\Populating Pracownik Table\Initializing Pracownik.Paths[Sort Output]"
+                  endId="Package\Populating Pracownik Table\Initializing Pracownik\Lookup.Inputs[Lookup Input]"
+                  name="Sort Output"
+                  startId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Outputs[Sort Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Populating Pracownik Table\Loading Pracownik"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{20A0228B-029F-45AE-AADE-8E5525CEEEC4}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Loading Pracownik"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Populating Pracownik Table.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{2E71AEF7-0436-40C6-BBD1-4EA8C80071CB}"
+          DTS:From="Package\Populating Pracownik Table\Initializing Pracownik"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Populating Pracownik Table\Loading Pracownik" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="178,42"
+          Id="Package\Populating Pracownik Table\Initializing Pracownik"
+          TopLeft="77,44" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\Populating Pracownik Table\Loading Pracownik"
+          TopLeft="84,149" />
+        <EdgeLayout
+          Id="Package\Populating Pracownik Table.PrecedenceConstraints[Constraint]"
+          TopLeft="166.75,86">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63"
+              Start="0,0"
+              End="0,55.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="339,289"
+          Size="339,332"
+          Id="Package\Populating Pracownik Table"
+          TopLeft="143,188" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <ConnectionManager
+    design-time-name="Package.ConnectionManagers[localhost.HDlab4 analytical database]">
+    <ProjectReferenceName></ProjectReferenceName>
+  </ConnectionManager>
+  <TaskHost
+    design-time-name="Package\Populating Pracownik Table\Initializing Pracownik">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="113,42"
+          Id="Package\Populating Pracownik Table\Initializing Pracownik\Lookup"
+          TopLeft="398,300" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Populating Pracownik Table\Initializing Pracownik\Data Conversion"
+          TopLeft="380,107" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Populating Pracownik Table\Initializing Pracownik\Marking is current"
+          TopLeft="590,430" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates"
+          TopLeft="377,196" />
+        <NodeLayout
+          Size="133,42"
+          Id="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel"
+          TopLeft="392,20" />
+        <EdgeLayout
+          Id="Package\Populating Pracownik Table\Initializing Pracownik.Paths[Sort Output]"
+          TopLeft="457.5,238">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,62"
+              Start="0,0"
+              End="0,54.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,54.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populating Pracownik Table\Initializing Pracownik.Paths[Lookup No Match Output]"
+          TopLeft="454.5,342">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="217.5,88"
+              Start="0,0"
+              End="217.5,80.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,40"
+                    Point2="0,44"
+                    Point3="4,44" />
+                  <mssgle:LineSegment
+                    End="213.5,44" />
+                  <mssgle:CubicBezierSegment
+                    Point1="213.5,44"
+                    Point2="217.5,44"
+                    Point3="217.5,48" />
+                  <mssgle:LineSegment
+                    End="217.5,80.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="52.94361328125,49,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populating Pracownik Table\Initializing Pracownik.Paths[Excel Source Output]"
+          TopLeft="458.25,62">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,45"
+              Start="0,0"
+              End="0,37.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populating Pracownik Table\Initializing Pracownik.Paths[Data Conversion Output]"
+          TopLeft="459.25,149">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47"
+              Start="0,0"
+              End="0,39.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,11.75,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="147,42"
+          Id="Package\Populating Pracownik Table\Initializing Pracownik\Pracownik DW"
+          TopLeft="598,530" />
+        <EdgeLayout
+          Id="Package\Populating Pracownik Table\Initializing Pracownik.Paths[Derived Column Output]"
+          TopLeft="671.75,472">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58"
+              Start="0,0"
+              End="0,50.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="209,42"
+          Id="Package\Populating Pracownik Table\Initializing Pracownik\Slowly Changing Dimension"
+          TopLeft="252,450" />
+        <EdgeLayout
+          Id="Package\Populating Pracownik Table\Initializing Pracownik.Paths[Lookup Match Output]"
+          TopLeft="437,342">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-80.5,108"
+              Start="0,0"
+              End="-80.5,100.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.1047120418848" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,40.1047120418848"
+                    Point2="0,44.1047120418848"
+                    Point3="-4,44.1047120418848" />
+                  <mssgle:LineSegment
+                    End="-76.5,44.1047120418848" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-76.5,44.1047120418848"
+                    Point2="-80.5,44.1047120418848"
+                    Point3="-80.5,48.1047120418848" />
+                  <mssgle:LineSegment
+                    End="-80.5,100.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-88.44138671875,49.1047120418848,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populating Pracownik Table\Initializing Pracownik\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[pracownik]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populating Pracownik Table\Initializing Pracownik\CEO's excel">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populating Pracownik Table\Initializing Pracownik\Pracownik DW">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
