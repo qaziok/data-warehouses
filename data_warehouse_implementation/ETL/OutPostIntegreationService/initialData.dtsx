@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="16"
-  DTS:VersionGUID="{FEFCBC2D-7BB6-49EC-9F92-ACC56659CED6}">
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{2E14E24F-8933-4325-8DCC-63964FDDFF04}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -23,7 +23,7 @@
       DTS:ObjectName="insertIntoData.sql">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="C:\Users\User\Documents\sem5\HD\data-warehouses\data_warehouse_implementation\ETL\OutPostIntegreationService\scripts\insertIntoData.sql" />
+          DTS:ConnectionString="C:\Users\User\Documents\sem5\HD\data-warehouses\data_warehouse_implementation\ETL\OutPostIntegreationService\Nowy folder\insertIntoData.sql" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -100,13 +100,13 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="165.6,41.6"
-          Id="Package\SQL insert into typ"
-          TopLeft="510.714294411698,180.470590766326" />
-        <NodeLayout
-          Size="162.4,41.6"
+          Size="162,42"
           Id="Package\SQL insert into data"
           TopLeft="327.142862714067,181.235296659404" />
+        <NodeLayout
+          Size="166,42"
+          Id="Package\SQL insert into typ"
+          TopLeft="510.714294411698,180.470590766326" />
       </GraphLayout>
     </LayoutInfo>
   </Package>

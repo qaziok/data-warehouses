@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="12/10/2022 6:14:17 PM"
@@ -1752,7 +1752,7 @@ where [refTable].[nr_pracownika] = ?</property>
                           cachedDataType="wstr"
                           cachedLength="255"
                           cachedName="płeć 2"
-                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\253:invalid">
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\283:invalid">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -1769,7 +1769,7 @@ where [refTable].[nr_pracownika] = ?</property>
                           cachedDataType="wstr"
                           cachedLength="255"
                           cachedName="stanowisko 2"
-                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\254:invalid">
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\284:invalid">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -1785,7 +1785,7 @@ where [refTable].[nr_pracownika] = ?</property>
                           refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Inputs[Sort Input].Columns[sortownia 2]"
                           cachedDataType="r8"
                           cachedName="sortownia 2"
-                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\255:invalid">
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\285:invalid">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -1801,7 +1801,7 @@ where [refTable].[nr_pracownika] = ?</property>
                           refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Inputs[Sort Input].Columns[data zatrudnienia 2]"
                           cachedDataType="date"
                           cachedName="data zatrudnienia 2"
-                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\256:invalid">
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\286:invalid">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -1817,7 +1817,7 @@ where [refTable].[nr_pracownika] = ?</property>
                           refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Inputs[Sort Input].Columns[data zwolnienia 2]"
                           cachedDataType="date"
                           cachedName="data zwolnienia 2"
-                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\257:invalid">
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\287:invalid">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -1970,7 +1970,7 @@ where [refTable].[nr_pracownika] = ?</property>
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\253:invalid}</property>
+                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\283:invalid}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -1984,7 +1984,7 @@ where [refTable].[nr_pracownika] = ?</property>
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\254:invalid}</property>
+                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\284:invalid}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -1997,7 +1997,7 @@ where [refTable].[nr_pracownika] = ?</property>
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\255:invalid}</property>
+                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\285:invalid}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -2010,7 +2010,7 @@ where [refTable].[nr_pracownika] = ?</property>
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\256:invalid}</property>
+                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\286:invalid}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -2023,7 +2023,7 @@ where [refTable].[nr_pracownika] = ?</property>
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\257:invalid}</property>
+                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\287:invalid}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
