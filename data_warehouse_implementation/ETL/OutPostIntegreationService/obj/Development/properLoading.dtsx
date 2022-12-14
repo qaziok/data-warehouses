@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="45"
-  DTS:VersionGUID="{5938FC7E-621D-4727-A1A5-81F43F9464E5}">
+  DTS:VersionBuild="60"
+  DTS:VersionGUID="{FF384B7A-1AAB-480B-8052-035C0A91A5DD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -683,6 +683,2075 @@ where [refTable].[nr_paczki] = ?</property>
               endId="Package\populating Paczka\Derived Column.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
               startId="Package\populating Paczka\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\populating Pracownik"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{D9D0A6B7-0AA7-4E91-B56E-A08A26E3F353}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="populating Pracownik"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\populating Pracownik\calculating wiek"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="calculating wiek"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\populating Pracownik\calculating wiek.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\populating Pracownik\calculating wiek.Inputs[Derived Column Input].Columns[data urodzenia]"
+                      cachedDataType="date"
+                      cachedName="data urodzenia"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[data urodzenia]" />
+                    <inputColumn
+                      refId="Package\populating Pracownik\calculating wiek.Inputs[Derived Column Input].Columns[data zwolnienia]"
+                      cachedDataType="date"
+                      cachedName="data zwolnienia"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[data zwolnienia]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\populating Pracownik\calculating wiek.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\populating Pracownik\calculating wiek.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\populating Pracownik\calculating wiek.Outputs[Derived Column Output].Columns[wiek]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\populating Pracownik\calculating wiek.Outputs[Derived Column Output].Columns[wiek]"
+                      name="wiek"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[data zwolnienia]}) ? [DATEDIFF]("year",#{Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[data urodzenia]},[GETDATE]()) : [DATEDIFF]("year",#{Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[data urodzenia]},#{Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[data zwolnienia]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL([data zwolnienia]) ? DATEDIFF("year",[data urodzenia],GETDATE()) : DATEDIFF("year",[data urodzenia],[data zwolnienia])</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\populating Pracownik\calculating wiek.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\populating Pracownik\calculating wiek.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\populating Pracownik\calculating wiek.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\populating Pracownik\calculating wiek.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\calculating wiek.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\populating Pracownik\calculating wiek.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\populating Pracownik\CEO's excel"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="CEO's excel"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Sheet1$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\populating Pracownik\CEO's excel.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[id 2]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].ExternalColumns[id]"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[id 2]"
+                      name="id 2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[imie]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].ExternalColumns[imie]"
+                      length="255"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[imie]"
+                      name="imie"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[nazwisko]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].ExternalColumns[nazwisko]"
+                      length="255"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[nazwisko]"
+                      name="nazwisko"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[data urodzenia]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].ExternalColumns[data urodzenia]"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[data urodzenia]"
+                      name="data urodzenia"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[płeć]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].ExternalColumns[płeć]"
+                      length="255"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[płeć]"
+                      name="płeć"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[stanowisko]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].ExternalColumns[stanowisko]"
+                      length="255"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[stanowisko]"
+                      name="stanowisko"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[sortownia]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].ExternalColumns[sortownia]"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[sortownia]"
+                      name="sortownia"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[data zatrudnienia]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].ExternalColumns[data zatrudnienia]"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[data zatrudnienia]"
+                      name="data zatrudnienia"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[data zwolnienia]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].ExternalColumns[data zwolnienia]"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[data zwolnienia]"
+                      name="data zwolnienia"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[wynagrodzenie]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].ExternalColumns[wynagrodzenie]"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[wynagrodzenie]"
+                      name="wynagrodzenie"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].ExternalColumns[id]"
+                      dataType="r8"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].ExternalColumns[imie]"
+                      dataType="wstr"
+                      length="255"
+                      name="imie" />
+                    <externalMetadataColumn
+                      refId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].ExternalColumns[nazwisko]"
+                      dataType="wstr"
+                      length="255"
+                      name="nazwisko" />
+                    <externalMetadataColumn
+                      refId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].ExternalColumns[data urodzenia]"
+                      dataType="date"
+                      name="data urodzenia" />
+                    <externalMetadataColumn
+                      refId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].ExternalColumns[płeć]"
+                      dataType="wstr"
+                      length="255"
+                      name="płeć" />
+                    <externalMetadataColumn
+                      refId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].ExternalColumns[stanowisko]"
+                      dataType="wstr"
+                      length="255"
+                      name="stanowisko" />
+                    <externalMetadataColumn
+                      refId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].ExternalColumns[sortownia]"
+                      dataType="r8"
+                      name="sortownia" />
+                    <externalMetadataColumn
+                      refId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].ExternalColumns[data zatrudnienia]"
+                      dataType="date"
+                      name="data zatrudnienia" />
+                    <externalMetadataColumn
+                      refId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].ExternalColumns[data zwolnienia]"
+                      dataType="date"
+                      name="data zwolnienia" />
+                    <externalMetadataColumn
+                      refId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].ExternalColumns[wynagrodzenie]"
+                      dataType="r8"
+                      name="wynagrodzenie" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Error Output].Columns[id]"
+                      dataType="r8"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Error Output].Columns[id]"
+                      name="id" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Error Output].Columns[imie]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Error Output].Columns[imie]"
+                      name="imie" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Error Output].Columns[nazwisko]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Error Output].Columns[nazwisko]"
+                      name="nazwisko" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Error Output].Columns[data urodzenia]"
+                      dataType="date"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Error Output].Columns[data urodzenia]"
+                      name="data urodzenia" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Error Output].Columns[płeć]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Error Output].Columns[płeć]"
+                      name="płeć" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Error Output].Columns[stanowisko]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Error Output].Columns[stanowisko]"
+                      name="stanowisko" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Error Output].Columns[sortownia]"
+                      dataType="r8"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Error Output].Columns[sortownia]"
+                      name="sortownia" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Error Output].Columns[data zatrudnienia]"
+                      dataType="date"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Error Output].Columns[data zatrudnienia]"
+                      name="data zatrudnienia" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Error Output].Columns[data zwolnienia]"
+                      dataType="date"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Error Output].Columns[data zwolnienia]"
+                      name="data zwolnienia" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Error Output].Columns[wynagrodzenie]"
+                      dataType="r8"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Error Output].Columns[wynagrodzenie]"
+                      name="wynagrodzenie" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\populating Pracownik\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\populating Pracownik\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\populating Pracownik\Conditional Split.Inputs[Conditional Split Input].Columns[data zwolnienia]"
+                      cachedDataType="date"
+                      cachedName="data zwolnienia"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[data zwolnienia]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\populating Pracownik\Conditional Split.Outputs[current workers]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="current workers"
+                  synchronousInputId="Package\populating Pracownik\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[ISNULL](#{Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[data zwolnienia]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ISNULL([data zwolnienia])</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\populating Pracownik\Conditional Split.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\populating Pracownik\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\populating Pracownik\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\populating Pracownik\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\populating Pracownik\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\populating Pracownik\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\populating Pracownik\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\populating Pracownik\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\populating Pracownik\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\populating Pracownik\Data Conversion.Inputs[Data Conversion Input].Columns[id 2]"
+                      cachedDataType="r8"
+                      cachedName="id 2"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[id 2]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\populating Pracownik\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\populating Pracownik\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\populating Pracownik\Data Conversion.Outputs[Data Conversion Output].Columns[id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\populating Pracownik\Data Conversion.Outputs[Data Conversion Output].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[id 2]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\populating Pracownik\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\populating Pracownik\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\populating Pracownik\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\populating Pracownik\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\populating Pracownik\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\populating Pracownik\Insert Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Insert Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[pracownik]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\populating Pracownik\Insert Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-46GI6A46.OutPostdw]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-46GI6A46.OutPostdw]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\populating Pracownik\Insert Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\populating Pracownik\Insert Destination.Inputs[OLE DB Destination Input].Columns[id]"
+                      cachedDataType="i4"
+                      cachedName="id"
+                      externalMetadataColumnId="Package\populating Pracownik\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[nr_pracownika]"
+                      lineageId="Package\populating Pracownik\Data Conversion.Outputs[Data Conversion Output].Columns[id]" />
+                    <inputColumn
+                      refId="Package\populating Pracownik\Insert Destination.Inputs[OLE DB Destination Input].Columns[wynagrodzenieRange]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="wynagrodzenieRange"
+                      externalMetadataColumnId="Package\populating Pracownik\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[wynagrodzenie]"
+                      lineageId="Package\populating Pracownik\ranges.Outputs[Output 0].Columns[wynagrodzenieRange]" />
+                    <inputColumn
+                      refId="Package\populating Pracownik\Insert Destination.Inputs[OLE DB Destination Input].Columns[wiekRange]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="wiekRange"
+                      externalMetadataColumnId="Package\populating Pracownik\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[wiek]"
+                      lineageId="Package\populating Pracownik\ranges.Outputs[Output 0].Columns[wiekRange]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\populating Pracownik\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_pracownik]"
+                      dataType="i4"
+                      name="id_pracownik" />
+                    <externalMetadataColumn
+                      refId="Package\populating Pracownik\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[nr_pracownika]"
+                      dataType="i4"
+                      name="nr_pracownika" />
+                    <externalMetadataColumn
+                      refId="Package\populating Pracownik\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[wynagrodzenie]"
+                      codePage="1250"
+                      dataType="str"
+                      length="20"
+                      name="wynagrodzenie" />
+                    <externalMetadataColumn
+                      refId="Package\populating Pracownik\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[wiek]"
+                      codePage="1250"
+                      dataType="str"
+                      length="20"
+                      name="wiek" />
+                    <externalMetadataColumn
+                      refId="Package\populating Pracownik\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[data_wstawienia]"
+                      dataType="dbDate"
+                      name="data_wstawienia" />
+                    <externalMetadataColumn
+                      refId="Package\populating Pracownik\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[data_deaktywacji]"
+                      dataType="dbDate"
+                      name="data_deaktywacji" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\populating Pracownik\Insert Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\populating Pracownik\Insert Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\populating Pracownik\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\populating Pracownik\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\populating Pracownik\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\populating Pracownik\OLE DB Command"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="OLE DB Command"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [dbo].[pracownik] SET [wiek] = ?,[wynagrodzenie] = ? WHERE [nr_pracownika] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\populating Pracownik\OLE DB Command.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-46GI6A46.OutPostdw]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-46GI6A46.OutPostdw]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\populating Pracownik\OLE DB Command.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\populating Pracownik\OLE DB Command.Inputs[OLE DB Command Input].Columns[id]"
+                      cachedDataType="i4"
+                      cachedName="id"
+                      externalMetadataColumnId="Package\populating Pracownik\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\populating Pracownik\Data Conversion.Outputs[Data Conversion Output].Columns[id]" />
+                    <inputColumn
+                      refId="Package\populating Pracownik\OLE DB Command.Inputs[OLE DB Command Input].Columns[wiekRange]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="wiekRange"
+                      externalMetadataColumnId="Package\populating Pracownik\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\populating Pracownik\ranges.Outputs[Output 0].Columns[wiekRange]" />
+                    <inputColumn
+                      refId="Package\populating Pracownik\OLE DB Command.Inputs[OLE DB Command Input].Columns[wynagrodzenieRange]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="wynagrodzenieRange"
+                      externalMetadataColumnId="Package\populating Pracownik\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\populating Pracownik\ranges.Outputs[Output 0].Columns[wynagrodzenieRange]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\populating Pracownik\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      codePage="1250"
+                      dataType="str"
+                      length="20"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\populating Pracownik\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      codePage="1250"
+                      dataType="str"
+                      length="20"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\populating Pracownik\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="i4"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\populating Pracownik\OLE DB Command.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\populating Pracownik\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\populating Pracownik\OLE DB Command.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\populating Pracownik\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\populating Pracownik\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\populating Pracownik\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\populating Pracownik\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\populating Pracownik\ranges"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;12"
+              description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
+              name="ranges"
+              version="12">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Stores the source code of the component"
+                  isArray="true"
+                  name="SourceCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="30">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[ComponentWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services component wrapper
+*  This module defines the base class for your component
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+
+public class UserComponent: ScriptComponent
+{
+    public Connections Connections;
+    public Variables Variables;
+    public UserComponent()
+    {
+        Connections = new Connections(this);
+        Variables = new Variables(this);
+    }
+
+    public override void ProcessInput(int InputID, string InputName, PipelineBuffer Buffer, OutputNameMap OutputMap)
+    {
+
+        if (InputName.Equals(@"Input 0", StringComparison.Ordinal))
+        {
+            Input0_ProcessInput(new Input0Buffer(Buffer, GetColumnIndexes(InputID), OutputMap));
+        }
+
+    }
+
+    public virtual void Input0_ProcessInput(Input0Buffer Buffer)
+    {
+        while (Buffer.NextRow())
+        {
+            Input0_ProcessInputRow(Buffer);
+        }
+    }
+
+    public virtual void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+    }
+
+}
+
+public class Connections
+{
+    ScriptComponent ParentComponent;
+
+    public Connections(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+
+public class Variables
+{
+    ScriptComponent ParentComponent;
+
+    public Variables(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.resx]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[main.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[#region Help:  Introduction to the Script Component
+/* The Script Component allows you to perform virtually any operation that can be accomplished in
+ * a .Net application within the context of an Integration Services data flow.
+ *
+ * Expand the other regions which have "Help" prefixes for examples of specific ways to use
+ * Integration Services features within this script component. */
+#endregion
+
+#region Namespaces
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+#endregion
+
+/// <summary>
+/// This is the class to which to add your code.  Do not change the name, attributes, or parent
+/// of this class.
+/// </summary>
+[Microsoft.SqlServer.Dts.Pipeline.SSISScriptComponentEntryPointAttribute]
+public class ScriptMain : UserComponent
+{
+    #region Help:  Using Integration Services variables and parameters
+    /* To use a variable in this script, first ensure that the variable has been added to
+     * either the list contained in the ReadOnlyVariables property or the list contained in
+     * the ReadWriteVariables property of this script component, according to whether or not your
+     * code needs to write into the variable.  To do so, save this script, close this instance of
+     * Visual Studio, and update the ReadOnlyVariables and ReadWriteVariables properties in the
+     * Script Transformation Editor window.
+     * To use a parameter in this script, follow the same steps. Parameters are always read-only.
+     *
+     * Example of reading from a variable or parameter:
+     *  DateTime startTime = Variables.MyStartTime;
+     *
+     * Example of writing to a variable:
+     *  Variables.myStringVariable = "new value";
+     */
+    #endregion
+
+    #region Help:  Using Integration Services Connnection Managers
+    /* Some types of connection managers can be used in this script component.  See the help topic
+     * "Working with Connection Managers Programatically" for details.
+     *
+     * To use a connection manager in this script, first ensure that the connection manager has
+     * been added to either the list of connection managers on the Connection Managers page of the
+     * script component editor.  To add the connection manager, save this script, close this instance of
+     * Visual Studio, and add the Connection Manager to the list.
+     *
+     * If the component needs to hold a connection open while processing rows, override the
+     * AcquireConnections and ReleaseConnections methods.
+     * 
+     * Example of using an ADO.Net connection manager to acquire a SqlConnection:
+     *  object rawConnection = Connections.SalesDB.AcquireConnection(transaction);
+     *  SqlConnection salesDBConn = (SqlConnection)rawConnection;
+     *
+     * Example of using a File connection manager to acquire a file path:
+     *  object rawConnection = Connections.Prices_zip.AcquireConnection(transaction);
+     *  string filePath = (string)rawConnection;
+     *
+     * Example of releasing a connection manager:
+     *  Connections.SalesDB.ReleaseConnection(rawConnection);
+     */
+    #endregion
+
+    #region Help:  Firing Integration Services Events
+    /* This script component can fire events.
+     *
+     * Example of firing an error event:
+     *  ComponentMetaData.FireError(10, "Process Values", "Bad value", "", 0, out cancel);
+     *
+     * Example of firing an information event:
+     *  ComponentMetaData.FireInformation(10, "Process Values", "Processing has started", "", 0, fireAgain);
+     *
+     * Example of firing a warning event:
+     *  ComponentMetaData.FireWarning(10, "Process Values", "No rows were received", "", 0);
+     */
+    #endregion
+
+    /// <summary>
+    /// This method is called once, before rows begin to be processed in the data flow.
+    ///
+    /// You can remove this method if you don't need to do anything here.
+    /// </summary>
+    public override void PreExecute()
+    {
+        base.PreExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    /// <summary>
+    /// This method is called after all the rows have passed through this component.
+    ///
+    /// You can delete this method if you don't need to do anything here.
+    /// </summary>
+    public override void PostExecute()
+    {
+        base.PostExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    /// <summary>
+    /// This method is called once for every row that passes through the component from Input0.
+    ///
+    /// Example of reading a value from a column in the the row:
+    ///  string zipCode = Row.ZipCode
+    ///
+    /// Example of writing a value to a column in the row:
+    ///  Row.ZipCode = zipCode
+    /// </summary>
+    /// <param name="Row">The row that is currently passing through the component</param>
+    public override void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+        if (Row.wiek_IsNull)
+        {
+            Row.wiekRange_IsNull = true;
+        }
+        else
+            switch (Row.wiek)
+            {
+                case Int16.MinValue - 14:
+                    //worker too young
+                    Row.wiekRange_IsNull = true;
+                    Boolean cancel = true;
+                    ComponentMetaData.FireError(10, "Calculating Ranges", "Bad wiek value", "", 0, out cancel);
+                    break;
+                case int n when (n > 0 && n <= 20):
+                    Row.wiekRange = "miedzy 0 i 20";
+                    break;
+                case int n when (n > 20 && n <= 25):
+                    Row.wiekRange = "miedzy 21 i 25";
+                    break;
+                case int n when (n > 25 && n <= 30):
+                    Row.wiekRange = "miedzy 26 i 30";
+                    break;
+                case int n when (n > 30 && n <= 35):
+                    Row.wiekRange = "miedzy 31 i 35";
+                    break;
+                case int n when (n > 35 && n <= 40):
+                    Row.wiekRange = "miedzy 36 i 40";
+                    break;
+                case int n when (n > 40 && n <= 50):
+                    Row.wiekRange = "miedzy 41 i 50";
+                    break;
+                case int n when (n > 50 && n <= 60):
+                    Row.wiekRange = "miedzy 51 i 60";
+                    break;
+                default:
+                    Row.wiekRange = "powyżej 61";
+                    break;
+
+            }
+        if (Row.wynagrodzenie_IsNull)
+        {
+            Row.wynagrodzenieRange_IsNull = true;
+        }
+        else
+            switch (Row.wynagrodzenie)
+            {
+                case double n when (n > 0 && n < 2000):
+                    Row.wynagrodzenieRange = "b.małe";
+                    break;
+                case double n when (n >= 2000 && n < 3000):
+                    Row.wynagrodzenieRange = "małe";
+                    break;
+                case double n when (n >= 3000 && n < 4000):
+                    Row.wynagrodzenieRange = "średnie";
+                    break;
+                case double n when (n >= 4000 && n < 5000):
+                    Row.wynagrodzenieRange = "duże";
+                    break;
+                default:
+                    Row.wynagrodzenieRange = "b.duże";
+                    break;
+            }
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[BufferWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services buffer wrappers
+*  This module defines classes for accessing data flow buffers
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+
+public class Input0Buffer: ScriptBuffer
+
+{
+    public Input0Buffer(PipelineBuffer Buffer, int[] BufferColumnIndexes, OutputNameMap OutputMap)
+        : base(Buffer, BufferColumnIndexes, OutputMap)
+    {
+    }
+
+    public Int32 wiek
+    {
+        get
+        {
+            return Buffer.GetInt32(BufferColumnIndexes[0]);
+        }
+    }
+    public bool wiek_IsNull
+    {
+        get
+        {
+            return IsNull(0);
+        }
+    }
+
+    public Double wynagrodzenie
+    {
+        get
+        {
+            return Buffer.GetDouble(BufferColumnIndexes[1]);
+        }
+    }
+    public bool wynagrodzenie_IsNull
+    {
+        get
+        {
+            return IsNull(1);
+        }
+    }
+
+    public String wiekRange
+    {
+        set
+        {
+            this[2] = value;
+        }
+    }
+    public bool wiekRange_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(2);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String wynagrodzenieRange
+    {
+        set
+        {
+            this[3] = value;
+        }
+    }
+    public bool wynagrodzenieRange_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(3);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    new public bool NextRow()
+    {
+        return base.NextRow();
+    }
+
+    new public bool EndOfRowset()
+    {
+        return base.EndOfRowset();
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_8abe97704f9e408ca7cd82814fa294cd.csproj]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5d850a1c-d044-4174-85b0-799e24a01e01}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SC_8abe97704f9e408ca7cd82814fa294cd</RootNamespace>
+    <AssemblyName>SC_BB04543E6A03429780B20D7706AC7AD7</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.TxScript, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.PipelineHost, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Compile Include="main.cs" />
+    <Compile Include="BufferWrapper.cs" />
+    <Compile Include="ComponentWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- This section defines VSTA properties that describe the host-changable project properties. -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="ScriptComponent" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoExeName="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
+        <Host Name="ScriptComponent" GeneratedNamespace="SC_8abe97704f9e408ca7cd82814fa294cd" IconIndex="0"></Host>
+        <ProjectClient>
+          <HostIdentifier>SSIS_SC150</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_8abe97704f9e408ca7cd82814fa294cd.Properties.Settings.get_Default():SC_8abe97704f9e408ca7cd82814fa294cd.Properties.Sett" +
+    "ings")]
+
+namespace SC_8abe97704f9e408ca7cd82814fa294cd.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Project]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
+  <msb:PropertyGroup>
+    <msb:CodeName>SC_8abe97704f9e408ca7cd82814fa294cd</msb:CodeName>
+    <msb:Language>msBuild</msb:Language>
+    <msb:DisplayName>SC_8abe97704f9e408ca7cd82814fa294cd</msb:DisplayName>
+    <msb:ProjectId>{5F042C4E-2254-4963-9965-29294908CE81}</msb:ProjectId>
+  </msb:PropertyGroup>
+  <msb:ItemGroup>
+    <msb:Project Include="SC_8abe97704f9e408ca7cd82814fa294cd.csproj" />
+    <msb:File Include="Properties\Resources.resx" />
+    <msb:File Include="Properties\Settings.Designer.cs" />
+    <msb:File Include="main.cs" />
+    <msb:File Include="BufferWrapper.cs" />
+    <msb:File Include="ComponentWrapper.cs" />
+    <msb:File Include="Properties\Settings.settings" />
+    <msb:File Include="Properties\AssemblyInfo.cs" />
+    <msb:File Include="Properties\Resources.Designer.cs" />
+  </msb:ItemGroup>
+</c:Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\AssemblyInfo.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("SC_8abe97704f9e408ca7cd82814fa294cd")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("SC_8abe97704f9e408ca7cd82814fa294cd")]
+[assembly: AssemblyCopyright("Copyright @  2022")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.0.0")]
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.settings]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_8abe97704f9e408ca7cd82814fa294cd.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+    "rceManager")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_8abe97704f9e408ca7cd82814fa294cd.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+    "fo")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_8abe97704f9e408ca7cd82814fa294cd.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+    "):Void")]
+
+namespace SC_8abe97704f9e408ca7cd82814fa294cd.Properties {
+    
+    
+    /// <summary>
+    ///   A strongly-typed resource class, for looking up localized strings, etc.
+    /// </summary>
+    // This class was auto-generated by the StronglyTypedResourceBuilder
+    // class via a tool like ResGen or Visual Studio.
+    // To add or remove a member, edit your .ResX file then rerun ResGen
+    // with the /str option, or rebuild your VS project.
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    internal class Resources {
+        
+        private static global::System.Resources.ResourceManager resourceMan;
+        
+        private static global::System.Globalization.CultureInfo resourceCulture;
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal Resources() {
+        }
+        
+        /// <summary>
+        ///   Returns the cached ResourceManager instance used by this class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if ((resourceMan == null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SC_8abe97704f9e408ca7cd82814fa294cd.Properties.Resources", typeof(Resources).Assembly);
+                    resourceMan = temp;
+                }
+                return resourceMan;
+            }
+        }
+        
+        /// <summary>
+        ///   Overrides the current thread's CurrentUICulture property for all
+        ///   resource lookups using this strongly typed resource class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
+                return resourceCulture;
+            }
+            set {
+                resourceCulture = value;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Stores the binary representation of the component"
+                  isArray="true"
+                  name="BinaryCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="2">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_BB04543E6A03429780B20D7706AC7AD7.dll]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAMMZmWMAAAAAAAAAAOAAIiALATAAABgAAAAIAAAAAAAA3jYA
+AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAIw2AABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
+AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAA5BYAAAAgAAAAGAAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAQAAAAAYAAAAaAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAIAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAADA
+NgAAAAAAAEgAAAACAAUAxCMAABASAAABAAAAAAAAANQ1AAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBAAAAoqHgIoEQAACioTMAcA4QEAAAEAABEDbwcAAAYs
+DAMXbwsAAAY4BQEAAANvBgAABgsHIPJ///8zLQMXbwsAAAYXCgIoEgAACh8KcgEAAHByJwAAcHJF
+AABwFhIAbxMAAAo4yQAAAAcWMRUHHxQwEANyRwAAcG8KAAAGOLAAAAAHDAgfFDEVCB8ZMBADcmMA
+AHBvCgAABjiUAAAABw0JHxkxEgkfHjANA3KBAABwbwoAAAYrewcTBBEEHx4xExEEHyMwDQNynwAA
+cG8KAAAGK18HEwURBR8jMRMRBR8oMA0Dcr0AAHBvCgAABitDBxMGEQYfKDETEQYfMjANA3LbAABw
+bwoAAAYrJwcTBxEHHzIxExEHHzwwDQNy+QAAcG8KAAAGKwsDchcBAHBvCgAABgNvCQAABiwIAxdv
+DQAABioDbwgAAAYTCBEIIwAAAAAAAAAANhkRCCMAAAAAAECfQDQMA3ItAQBwbwwAAAYqEQgTCREJ
+IwAAAAAAQJ9ANxkRCSMAAAAAAHCnQDQMA3I7AQBwbwwAAAYqEQgTChEKIwAAAAAAcKdANxkRCiMA
+AAAAAECvQDQMA3JFAQBwbwwAAAYqEQgTCxELIwAAAAAAQK9ANxkRCyMAAAAAAIizQDQMA3JVAQBw
+bwwAAAYqA3JfAQBwbwwAAAYqHgIoEAAABioqAgMEBSgUAAAKKlICexUAAAoCexYAAAoWlG8XAAAK
+KiICFigYAAAKKlICexUAAAoCexYAAAoXlG8ZAAAKKiICFygYAAAKKiYCGAMoGgAACipaAywIAhgo
+GwAACipybQEAcHMcAAAKeiYCGQMoGgAACipaAywIAhkoGwAACipybQEAcHMcAAAKeh4CKB0AAAoq
+HgIoHgAACip+AigfAAAKAgJzFAAABn0BAAAEAgJzFQAABn0CAAAEKpIEcgoCAHAabyAAAAosFQIF
+AgMoIQAACg4EcwUAAAZvEgAABipKKwcCA28TAAAGA28OAAAGLfEqBio6AigiAAAKAgN9AwAABCo6
+AigiAAAKAgN9BAAABCoeAigiAAAKKq5+BQAABC0echoCAHDQBwAAAigjAAAKbyQAAApzJQAACoAF
+AAAEfgUAAAQqGn4GAAAEKh4CgAYAAAQqGn4HAAAEKh4CKCYAAAoqLnMbAAAGgAcAAAQqQlNKQgEA
+AQAAAAAADAAAAHY0LjAuMzAzMTkAAAAABQBsAAAADAYAACN+AAB4BgAAKAcAACNTdHJpbmdzAAAA
+AKANAACMAgAAI1VTACwQAAAQAAAAI0dVSUQAAAA8EAAA1AEAACNCbG9iAAAAAAAAAAIAAAFXFaIB
+CQEAAAD6ATMAFgAAAQAAACAAAAAIAAAABwAAABwAAAARAAAAJgAAABAAAAABAAAAAwAAAAsAAAAM
+AAAAAQAAAAUAAAABAAAAAABsAwEAAAAAAAYAXQJeBQYA8QJeBQYAqQFLBQ8A0gUAAAYA1gFJBAYA
+QAJJBAYAIQJJBAYA2AJJBAYAfQJJBAYAlgJJBAYA7QFJBAYACAIsAwoAsQL2AAoA6gT2AA4A2wT2
+AAoAkgT2AAoAmAb2AAYAWwYBBAYAjAFLBQYA+wR+BQYAhgQ0BBIAXAFWAxIAvQFWAxIARAEfBAYA
+cQFeBRYAAQALBQYAWwQBBAYARgMBBAYAdQQBBAYAFwEBBAYAyAABBAYAHQdJBAAAAABHAAAAAAAB
+AAEAAQAQABQEAAAQAAEAAQABABAAzgQAADkAAQAFAAEAEAB6BgAARQABABAAAQAQAE8GAABJAAMA
+FAABABAAEAYAAEkABAAVAAAAEACFBeEFSQAFABYAAAEQAD8G4QVhAAcAGgAGAE8GmQAGABAGnQAB
+AIgGoQABAIgGoQARAAgEpQARADQBqQARAHcArQBQIAAAAADGAA8DBgABAFggAAAAAMYAGgMGAAEA
+YCAAAAAAxgD6BrEAAQBNIgAAAACGGD4FBgACAFUiAAAAAIYYPgU6AAIAYCIAAAAAhghNA7cABQB1
+IgAAAACGCOADYQAFAH4iAAAAAIYIrAC7AAUAkyIAAAAAhgjHA2EABQCcIgAAAACGCJ4AEAAFAKYi
+AAAAAIYIsgO/AAYAvSIAAAAAhgiHABAABwDHIgAAAACGCJQDvwAIAN4iAAAAAIYAEQdhAAkA5iIA
+AAAAhgBiBmEACQDuIgAAAACGGD4FBgAJAA4jAAAAAMYA7QbEAAkAMyMAAAAAxgHmBrEADQBGIwAA
+AADGAfoGsQAOAEgjAAAAAIYYPgXOAA8AVyMAAAAAhhg+Bc4AEABmIwAAAACDGD4FBgARAG4jAAAA
+AJMI9wTUABEAmiMAAAAAkwgcAdkAEQChIwAAAACTCCgB3gARAKkjAAAAAJYIbgbkABIAsCMAAAAA
+hhg+BQYAEgC4IwAAAACRGEQF6QASAAAAAQAVBwAAAQDwBAAAAgAaBgAAAwCgBAAAAQAmAwAAAQAm
+AwAAAQAmAwAAAQAmAwAAAQBQAAAAAgDsAAAAAwDwBAAABACgBAAAAQDwBAAAAQAVBwAAAQCeBgAA
+AQCeBgAAAQAmAwkAPgUBABEAPgUGABkAPgUKACkAPgUQADEAPgUQADkAPgUQAEEAPgUQAEkAPgUQ
+AFEAPgUQAFkAPgUQAGEAPgUQAGkAPgUGAJkAPgUGALkAPgUVAMkAPgUGAIkADwMGAIkAGgMGAIkA
+WAAqANEANAUvAHEAPgU6AHEA8AREAHEAGgZIAHkAGgBMAHEA6QNRAHkAvgBWAHEA+ANbAHEA8AMB
+ANkAPgUQAHEAEQdhAHEAYgZhAIkAPgUGAOEASAZlAIkALgZsAJEAPgUGAPEA2gByAPEAGQd5AKEA
+PgV/AMEAPgUGAC4ACwAMAS4AEwAVAS4AGwA0AS4AIwA9AS4AKwBmAS4AMwBmAS4AOwBmAS4AQwA9
+AS4ASwBsAS4AUwBmAS4AWwCDAUMAYwDNAeEAewDNAeMAawDNASkBcwA0AUkBcwA0ARsAAwABAAcA
+CQAIAAsAAABRA+0AAADkA/EAAACwAPUAAADLA/EAAACiAPkAAAC2A/EAAACLAPkAAACYA/EAAAD7
+BP0AAAA8AQIBAAByBgcBAgAGAAMAAgAHAAUAAgAIAAcAAgAJAAkAAQAKAAsAAQALAA0AAQAMAA8A
+AQANABEAAgAXABMAAgAYABUAAQAZABUAAgAaABcABIAAAAEAAAAAAAAAAAAAAAAAIwAAAAQAAAAA
+AAAAAAAAAIcAbgAAAAAADwAAAAAAAAAAAAAAkACoBgAAAAAPAAAAAAAAAAAAAACQAMUGAAAAAAQA
+AAAAAAAAAAAAAIcAAQQAAAAADwAAAAAAAAAAAAAAkACqBAAAAAAAAAAAAQAAAI8FAAAAAAAAAElE
+VFNDb21wb25lbnRNZXRhRGF0YTEwMABHZXRJbnQzMgBTQ19CQjA0NTQzRTZBMDM0Mjk3ODBCMjBE
+NzcwNkFDN0FENwA8TW9kdWxlPgBJbnB1dElEAGdldF9Db21wb25lbnRNZXRhRGF0YQBtc2Nvcmxp
+YgBkZWZhdWx0SW5zdGFuY2UAc2V0X3d5bmFncm9kemVuaWVSYW5nZQBzZXRfd2lla1JhbmdlAGdl
+dF93eW5hZ3JvZHplbmllAEdldERvdWJsZQBSdW50aW1lVHlwZUhhbmRsZQBHZXRUeXBlRnJvbUhh
+bmRsZQBJbnB1dE5hbWUATWljcm9zb2Z0LlNxbFNlcnZlci5EdHMuUGlwZWxpbmUAVHlwZQBnZXRf
+Q3VsdHVyZQBzZXRfQ3VsdHVyZQByZXNvdXJjZUN1bHR1cmUAQXBwbGljYXRpb25TZXR0aW5nc0Jh
+c2UARWRpdG9yQnJvd3NhYmxlU3RhdGUAQ29tcGlsZXJHZW5lcmF0ZWRBdHRyaWJ1dGUARGVidWdn
+ZXJOb25Vc2VyQ29kZUF0dHJpYnV0ZQBEZWJ1Z2dhYmxlQXR0cmlidXRlAEVkaXRvckJyb3dzYWJs
+ZUF0dHJpYnV0ZQBBc3NlbWJseVRpdGxlQXR0cmlidXRlAEFzc2VtYmx5VHJhZGVtYXJrQXR0cmli
+dXRlAFRhcmdldEZyYW1ld29ya0F0dHJpYnV0ZQBBc3NlbWJseUNvbmZpZ3VyYXRpb25BdHRyaWJ1
+dGUAQXNzZW1ibHlEZXNjcmlwdGlvbkF0dHJpYnV0ZQBDb21waWxhdGlvblJlbGF4YXRpb25zQXR0
+cmlidXRlAEFzc2VtYmx5UHJvZHVjdEF0dHJpYnV0ZQBBc3NlbWJseUNvcHlyaWdodEF0dHJpYnV0
+ZQBTU0lTU2NyaXB0Q29tcG9uZW50RW50cnlQb2ludEF0dHJpYnV0ZQBBc3NlbWJseUNvbXBhbnlB
+dHRyaWJ1dGUAUnVudGltZUNvbXBhdGliaWxpdHlBdHRyaWJ1dGUAUHJlRXhlY3V0ZQBQb3N0RXhl
+Y3V0ZQB2YWx1ZQBTeXN0ZW0uUnVudGltZS5WZXJzaW9uaW5nAFN0cmluZwBnZXRfd2llawBTeXN0
+ZW0uQ29tcG9uZW50TW9kZWwAU0NfQkIwNDU0M0U2QTAzNDI5NzgwQjIwRDc3MDZBQzdBRDcuZGxs
+AHNldF93eW5hZ3JvZHplbmllUmFuZ2VfSXNOdWxsAHNldF93aWVrUmFuZ2VfSXNOdWxsAGdldF93
+eW5hZ3JvZHplbmllX0lzTnVsbABnZXRfd2lla19Jc051bGwAU2V0TnVsbABzZXRfSXRlbQBTeXN0
+ZW0AcmVzb3VyY2VNYW4AU2NyaXB0TWFpbgBTeXN0ZW0uQ29uZmlndXJhdGlvbgBTeXN0ZW0uR2xv
+YmFsaXphdGlvbgBTeXN0ZW0uUmVmbGVjdGlvbgBJbnZhbGlkT3BlcmF0aW9uRXhjZXB0aW9uAFN0
+cmluZ0NvbXBhcmlzb24AQ3VsdHVyZUluZm8AT3V0cHV0TmFtZU1hcABPdXRwdXRNYXAATWljcm9z
+b2Z0LlNxbFNlcnZlci5EVFNQaXBlbGluZVdyYXAASW5wdXQwQnVmZmVyAFBpcGVsaW5lQnVmZmVy
+AFNjcmlwdEJ1ZmZlcgBnZXRfUmVzb3VyY2VNYW5hZ2VyAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRHRz
+LlBpcGVsaW5lLldyYXBwZXIARmlyZUVycm9yAC5jdG9yAC5jY3RvcgBTeXN0ZW0uRGlhZ25vc3Rp
+Y3MAU3lzdGVtLlJ1bnRpbWUuQ29tcGlsZXJTZXJ2aWNlcwBTeXN0ZW0uUmVzb3VyY2VzAFNDXzhh
+YmU5NzcwNGY5ZTQwOGNhN2NkODI4MTRmYTI5NGNkLlByb3BlcnRpZXMuUmVzb3VyY2VzLnJlc291
+cmNlcwBEZWJ1Z2dpbmdNb2RlcwBTQ184YWJlOTc3MDRmOWU0MDhjYTdjZDgyODE0ZmEyOTRjZC5Q
+cm9wZXJ0aWVzAFZhcmlhYmxlcwBCdWZmZXJDb2x1bW5JbmRleGVzAEdldENvbHVtbkluZGV4ZXMA
+U2V0dGluZ3MARXF1YWxzAENvbm5lY3Rpb25zAE9iamVjdABFbmRPZlJvd3NldABnZXRfRGVmYXVs
+dABVc2VyQ29tcG9uZW50AFBhcmVudENvbXBvbmVudABTY3JpcHRDb21wb25lbnQATWljcm9zb2Z0
+LlNxbFNlcnZlci5UeFNjcmlwdABNaWNyb3NvZnQuU3FsU2VydmVyLlBpcGVsaW5lSG9zdABJbnB1
+dDBfUHJvY2Vzc0lucHV0AElucHV0MF9Qcm9jZXNzSW5wdXRSb3cATmV4dFJvdwBnZXRfQXNzZW1i
+bHkAAAAAJUMAYQBsAGMAdQBsAGEAdABpAG4AZwAgAFIAYQBuAGcAZQBzAAAdQgBhAGQAIAB3AGkA
+ZQBrACAAdgBhAGwAdQBlAAABABttAGkAZQBkAHoAeQAgADAAIABpACAAMgAwAAAdbQBpAGUAZAB6
+AHkAIAAyADEAIABpACAAMgA1AAAdbQBpAGUAZAB6AHkAIAAyADYAIABpACAAMwAwAAAdbQBpAGUA
+ZAB6AHkAIAAzADEAIABpACAAMwA1AAAdbQBpAGUAZAB6AHkAIAAzADYAIABpACAANAAwAAAdbQBp
+AGUAZAB6AHkAIAA0ADEAIABpACAANQAwAAAdbQBpAGUAZAB6AHkAIAA1ADEAIABpACAANgAwAAAV
+cABvAHcAeQB8AWUAagAgADYAMQABDWIALgBtAGEAQgFlAAEJbQBhAEIBZQABD1sBcgBlAGQAbgBp
+AGUAAQlkAHUAfAFlAAENYgAuAGQAdQB8AWUAAYCbSQBzAE4AdQBsAGwAIABwAHIAbwBwAGUAcgB0
+AHkAIABjAGEAbgBuAG8AdAAgAGIAZQAgAHMAZQB0ACAAdABvACAARgBhAGwAcwBlAC4AIABBAHMA
+cwBpAGcAbgAgAGEAIAB2AGEAbAB1AGUAIAB0AG8AIAB0AGgAZQAgAGMAbwBsAHUAbQBuACAAaQBu
+AHMAdABlAGEAZAAuAAAPSQBuAHAAdQB0ACAAMAAAcVMAQwBfADgAYQBiAGUAOQA3ADcAMAA0AGYA
+OQBlADQAMAA4AGMAYQA3AGMAZAA4ADIAOAAxADQAZgBhADIAOQA0AGMAZAAuAFAAcgBvAHAAZQBy
+AHQAaQBlAHMALgBSAGUAcwBvAHUAcgBjAGUAcwAAIkpav4vmjEmt7ceWgavuSwAEIAEBCAMgAAEF
+IAEBEREEIAEBDgUgAQERWQ4HDAIICAgICAgIDQ0NDQQgABJpCiAGAQgODg4IEAIJIAMBEj0dCBJB
+AwYSPQMGHQgEIAEICAQgAQIIBCABDQgFIAIBCBwDIAACBiACAg4RdQUgAR0ICAYAARJ5EX0FIAAS
+gIEHIAIBDhKAgQi3elxWGTTgiQiJhF3NgIDMkQMGEhQDBhIYAwYSRQMGElEDBhJVAwYSIAUgAQES
+DAMgAAgDIAANBCABAQIJIAQBCA4SPRJBBSABARJFBAAAElEEAAASVQUAAQESVQQAABIgAwAAAQMo
+AAgDKAACAygADQMoAA4ECAASUQQIABJVBAgAEiAIAQAIAAAAAAAeAQABAFQCFldyYXBOb25FeGNl
+cHRpb25UaHJvd3MBCAEAAgAAAAAAKAEAI1NDXzhhYmU5NzcwNGY5ZTQwOGNhN2NkODI4MTRmYTI5
+NGNkAAAFAQAAAAAWAQARQ29weXJpZ2h0IEAgIDIwMjIAAEkBABouTkVURnJhbWV3b3JrLFZlcnNp
+b249djQuNwEAVA4URnJhbWV3b3JrRGlzcGxheU5hbWUSLk5FVCBGcmFtZXdvcmsgNC43BAEAAAAA
+ALQAAADOyu++AQAAAJEAAABsU3lzdGVtLlJlc291cmNlcy5SZXNvdXJjZVJlYWRlciwgbXNjb3Js
+aWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdh
+NWM1NjE5MzRlMDg5I1N5c3RlbS5SZXNvdXJjZXMuUnVudGltZVJlc291cmNlU2V0AgAAAAAAAAAA
+AAAAUEFEUEFEULQAAAC0NgAAAAAAAAAAAADONgAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwDYA
+AAAAAAAAAAAAAABfQ29yRGxsTWFpbgBtc2NvcmVlLmRsbAAAAAAA/yUAIAAQAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAEAEAAAABgAAIAAAAAAAAAAAAAAAAAAAAEAAQAAADAAAIAAAAAAAAAAAAAAAAAAAAEAAAAAAEgA
+AABYQAAA7AMAAAAAAAAAAAAA7AM0AAAAVgBTAF8AVgBFAFIAUwBJAE8ATgBfAEkATgBGAE8AAAAA
+AL0E7/4AAAEAAAABAAAAAAAAAAEAAAAAAD8AAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAABEAAAA
+AQBWAGEAcgBGAGkAbABlAEkAbgBmAG8AAAAAACQABAAAAFQAcgBhAG4AcwBsAGEAdABpAG8AbgAA
+AAAAAACwBEwDAAABAFMAdAByAGkAbgBnAEYAaQBsAGUASQBuAGYAbwAAACgDAAABADAAMAAwADAA
+MAA0AGIAMAAAABoAAQABAEMAbwBtAG0AZQBuAHQAcwAAAAAAAAAiAAEAAQBDAG8AbQBwAGEAbgB5
+AE4AYQBtAGUAAAAAAAAAAABwACQAAQBGAGkAbABlAEQAZQBzAGMAcgBpAHAAdABpAG8AbgAAAAAA
+UwBDAF8AOABhAGIAZQA5ADcANwAwADQAZgA5AGUANAAwADgAYwBhADcAYwBkADgAMgA4ADEANABm
+AGEAMgA5ADQAYwBkAAAAMAAIAAEARgBpAGwAZQBWAGUAcgBzAGkAbwBuAAAAAAAxAC4AMAAuADAA
+LgAwAAAAcAAoAAEASQBuAHQAZQByAG4AYQBsAE4AYQBtAGUAAABTAEMAXwBCAEIAMAA0ADUANAAz
+AEUANgBBADAAMwA0ADIAOQA3ADgAMABCADIAMABEADcANwAwADYAQQBDADcAQQBEADcALgBkAGwA
+bAAAAEgAEgABAEwAZQBnAGEAbABDAG8AcAB5AHIAaQBnAGgAdAAAAEMAbwBwAHkAcgBpAGcAaAB0
+ACAAQAAgACAAMgAwADIAMgAAACoAAQABAEwAZQBnAGEAbABUAHIAYQBkAGUAbQBhAHIAawBzAAAA
+AAAAAAAAeAAoAAEATwByAGkAZwBpAG4AYQBsAEYAaQBsAGUAbgBhAG0AZQAAAFMAQwBfAEIAQgAw
+ADQANQA0ADMARQA2AEEAMAAzADQAMgA5ADcAOAAwAEIAMgAwAEQANwA3ADAANgBBAEMANwBBAEQA
+NwAuAGQAbABsAAAAaAAkAAEAUAByAG8AZAB1AGMAdABOAGEAbQBlAAAAAABTAEMAXwA4AGEAYgBl
+ADkANwA3ADAANABmADkAZQA0ADAAOABjAGEANwBjAGQAOAAyADgAMQA0AGYAYQAyADkANABjAGQA
+AAA0AAgAAQBQAHIAbwBkAHUAYwB0AFYAZQByAHMAaQBvAG4AAAAxAC4AMAAuADAALgAwAAAAOAAI
+AAEAQQBzAHMAZQBtAGIAbAB5ACAAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAADAAAAOA2AAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the Microsoft Visual Studio Tools for Applications project. Project names must be unique within a package."
+                  name="VSTAProjectName"
+                  typeConverter="NOTBROWSABLE">SC_bb04543e6a03429780b20d7706ac7ad7</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the programming language used by the script."
+                  name="ScriptLanguage"
+                  typeConverter="Microsoft.SqlServer.VSTAHosting.ScriptingLanguages">CSharp</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read-only variables."
+                  name="ReadOnlyVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read/write variables."
+                  name="ReadWriteVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIWriteableVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="List of breakpoints present on the script."
+                  isArray="true"
+                  name="BreakpointCollection"
+                  typeConverter="NOTBROWSABLE">
+                  <arrayElements
+                    arrayElementCount="0" />
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Checksum to match component metedata against compiled codes."
+                  name="MetadataChecksum140"
+                  typeConverter="NOTBROWSABLE">AF</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\populating Pracownik\ranges.Inputs[Input 0]"
+                  hasSideEffects="true"
+                  name="Input 0">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\populating Pracownik\ranges.Inputs[Input 0].Columns[wiek]"
+                      cachedDataType="i4"
+                      cachedName="wiek"
+                      lineageId="Package\populating Pracownik\calculating wiek.Outputs[Derived Column Output].Columns[wiek]" />
+                    <inputColumn
+                      refId="Package\populating Pracownik\ranges.Inputs[Input 0].Columns[wynagrodzenie]"
+                      cachedDataType="r8"
+                      cachedName="wynagrodzenie"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[wynagrodzenie]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\populating Pracownik\ranges.Outputs[Output 0]"
+                  name="Output 0"
+                  synchronousInputId="Package\populating Pracownik\ranges.Inputs[Input 0]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\populating Pracownik\ranges.Outputs[Output 0].Columns[wiekRange]"
+                      codePage="1250"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\populating Pracownik\ranges.Outputs[Output 0].Columns[wiekRange]"
+                      name="wiekRange" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\ranges.Outputs[Output 0].Columns[wynagrodzenieRange]"
+                      codePage="1250"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\populating Pracownik\ranges.Outputs[Output 0].Columns[wynagrodzenieRange]"
+                      name="wynagrodzenieRange" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\populating Pracownik\Slowly Changing Dimension 1"
+              componentClassID="Microsoft.SCD"
+              contactInfo="Slowly Changing Dimension;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
+              description="Updates a SQL Server Analysis Services data warehouse dimension. Update dimension records that are already present and  insert dimension records that aren't. For example, update the DimProduct table of the AdventureWorksDW OLAP database with data from the Products table in the AdventureWorks OLTP database."
+              name="Slowly Changing Dimension 1"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SELECT statement used to create a schema rowset."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT [nr_pracownika], [wiek], [wynagrodzenie] FROM [dbo].[pracownik]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the WHERE clause in the SELECT statement that selects the current row among rows with identical business keys."
+                  name="CurrentRowWhere"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether historical attribute updates are directed to the transformation output for changing attribute updates."
+                  name="UpdateChangingAttributeHistory">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the transformation fails when columns with fixed attributes contain changes."
+                  name="FailOnFixedAttributeChange">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the column name for the inferred member."
+                  name="InferredMemberIndicator"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether inferred member updates are detected."
+                  name="EnableInferredMember">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the transformation fails when a lookup of an existing record fails."
+                  name="FailOnLookupFailure">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies that all rows in the input are new or the transformation detects the change type."
+                  name="IncomingRowChangeType"
+                  typeConverter="IncomingRowChangeType">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\populating Pracownik\Slowly Changing Dimension 1.Connections[LookupConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-46GI6A46.OutPostdw]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-46GI6A46.OutPostdw]"
+                  description="Defines the connection to use for lookups in the dimension table"
+                  name="LookupConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\populating Pracownik\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input]"
+                  name="Slowly Changing Dimension Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\populating Pracownik\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].Columns[id]"
+                      cachedDataType="i4"
+                      cachedName="id"
+                      externalMetadataColumnId="Package\populating Pracownik\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[nr_pracownika]"
+                      lineageId="Package\populating Pracownik\Data Conversion.Outputs[Data Conversion Output].Columns[id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\populating Pracownik\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].Columns[wiekRange]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="wiekRange"
+                      externalMetadataColumnId="Package\populating Pracownik\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[wiek]"
+                      lineageId="Package\populating Pracownik\ranges.Outputs[Output 0].Columns[wiekRange]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\populating Pracownik\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].Columns[wynagrodzenieRange]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="wynagrodzenieRange"
+                      externalMetadataColumnId="Package\populating Pracownik\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[wynagrodzenie]"
+                      lineageId="Package\populating Pracownik\ranges.Outputs[Output 0].Columns[wynagrodzenieRange]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\populating Pracownik\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[nr_pracownika]"
+                      dataType="i4"
+                      name="nr_pracownika" />
+                    <externalMetadataColumn
+                      refId="Package\populating Pracownik\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[wiek]"
+                      codePage="1250"
+                      dataType="str"
+                      length="20"
+                      name="wiek" />
+                    <externalMetadataColumn
+                      refId="Package\populating Pracownik\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[wynagrodzenie]"
+                      codePage="1250"
+                      dataType="str"
+                      length="20"
+                      name="wynagrodzenie" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\populating Pracownik\Slowly Changing Dimension 1.Outputs[Unchanged Output]"
+                  description="Unchanged rows"
+                  exclusionGroup="1"
+                  name="Unchanged Output"
+                  synchronousInputId="Package\populating Pracownik\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\populating Pracownik\Slowly Changing Dimension 1.Outputs[New Output]"
+                  description="New rows"
+                  exclusionGroup="1"
+                  name="New Output"
+                  synchronousInputId="Package\populating Pracownik\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\populating Pracownik\Slowly Changing Dimension 1.Outputs[Fixed Attribute Output]"
+                  description="Rows with changes in columns tagged FixedAttribute"
+                  exclusionGroup="1"
+                  name="Fixed Attribute Output"
+                  synchronousInputId="Package\populating Pracownik\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\populating Pracownik\Slowly Changing Dimension 1.Outputs[Changing Attribute Updates Output]"
+                  description="These rows contain new information for ChangingAttribute (Type 1) column changes"
+                  exclusionGroup="1"
+                  name="Changing Attribute Updates Output"
+                  synchronousInputId="Package\populating Pracownik\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\populating Pracownik\Slowly Changing Dimension 1.Outputs[Historical Attribute Inserts Output]"
+                  description="HistoricalAttribute (Type 2) changes result in these new rows"
+                  exclusionGroup="2"
+                  name="Historical Attribute Inserts Output"
+                  synchronousInputId="Package\populating Pracownik\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\populating Pracownik\Slowly Changing Dimension 1.Outputs[Inferred Member Updates Output]"
+                  description="Information to update unpopulated initial dimension row"
+                  exclusionGroup="1"
+                  name="Inferred Member Updates Output"
+                  synchronousInputId="Package\populating Pracownik\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\populating Pracownik.Paths[Changing Attribute Updates Output]"
+              endId="Package\populating Pracownik\OLE DB Command.Inputs[OLE DB Command Input]"
+              name="Changing Attribute Updates Output"
+              startId="Package\populating Pracownik\Slowly Changing Dimension 1.Outputs[Changing Attribute Updates Output]" />
+            <path
+              refId="Package\populating Pracownik.Paths[current workers]"
+              endId="Package\populating Pracownik\calculating wiek.Inputs[Derived Column Input]"
+              name="current workers"
+              startId="Package\populating Pracownik\Conditional Split.Outputs[current workers]" />
+            <path
+              refId="Package\populating Pracownik.Paths[Data Conversion Output]"
+              endId="Package\populating Pracownik\Conditional Split.Inputs[Conditional Split Input]"
+              name="Data Conversion Output"
+              startId="Package\populating Pracownik\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\populating Pracownik.Paths[Derived Column Output]"
+              endId="Package\populating Pracownik\ranges.Inputs[Input 0]"
+              name="Derived Column Output"
+              startId="Package\populating Pracownik\calculating wiek.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\populating Pracownik.Paths[Excel Source Output]"
+              endId="Package\populating Pracownik\Data Conversion.Inputs[Data Conversion Input]"
+              name="Excel Source Output"
+              startId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\populating Pracownik.Paths[New Output]"
+              endId="Package\populating Pracownik\Insert Destination.Inputs[OLE DB Destination Input]"
+              name="New Output"
+              startId="Package\populating Pracownik\Slowly Changing Dimension 1.Outputs[New Output]" />
+            <path
+              refId="Package\populating Pracownik.Paths[Output 0]"
+              endId="Package\populating Pracownik\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input]"
+              name="Output 0"
+              startId="Package\populating Pracownik\ranges.Outputs[Output 0]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1752,7 +3821,7 @@ where [refTable].[nr_pracownika] = ?</property>
                           cachedDataType="wstr"
                           cachedLength="255"
                           cachedName="płeć 2"
-                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\283:invalid">
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\258:invalid">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -1769,7 +3838,7 @@ where [refTable].[nr_pracownika] = ?</property>
                           cachedDataType="wstr"
                           cachedLength="255"
                           cachedName="stanowisko 2"
-                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\284:invalid">
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\259:invalid">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -1785,7 +3854,7 @@ where [refTable].[nr_pracownika] = ?</property>
                           refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Inputs[Sort Input].Columns[sortownia 2]"
                           cachedDataType="r8"
                           cachedName="sortownia 2"
-                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\285:invalid">
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\260:invalid">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -1801,7 +3870,7 @@ where [refTable].[nr_pracownika] = ?</property>
                           refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Inputs[Sort Input].Columns[data zatrudnienia 2]"
                           cachedDataType="date"
                           cachedName="data zatrudnienia 2"
-                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\286:invalid">
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\261:invalid">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -1817,7 +3886,7 @@ where [refTable].[nr_pracownika] = ?</property>
                           refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Inputs[Sort Input].Columns[data zwolnienia 2]"
                           cachedDataType="date"
                           cachedName="data zwolnienia 2"
-                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\287:invalid">
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\262:invalid">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -1970,7 +4039,7 @@ where [refTable].[nr_pracownika] = ?</property>
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\283:invalid}</property>
+                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\258:invalid}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -1984,7 +4053,7 @@ where [refTable].[nr_pracownika] = ?</property>
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\284:invalid}</property>
+                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\259:invalid}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -1997,7 +4066,7 @@ where [refTable].[nr_pracownika] = ?</property>
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\285:invalid}</property>
+                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\260:invalid}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -2010,7 +4079,7 @@ where [refTable].[nr_pracownika] = ?</property>
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\286:invalid}</property>
+                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\261:invalid}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -2023,7 +4092,7 @@ where [refTable].[nr_pracownika] = ?</property>
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\287:invalid}</property>
+                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\262:invalid}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -4248,6 +6317,14 @@ where [refTable].[nr_zlecenie] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="164,42"
+          Id="Package\populating Paczka"
+          TopLeft="782,182" />
+        <NodeLayout
+          Size="179,42"
+          Id="Package\populating Pracownik"
+          TopLeft="565,175" />
+        <NodeLayout
           Size="178,42"
           Id="Package\Populating Pracownik Table\Initializing Pracownik"
           TopLeft="77,44" />
@@ -4288,10 +6365,6 @@ where [refTable].[nr_zlecenie] = ?</property>
           Size="170,42"
           Id="Package\populating Zlecenie"
           TopLeft="981.111111111111,182.222222222222" />
-        <NodeLayout
-          Size="164,42"
-          Id="Package\populating Paczka"
-          TopLeft="798,179" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -4299,6 +6372,372 @@ where [refTable].[nr_zlecenie] = ?</property>
     design-time-name="Package.ConnectionManagers[localhost.HDlab4 analytical database]">
     <ProjectReferenceName></ProjectReferenceName>
   </ConnectionManager>
+  <TaskHost
+    design-time-name="Package\populating Paczka">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\populating Paczka\OLE DB Source"
+          TopLeft="640,69" />
+        <NodeLayout
+          Size="113,42"
+          Id="Package\populating Paczka\Lookup"
+          TopLeft="667,279" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\populating Paczka\OLE DB Destination"
+          TopLeft="632,384" />
+        <EdgeLayout
+          Id="Package\populating Paczka.Paths[Lookup No Match Output]"
+          TopLeft="720.5,321">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63"
+              Start="0,0"
+              End="0,55.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,21.9453125,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="154,42"
+          Id="Package\populating Paczka\Derived Column"
+          TopLeft="645,158" />
+        <EdgeLayout
+          Id="Package\populating Paczka.Paths[OLE DB Source Output]"
+          TopLeft="718.5,111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47"
+              Start="0,0"
+              End="0,39.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populating Paczka.Paths[Derived Column Output]"
+          TopLeft="722.75,200">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,79"
+              Start="0,0"
+              End="0,71.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,71.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\populating Paczka\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\populating Paczka\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[paczka]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\populating Paczka\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\populating Pracownik">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="133,42"
+          Id="Package\populating Pracownik\CEO's excel"
+          TopLeft="245.5,5.5" />
+        <NodeLayout
+          Size="111,42"
+          Id="Package\populating Pracownik\ranges"
+          TopLeft="256.5,413.5" />
+        <NodeLayout
+          Size="155,42"
+          Id="Package\populating Pracownik\Conditional Split"
+          TopLeft="234.5,209.5" />
+        <NodeLayout
+          Size="153,42"
+          Id="Package\populating Pracownik\calculating wiek"
+          TopLeft="235.5,311.5" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\populating Pracownik\Data Conversion"
+          TopLeft="234,107.5" />
+        <EdgeLayout
+          Id="Package\populating Pracownik.Paths[Excel Source Output]"
+          TopLeft="312,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populating Pracownik.Paths[Derived Column Output]"
+          TopLeft="312,353.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populating Pracownik.Paths[Data Conversion Output]"
+          TopLeft="312,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populating Pracownik.Paths[current workers]"
+          TopLeft="312,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-35.4871875,21.37548828125,70.974375,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="218,42"
+          Id="Package\populating Pracownik\Slowly Changing Dimension 1"
+          TopLeft="203,515.5" />
+        <EdgeLayout
+          Id="Package\populating Pracownik.Paths[Output 0]"
+          TopLeft="312,455.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="163,42"
+          Id="Package\populating Pracownik\Insert Destination"
+          TopLeft="64.5000000000001,616.5" />
+        <EdgeLayout
+          Id="Package\populating Pracownik.Paths[New Output]"
+          TopLeft="277,557.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-131,59.0000000000001"
+              Start="0,0"
+              End="-131,51.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.8579234972678" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.8579234972678"
+                    Point2="0,23.8579234972678"
+                    Point3="-4,23.8579234972678" />
+                  <mssgle:LineSegment
+                    End="-127,23.8579234972678" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-127,23.8579234972678"
+                    Point2="-131,23.8579234972678"
+                    Point3="-131,27.8579234972678" />
+                  <mssgle:LineSegment
+                    End="-131,51.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-92.59138671875,28.8579234972678,54.1827734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="166,42"
+          Id="Package\populating Pracownik\OLE DB Command"
+          TopLeft="262,614.5" />
+        <EdgeLayout
+          Id="Package\populating Pracownik.Paths[Changing Attribute Updates Output]"
+          TopLeft="346,557.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57"
+              Start="0,0"
+              End="0,49.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-78.53390625,18.91845703125,157.0678125,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\populating Pracownik\CEO's excel">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Populating Pracownik Table\Initializing Pracownik">
     <LayoutInfo>
@@ -4359,9 +6798,7 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4479,9 +6916,7 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4503,9 +6938,7 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4680,7 +7113,7 @@ where [refTable].[nr_zlecenie] = ?</property>
     design-time-name="Package\Populating Pracownik Table\Loading Pracownik">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="156,42"
           Id="Package\Populating Pracownik Table\Loading Pracownik\Data Conversion"
@@ -4716,9 +7149,7 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4740,9 +7171,7 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4764,9 +7193,7 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4852,6 +7279,19 @@ where [refTable].[nr_zlecenie] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\populating Zlecenie\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\populating Zlecenie\OLE DB Source">
     <Properties>
       <Property>
@@ -4870,7 +7310,7 @@ where [refTable].[nr_zlecenie] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -4880,7 +7320,7 @@ where [refTable].[nr_zlecenie] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4888,156 +7328,51 @@ where [refTable].[nr_zlecenie] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\populating Zlecenie\OLE DB Destination">
+    design-time-name="Package\populating Pracownik\Slowly Changing Dimension 1">
     <Properties>
       <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
+        <Name>SCDMetadata</Name>
         <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\populating Paczka">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="150,42"
-          Id="Package\populating Paczka\OLE DB Source"
-          TopLeft="640,69" />
-        <NodeLayout
-          Size="113,42"
-          Id="Package\populating Paczka\Lookup"
-          TopLeft="667,279" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\populating Paczka\OLE DB Destination"
-          TopLeft="632,384" />
-        <EdgeLayout
-          Id="Package\populating Paczka.Paths[Lookup No Match Output]"
-          TopLeft="720.5,321">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,63"
-              Start="0,0"
-              End="0,55.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,55.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,21.9453125,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="154,42"
-          Id="Package\populating Paczka\Derived Column"
-          TopLeft="645,158" />
-        <EdgeLayout
-          Id="Package\populating Paczka.Paths[OLE DB Source Output]"
-          TopLeft="718.5,111">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,47"
-              Start="0,0"
-              End="0,39.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,39.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\populating Paczka.Paths[Derived Column Output]"
-          TopLeft="722.75,200">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,79"
-              Start="0,0"
-              End="0,71.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,71.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\populating Paczka\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\populating Paczka\Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[paczka]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\populating Paczka\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
+          type="q2:string">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SCDWizardMetadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionID&gt;{E3B814FC-C8CF-4654-A63B-3DA7678FED4F}&lt;/ConnectionID&gt;
+  &lt;TableName&gt;[dbo].[pracownik]&lt;/TableName&gt;
+  &lt;InputToColumnsCollection&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;Data Conversion.Outputs[Data Conversion Output].Columns[id]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;nr_pracownika&lt;/ColumnName&gt;
+      &lt;KeyType&gt;BusinessKey&lt;/KeyType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;ranges.Outputs[Output 0].Columns[wiekRange]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;wiek&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;ranges.Outputs[Output 0].Columns[wynagrodzenieRange]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;wynagrodzenie&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+  &lt;/InputToColumnsCollection&gt;
+  &lt;GeneratedComponentsIdentificationStrings&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;Insert Destination&lt;/anyType&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command&lt;/anyType&gt;
+  &lt;/GeneratedComponentsIdentificationStrings&gt;
+  &lt;FailFixedAttribute&gt;false&lt;/FailFixedAttribute&gt;
+  &lt;FailChangeAttribute&gt;false&lt;/FailChangeAttribute&gt;
+  &lt;UseStartEndDate&gt;false&lt;/UseStartEndDate&gt;
+  &lt;CurrentIndicatorColumn /&gt;
+  &lt;InferredIndicatorColumn /&gt;
+  &lt;ValueCurrent /&gt;
+  &lt;ValueExpired /&gt;
+  &lt;StartDateColumn /&gt;
+  &lt;EndDateColumn /&gt;
+  &lt;DateVariable /&gt;
+  &lt;EnableInferredSupport&gt;false&lt;/EnableInferredSupport&gt;
+&lt;/SCDWizardMetadata&gt;</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

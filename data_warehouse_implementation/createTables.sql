@@ -23,7 +23,7 @@ create table pracownik (
 	id_pracownik int primary key identity(1,1) not null,
 	nr_pracownika int not null,
 	wynagrodzenie varchar(20) not null CHECK (wynagrodzenie IN('b.ma³e', 'ma³e', 'œrednie', 'du¿e', 'b.du¿e')) DEFAULT 'œrednie',
-	wiek varchar(20) not null CHECK (wiek IN('(0,20>', '(20,25>', '(25,30>', '(30,35>', '(35,40>', '(40,50>', '(50,60>', '(60,inf)')) DEFAULT '(0,20>',
+	wiek varchar(20) not null CHECK (wiek IN('miêdzy 0 i 20', 'miedzy 21 i 25', 'miedzy 26 i 30', 'miedzy 31 i 35', 'miedzy 36 i 40', 'miedzy 41 i 50', 'miedzy 51 i 60', 'powy¿ej 61')) DEFAULT 'miedzy 36 i 40',
 	data_wstawienia date,
 	data_deaktywacji date
 );
