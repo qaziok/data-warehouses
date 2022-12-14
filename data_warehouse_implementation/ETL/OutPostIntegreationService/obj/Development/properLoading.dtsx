@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="60"
-  DTS:VersionGUID="{FF384B7A-1AAB-480B-8052-035C0A91A5DD}">
+  DTS:VersionBuild="64"
+  DTS:VersionGUID="{8237A938-30AF-46B0-B6D3-1934A51167F1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -37,7 +37,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=LAPTOP-46GI6A46;Initial Catalog=HDlabDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{C8DBCA7B-85F9-4F66-B672-CC7388A9C8EE}LAPTOP-46GI6A46.HDlabDB;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=HDlabDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package1-{C8DBCA7B-85F9-4F66-B672-CC7388A9C8EE}LAPTOP-46GI6A46.HDlabDB;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -2156,7 +2156,7 @@ namespace SC_8abe97704f9e408ca7cd82814fa294cd.Properties {
     <msb:CodeName>SC_8abe97704f9e408ca7cd82814fa294cd</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>SC_8abe97704f9e408ca7cd82814fa294cd</msb:DisplayName>
-    <msb:ProjectId>{5F042C4E-2254-4963-9965-29294908CE81}</msb:ProjectId>
+    <msb:ProjectId>{851AE344-5525-4640-8F75-56280B90E485}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="SC_8abe97704f9e408ca7cd82814fa294cd.csproj" />
@@ -2303,7 +2303,7 @@ namespace SC_8abe97704f9e408ca7cd82814fa294cd.Properties {
                     <arrayElement
                       dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAMMZmWMAAAAAAAAAAOAAIiALATAAABgAAAAIAAAAAAAA3jYA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAJHUmWMAAAAAAAAAAOAAIiALATAAABgAAAAIAAAAAAAA3jYA
 AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
 ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAIw2AABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
 AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -2399,7 +2399,7 @@ AHkAIABjAGEAbgBuAG8AdAAgAGIAZQAgAHMAZQB0ACAAdABvACAARgBhAGwAcwBlAC4AIABBAHMA
 cwBpAGcAbgAgAGEAIAB2AGEAbAB1AGUAIAB0AG8AIAB0AGgAZQAgAGMAbwBsAHUAbQBuACAAaQBu
 AHMAdABlAGEAZAAuAAAPSQBuAHAAdQB0ACAAMAAAcVMAQwBfADgAYQBiAGUAOQA3ADcAMAA0AGYA
 OQBlADQAMAA4AGMAYQA3AGMAZAA4ADIAOAAxADQAZgBhADIAOQA0AGMAZAAuAFAAcgBvAHAAZQBy
-AHQAaQBlAHMALgBSAGUAcwBvAHUAcgBjAGUAcwAAIkpav4vmjEmt7ceWgavuSwAEIAEBCAMgAAEF
+AHQAaQBlAHMALgBSAGUAcwBvAHUAcgBjAGUAcwAAJRxc258LbkGpOM1n9eXFVwAEIAEBCAMgAAEF
 IAEBEREEIAEBDgUgAQERWQ4HDAIICAgICAgIDQ0NDQQgABJpCiAGAQgODg4IEAIJIAMBEj0dCBJB
 AwYSPQMGHQgEIAEICAQgAQIIBCABDQgFIAIBCBwDIAACBiACAg4RdQUgAR0ICAYAARJ5EX0FIAAS
 gIEHIAIBDhKAgQi3elxWGTTgiQiJhF3NgIDMkQMGEhQDBhIYAwYSRQMGElEDBhJVAwYSIAUgAQES
@@ -3821,7 +3821,7 @@ where [refTable].[nr_pracownika] = ?</property>
                           cachedDataType="wstr"
                           cachedLength="255"
                           cachedName="płeć 2"
-                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\258:invalid">
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\268:invalid">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -3838,7 +3838,7 @@ where [refTable].[nr_pracownika] = ?</property>
                           cachedDataType="wstr"
                           cachedLength="255"
                           cachedName="stanowisko 2"
-                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\259:invalid">
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\269:invalid">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -3854,7 +3854,7 @@ where [refTable].[nr_pracownika] = ?</property>
                           refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Inputs[Sort Input].Columns[sortownia 2]"
                           cachedDataType="r8"
                           cachedName="sortownia 2"
-                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\260:invalid">
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\270:invalid">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -3870,7 +3870,7 @@ where [refTable].[nr_pracownika] = ?</property>
                           refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Inputs[Sort Input].Columns[data zatrudnienia 2]"
                           cachedDataType="date"
                           cachedName="data zatrudnienia 2"
-                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\261:invalid">
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\271:invalid">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -3886,7 +3886,7 @@ where [refTable].[nr_pracownika] = ?</property>
                           refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Inputs[Sort Input].Columns[data zwolnienia 2]"
                           cachedDataType="date"
                           cachedName="data zwolnienia 2"
-                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\262:invalid">
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\272:invalid">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -4039,7 +4039,7 @@ where [refTable].[nr_pracownika] = ?</property>
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\258:invalid}</property>
+                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\268:invalid}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -4053,7 +4053,7 @@ where [refTable].[nr_pracownika] = ?</property>
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\259:invalid}</property>
+                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\269:invalid}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -4066,7 +4066,7 @@ where [refTable].[nr_pracownika] = ?</property>
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\260:invalid}</property>
+                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\270:invalid}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -4079,7 +4079,7 @@ where [refTable].[nr_pracownika] = ?</property>
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\261:invalid}</property>
+                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\271:invalid}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -4092,7 +4092,7 @@ where [refTable].[nr_pracownika] = ?</property>
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\262:invalid}</property>
+                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\272:invalid}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -6323,7 +6323,7 @@ where [refTable].[nr_zlecenie] = ?</property>
         <NodeLayout
           Size="179,42"
           Id="Package\populating Pracownik"
-          TopLeft="565,175" />
+          TopLeft="563.888888888889,185" />
         <NodeLayout
           Size="178,42"
           Id="Package\Populating Pracownik Table\Initializing Pracownik"
@@ -6378,45 +6378,21 @@ where [refTable].[nr_zlecenie] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="150,42"
-          Id="Package\populating Paczka\OLE DB Source"
-          TopLeft="640,69" />
+          Size="171,42"
+          Id="Package\populating Paczka\OLE DB Destination"
+          TopLeft="633,383" />
         <NodeLayout
           Size="113,42"
           Id="Package\populating Paczka\Lookup"
           TopLeft="667,279" />
         <NodeLayout
-          Size="171,42"
-          Id="Package\populating Paczka\OLE DB Destination"
-          TopLeft="632,384" />
-        <EdgeLayout
-          Id="Package\populating Paczka.Paths[Lookup No Match Output]"
-          TopLeft="720.5,321">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,63"
-              Start="0,0"
-              End="0,55.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,55.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,21.9453125,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
           Size="154,42"
           Id="Package\populating Paczka\Derived Column"
           TopLeft="645,158" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\populating Paczka\OLE DB Source"
+          TopLeft="640,69" />
         <EdgeLayout
           Id="Package\populating Paczka.Paths[OLE DB Source Output]"
           TopLeft="718.5,111">
@@ -6437,6 +6413,30 @@ where [refTable].[nr_zlecenie] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populating Paczka.Paths[Lookup No Match Output]"
+          TopLeft="721,321">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,62"
+              Start="0,0"
+              End="0,54.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,54.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,21.4453125,111.6127734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6483,7 +6483,7 @@ where [refTable].[nr_zlecenie] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -6493,7 +6493,7 @@ where [refTable].[nr_zlecenie] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -6523,13 +6523,25 @@ where [refTable].[nr_zlecenie] = ?</property>
           Id="Package\populating Pracownik\CEO's excel"
           TopLeft="245.5,5.5" />
         <NodeLayout
-          Size="111,42"
-          Id="Package\populating Pracownik\ranges"
-          TopLeft="256.5,413.5" />
+          Size="166,42"
+          Id="Package\populating Pracownik\OLE DB Command"
+          TopLeft="262,614.5" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\populating Pracownik\Insert Destination"
+          TopLeft="64.5000000000001,616.5" />
         <NodeLayout
           Size="155,42"
           Id="Package\populating Pracownik\Conditional Split"
           TopLeft="234.5,209.5" />
+        <NodeLayout
+          Size="111,42"
+          Id="Package\populating Pracownik\ranges"
+          TopLeft="256.5,413.5" />
+        <NodeLayout
+          Size="218,42"
+          Id="Package\populating Pracownik\Slowly Changing Dimension 1"
+          TopLeft="203,515.5" />
         <NodeLayout
           Size="153,42"
           Id="Package\populating Pracownik\calculating wiek"
@@ -6538,28 +6550,6 @@ where [refTable].[nr_zlecenie] = ?</property>
           Size="156,42"
           Id="Package\populating Pracownik\Data Conversion"
           TopLeft="234,107.5" />
-        <EdgeLayout
-          Id="Package\populating Pracownik.Paths[Excel Source Output]"
-          TopLeft="312,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\populating Pracownik.Paths[Derived Column Output]"
           TopLeft="312,353.5">
@@ -6628,10 +6618,30 @@ where [refTable].[nr_zlecenie] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="218,42"
-          Id="Package\populating Pracownik\Slowly Changing Dimension 1"
-          TopLeft="203,515.5" />
+        <EdgeLayout
+          Id="Package\populating Pracownik.Paths[Changing Attribute Updates Output]"
+          TopLeft="346,557.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57"
+              Start="0,0"
+              End="0,49.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-78.53390625,18.91845703125,157.0678125,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\populating Pracownik.Paths[Output 0]"
           TopLeft="312,455.5">
@@ -6654,10 +6664,6 @@ where [refTable].[nr_zlecenie] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="163,42"
-          Id="Package\populating Pracownik\Insert Destination"
-          TopLeft="64.5000000000001,616.5" />
         <EdgeLayout
           Id="Package\populating Pracownik.Paths[New Output]"
           TopLeft="277,557.5">
@@ -6694,32 +6700,26 @@ where [refTable].[nr_zlecenie] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="166,42"
-          Id="Package\populating Pracownik\OLE DB Command"
-          TopLeft="262,614.5" />
         <EdgeLayout
-          Id="Package\populating Pracownik.Paths[Changing Attribute Updates Output]"
-          TopLeft="346,557.5">
+          Id="Package\populating Pracownik.Paths[Excel Source Output]"
+          TopLeft="312,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,57"
+              EndConnector="0,60"
               Start="0,0"
-              End="0,49.5">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,49.5" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-78.53390625,18.91845703125,157.0678125,11.6630859375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -6735,6 +6735,55 @@ where [refTable].[nr_zlecenie] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\populating Pracownik\Slowly Changing Dimension 1">
+    <Properties>
+      <Property>
+        <Name>SCDMetadata</Name>
+        <Value
+          type="q2:string">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SCDWizardMetadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionID&gt;{E3B814FC-C8CF-4654-A63B-3DA7678FED4F}&lt;/ConnectionID&gt;
+  &lt;TableName&gt;[dbo].[pracownik]&lt;/TableName&gt;
+  &lt;InputToColumnsCollection&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;Data Conversion.Outputs[Data Conversion Output].Columns[id]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;nr_pracownika&lt;/ColumnName&gt;
+      &lt;KeyType&gt;BusinessKey&lt;/KeyType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;ranges.Outputs[Output 0].Columns[wiekRange]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;wiek&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;ranges.Outputs[Output 0].Columns[wynagrodzenieRange]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;wynagrodzenie&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+  &lt;/InputToColumnsCollection&gt;
+  &lt;GeneratedComponentsIdentificationStrings&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;Insert Destination&lt;/anyType&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command&lt;/anyType&gt;
+  &lt;/GeneratedComponentsIdentificationStrings&gt;
+  &lt;FailFixedAttribute&gt;false&lt;/FailFixedAttribute&gt;
+  &lt;FailChangeAttribute&gt;false&lt;/FailChangeAttribute&gt;
+  &lt;UseStartEndDate&gt;false&lt;/UseStartEndDate&gt;
+  &lt;CurrentIndicatorColumn /&gt;
+  &lt;InferredIndicatorColumn /&gt;
+  &lt;ValueCurrent /&gt;
+  &lt;ValueExpired /&gt;
+  &lt;StartDateColumn /&gt;
+  &lt;EndDateColumn /&gt;
+  &lt;DateVariable /&gt;
+  &lt;EnableInferredSupport&gt;false&lt;/EnableInferredSupport&gt;
+&lt;/SCDWizardMetadata&gt;</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -7218,6 +7267,10 @@ where [refTable].[nr_zlecenie] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="171,42"
+          Id="Package\populating Zlecenie\OLE DB Destination"
+          TopLeft="616,290" />
+        <NodeLayout
           Size="150,42"
           Id="Package\populating Zlecenie\OLE DB Source"
           TopLeft="627,96" />
@@ -7225,10 +7278,28 @@ where [refTable].[nr_zlecenie] = ?</property>
           Size="113,42"
           Id="Package\populating Zlecenie\Lookup"
           TopLeft="647,194" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\populating Zlecenie\OLE DB Destination"
-          TopLeft="616,290" />
+        <EdgeLayout
+          Id="Package\populating Zlecenie.Paths[OLE DB Source Output]"
+          TopLeft="702.75,138">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,56"
+              Start="0,0"
+              End="0,48.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\populating Zlecenie.Paths[Lookup No Match Output]"
           TopLeft="702.5,236">
@@ -7251,28 +7322,6 @@ where [refTable].[nr_zlecenie] = ?</property>
             <mssgm:EdgeLabel
               BoundingBox="-55.80638671875,17.4453125,111.6127734375,11.609375"
               RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\populating Zlecenie.Paths[OLE DB Source Output]"
-          TopLeft="702.75,138">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,56"
-              Start="0,0"
-              End="0,48.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,48.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7310,7 +7359,7 @@ where [refTable].[nr_zlecenie] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -7320,59 +7369,10 @@ where [refTable].[nr_zlecenie] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\populating Pracownik\Slowly Changing Dimension 1">
-    <Properties>
-      <Property>
-        <Name>SCDMetadata</Name>
-        <Value
-          type="q2:string">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SCDWizardMetadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionID&gt;{E3B814FC-C8CF-4654-A63B-3DA7678FED4F}&lt;/ConnectionID&gt;
-  &lt;TableName&gt;[dbo].[pracownik]&lt;/TableName&gt;
-  &lt;InputToColumnsCollection&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;Data Conversion.Outputs[Data Conversion Output].Columns[id]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;nr_pracownika&lt;/ColumnName&gt;
-      &lt;KeyType&gt;BusinessKey&lt;/KeyType&gt;
-      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;ranges.Outputs[Output 0].Columns[wiekRange]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;wiek&lt;/ColumnName&gt;
-      &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;ranges.Outputs[Output 0].Columns[wynagrodzenieRange]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;wynagrodzenie&lt;/ColumnName&gt;
-      &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-  &lt;/InputToColumnsCollection&gt;
-  &lt;GeneratedComponentsIdentificationStrings&gt;
-    &lt;anyType xsi:type="xsd:string"&gt;Insert Destination&lt;/anyType&gt;
-    &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command&lt;/anyType&gt;
-  &lt;/GeneratedComponentsIdentificationStrings&gt;
-  &lt;FailFixedAttribute&gt;false&lt;/FailFixedAttribute&gt;
-  &lt;FailChangeAttribute&gt;false&lt;/FailChangeAttribute&gt;
-  &lt;UseStartEndDate&gt;false&lt;/UseStartEndDate&gt;
-  &lt;CurrentIndicatorColumn /&gt;
-  &lt;InferredIndicatorColumn /&gt;
-  &lt;ValueCurrent /&gt;
-  &lt;ValueExpired /&gt;
-  &lt;StartDateColumn /&gt;
-  &lt;EndDateColumn /&gt;
-  &lt;DateVariable /&gt;
-  &lt;EnableInferredSupport&gt;false&lt;/EnableInferredSupport&gt;
-&lt;/SCDWizardMetadata&gt;</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
