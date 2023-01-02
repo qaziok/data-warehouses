@@ -2,18 +2,18 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>OutPostIntegreationService</Name>
-    <LastWriteTime>2022-12-14T13:55:55.3909879Z</LastWriteTime>
+    <LastWriteTime>2022-12-15T11:41:30.8422448Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>initialData.dtsx</Name>
-      <LastWriteTime>2022-12-13T20:01:38.2064993Z</LastWriteTime>
+      <LastWriteTime>2022-12-15T11:41:30.7015651Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>properLoading.dtsx</Name>
-      <LastWriteTime>2022-12-14T13:55:55.313659Z</LastWriteTime>
+      <LastWriteTime>2022-12-15T10:12:27.0744754Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

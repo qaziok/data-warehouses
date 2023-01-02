@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="17"
-  DTS:VersionGUID="{2E14E24F-8933-4325-8DCC-63964FDDFF04}">
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{6598FB3F-895C-4187-AEAA-17F5681F660E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -35,7 +35,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=LAPTOP-46GI6A46;Initial Catalog=HDlabDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{A9BD563B-0190-43E9-8457-C8A93A25E3AA}LAPTOP-46GI6A46.HDlabDB;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=LAPTOP-46GI6A46;Initial Catalog=HDlabDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{A9BD563B-0190-43E9-8457-C8A93A25E3AA}LAPTOP-46GI6A46.HDlabDB;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -100,11 +100,11 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="162,42"
+          Size="161.6,41.6"
           Id="Package\SQL insert into data"
           TopLeft="327.142862714067,181.235296659404" />
         <NodeLayout
-          Size="166,42"
+          Size="166.4,41.6"
           Id="Package\SQL insert into typ"
           TopLeft="510.714294411698,180.470590766326" />
       </GraphLayout>

@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="64"
-  DTS:VersionGUID="{8237A938-30AF-46B0-B6D3-1934A51167F1}">
+  DTS:VersionBuild="69"
+  DTS:VersionGUID="{3665D215-71EB-491E-BC56-7DBEB3BCA884}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -49,7 +49,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=LAPTOP-46GI6A46;Initial Catalog=OutPostdw;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package1-{E3B814FC-C8CF-4654-A63B-3DA7678FED4F}LAPTOP-46GI6A46.OutPostdw;" />
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=OutPostdw;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package1-{E3B814FC-C8CF-4654-A63B-3DA7678FED4F}LAPTOP-46GI6A46.OutPostdw;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -1223,6 +1223,154 @@ where [refTable].[nr_paczki] = ?</property>
               </outputs>
             </component>
             <component
+              refId="Package\populating Pracownik\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\populating Pracownik\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\populating Pracownik\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\populating Pracownik\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\populating Pracownik\Derived Column.Outputs[Derived Column Output].Columns[data_deaktywacji]"
+                      dataType="dbDate"
+                      description="data_deaktywacji"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\populating Pracownik\Derived Column.Outputs[Derived Column Output].Columns[data_deaktywacji]"
+                      name="data_deaktywacji"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_DBDATE)(@[System::ContainerStartTime])</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_DBDATE)(@[System::ContainerStartTime])</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\populating Pracownik\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\populating Pracownik\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\populating Pracownik\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\populating Pracownik\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\populating Pracownik\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\populating Pracownik\Derived Column 1"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\populating Pracownik\Derived Column 1.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\populating Pracownik\Derived Column 1.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\populating Pracownik\Derived Column 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\populating Pracownik\Derived Column 1.Outputs[Derived Column Output].Columns[data_wstawienia]"
+                      dataType="dbDate"
+                      description="data_wstawienia"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\populating Pracownik\Derived Column 1.Outputs[Derived Column Output].Columns[data_wstawienia]"
+                      name="data_wstawienia"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_DBDATE)(@[System::ContainerStartTime])</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_DBDATE)(@[System::ContainerStartTime])</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\populating Pracownik\Derived Column 1.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\populating Pracownik\Derived Column 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\populating Pracownik\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\populating Pracownik\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\populating Pracownik\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\populating Pracownik\Insert Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -1299,7 +1447,7 @@ where [refTable].[nr_paczki] = ?</property>
                       cachedDataType="i4"
                       cachedName="id"
                       externalMetadataColumnId="Package\populating Pracownik\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[nr_pracownika]"
-                      lineageId="Package\populating Pracownik\Data Conversion.Outputs[Data Conversion Output].Columns[id]" />
+                      lineageId="Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[id]" />
                     <inputColumn
                       refId="Package\populating Pracownik\Insert Destination.Inputs[OLE DB Destination Input].Columns[wynagrodzenieRange]"
                       cachedCodepage="1250"
@@ -1307,7 +1455,7 @@ where [refTable].[nr_paczki] = ?</property>
                       cachedLength="20"
                       cachedName="wynagrodzenieRange"
                       externalMetadataColumnId="Package\populating Pracownik\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[wynagrodzenie]"
-                      lineageId="Package\populating Pracownik\ranges.Outputs[Output 0].Columns[wynagrodzenieRange]" />
+                      lineageId="Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[wynagrodzenieRange]" />
                     <inputColumn
                       refId="Package\populating Pracownik\Insert Destination.Inputs[OLE DB Destination Input].Columns[wiekRange]"
                       cachedCodepage="1250"
@@ -1315,7 +1463,13 @@ where [refTable].[nr_paczki] = ?</property>
                       cachedLength="20"
                       cachedName="wiekRange"
                       externalMetadataColumnId="Package\populating Pracownik\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[wiek]"
-                      lineageId="Package\populating Pracownik\ranges.Outputs[Output 0].Columns[wiekRange]" />
+                      lineageId="Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[wiekRange]" />
+                    <inputColumn
+                      refId="Package\populating Pracownik\Insert Destination.Inputs[OLE DB Destination Input].Columns[data_wstawienia]"
+                      cachedDataType="dbDate"
+                      cachedName="data_wstawienia"
+                      externalMetadataColumnId="Package\populating Pracownik\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[data_wstawienia]"
+                      lineageId="Package\populating Pracownik\Derived Column 1.Outputs[Derived Column Output].Columns[data_wstawienia]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1393,7 +1547,7 @@ where [refTable].[nr_paczki] = ?</property>
                   description="The SQL command to be executed."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [dbo].[pracownik] SET [wiek] = ?,[wynagrodzenie] = ? WHERE [nr_pracownika] = ?</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [dbo].[pracownik] SET [data_deaktywacji] = ? WHERE [nr_pracownika] = ? AND [data_deaktywacji] IS NULL</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1419,32 +1573,20 @@ where [refTable].[nr_paczki] = ?</property>
                       refId="Package\populating Pracownik\OLE DB Command.Inputs[OLE DB Command Input].Columns[id]"
                       cachedDataType="i4"
                       cachedName="id"
-                      externalMetadataColumnId="Package\populating Pracownik\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      externalMetadataColumnId="Package\populating Pracownik\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
                       lineageId="Package\populating Pracownik\Data Conversion.Outputs[Data Conversion Output].Columns[id]" />
                     <inputColumn
-                      refId="Package\populating Pracownik\OLE DB Command.Inputs[OLE DB Command Input].Columns[wiekRange]"
-                      cachedCodepage="1250"
-                      cachedDataType="str"
-                      cachedLength="20"
-                      cachedName="wiekRange"
+                      refId="Package\populating Pracownik\OLE DB Command.Inputs[OLE DB Command Input].Columns[data_deaktywacji]"
+                      cachedDataType="dbDate"
+                      cachedName="data_deaktywacji"
                       externalMetadataColumnId="Package\populating Pracownik\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      lineageId="Package\populating Pracownik\ranges.Outputs[Output 0].Columns[wiekRange]" />
-                    <inputColumn
-                      refId="Package\populating Pracownik\OLE DB Command.Inputs[OLE DB Command Input].Columns[wynagrodzenieRange]"
-                      cachedCodepage="1250"
-                      cachedDataType="str"
-                      cachedLength="20"
-                      cachedName="wynagrodzenieRange"
-                      externalMetadataColumnId="Package\populating Pracownik\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      lineageId="Package\populating Pracownik\ranges.Outputs[Output 0].Columns[wynagrodzenieRange]" />
+                      lineageId="Package\populating Pracownik\Derived Column.Outputs[Derived Column Output].Columns[data_deaktywacji]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\populating Pracownik\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      codePage="1250"
-                      dataType="str"
-                      length="20"
+                      dataType="dbDate"
                       name="Param_0">
                       <properties>
                         <property
@@ -1455,21 +1597,8 @@ where [refTable].[nr_paczki] = ?</property>
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\populating Pracownik\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      codePage="1250"
-                      dataType="str"
-                      length="20"
-                      name="Param_1">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\populating Pracownik\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
                       dataType="i4"
-                      name="Param_2">
+                      name="Param_1">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1857,7 +1986,7 @@ public class ScriptMain : UserComponent
                     ComponentMetaData.FireError(10, "Calculating Ranges", "Bad wiek value", "", 0, out cancel);
                     break;
                 case int n when (n > 0 && n <= 20):
-                    Row.wiekRange = "miedzy 0 i 20";
+                    Row.wiekRange = "między 0 i 20";
                     break;
                 case int n when (n > 20 && n <= 25):
                     Row.wiekRange = "miedzy 21 i 25";
@@ -2156,7 +2285,7 @@ namespace SC_8abe97704f9e408ca7cd82814fa294cd.Properties {
     <msb:CodeName>SC_8abe97704f9e408ca7cd82814fa294cd</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>SC_8abe97704f9e408ca7cd82814fa294cd</msb:DisplayName>
-    <msb:ProjectId>{851AE344-5525-4640-8F75-56280B90E485}</msb:ProjectId>
+    <msb:ProjectId>{CA531C31-A393-40A9-93FE-52A6BF762B14}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="SC_8abe97704f9e408ca7cd82814fa294cd.csproj" />
@@ -2303,7 +2432,7 @@ namespace SC_8abe97704f9e408ca7cd82814fa294cd.Properties {
                     <arrayElement
                       dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAJHUmWMAAAAAAAAAAOAAIiALATAAABgAAAAIAAAAAAAA3jYA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAMPymmMAAAAAAAAAAOAAIiALATAAABgAAAAIAAAAAAAA3jYA
 AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
 ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAIw2AABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
 AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -2389,7 +2518,7 @@ dABVc2VyQ29tcG9uZW50AFBhcmVudENvbXBvbmVudABTY3JpcHRDb21wb25lbnQATWljcm9zb2Z0
 LlNxbFNlcnZlci5UeFNjcmlwdABNaWNyb3NvZnQuU3FsU2VydmVyLlBpcGVsaW5lSG9zdABJbnB1
 dDBfUHJvY2Vzc0lucHV0AElucHV0MF9Qcm9jZXNzSW5wdXRSb3cATmV4dFJvdwBnZXRfQXNzZW1i
 bHkAAAAAJUMAYQBsAGMAdQBsAGEAdABpAG4AZwAgAFIAYQBuAGcAZQBzAAAdQgBhAGQAIAB3AGkA
-ZQBrACAAdgBhAGwAdQBlAAABABttAGkAZQBkAHoAeQAgADAAIABpACAAMgAwAAAdbQBpAGUAZAB6
+ZQBrACAAdgBhAGwAdQBlAAABABttAGkAGQFkAHoAeQAgADAAIABpACAAMgAwAAEdbQBpAGUAZAB6
 AHkAIAAyADEAIABpACAAMgA1AAAdbQBpAGUAZAB6AHkAIAAyADYAIABpACAAMwAwAAAdbQBpAGUA
 ZAB6AHkAIAAzADEAIABpACAAMwA1AAAdbQBpAGUAZAB6AHkAIAAzADYAIABpACAANAAwAAAdbQBp
 AGUAZAB6AHkAIAA0ADEAIABpACAANQAwAAAdbQBpAGUAZAB6AHkAIAA1ADEAIABpACAANgAwAAAV
@@ -2399,7 +2528,7 @@ AHkAIABjAGEAbgBuAG8AdAAgAGIAZQAgAHMAZQB0ACAAdABvACAARgBhAGwAcwBlAC4AIABBAHMA
 cwBpAGcAbgAgAGEAIAB2AGEAbAB1AGUAIAB0AG8AIAB0AGgAZQAgAGMAbwBsAHUAbQBuACAAaQBu
 AHMAdABlAGEAZAAuAAAPSQBuAHAAdQB0ACAAMAAAcVMAQwBfADgAYQBiAGUAOQA3ADcAMAA0AGYA
 OQBlADQAMAA4AGMAYQA3AGMAZAA4ADIAOAAxADQAZgBhADIAOQA0AGMAZAAuAFAAcgBvAHAAZQBy
-AHQAaQBlAHMALgBSAGUAcwBvAHUAcgBjAGUAcwAAJRxc258LbkGpOM1n9eXFVwAEIAEBCAMgAAEF
+AHQAaQBlAHMALgBSAGUAcwBvAHUAcgBjAGUAcwAAUotxsQM+KkeFjtIAueJDxwAEIAEBCAMgAAEF
 IAEBEREEIAEBDgUgAQERWQ4HDAIICAgICAgIDQ0NDQQgABJpCiAGAQgODg4IEAIJIAMBEj0dCBJB
 AwYSPQMGHQgEIAEICAQgAQIIBCABDQgFIAIBCBwDIAACBiACAg4RdQUgAR0ICAYAARJ5EX0FIAAS
 gIEHIAIBDhKAgQi3elxWGTTgiQiJhF3NgIDMkQMGEhQDBhIYAwYSRQMGElEDBhJVAwYSIAUgAQES
@@ -2551,11 +2680,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   dataType="System.String"
                   description="Specifies the SELECT statement used to create a schema rowset."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT [nr_pracownika], [wiek], [wynagrodzenie] FROM [dbo].[pracownik]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT [nr_pracownika], [wiek], [wynagrodzenie],[data_wstawienia],[data_deaktywacji] FROM [dbo].[pracownik]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the WHERE clause in the SELECT statement that selects the current row among rows with identical business keys."
-                  name="CurrentRowWhere"></property>
+                  name="CurrentRowWhere">[data_wstawienia] IS NOT NULL AND [data_deaktywacji] IS NULL</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether historical attribute updates are directed to the transformation output for changing attribute updates."
@@ -2624,7 +2753,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                         <property
                           dataType="System.Int32"
                           name="ColumnType"
-                          typeConverter="ColumnType">2</property>
+                          typeConverter="ColumnType">3</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -2639,7 +2768,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                         <property
                           dataType="System.Int32"
                           name="ColumnType"
-                          typeConverter="ColumnType">2</property>
+                          typeConverter="ColumnType">3</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -2661,6 +2790,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       dataType="str"
                       length="20"
                       name="wynagrodzenie" />
+                    <externalMetadataColumn
+                      refId="Package\populating Pracownik\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[data_wstawienia]"
+                      dataType="dbDate"
+                      name="data_wstawienia" />
+                    <externalMetadataColumn
+                      refId="Package\populating Pracownik\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[data_deaktywacji]"
+                      dataType="dbDate"
+                      name="data_deaktywacji" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2715,13 +2852,507 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\populating Pracownik\Union All"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Union All"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\populating Pracownik\Union All.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\populating Pracownik\Union All.Inputs[Union All Input 1].Columns[id 2]"
+                      cachedDataType="r8"
+                      cachedName="id 2"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[id 2]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[id 2]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\populating Pracownik\Union All.Inputs[Union All Input 1].Columns[imie]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="imie"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[imie]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[imie]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\populating Pracownik\Union All.Inputs[Union All Input 1].Columns[nazwisko]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="nazwisko"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[nazwisko]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[nazwisko]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\populating Pracownik\Union All.Inputs[Union All Input 1].Columns[data urodzenia]"
+                      cachedDataType="date"
+                      cachedName="data urodzenia"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[data urodzenia]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[data urodzenia]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\populating Pracownik\Union All.Inputs[Union All Input 1].Columns[płeć]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="płeć"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[płeć]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[płeć]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\populating Pracownik\Union All.Inputs[Union All Input 1].Columns[stanowisko]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="stanowisko"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[stanowisko]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[stanowisko]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\populating Pracownik\Union All.Inputs[Union All Input 1].Columns[sortownia]"
+                      cachedDataType="r8"
+                      cachedName="sortownia"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[sortownia]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[sortownia]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\populating Pracownik\Union All.Inputs[Union All Input 1].Columns[data zatrudnienia]"
+                      cachedDataType="date"
+                      cachedName="data zatrudnienia"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[data zatrudnienia]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[data zatrudnienia]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\populating Pracownik\Union All.Inputs[Union All Input 1].Columns[data zwolnienia]"
+                      cachedDataType="date"
+                      cachedName="data zwolnienia"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[data zwolnienia]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[data zwolnienia]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\populating Pracownik\Union All.Inputs[Union All Input 1].Columns[wynagrodzenie]"
+                      cachedDataType="r8"
+                      cachedName="wynagrodzenie"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[wynagrodzenie]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[wynagrodzenie]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\populating Pracownik\Union All.Inputs[Union All Input 1].Columns[id]"
+                      cachedDataType="i4"
+                      cachedName="id"
+                      lineageId="Package\populating Pracownik\Data Conversion.Outputs[Data Conversion Output].Columns[id]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[id]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\populating Pracownik\Union All.Inputs[Union All Input 1].Columns[wiek]"
+                      cachedDataType="i4"
+                      cachedName="wiek"
+                      lineageId="Package\populating Pracownik\calculating wiek.Outputs[Derived Column Output].Columns[wiek]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[wiek]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\populating Pracownik\Union All.Inputs[Union All Input 1].Columns[wiekRange]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="wiekRange"
+                      lineageId="Package\populating Pracownik\ranges.Outputs[Output 0].Columns[wiekRange]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[wiekRange]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\populating Pracownik\Union All.Inputs[Union All Input 1].Columns[wynagrodzenieRange]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="wynagrodzenieRange"
+                      lineageId="Package\populating Pracownik\ranges.Outputs[Output 0].Columns[wynagrodzenieRange]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[wynagrodzenieRange]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\populating Pracownik\Union All.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\populating Pracownik\Union All.Inputs[Union All Input 2].Columns[id 2]"
+                      cachedDataType="r8"
+                      cachedName="id 2"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[id 2]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[id 2]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\populating Pracownik\Union All.Inputs[Union All Input 2].Columns[imie]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="imie"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[imie]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[imie]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\populating Pracownik\Union All.Inputs[Union All Input 2].Columns[nazwisko]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="nazwisko"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[nazwisko]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[nazwisko]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\populating Pracownik\Union All.Inputs[Union All Input 2].Columns[data urodzenia]"
+                      cachedDataType="date"
+                      cachedName="data urodzenia"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[data urodzenia]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[data urodzenia]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\populating Pracownik\Union All.Inputs[Union All Input 2].Columns[płeć]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="płeć"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[płeć]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[płeć]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\populating Pracownik\Union All.Inputs[Union All Input 2].Columns[stanowisko]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="stanowisko"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[stanowisko]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[stanowisko]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\populating Pracownik\Union All.Inputs[Union All Input 2].Columns[sortownia]"
+                      cachedDataType="r8"
+                      cachedName="sortownia"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[sortownia]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[sortownia]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\populating Pracownik\Union All.Inputs[Union All Input 2].Columns[data zatrudnienia]"
+                      cachedDataType="date"
+                      cachedName="data zatrudnienia"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[data zatrudnienia]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[data zatrudnienia]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\populating Pracownik\Union All.Inputs[Union All Input 2].Columns[data zwolnienia]"
+                      cachedDataType="date"
+                      cachedName="data zwolnienia"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[data zwolnienia]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[data zwolnienia]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\populating Pracownik\Union All.Inputs[Union All Input 2].Columns[wynagrodzenie]"
+                      cachedDataType="r8"
+                      cachedName="wynagrodzenie"
+                      lineageId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output].Columns[wynagrodzenie]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[wynagrodzenie]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\populating Pracownik\Union All.Inputs[Union All Input 2].Columns[id]"
+                      cachedDataType="i4"
+                      cachedName="id"
+                      lineageId="Package\populating Pracownik\Data Conversion.Outputs[Data Conversion Output].Columns[id]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[id]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\populating Pracownik\Union All.Inputs[Union All Input 2].Columns[wiek]"
+                      cachedDataType="i4"
+                      cachedName="wiek"
+                      lineageId="Package\populating Pracownik\calculating wiek.Outputs[Derived Column Output].Columns[wiek]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[wiek]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\populating Pracownik\Union All.Inputs[Union All Input 2].Columns[wiekRange]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="wiekRange"
+                      lineageId="Package\populating Pracownik\ranges.Outputs[Output 0].Columns[wiekRange]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[wiekRange]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\populating Pracownik\Union All.Inputs[Union All Input 2].Columns[wynagrodzenieRange]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="wynagrodzenieRange"
+                      lineageId="Package\populating Pracownik\ranges.Outputs[Output 0].Columns[wynagrodzenieRange]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[wynagrodzenieRange]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\populating Pracownik\Union All.Inputs[Union All Input 3]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\populating Pracownik\Union All.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[id 2]"
+                      dataType="r8"
+                      lineageId="Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[id 2]"
+                      name="id 2" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[imie]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[imie]"
+                      name="imie" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[nazwisko]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[nazwisko]"
+                      name="nazwisko" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[data urodzenia]"
+                      dataType="date"
+                      lineageId="Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[data urodzenia]"
+                      name="data urodzenia" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[płeć]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[płeć]"
+                      name="płeć" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[stanowisko]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[stanowisko]"
+                      name="stanowisko" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[sortownia]"
+                      dataType="r8"
+                      lineageId="Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[sortownia]"
+                      name="sortownia" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[data zatrudnienia]"
+                      dataType="date"
+                      lineageId="Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[data zatrudnienia]"
+                      name="data zatrudnienia" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[data zwolnienia]"
+                      dataType="date"
+                      lineageId="Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[data zwolnienia]"
+                      name="data zwolnienia" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[wynagrodzenie]"
+                      dataType="r8"
+                      lineageId="Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[wynagrodzenie]"
+                      name="wynagrodzenie" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[id]"
+                      dataType="i4"
+                      lineageId="Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[id]"
+                      name="id" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[wiek]"
+                      dataType="i4"
+                      lineageId="Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[wiek]"
+                      name="wiek" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[wiekRange]"
+                      codePage="1250"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[wiekRange]"
+                      name="wiekRange" />
+                    <outputColumn
+                      refId="Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[wynagrodzenieRange]"
+                      codePage="1250"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\populating Pracownik\Union All.Outputs[Union All Output 1].Columns[wynagrodzenieRange]"
+                      name="wynagrodzenieRange" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
-            <path
-              refId="Package\populating Pracownik.Paths[Changing Attribute Updates Output]"
-              endId="Package\populating Pracownik\OLE DB Command.Inputs[OLE DB Command Input]"
-              name="Changing Attribute Updates Output"
-              startId="Package\populating Pracownik\Slowly Changing Dimension 1.Outputs[Changing Attribute Updates Output]" />
             <path
               refId="Package\populating Pracownik.Paths[current workers]"
               endId="Package\populating Pracownik\calculating wiek.Inputs[Derived Column Input]"
@@ -2738,20 +3369,45 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               name="Derived Column Output"
               startId="Package\populating Pracownik\calculating wiek.Outputs[Derived Column Output]" />
             <path
+              refId="Package\populating Pracownik.Paths[Derived Column Output1]"
+              endId="Package\populating Pracownik\OLE DB Command.Inputs[OLE DB Command Input]"
+              name="Derived Column Output"
+              startId="Package\populating Pracownik\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\populating Pracownik.Paths[Derived Column Output2]"
+              endId="Package\populating Pracownik\Insert Destination.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\populating Pracownik\Derived Column 1.Outputs[Derived Column Output]" />
+            <path
               refId="Package\populating Pracownik.Paths[Excel Source Output]"
               endId="Package\populating Pracownik\Data Conversion.Inputs[Data Conversion Input]"
               name="Excel Source Output"
               startId="Package\populating Pracownik\CEO's excel.Outputs[Excel Source Output]" />
             <path
+              refId="Package\populating Pracownik.Paths[Historical Attribute Inserts Output]"
+              endId="Package\populating Pracownik\Derived Column.Inputs[Derived Column Input]"
+              name="Historical Attribute Inserts Output"
+              startId="Package\populating Pracownik\Slowly Changing Dimension 1.Outputs[Historical Attribute Inserts Output]" />
+            <path
               refId="Package\populating Pracownik.Paths[New Output]"
-              endId="Package\populating Pracownik\Insert Destination.Inputs[OLE DB Destination Input]"
+              endId="Package\populating Pracownik\Union All.Inputs[Union All Input 1]"
               name="New Output"
               startId="Package\populating Pracownik\Slowly Changing Dimension 1.Outputs[New Output]" />
+            <path
+              refId="Package\populating Pracownik.Paths[OLE DB Command Output]"
+              endId="Package\populating Pracownik\Union All.Inputs[Union All Input 2]"
+              name="OLE DB Command Output"
+              startId="Package\populating Pracownik\OLE DB Command.Outputs[OLE DB Command Output]" />
             <path
               refId="Package\populating Pracownik.Paths[Output 0]"
               endId="Package\populating Pracownik\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input]"
               name="Output 0"
               startId="Package\populating Pracownik\ranges.Outputs[Output 0]" />
+            <path
+              refId="Package\populating Pracownik.Paths[Union All Output 1]"
+              endId="Package\populating Pracownik\Derived Column 1.Inputs[Derived Column Input]"
+              name="Union All Output 1"
+              startId="Package\populating Pracownik\Union All.Outputs[Union All Output 1]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -6317,19 +6973,19 @@ where [refTable].[nr_zlecenie] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="164,42"
+          Size="164,41.6"
           Id="Package\populating Paczka"
           TopLeft="782,182" />
         <NodeLayout
-          Size="179,42"
+          Size="179.2,41.6"
           Id="Package\populating Pracownik"
           TopLeft="563.888888888889,185" />
         <NodeLayout
-          Size="178,42"
+          Size="177.6,41.6"
           Id="Package\Populating Pracownik Table\Initializing Pracownik"
           TopLeft="77,44" />
         <NodeLayout
-          Size="167,42"
+          Size="167.2,41.6"
           Id="Package\Populating Pracownik Table\Loading Pracownik"
           TopLeft="84,149" />
         <EdgeLayout
@@ -6357,12 +7013,12 @@ where [refTable].[nr_zlecenie] = ?</property>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="339,289"
-          Size="339,332"
+          PanelSize="339.2,288.8"
+          Size="339.2,332"
           Id="Package\Populating Pracownik Table"
           TopLeft="143,188" />
         <NodeLayout
-          Size="170,42"
+          Size="169.6,41.6"
           Id="Package\populating Zlecenie"
           TopLeft="981.111111111111,182.222222222222" />
       </GraphLayout>
@@ -6378,19 +7034,19 @@ where [refTable].[nr_zlecenie] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="171,42"
+          Size="171.2,41.6"
           Id="Package\populating Paczka\OLE DB Destination"
           TopLeft="633,383" />
         <NodeLayout
-          Size="113,42"
+          Size="112.8,41.6"
           Id="Package\populating Paczka\Lookup"
           TopLeft="667,279" />
         <NodeLayout
-          Size="154,42"
+          Size="153.6,41.6"
           Id="Package\populating Paczka\Derived Column"
           TopLeft="645,158" />
         <NodeLayout
-          Size="150,42"
+          Size="150.4,41.6"
           Id="Package\populating Paczka\OLE DB Source"
           TopLeft="640,69" />
         <EdgeLayout
@@ -6483,7 +7139,7 @@ where [refTable].[nr_zlecenie] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -6493,7 +7149,7 @@ where [refTable].[nr_zlecenie] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -6517,53 +7173,45 @@ where [refTable].[nr_zlecenie] = ?</property>
     design-time-name="Package\populating Pracownik">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="133,42"
+          Size="132.8,41.6"
           Id="Package\populating Pracownik\CEO's excel"
-          TopLeft="245.5,5.5" />
+          TopLeft="164.5,5.49999999999995" />
         <NodeLayout
-          Size="166,42"
-          Id="Package\populating Pracownik\OLE DB Command"
-          TopLeft="262,614.5" />
-        <NodeLayout
-          Size="163,42"
-          Id="Package\populating Pracownik\Insert Destination"
-          TopLeft="64.5000000000001,616.5" />
-        <NodeLayout
-          Size="155,42"
+          Size="155.2,41.6"
           Id="Package\populating Pracownik\Conditional Split"
-          TopLeft="234.5,209.5" />
+          TopLeft="153.3,208.7" />
         <NodeLayout
-          Size="111,42"
+          Size="111.2,41.6"
           Id="Package\populating Pracownik\ranges"
-          TopLeft="256.5,413.5" />
+          TopLeft="175.3,411.9" />
         <NodeLayout
-          Size="218,42"
+          Size="217.6,41.6"
           Id="Package\populating Pracownik\Slowly Changing Dimension 1"
-          TopLeft="203,515.5" />
+          TopLeft="122.1,513.5" />
         <NodeLayout
-          Size="153,42"
+          Size="152.8,41.6"
           Id="Package\populating Pracownik\calculating wiek"
-          TopLeft="235.5,311.5" />
+          TopLeft="154.5,310.3" />
         <NodeLayout
-          Size="156,42"
+          Size="156,41.6"
           Id="Package\populating Pracownik\Data Conversion"
-          TopLeft="234,107.5" />
+          TopLeft="152.9,107.1" />
         <EdgeLayout
           Id="Package\populating Pracownik.Paths[Derived Column Output]"
-          TopLeft="312,353.5">
+          TopLeft="230.9,351.9">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="0,59.9999999999999"
               Start="0,0"
-              End="0,52.5">
+              End="0,52.4999999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,52.4999999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6574,18 +7222,18 @@ where [refTable].[nr_zlecenie] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\populating Pracownik.Paths[Data Conversion Output]"
-          TopLeft="312,149.5">
+          TopLeft="230.9,148.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="0,59.9999999999999"
               Start="0,0"
-              End="0,52.5">
+              End="0,52.4999999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,52.4999999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6596,18 +7244,18 @@ where [refTable].[nr_zlecenie] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\populating Pracownik.Paths[current workers]"
-          TopLeft="312,251.5">
+          TopLeft="230.9,250.3">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="0,59.9999999999999"
               Start="0,0"
-              End="0,52.5">
+              End="0,52.4999999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,52.4999999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6619,43 +7267,19 @@ where [refTable].[nr_zlecenie] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populating Pracownik.Paths[Changing Attribute Updates Output]"
-          TopLeft="346,557.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,57"
-              Start="0,0"
-              End="0,49.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,49.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-78.53390625,18.91845703125,157.0678125,11.6630859375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\populating Pracownik.Paths[Output 0]"
-          TopLeft="312,455.5">
+          TopLeft="230.9,453.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="0,59.9999999999999"
               Start="0,0"
-              End="0,52.5">
+              End="0,52.4999999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,52.4999999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6665,55 +7289,211 @@ where [refTable].[nr_zlecenie] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populating Pracownik.Paths[New Output]"
-          TopLeft="277,557.5">
+          Id="Package\populating Pracownik.Paths[Excel Source Output]"
+          TopLeft="230.9,47.1">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-131,59.0000000000001"
+              EndConnector="0,59.9999999999999"
               Start="0,0"
-              End="-131,51.5000000000001">
+              End="0,52.4999999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.8579234972678" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19.8579234972678"
-                    Point2="0,23.8579234972678"
-                    Point3="-4,23.8579234972678" />
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\populating Pracownik\Derived Column"
+          TopLeft="17.5000000000001,615.099999999999" />
+        <EdgeLayout
+          Id="Package\populating Pracownik.Paths[Historical Attribute Inserts Output]"
+          TopLeft="195.966666666667,555.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-102.066666666667,59.9999999999999"
+              Start="0,0"
+              End="-102.066666666667,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="-127,23.8579234972678" />
+                    End="0,20.2627737226277" />
                   <mssgle:CubicBezierSegment
-                    Point1="-127,23.8579234972678"
-                    Point2="-131,23.8579234972678"
-                    Point3="-131,27.8579234972678" />
+                    Point1="0,20.2627737226277"
+                    Point2="0,24.2627737226277"
+                    Point3="-4,24.2627737226277" />
                   <mssgle:LineSegment
-                    End="-131,51.5000000000001" />
+                    End="-98.0666666666667,24.2627737226277" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-98.0666666666667,24.2627737226277"
+                    Point2="-102.066666666667,24.2627737226277"
+                    Point3="-102.066666666667,28.2627737226277" />
+                  <mssgle:LineSegment
+                    End="-102.066666666667,52.4999999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-92.59138671875,28.8579234972678,54.1827734375,11.43359375"
+              BoundingBox="-126.089720052083,29.2627737226277,150.1127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\populating Pracownik\OLE DB Command"
+          TopLeft="5.50000000000009,716.699999999999" />
         <EdgeLayout
-          Id="Package\populating Pracownik.Paths[Excel Source Output]"
-          TopLeft="312,47.5">
+          Id="Package\populating Pracownik.Paths[Derived Column Output1]"
+          TopLeft="90.9000000000001,656.699999999999">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="0,59.9999999999999"
               Start="0,0"
-              End="0,52.5">
+              End="0,52.4999999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="120,41.6"
+          Id="Package\populating Pracownik\Union All"
+          TopLeft="170.9,818.299999999999" />
+        <EdgeLayout
+          Id="Package\populating Pracownik.Paths[New Output]"
+          TopLeft="265.833333333333,555.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-16.2666666666667,263.2"
+              Start="0,0"
+              End="-16.2666666666667,255.7">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,126.641022577947" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,126.641022577947"
+                    Point2="0,130.641022577947"
+                    Point3="-4,130.641022577947" />
+                  <mssgle:LineSegment
+                    End="-12.2666666666667,130.641022577947" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-12.2666666666667,130.641022577947"
+                    Point2="-16.2666666666667,130.641022577947"
+                    Point3="-16.2666666666667,134.641022577947" />
+                  <mssgle:LineSegment
+                    End="-16.2666666666667,255.7" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-35.2247200520833,135.641022577947,54.1827734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populating Pracownik.Paths[OLE DB Command Output]"
+          TopLeft="87.9000000000001,758.299999999999">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="124.333333333333,59.9999999999999"
+              Start="0,0"
+              End="124.333333333333,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5263157894736" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.5263157894736"
+                    Point2="0,35.5263157894736"
+                    Point3="4,35.5263157894736" />
+                  <mssgle:LineSegment
+                    End="120.333333333333,35.5263157894736" />
+                  <mssgle:CubicBezierSegment
+                    Point1="120.333333333333,35.5263157894736"
+                    Point2="124.333333333333,35.5263157894736"
+                    Point3="124.333333333333,39.5263157894736" />
+                  <mssgle:LineSegment
+                    End="124.333333333333,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\populating Pracownik\Derived Column 1"
+          TopLeft="150.41428572645,918.370588213844" />
+        <EdgeLayout
+          Id="Package\populating Pracownik.Paths[Union All Output 1]"
+          TopLeft="231.257142863225,859.899999999999">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58.4705882138445"
+              Start="0,0"
+              End="0,50.9705882138445">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.9705882138445" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\populating Pracownik\Insert Destination"
+          TopLeft="149.7,1021.5" />
+        <EdgeLayout
+          Id="Package\populating Pracownik.Paths[Derived Column Output2]"
+          TopLeft="231.257142863225,959.970588213844">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,61.5294117861553"
+              Start="0,0"
+              End="0,54.0294117861553">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,54.0294117861553" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6759,29 +7539,32 @@ where [refTable].[nr_zlecenie] = ?</property>
       &lt;IdentificationString&gt;ranges.Outputs[Output 0].Columns[wiekRange]&lt;/IdentificationString&gt;
       &lt;ColumnName&gt;wiek&lt;/ColumnName&gt;
       &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+      &lt;ChangeType&gt;HistoricalAttribute&lt;/ChangeType&gt;
     &lt;/InputColumnToDBColumn&gt;
     &lt;InputColumnToDBColumn&gt;
       &lt;IdentificationString&gt;ranges.Outputs[Output 0].Columns[wynagrodzenieRange]&lt;/IdentificationString&gt;
       &lt;ColumnName&gt;wynagrodzenie&lt;/ColumnName&gt;
       &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+      &lt;ChangeType&gt;HistoricalAttribute&lt;/ChangeType&gt;
     &lt;/InputColumnToDBColumn&gt;
   &lt;/InputToColumnsCollection&gt;
   &lt;GeneratedComponentsIdentificationStrings&gt;
-    &lt;anyType xsi:type="xsd:string"&gt;Insert Destination&lt;/anyType&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;Derived Column&lt;/anyType&gt;
     &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command&lt;/anyType&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;Union All&lt;/anyType&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;Derived Column 1&lt;/anyType&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;Insert Destination&lt;/anyType&gt;
   &lt;/GeneratedComponentsIdentificationStrings&gt;
   &lt;FailFixedAttribute&gt;false&lt;/FailFixedAttribute&gt;
   &lt;FailChangeAttribute&gt;false&lt;/FailChangeAttribute&gt;
-  &lt;UseStartEndDate&gt;false&lt;/UseStartEndDate&gt;
+  &lt;UseStartEndDate&gt;true&lt;/UseStartEndDate&gt;
   &lt;CurrentIndicatorColumn /&gt;
   &lt;InferredIndicatorColumn /&gt;
   &lt;ValueCurrent /&gt;
   &lt;ValueExpired /&gt;
-  &lt;StartDateColumn /&gt;
-  &lt;EndDateColumn /&gt;
-  &lt;DateVariable /&gt;
+  &lt;StartDateColumn&gt;data_wstawienia&lt;/StartDateColumn&gt;
+  &lt;EndDateColumn&gt;data_deaktywacji&lt;/EndDateColumn&gt;
+  &lt;DateVariable&gt;System::ContainerStartTime&lt;/DateVariable&gt;
   &lt;EnableInferredSupport&gt;false&lt;/EnableInferredSupport&gt;
 &lt;/SCDWizardMetadata&gt;</Value>
       </Property>
@@ -6847,7 +7630,9 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6965,7 +7750,9 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6987,7 +7774,9 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7162,7 +7951,7 @@ where [refTable].[nr_zlecenie] = ?</property>
     design-time-name="Package\Populating Pracownik Table\Loading Pracownik">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="156,42"
           Id="Package\Populating Pracownik Table\Loading Pracownik\Data Conversion"
@@ -7198,7 +7987,9 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7220,7 +8011,9 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7242,7 +8035,9 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7267,15 +8062,15 @@ where [refTable].[nr_zlecenie] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="171,42"
+          Size="171.2,41.6"
           Id="Package\populating Zlecenie\OLE DB Destination"
           TopLeft="616,290" />
         <NodeLayout
-          Size="150,42"
+          Size="150.4,41.6"
           Id="Package\populating Zlecenie\OLE DB Source"
           TopLeft="627,96" />
         <NodeLayout
-          Size="113,42"
+          Size="112.8,41.6"
           Id="Package\populating Zlecenie\Lookup"
           TopLeft="647,194" />
         <EdgeLayout
@@ -7359,7 +8154,7 @@ where [refTable].[nr_zlecenie] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -7369,10 +8164,23 @@ where [refTable].[nr_zlecenie] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\populating Pracownik\Insert Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

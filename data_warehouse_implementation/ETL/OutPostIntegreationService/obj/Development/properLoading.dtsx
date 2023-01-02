@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="64"
-  DTS:VersionGUID="{8237A938-30AF-46B0-B6D3-1934A51167F1}">
+  DTS:VersionBuild="68"
+  DTS:VersionGUID="{8396C3C0-13DF-4C31-A232-47F30BAF37AB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -49,7 +49,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=LAPTOP-46GI6A46;Initial Catalog=OutPostdw;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package1-{E3B814FC-C8CF-4654-A63B-3DA7678FED4F}LAPTOP-46GI6A46.OutPostdw;" />
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=OutPostdw;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package1-{E3B814FC-C8CF-4654-A63B-3DA7678FED4F}LAPTOP-46GI6A46.OutPostdw;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -1857,7 +1857,7 @@ public class ScriptMain : UserComponent
                     ComponentMetaData.FireError(10, "Calculating Ranges", "Bad wiek value", "", 0, out cancel);
                     break;
                 case int n when (n > 0 && n <= 20):
-                    Row.wiekRange = "miedzy 0 i 20";
+                    Row.wiekRange = "między 0 i 20";
                     break;
                 case int n when (n > 20 && n <= 25):
                     Row.wiekRange = "miedzy 21 i 25";
@@ -2156,7 +2156,7 @@ namespace SC_8abe97704f9e408ca7cd82814fa294cd.Properties {
     <msb:CodeName>SC_8abe97704f9e408ca7cd82814fa294cd</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>SC_8abe97704f9e408ca7cd82814fa294cd</msb:DisplayName>
-    <msb:ProjectId>{851AE344-5525-4640-8F75-56280B90E485}</msb:ProjectId>
+    <msb:ProjectId>{CA531C31-A393-40A9-93FE-52A6BF762B14}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="SC_8abe97704f9e408ca7cd82814fa294cd.csproj" />
@@ -2303,7 +2303,7 @@ namespace SC_8abe97704f9e408ca7cd82814fa294cd.Properties {
                     <arrayElement
                       dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAJHUmWMAAAAAAAAAAOAAIiALATAAABgAAAAIAAAAAAAA3jYA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAMPymmMAAAAAAAAAAOAAIiALATAAABgAAAAIAAAAAAAA3jYA
 AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
 ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAIw2AABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
 AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -2389,7 +2389,7 @@ dABVc2VyQ29tcG9uZW50AFBhcmVudENvbXBvbmVudABTY3JpcHRDb21wb25lbnQATWljcm9zb2Z0
 LlNxbFNlcnZlci5UeFNjcmlwdABNaWNyb3NvZnQuU3FsU2VydmVyLlBpcGVsaW5lSG9zdABJbnB1
 dDBfUHJvY2Vzc0lucHV0AElucHV0MF9Qcm9jZXNzSW5wdXRSb3cATmV4dFJvdwBnZXRfQXNzZW1i
 bHkAAAAAJUMAYQBsAGMAdQBsAGEAdABpAG4AZwAgAFIAYQBuAGcAZQBzAAAdQgBhAGQAIAB3AGkA
-ZQBrACAAdgBhAGwAdQBlAAABABttAGkAZQBkAHoAeQAgADAAIABpACAAMgAwAAAdbQBpAGUAZAB6
+ZQBrACAAdgBhAGwAdQBlAAABABttAGkAGQFkAHoAeQAgADAAIABpACAAMgAwAAEdbQBpAGUAZAB6
 AHkAIAAyADEAIABpACAAMgA1AAAdbQBpAGUAZAB6AHkAIAAyADYAIABpACAAMwAwAAAdbQBpAGUA
 ZAB6AHkAIAAzADEAIABpACAAMwA1AAAdbQBpAGUAZAB6AHkAIAAzADYAIABpACAANAAwAAAdbQBp
 AGUAZAB6AHkAIAA0ADEAIABpACAANQAwAAAdbQBpAGUAZAB6AHkAIAA1ADEAIABpACAANgAwAAAV
@@ -2399,7 +2399,7 @@ AHkAIABjAGEAbgBuAG8AdAAgAGIAZQAgAHMAZQB0ACAAdABvACAARgBhAGwAcwBlAC4AIABBAHMA
 cwBpAGcAbgAgAGEAIAB2AGEAbAB1AGUAIAB0AG8AIAB0AGgAZQAgAGMAbwBsAHUAbQBuACAAaQBu
 AHMAdABlAGEAZAAuAAAPSQBuAHAAdQB0ACAAMAAAcVMAQwBfADgAYQBiAGUAOQA3ADcAMAA0AGYA
 OQBlADQAMAA4AGMAYQA3AGMAZAA4ADIAOAAxADQAZgBhADIAOQA0AGMAZAAuAFAAcgBvAHAAZQBy
-AHQAaQBlAHMALgBSAGUAcwBvAHUAcgBjAGUAcwAAJRxc258LbkGpOM1n9eXFVwAEIAEBCAMgAAEF
+AHQAaQBlAHMALgBSAGUAcwBvAHUAcgBjAGUAcwAAUotxsQM+KkeFjtIAueJDxwAEIAEBCAMgAAEF
 IAEBEREEIAEBDgUgAQERWQ4HDAIICAgICAgIDQ0NDQQgABJpCiAGAQgODg4IEAIJIAMBEj0dCBJB
 AwYSPQMGHQgEIAEICAQgAQIIBCABDQgFIAIBCBwDIAACBiACAg4RdQUgAR0ICAYAARJ5EX0FIAAS
 gIEHIAIBDhKAgQi3elxWGTTgiQiJhF3NgIDMkQMGEhQDBhIYAwYSRQMGElEDBhJVAwYSIAUgAQES
@@ -3821,7 +3821,7 @@ where [refTable].[nr_pracownika] = ?</property>
                           cachedDataType="wstr"
                           cachedLength="255"
                           cachedName="płeć 2"
-                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\268:invalid">
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\258:invalid">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -3838,7 +3838,7 @@ where [refTable].[nr_pracownika] = ?</property>
                           cachedDataType="wstr"
                           cachedLength="255"
                           cachedName="stanowisko 2"
-                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\269:invalid">
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\259:invalid">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -3854,7 +3854,7 @@ where [refTable].[nr_pracownika] = ?</property>
                           refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Inputs[Sort Input].Columns[sortownia 2]"
                           cachedDataType="r8"
                           cachedName="sortownia 2"
-                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\270:invalid">
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\260:invalid">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -3870,7 +3870,7 @@ where [refTable].[nr_pracownika] = ?</property>
                           refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Inputs[Sort Input].Columns[data zatrudnienia 2]"
                           cachedDataType="date"
                           cachedName="data zatrudnienia 2"
-                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\271:invalid">
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\261:invalid">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -3886,7 +3886,7 @@ where [refTable].[nr_pracownika] = ?</property>
                           refId="Package\Populating Pracownik Table\Initializing Pracownik\Remove duplicates.Inputs[Sort Input].Columns[data zwolnienia 2]"
                           cachedDataType="date"
                           cachedName="data zwolnienia 2"
-                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\272:invalid">
+                          lineageId="Package\Populating Pracownik Table\Initializing Pracownik\262:invalid">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -4039,7 +4039,7 @@ where [refTable].[nr_pracownika] = ?</property>
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\268:invalid}</property>
+                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\258:invalid}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -4053,7 +4053,7 @@ where [refTable].[nr_pracownika] = ?</property>
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\269:invalid}</property>
+                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\259:invalid}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -4066,7 +4066,7 @@ where [refTable].[nr_pracownika] = ?</property>
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\270:invalid}</property>
+                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\260:invalid}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -4079,7 +4079,7 @@ where [refTable].[nr_pracownika] = ?</property>
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\271:invalid}</property>
+                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\261:invalid}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -4092,7 +4092,7 @@ where [refTable].[nr_pracownika] = ?</property>
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\272:invalid}</property>
+                              name="SortColumnId">#{Package\Populating Pracownik Table\Initializing Pracownik\262:invalid}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -6412,7 +6412,9 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6458,7 +6460,9 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -6483,7 +6487,7 @@ where [refTable].[nr_zlecenie] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -6493,7 +6497,7 @@ where [refTable].[nr_zlecenie] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -6847,7 +6851,9 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6965,7 +6971,9 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6987,7 +6995,9 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7162,7 +7172,7 @@ where [refTable].[nr_zlecenie] = ?</property>
     design-time-name="Package\Populating Pracownik Table\Loading Pracownik">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="156,42"
           Id="Package\Populating Pracownik Table\Loading Pracownik\Data Conversion"
@@ -7198,7 +7208,9 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7220,7 +7232,9 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7242,7 +7256,9 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7297,7 +7313,9 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7359,7 +7377,7 @@ where [refTable].[nr_zlecenie] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -7369,7 +7387,7 @@ where [refTable].[nr_zlecenie] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
