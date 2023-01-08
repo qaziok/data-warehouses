@@ -41,7 +41,7 @@ SELECT * FROM Etap
 SELECT * FROM Osoba
 SELECT * FROM Paczka
 SELECT * FROM Paczkomat
-SELECT * FROM Pracownik
+SELECT * FROM Pracownik order by ID desc
 SELECT * FROM Sortownia
 SELECT * FROM Uzytkownik
 SELECT * FROM Zlecenie
