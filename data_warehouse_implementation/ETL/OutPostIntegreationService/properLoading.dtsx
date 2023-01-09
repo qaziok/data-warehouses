@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="104"
-  DTS:VersionGUID="{DC0AC5E2-132F-4426-BB65-F0720E230C9A}">
+  DTS:VersionBuild="109"
+  DTS:VersionGUID="{B40A7FB0-263E-4E70-93C3-4157DCE71CBB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2153,164 +2153,6 @@ where [refTable].[nr_pracownika] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\inserting into Etap\retriveing Paczka"
-              componentClassID="Microsoft.Lookup"
-              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
-              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-              name="retriveing Paczka"
-              usesDispositions="true"
-              version="6">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Specifies the SQL statement that generates the lookup table."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[paczka]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
-                  expressionType="Notify"
-                  name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[paczka]) [refTable]
-where [refTable].[nr_paczki] = ?</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the type of connection used to access the reference dataset."
-                  name="ConnectionType"
-                  typeConverter="LookupConnectionType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the cache type of the lookup table."
-                  name="CacheType"
-                  typeConverter="CacheType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
-                  name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
-                  name="NoMatchCachePercentage">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
-                  name="MaxMemoryUsage">25</property>
-                <property
-                  dataType="System.Int64"
-                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
-                  name="MaxMemoryUsage64">25</property>
-                <property
-                  dataType="System.String"
-                  description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_paczka" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nr_paczki" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="waga" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="rozmiar" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1250"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
-                <property
-                  containsID="true"
-                  dataType="System.String"
-                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\inserting into Etap\retriving Zlecenie.Outputs[Lookup Match Output].Columns[ID_paczki]};</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
-                  name="TreatDuplicateKeysAsError">false</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\inserting into Etap\retriveing Paczka.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-46GI6A46.OutPostdw]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-46GI6A46.OutPostdw]"
-                  description="Connection manager used to access lookup data."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\inserting into Etap\retriveing Paczka.Inputs[Lookup Input]"
-                  name="Lookup Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\inserting into Etap\retriveing Paczka.Inputs[Lookup Input].Columns[ID_paczki]"
-                      cachedDataType="i4"
-                      cachedName="ID_paczki"
-                      lineageId="Package\inserting into Etap\retriving Zlecenie.Outputs[Lookup Match Output].Columns[ID_paczki]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">nr_paczki</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\inserting into Etap\retriveing Paczka.Outputs[Lookup Match Output]"
-                  errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="Lookup Match Output"
-                  synchronousInputId="Package\inserting into Etap\retriveing Paczka.Inputs[Lookup Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\inserting into Etap\retriveing Paczka.Outputs[Lookup Match Output].Columns[Paczka DW id]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\inserting into Etap\retriveing Paczka.Outputs[Lookup Match Output].Columns[Paczka DW id]"
-                      name="Paczka DW id"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">id_paczka</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\inserting into Etap\retriveing Paczka.Outputs[Lookup No Match Output]"
-                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
-                  exclusionGroup="1"
-                  name="Lookup No Match Output"
-                  synchronousInputId="Package\inserting into Etap\retriveing Paczka.Inputs[Lookup Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\inserting into Etap\retriveing Paczka.Outputs[Lookup Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Lookup Error Output"
-                  synchronousInputId="Package\inserting into Etap\retriveing Paczka.Inputs[Lookup Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\inserting into Etap\retriveing Paczka.Outputs[Lookup Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\inserting into Etap\retriveing Paczka.Outputs[Lookup Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\inserting into Etap\retriveing Paczka.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\inserting into Etap\retriveing Paczka.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\inserting into Etap\retriving Miejsce"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
@@ -2461,6 +2303,322 @@ where [refTable].[nr_miejse] = ?</property>
                       refId="Package\inserting into Etap\retriving Miejsce.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\inserting into Etap\retriving Miejsce.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\inserting into Etap\retriving Paczka"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="retriving Paczka"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[paczka]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[paczka]) [refTable]
+where [refTable].[nr_paczki] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_paczka" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nr_paczki" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="waga" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="rozmiar" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1250"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\inserting into Etap\retriving Paczka ID.Outputs[Lookup Match Output].Columns[ID_paczki]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\inserting into Etap\retriving Paczka.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-46GI6A46.OutPostdw]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-46GI6A46.OutPostdw]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\inserting into Etap\retriving Paczka.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\inserting into Etap\retriving Paczka.Inputs[Lookup Input].Columns[ID_paczki]"
+                      cachedDataType="i4"
+                      cachedName="ID_paczki"
+                      lineageId="Package\inserting into Etap\retriving Paczka ID.Outputs[Lookup Match Output].Columns[ID_paczki]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">nr_paczki</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\inserting into Etap\retriving Paczka.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\inserting into Etap\retriving Paczka.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\inserting into Etap\retriving Paczka.Outputs[Lookup Match Output].Columns[Paczka DW id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\inserting into Etap\retriving Paczka.Outputs[Lookup Match Output].Columns[Paczka DW id]"
+                      name="Paczka DW id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">id_paczka</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\inserting into Etap\retriving Paczka.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\inserting into Etap\retriving Paczka.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\inserting into Etap\retriving Paczka.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\inserting into Etap\retriving Paczka.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\inserting into Etap\retriving Paczka.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\inserting into Etap\retriving Paczka.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\inserting into Etap\retriving Paczka.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\inserting into Etap\retriving Paczka.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\inserting into Etap\retriving Paczka ID"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="retriving Paczka ID"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[Zlecenie]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[Zlecenie]) [refTable]
+where [refTable].[ID] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ID_uzytkownika" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ID_paczki" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ID_paczkomatu_wysylkowego" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ID_paczkomatu_odbiorczego" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Status" dataType="DT_STR" length="60" precision="0" scale="0" codePage="1250"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\inserting into Etap\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID_zlecenia]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\inserting into Etap\retriving Paczka ID.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-46GI6A46.HDlabDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-46GI6A46.HDlabDB]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\inserting into Etap\retriving Paczka ID.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\inserting into Etap\retriving Paczka ID.Inputs[Lookup Input].Columns[ID_zlecenia]"
+                      cachedDataType="i4"
+                      cachedName="ID_zlecenia"
+                      lineageId="Package\inserting into Etap\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID_zlecenia]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">ID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\inserting into Etap\retriving Paczka ID.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\inserting into Etap\retriving Paczka ID.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\inserting into Etap\retriving Paczka ID.Outputs[Lookup Match Output].Columns[ID_paczki]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\inserting into Etap\retriving Paczka ID.Outputs[Lookup Match Output].Columns[ID_paczki]"
+                      name="ID_paczki"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">ID_paczki</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\inserting into Etap\retriving Paczka ID.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\inserting into Etap\retriving Paczka ID.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\inserting into Etap\retriving Paczka ID.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\inserting into Etap\retriving Paczka ID.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\inserting into Etap\retriving Paczka ID.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\inserting into Etap\retriving Paczka ID.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\inserting into Etap\retriving Paczka ID.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\inserting into Etap\retriving Paczka ID.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2799,14 +2957,14 @@ where [refTable].[typ_typu] = ?</property>
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[Zlecenie]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[zlecenie]</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[Zlecenie]) [refTable]
-where [refTable].[ID] = ?</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[zlecenie]) [refTable]
+where [refTable].[nr_zlecenie] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -2837,7 +2995,7 @@ where [refTable].[ID] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ID_uzytkownika" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ID_paczki" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ID_paczkomatu_wysylkowego" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ID_paczkomatu_odbiorczego" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Status" dataType="DT_STR" length="60" precision="0" scale="0" codePage="1250"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_zlecenie" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nr_zlecenie" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -2855,8 +3013,8 @@ where [refTable].[ID] = ?</property>
               <connections>
                 <connection
                   refId="Package\inserting into Etap\retriving Zlecenie.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-46GI6A46.HDlabDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-46GI6A46.HDlabDB]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-46GI6A46.OutPostdw]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-46GI6A46.OutPostdw]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -2874,7 +3032,7 @@ where [refTable].[ID] = ?</property>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">ID</property>
+                          name="JoinToReferenceColumn">nr_zlecenie</property>
                         <property
                           dataType="System.Null"
                           description="Specifies the column in the reference table from which a column is copied."
@@ -2905,21 +3063,7 @@ where [refTable].[ID] = ?</property>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">ID</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\inserting into Etap\retriving Zlecenie.Outputs[Lookup Match Output].Columns[ID_paczki]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\inserting into Etap\retriving Zlecenie.Outputs[Lookup Match Output].Columns[ID_paczki]"
-                      name="ID_paczki"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">ID_paczki</property>
+                          name="CopyFromReferenceColumn">id_zlecenie</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -4847,7 +4991,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       refId="Package\inserting into Etap\Sort 3.Inputs[Sort Input].Columns[ID_paczki]"
                       cachedDataType="i4"
                       cachedName="ID_paczki"
-                      lineageId="Package\inserting into Etap\retriving Zlecenie.Outputs[Lookup Match Output].Columns[ID_paczki]">
+                      lineageId="Package\inserting into Etap\retriving Paczka ID.Outputs[Lookup Match Output].Columns[ID_paczki]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -4863,7 +5007,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       refId="Package\inserting into Etap\Sort 3.Inputs[Sort Input].Columns[Paczka DW id]"
                       cachedDataType="i4"
                       cachedName="Paczka DW id"
-                      lineageId="Package\inserting into Etap\retriveing Paczka.Outputs[Lookup Match Output].Columns[Paczka DW id]">
+                      lineageId="Package\inserting into Etap\retriving Paczka.Outputs[Lookup Match Output].Columns[Paczka DW id]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -5105,7 +5249,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\inserting into Etap\retriving Zlecenie.Outputs[Lookup Match Output].Columns[ID_paczki]}</property>
+                          name="SortColumnId">#{Package\inserting into Etap\retriving Paczka ID.Outputs[Lookup Match Output].Columns[ID_paczki]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -5118,7 +5262,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\inserting into Etap\retriveing Paczka.Outputs[Lookup Match Output].Columns[Paczka DW id]}</property>
+                          name="SortColumnId">#{Package\inserting into Etap\retriving Paczka.Outputs[Lookup Match Output].Columns[Paczka DW id]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -5484,39 +5628,44 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               startId="Package\inserting into Etap\Derived Column.Outputs[Derived Column Output]" />
             <path
               refId="Package\inserting into Etap.Paths[Lookup Match Output5]"
-              endId="Package\inserting into Etap\retriving Sortownia ID.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\inserting into Etap\retrieveing Pracownik.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\inserting into Etap.Paths[Lookup Match Output4]"
-              endId="Package\inserting into Etap\retriving Zlecenie.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\inserting into Etap\retriving Typ.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\inserting into Etap.Paths[Lookup Match Output3]"
-              endId="Package\inserting into Etap\retriveing Paczka.Inputs[Lookup Input]"
+              endId="Package\inserting into Etap\retriving Paczka ID.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\inserting into Etap\retriving Zlecenie.Outputs[Lookup Match Output]" />
             <path
               refId="Package\inserting into Etap.Paths[Lookup Match Output6]"
+              endId="Package\inserting into Etap\retriving Paczka.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\inserting into Etap\retriving Paczka ID.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\inserting into Etap.Paths[Lookup Match Output4]"
               endId="Package\inserting into Etap\retreving Data.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\inserting into Etap\retriving Sortownia ID.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\inserting into Etap.Paths[Lookup Match Output1]"
-              endId="Package\inserting into Etap\retriving Miejsce.Inputs[Lookup Input]"
+              refId="Package\inserting into Etap.Paths[Lookup Match Output7]"
+              endId="Package\inserting into Etap\retrieveing Pracownik.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\inserting into Etap\retreving Data.Outputs[Lookup Match Output]" />
+              startId="Package\inserting into Etap\retriving Paczka.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\inserting into Etap.Paths[Lookup Match Output2]"
+              endId="Package\inserting into Etap\retriving Zlecenie.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\inserting into Etap\retriving Typ.Outputs[Lookup Match Output]" />
             <path
               refId="Package\inserting into Etap.Paths[Lookup Match Output]"
               endId="Package\inserting into Etap\Sort 3.Inputs[Sort Input]"
               name="Lookup Match Output"
               startId="Package\inserting into Etap\retriving Miejsce.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\inserting into Etap.Paths[Lookup Match Output2]"
-              endId="Package\inserting into Etap\retrieveing Pracownik.Inputs[Lookup Input]"
+              refId="Package\inserting into Etap.Paths[Lookup Match Output1]"
+              endId="Package\inserting into Etap\retriving Miejsce.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\inserting into Etap\retriveing Paczka.Outputs[Lookup Match Output]" />
+              startId="Package\inserting into Etap\retreving Data.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\inserting into Etap.Paths[Lookup Match Output3]"
+              endId="Package\inserting into Etap\retriving Sortownia ID.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\inserting into Etap\retrieveing Pracownik.Outputs[Lookup Match Output]" />
             <path
               refId="Package\inserting into Etap.Paths[Lookup No Match Output]"
               endId="Package\inserting into Etap\OLE DB Destination.Inputs[OLE DB Destination Input]"
@@ -5534,19 +5683,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               startId="Package\inserting into Etap\Merge Join.Outputs[Merge Join Output]" />
             <path
               refId="Package\inserting into Etap.Paths[OLE DB Source Output1]"
-              endId="Package\inserting into Etap\Derived Column.Inputs[Derived Column Input]"
-              name="OLE DB Source Output"
-              startId="Package\inserting into Etap\OLE DB Source.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\inserting into Etap.Paths[OLE DB Source Output2]"
               endId="Package\inserting into Etap\Sort 1.Inputs[Sort Input]"
               name="OLE DB Source Output"
               startId="Package\inserting into Etap\OLE DB Source Adres.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\inserting into Etap.Paths[OLE DB Source Output]"
+              refId="Package\inserting into Etap.Paths[OLE DB Source Output2]"
               endId="Package\inserting into Etap\Sort 2.Inputs[Sort Input]"
               name="OLE DB Source Output"
               startId="Package\inserting into Etap\OLE DB Source Etap.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\inserting into Etap.Paths[OLE DB Source Output]"
+              endId="Package\inserting into Etap\Derived Column.Inputs[Derived Column Input]"
+              name="OLE DB Source Output"
+              startId="Package\inserting into Etap\OLE DB Source.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\inserting into Etap.Paths[Output 0]"
               endId="Package\inserting into Etap\Sort 4.Inputs[Sort Input]"
@@ -5559,29 +5708,29 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               startId="Package\inserting into Etap\Conditional Split.Outputs[proper Etap]" />
             <path
               refId="Package\inserting into Etap.Paths[Sort Output]"
+              endId="Package\inserting into Etap\Merge Join.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\inserting into Etap\Sort 1.Outputs[Sort Output]" />
+            <path
+              refId="Package\inserting into Etap.Paths[Sort Output1]"
               endId="Package\inserting into Etap\Merge Join.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\inserting into Etap\Sort 2.Outputs[Sort Output]" />
             <path
-              refId="Package\inserting into Etap.Paths[Sort Output1]"
+              refId="Package\inserting into Etap.Paths[Sort Output2]"
               endId="Package\inserting into Etap\Script Component.Inputs[Input 0]"
               name="Sort Output"
               startId="Package\inserting into Etap\Sort.Outputs[Sort Output]" />
             <path
-              refId="Package\inserting into Etap.Paths[Sort Output2]"
+              refId="Package\inserting into Etap.Paths[Sort Output3]"
               endId="Package\inserting into Etap\Merge Join 1.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\inserting into Etap\Sort 3.Outputs[Sort Output]" />
             <path
-              refId="Package\inserting into Etap.Paths[Sort Output3]"
+              refId="Package\inserting into Etap.Paths[Sort Output4]"
               endId="Package\inserting into Etap\Merge Join 1.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\inserting into Etap\Sort 4.Outputs[Sort Output]" />
-            <path
-              refId="Package\inserting into Etap.Paths[Sort Output4]"
-              endId="Package\inserting into Etap\Merge Join.Inputs[Merge Join Right Input]"
-              name="Sort Output"
-              startId="Package\inserting into Etap\Sort 1.Outputs[Sort Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -8499,17 +8648,17 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               name="Data Conversion Output"
               startId="Package\populating Miejsce\Data Conversion.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\populating Miejsce.Paths[Derived Column Output1]"
+              refId="Package\populating Miejsce.Paths[Derived Column Output]"
               endId="Package\populating Miejsce\OLE DB Command.Inputs[OLE DB Command Input]"
               name="Derived Column Output"
               startId="Package\populating Miejsce\Derived Column 1.Outputs[Derived Column Output]" />
             <path
-              refId="Package\populating Miejsce.Paths[Derived Column Output2]"
+              refId="Package\populating Miejsce.Paths[Derived Column Output1]"
               endId="Package\populating Miejsce\Insert Destination.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
               startId="Package\populating Miejsce\Derived Column 2.Outputs[Derived Column Output]" />
             <path
-              refId="Package\populating Miejsce.Paths[Derived Column Output]"
+              refId="Package\populating Miejsce.Paths[Derived Column Output2]"
               endId="Package\populating Miejsce\Sort.Inputs[Sort Input]"
               name="Derived Column Output"
               startId="Package\populating Miejsce\Derived Column.Outputs[Derived Column Output]" />
@@ -8559,25 +8708,25 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               name="OLE DB Source Output"
               startId="Package\populating Miejsce\OLE DB Source Sortownia.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\populating Miejsce.Paths[Sort Output]"
-              endId="Package\populating Miejsce\Merge Join.Inputs[Merge Join Right Input]"
-              name="Sort Output"
-              startId="Package\populating Miejsce\Sort by ID_adresu.Outputs[Sort Output]" />
-            <path
-              refId="Package\populating Miejsce.Paths[Sort Output1]"
-              endId="Package\populating Miejsce\Merge Join.Inputs[Merge Join Left Input]"
-              name="Sort Output"
-              startId="Package\populating Miejsce\Sort by ID.Outputs[Sort Output]" />
-            <path
-              refId="Package\populating Miejsce.Paths[Sort Output2]"
+              refId="Package\populating Miejsce.Paths[Sort Output3]"
               endId="Package\populating Miejsce\Merge Join 1.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\populating Miejsce\Sort 1.Outputs[Sort Output]" />
             <path
-              refId="Package\populating Miejsce.Paths[Sort Output3]"
+              refId="Package\populating Miejsce.Paths[Sort Output]"
               endId="Package\populating Miejsce\Merge Join 1.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\populating Miejsce\Sort.Outputs[Sort Output]" />
+            <path
+              refId="Package\populating Miejsce.Paths[Sort Output1]"
+              endId="Package\populating Miejsce\Merge Join.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\populating Miejsce\Sort by ID_adresu.Outputs[Sort Output]" />
+            <path
+              refId="Package\populating Miejsce.Paths[Sort Output2]"
+              endId="Package\populating Miejsce\Merge Join.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\populating Miejsce\Sort by ID.Outputs[Sort Output]" />
             <path
               refId="Package\populating Miejsce.Paths[Union All Output 1]"
               endId="Package\populating Miejsce\Derived Column 2.Inputs[Derived Column Input]"
@@ -12508,402 +12657,96 @@ where [refTable].[nr_zlecenie] = ?</property>
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="160,42"
-          Id="Package\inserting into Etap\retriving Zlecenie"
-          TopLeft="583.129247269431,290.463118565444" />
+          Size="138,42"
+          Id="Package\inserting into Etap\retriving Typ"
+          TopLeft="604.081642940511,350.609712511977" />
         <NodeLayout
           Size="139,42"
           Id="Package\inserting into Etap\Merge Join 1"
-          TopLeft="416.462580602765,838.907563009889" />
-        <NodeLayout
-          Size="107,42"
-          Id="Package\inserting into Etap\Sort 3"
-          TopLeft="605.351469491654,745.574229676556" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\inserting into Etap\OLE DB Destination"
-          TopLeft="406.462580602765,1003.35200745433" />
+          TopLeft="426.462580602765,1169.90756300989" />
         <NodeLayout
           Size="106,42"
           Id="Package\inserting into Etap\Sort 1"
-          TopLeft="366.700685268125,365.600375633797" />
+          TopLeft="376.700685268125,696.600375633797" />
         <NodeLayout
-          Size="159,42"
-          Id="Package\inserting into Etap\retriveing Paczka"
-          TopLeft="585.907025047209,387.796451898778" />
+          Size="171,42"
+          Id="Package\inserting into Etap\OLE DB Destination"
+          TopLeft="416.462580602765,1334.35200745433" />
+        <NodeLayout
+          Size="98,42"
+          Id="Package\inserting into Etap\Sort"
+          TopLeft="255.129249653617,883.89449331303" />
         <NodeLayout
           Size="150,42"
           Id="Package\inserting into Etap\OLE DB Source"
-          TopLeft="589.795928411512,14.2521015451029" />
+          TopLeft="589.795928411512,22.2521015451029" />
         <NodeLayout
           Size="179,42"
           Id="Package\inserting into Etap\OLE DB Source Adres"
-          TopLeft="327.721092767572,271.213819688212" />
-        <NodeLayout
-          Size="162,42"
-          Id="Package\inserting into Etap\Script Component"
-          TopLeft="217.986392644566,658.600375816117" />
+          TopLeft="337.721092767572,602.213819688212" />
         <NodeLayout
           Size="154,42"
           Id="Package\inserting into Etap\Derived Column"
           TopLeft="590.573691713876,102.574229676556" />
         <NodeLayout
+          Size="160,42"
+          Id="Package\inserting into Etap\retriving Zlecenie"
+          TopLeft="588.129247269431,461.463118565444" />
+        <NodeLayout
           Size="156,42"
           Id="Package\inserting into Etap\retriving Miejsce"
-          TopLeft="581.240358380543,662.463118565444" />
+          TopLeft="591.240358380543,993.463118565444" />
         <NodeLayout
-          Size="106,42"
-          Id="Package\inserting into Etap\Sort 2"
-          TopLeft="110.772109387452,359.629787237632" />
+          Size="107,42"
+          Id="Package\inserting into Etap\Sort 3"
+          TopLeft="615.351469491654,1076.57422967656" />
         <NodeLayout
           Size="174,42"
           Id="Package\inserting into Etap\OLE DB Source Etap"
-          TopLeft="69.5170022758958,272.953314332859" />
+          TopLeft="79.5170022758958,603.953314332859" />
         <NodeLayout
           Size="146,42"
           Id="Package\inserting into Etap\retreving Data"
-          TopLeft="580.129247269431,603.574229676555" />
+          TopLeft="591.129247269431,901.574229676555" />
         <NodeLayout
           Size="155,42"
           Id="Package\inserting into Etap\Data Conversion"
-          TopLeft="765.306135482066,139.831934734199" />
+          TopLeft="591.306135482066,174.831934734199" />
         <NodeLayout
-          Size="107,42"
-          Id="Package\inserting into Etap\Sort 4"
-          TopLeft="253.129247269431,742.240896343222" />
+          Size="162,42"
+          Id="Package\inserting into Etap\Script Component"
+          TopLeft="227.986392644566,989.600375816117" />
         <NodeLayout
-          Size="138,42"
-          Id="Package\inserting into Etap\retriving Typ"
-          TopLeft="591.081642940511,191.609712511977" />
+          Size="183,42"
+          Id="Package\inserting into Etap\retriving Sortownia ID"
+          TopLeft="578,820" />
         <NodeLayout
           Size="180,42"
           Id="Package\inserting into Etap\retrieveing Pracownik"
-          TopLeft="567.462580602765,456.907563009889" />
+          TopLeft="578.462580602765,736.907563009889" />
         <NodeLayout
-          Size="98,42"
-          Id="Package\inserting into Etap\Sort"
-          TopLeft="245.129249653617,552.89449331303" />
+          Size="107,42"
+          Id="Package\inserting into Etap\Sort 4"
+          TopLeft="263.129247269431,1073.24089634322" />
         <NodeLayout
           Size="130,42"
           Id="Package\inserting into Etap\Merge Join"
-          TopLeft="233.843540148438,458.89449458927" />
+          TopLeft="243.843540148438,789.89449458927" />
         <NodeLayout
           Size="113,42"
           Id="Package\inserting into Etap\Lookup"
-          TopLeft="430.907025047209,920.018674121" />
+          TopLeft="440.907025047209,1251.018674121" />
         <NodeLayout
           Size="154,42"
           Id="Package\inserting into Etap\Conditional Split"
-          TopLeft="772.653074382694,221.655465293508" />
-        <EdgeLayout
-          Id="Package\inserting into Etap.Paths[OLE DB Source Output]"
-          TopLeft="160.144555831674,314.553314332859">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,45.0764729047731"
-              Start="0,0"
-              End="0,37.5764729047731">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,37.5764729047731" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\inserting into Etap.Paths[Merge Join Output1]"
-          TopLeft="296.286394901028,500.49449458927">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,52.3999987237596"
-              Start="0,0"
-              End="0,44.8999987237596">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,44.8999987237596" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\inserting into Etap.Paths[Merge Join Output]"
-          TopLeft="486.684802824987,880.907563009889">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,39.111111111111"
-              Start="0,0"
-              End="0,31.611111111111">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.611111111111" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\inserting into Etap.Paths[Lookup No Match Output]"
-          TopLeft="489.684802824987,962.018674121">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,41.3333333333327"
-              Start="0,0"
-              End="0,33.8333333333327">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.8333333333327" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,11.1119791666663,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\inserting into Etap.Paths[Lookup Match Output4]"
-          TopLeft="661.705445104971,233.209712511977">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,57.2534060534671"
-              Start="0,0"
-              End="0,49.7534060534671">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,49.7534060534671" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,19.0720155267336,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\inserting into Etap.Paths[Lookup Match Output3]"
-          TopLeft="664.26813615832,332.463118565444">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,55.3333333333332"
-              Start="0,0"
-              End="0,47.8333333333332">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,47.8333333333332" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,18.1119791666666,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\inserting into Etap.Paths[Lookup Match Output2]"
-          TopLeft="661.434802824987,429.796451898778">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,27.111111111111"
-              Start="0,0"
-              End="0,19.611111111111">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.611111111111" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,4.00086805555549,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\inserting into Etap.Paths[Lookup Match Output1]"
-          TopLeft="580.129247269431,624.574229676555">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="1.111111111112,58.888888888889"
-              Start="0,0"
-              End="-6.388888888888,58.888888888889">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-18.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-18.5,0"
-                    Point2="-22.5,0"
-                    Point3="-22.5,4" />
-                  <mssgle:LineSegment
-                    End="-22.5,54.888888888889" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-22.5,54.888888888889"
-                    Point2="-22.5,58.888888888889"
-                    Point3="-18.5,58.888888888889" />
-                  <mssgle:LineSegment
-                    End="-6.388888888888,58.888888888889" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-70.69138671875,-17.609375,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\inserting into Etap.Paths[Lookup Match Output]"
-          TopLeft="659.045913936098,704.463118565444">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,41.111111111112"
-              Start="0,0"
-              End="0,33.611111111112">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.611111111112" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,11.000868055556,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\inserting into Etap.Paths[Derived Column Output]"
-          TopLeft="744.173691713876,117.331934734199">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="98.7324437681898,22.5"
-              Start="0,0"
-              End="98.7324437681898,15">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="94.7324437681898,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="94.7324437681898,0"
-                    Point2="98.7324437681898,0"
-                    Point3="98.7324437681898,4" />
-                  <mssgle:LineSegment
-                    End="98.7324437681898,15" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\inserting into Etap.Paths[Data Conversion Output]"
-          TopLeft="846.37960493238,181.431934734199">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,40.2235305593088"
-              Start="0,0"
-              End="0,32.7235305593088">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32.7235305593088" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="598.653074382694,268.655465293508" />
+        <NodeLayout
+          Size="106,42"
+          Id="Package\inserting into Etap\Sort 2"
+          TopLeft="120.772109387452,690.629787237632" />
         <EdgeLayout
           Id="Package\inserting into Etap.Paths[Sort Output4]"
-          TopLeft="419.900685268125,407.200375633797">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-100.99047845302,51.6941189554735"
-              Start="0,0"
-              End="-100.99047845302,44.1941189554735">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.6382217223904" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26.6382217223904"
-                    Point2="0,30.6382217223904"
-                    Point3="-4,30.6382217223904" />
-                  <mssgle:LineSegment
-                    End="-96.99047845302,30.6382217223904" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-96.99047845302,30.6382217223904"
-                    Point2="-100.99047845302,30.6382217223904"
-                    Point3="-100.99047845302,34.6382217223904" />
-                  <mssgle:LineSegment
-                    End="-100.99047845302,44.1941189554735" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\inserting into Etap.Paths[Sort Output3]"
-          TopLeft="306.629247269431,784.240896343222">
+          TopLeft="316.629247269431,1115.24089634322">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -12914,17 +12757,17 @@ where [refTable].[nr_zlecenie] = ?</property>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28.4267425320057" />
+                    End="0,28.4267425320056" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,28.4267425320057"
-                    Point2="0,32.4267425320057"
-                    Point3="4,32.4267425320057" />
+                    Point1="0,28.4267425320056"
+                    Point2="0,32.4267425320056"
+                    Point3="4,32.4267425320056" />
                   <mssgle:LineSegment
-                    End="153.5,32.4267425320057" />
+                    End="153.5,32.4267425320056" />
                   <mssgle:CubicBezierSegment
-                    Point1="153.5,32.4267425320057"
-                    Point2="157.5,32.4267425320057"
-                    Point3="157.5,36.4267425320057" />
+                    Point1="153.5,32.4267425320056"
+                    Point2="157.5,32.4267425320056"
+                    Point3="157.5,36.4267425320056" />
                   <mssgle:LineSegment
                     End="157.5,47.1666666666667" />
                 </mssgle:SegmentCollection>
@@ -12936,14 +12779,14 @@ where [refTable].[nr_zlecenie] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\inserting into Etap.Paths[Sort Output2]"
-          TopLeft="658.851469491654,787.574229676556">
+          Id="Package\inserting into Etap.Paths[Sort Output3]"
+          TopLeft="668.851469491654,1118.57422967656">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-172.888888888889,51.3333333333334"
+              EndConnector="-172.888888888889,51.3333333333335"
               Start="0,0"
-              End="-172.888888888889,43.8333333333334">
+              End="-172.888888888889,43.8333333333335">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -12960,7 +12803,7 @@ where [refTable].[nr_zlecenie] = ?</property>
                     Point2="-172.888888888889,25.6666666666667"
                     Point3="-172.888888888889,29.6666666666667" />
                   <mssgle:LineSegment
-                    End="-172.888888888889,43.8333333333334" />
+                    End="-172.888888888889,43.8333333333335" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -12970,8 +12813,8 @@ where [refTable].[nr_zlecenie] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\inserting into Etap.Paths[Sort Output1]"
-          TopLeft="296.557821149092,594.49449331303">
+          Id="Package\inserting into Etap.Paths[Sort Output2]"
+          TopLeft="306.557821149092,925.49449331303">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -12992,8 +12835,8 @@ where [refTable].[nr_zlecenie] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\inserting into Etap.Paths[Sort Output]"
-          TopLeft="163.972109387451,401.229787237632">
+          Id="Package\inserting into Etap.Paths[Sort Output1]"
+          TopLeft="173.972109387451,732.229787237632">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -13026,44 +12869,66 @@ where [refTable].[nr_zlecenie] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\inserting into Etap.Paths[proper Etap]"
-          TopLeft="772.653074382694,242.455465293508">
+          Id="Package\inserting into Etap.Paths[Sort Output]"
+          TopLeft="429.900685268125,738.200375633797">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-43.171431442183,-30.0457527815311"
+              EndConnector="-100.99047845302,51.6941189554734"
               Start="0,0"
-              End="-35.671431442183,-30.0457527815311">
+              End="-100.99047845302,44.1941189554734">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-17.5857157210915,0" />
+                    End="0,26.6382217223904" />
                   <mssgle:CubicBezierSegment
-                    Point1="-17.5857157210915,0"
-                    Point2="-21.5857157210915,0"
-                    Point3="-21.5857157210915,-4" />
+                    Point1="0,26.6382217223904"
+                    Point2="0,30.6382217223904"
+                    Point3="-4,30.6382217223904" />
                   <mssgle:LineSegment
-                    End="-21.5857157210915,-26.0457527815311" />
+                    End="-96.99047845302,30.6382217223904" />
                   <mssgle:CubicBezierSegment
-                    Point1="-21.5857157210915,-26.0457527815311"
-                    Point2="-21.5857157210915,-30.0457527815311"
-                    Point3="-25.5857157210915,-30.0457527815311" />
+                    Point1="-96.99047845302,30.6382217223904"
+                    Point2="-100.99047845302,30.6382217223904"
+                    Point3="-100.99047845302,34.6382217223904" />
                   <mssgle:LineSegment
-                    End="-35.671431442183,-30.0457527815311" />
+                    End="-100.99047845302,44.1941189554734" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\inserting into Etap.Paths[proper Etap]"
+          TopLeft="674.367358661602,310.655465293508">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.9542472184691"
+              Start="0,0"
+              End="0,32.4542472184691">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.4542472184691" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.0133133773415,1,52.8551953125,11.2822265625"
+              BoundingBox="-26.42759765625,10.5860103279845,52.8551953125,11.2822265625"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\inserting into Etap.Paths[Output 0]"
-          TopLeft="302.807819956999,700.600375816117">
+          TopLeft="312.807819956999,1031.60037581612">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -13085,7 +12950,29 @@ where [refTable].[nr_zlecenie] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\inserting into Etap.Paths[OLE DB Source Output2]"
-          TopLeft="418.610889017849,312.813819688212">
+          TopLeft="170.144555831674,645.553314332859">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,45.076472904773"
+              Start="0,0"
+              End="0,37.576472904773">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.576472904773" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\inserting into Etap.Paths[OLE DB Source Output1]"
+          TopLeft="428.610889017849,643.813819688212">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -13106,19 +12993,251 @@ where [refTable].[nr_zlecenie] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\inserting into Etap.Paths[OLE DB Source Output1]"
-          TopLeft="666.184810062694,56.2521015451029">
+          Id="Package\inserting into Etap.Paths[OLE DB Source Output]"
+          TopLeft="666.184810062694,64.2521015451029">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,46.3221281314529"
+              EndConnector="0,38.3221281314531"
               Start="0,0"
-              End="0,38.8221281314529">
+              End="0,30.8221281314531">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38.8221281314529" />
+                    End="0,30.8221281314531" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\inserting into Etap.Paths[Merge Join Output1]"
+          TopLeft="306.286394901028,831.49449458927">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52.3999987237596"
+              Start="0,0"
+              End="0,44.8999987237596">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.8999987237596" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\inserting into Etap.Paths[Merge Join Output]"
+          TopLeft="496.684802824987,1211.90756300989">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.1111111111109"
+              Start="0,0"
+              End="0,31.6111111111109">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.6111111111109" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\inserting into Etap.Paths[Lookup No Match Output]"
+          TopLeft="499.684802824987,1293.018674121">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41.3333333333326"
+              Start="0,0"
+              End="0,33.8333333333326">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.8333333333326" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,11.1119791666663,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\inserting into Etap.Paths[Lookup Match Output4]"
+          TopLeft="666.814623634715,862">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.574229676555"
+              Start="0,0"
+              End="0,32.074229676555">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.074229676555" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,10.2324273382775,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\inserting into Etap.Paths[Lookup Match Output3]"
+          TopLeft="668.981290301383,778.907563009889">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41.092436990111"
+              Start="0,0"
+              End="0,33.592436990111">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.592436990111" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,10.9915309950555,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\inserting into Etap.Paths[Lookup Match Output2]"
+          TopLeft="670.605445104971,392.609712511977">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,68.853406053467"
+              Start="0,0"
+              End="0,61.353406053467">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,61.353406053467" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,24.8720155267335,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\inserting into Etap.Paths[Lookup Match Output1]"
+          TopLeft="666.684802824987,943.574229676555">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,49.888888888889"
+              Start="0,0"
+              End="0,42.388888888889">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.388888888889" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,15.3897569444445,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\inserting into Etap.Paths[Lookup Match Output]"
+          TopLeft="669.045913936098,1035.46311856544">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41.111111111112"
+              Start="0,0"
+              End="0,33.611111111112">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.611111111112" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,11.000868055556,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\inserting into Etap.Paths[Derived Column Output]"
+          TopLeft="668.189913597971,144.574229676556">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,30.257705057643"
+              Start="0,0"
+              End="0,22.757705057643">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.757705057643" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\inserting into Etap.Paths[Data Conversion Output]"
+          TopLeft="672.22960493238,216.831934734199">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51.823530559309"
+              Start="0,0"
+              End="0,44.323530559309">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.323530559309" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13128,78 +13247,82 @@ where [refTable].[nr_zlecenie] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="183,42"
-          Id="Package\inserting into Etap\retriving Sortownia ID"
-          TopLeft="744,534" />
+          Size="153,42"
+          Id="Package\inserting into Etap\retriving Paczka"
+          TopLeft="597,642" />
+        <NodeLayout
+          Size="168,42"
+          Id="Package\inserting into Etap\retriving Paczka ID"
+          TopLeft="591,554" />
         <EdgeLayout
           Id="Package\inserting into Etap.Paths[Lookup Match Output5]"
-          TopLeft="657.462580602765,498.907563009889">
+          TopLeft="671.564623634715,503.463118565444">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="178.037419397235,35.092436990111"
+              EndConnector="0,50.536881434556"
               Start="0,0"
-              End="178.037419397235,27.592436990111">
+              End="0,43.036881434556">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,13.5462184950555" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13.5462184950555"
-                    Point2="0,17.5462184950555"
-                    Point3="4,17.5462184950555" />
-                  <mssgle:LineSegment
-                    End="174.037419397235,17.5462184950555" />
-                  <mssgle:CubicBezierSegment
-                    Point1="174.037419397235,17.5462184950555"
-                    Point2="178.037419397235,17.5462184950555"
-                    Point3="178.037419397235,21.5462184950555" />
-                  <mssgle:LineSegment
-                    End="178.037419397235,27.592436990111" />
+                    End="0,43.036881434556" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="40.8273229798675,22.5462184950555,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,15.713753217278,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\inserting into Etap.Paths[Lookup Match Output6]"
-          TopLeft="835.5,576">
+          TopLeft="674.25,596">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-182.370752730569,27.574229676555"
+              EndConnector="0,46"
               Start="0,0"
-              End="-182.370752730569,20.074229676555">
+              End="0,38.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,9.78711483827749" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,9.78711483827749"
-                    Point2="0,13.7871148382775"
-                    Point3="-4,13.7871148382775" />
-                  <mssgle:LineSegment
-                    End="-178.370752730569,13.7871148382775" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-178.370752730569,13.7871148382775"
-                    Point2="-182.370752730569,13.7871148382775"
-                    Point3="-182.370752730569,17.7871148382775" />
-                  <mssgle:LineSegment
-                    End="-182.370752730569,20.074229676555" />
+                    End="0,38.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-139.376763084035,18.7871148382775,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,13.4453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\inserting into Etap.Paths[Lookup Match Output7]"
+          TopLeft="670.981290301383,684">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52.907563009889"
+              Start="0,0"
+              End="0,45.407563009889">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.407563009889" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,16.8990940049445,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -13207,7 +13330,7 @@ where [refTable].[nr_zlecenie] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\inserting into Etap\retriving Zlecenie">
+    design-time-name="Package\inserting into Etap\retriving Typ">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -13217,7 +13340,7 @@ where [refTable].[nr_zlecenie] = ?</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[Zlecenie]</Value>
+          type="q3:string">[dbo].[typ]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -13239,29 +13362,6 @@ where [refTable].[nr_zlecenie] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\inserting into Etap\retriveing Paczka">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[paczka]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -13292,12 +13392,35 @@ where [refTable].[nr_zlecenie] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\inserting into Etap\retriving Miejsce">
+    design-time-name="Package\inserting into Etap\retriving Zlecenie">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
           type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[zlecenie]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\inserting into Etap\retriving Miejsce">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -13351,7 +13474,7 @@ where [refTable].[nr_zlecenie] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\inserting into Etap\retriving Typ">
+    design-time-name="Package\inserting into Etap\retriving Sortownia ID">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -13361,7 +13484,7 @@ where [refTable].[nr_zlecenie] = ?</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[typ]</Value>
+          type="q3:string">[dbo].[Sortownia]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -13429,21 +13552,41 @@ where [refTable].[nr_zlecenie] = ?</property>
           Id="Package\populating Miejsce\Data Conversion"
           TopLeft="506.5,107.5" />
         <NodeLayout
+          Size="163,42"
+          Id="Package\populating Miejsce\Derived Column 2"
+          TopLeft="468,1127.5" />
+        <NodeLayout
           Size="130,42"
           Id="Package\populating Miejsce\Merge Join"
           TopLeft="281.5,413.5" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\populating Miejsce\Insert Destination"
+          TopLeft="468,1229.5" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\populating Miejsce\Sort 1"
+          TopLeft="333,515.5" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\populating Miejsce\Derived Column 1"
+          TopLeft="325,821.5" />
         <NodeLayout
           Size="155,42"
           Id="Package\populating Miejsce\Conditional Split"
           TopLeft="507,209.5" />
         <NodeLayout
-          Size="209,42"
-          Id="Package\populating Miejsce\Slowly Changing Dimension"
-          TopLeft="445,719.5" />
-        <NodeLayout
           Size="180,42"
           Id="Package\populating Miejsce\OLE DB Source Adres"
           TopLeft="5.50000000000006,209.5" />
+        <NodeLayout
+          Size="127,42"
+          Id="Package\populating Miejsce\Sort by ID"
+          TopLeft="76.0000000000001,311.5" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\populating Miejsce\Merge Join 1"
+          TopLeft="480,617.5" />
         <NodeLayout
           Size="200,42"
           Id="Package\populating Miejsce\OLE DB Source Sortownia"
@@ -13453,10 +13596,6 @@ where [refTable].[nr_zlecenie] = ?</property>
           Id="Package\populating Miejsce\Derived Column"
           TopLeft="472.5,413.5" />
         <NodeLayout
-          Size="127,42"
-          Id="Package\populating Miejsce\Sort by ID"
-          TopLeft="76.0000000000001,311.5" />
-        <NodeLayout
           Size="165,42"
           Id="Package\populating Miejsce\Sort by ID_adresu"
           TopLeft="264,311.5" />
@@ -13465,6 +13604,14 @@ where [refTable].[nr_zlecenie] = ?</property>
           Id="Package\populating Miejsce\Excel Source"
           TopLeft="515,5.5" />
         <NodeLayout
+          Size="166,42"
+          Id="Package\populating Miejsce\OLE DB Command"
+          TopLeft="322.5,923.5" />
+        <NodeLayout
+          Size="209,42"
+          Id="Package\populating Miejsce\Slowly Changing Dimension"
+          TopLeft="445,719.5" />
+        <NodeLayout
           Size="127,42"
           Id="Package\populating Miejsce\Aggregate"
           TopLeft="490,311.5" />
@@ -13472,6 +13619,166 @@ where [refTable].[nr_zlecenie] = ?</property>
           Size="98,42"
           Id="Package\populating Miejsce\Sort"
           TopLeft="500.5,515.5" />
+        <NodeLayout
+          Size="121,42"
+          Id="Package\populating Miejsce\Union All"
+          TopLeft="489,1025.5" />
+        <EdgeLayout
+          Id="Package\populating Miejsce.Paths[Historical Attribute Inserts Output]"
+          TopLeft="516,761.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-109.5,60"
+              Start="0,0"
+              End="-109.5,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.2735042735043" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.2735042735043"
+                    Point2="0,24.2735042735043"
+                    Point3="-4,24.2735042735043" />
+                  <mssgle:LineSegment
+                    End="-105.5,24.2735042735043" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-105.5,24.2735042735043"
+                    Point2="-109.5,24.2735042735043"
+                    Point3="-109.5,28.2735042735043" />
+                  <mssgle:LineSegment
+                    End="-109.5,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-129.80638671875,29.2735042735043,150.1127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populating Miejsce.Paths[Excel Source Output]"
+          TopLeft="584.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populating Miejsce.Paths[Derived Column Output2]"
+          TopLeft="549.5,455.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populating Miejsce.Paths[Derived Column Output1]"
+          TopLeft="549.5,1169.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populating Miejsce.Paths[Derived Column Output]"
+          TopLeft="406,863.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populating Miejsce.Paths[Data Conversion Output]"
+          TopLeft="584.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\populating Miejsce.Paths[Aggregate Output 1]"
           TopLeft="551.5,353.5">
@@ -13491,11 +13798,109 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populating Miejsce.Paths[Sort Output1]"
+          Id="Package\populating Miejsce.Paths[Union All Output 1]"
+          TopLeft="549.5,1067.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populating Miejsce.Paths[Sort Output]"
+          TopLeft="549.5,557.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="21.8333333333334,60"
+              Start="0,0"
+              End="21.8333333333334,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5903271692745" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.5903271692745"
+                    Point2="0,35.5903271692745"
+                    Point3="4,35.5903271692745" />
+                  <mssgle:LineSegment
+                    End="17.8333333333334,35.5903271692745" />
+                  <mssgle:CubicBezierSegment
+                    Point1="17.8333333333334,35.5903271692745"
+                    Point2="21.8333333333334,35.5903271692745"
+                    Point3="21.8333333333334,39.5903271692745" />
+                  <mssgle:LineSegment
+                    End="21.8333333333334,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populating Miejsce.Paths[Sort Output3]"
+          TopLeft="386.5,557.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="141.166666666667,60"
+              Start="0,0"
+              End="141.166666666667,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5903271692745" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.5903271692745"
+                    Point2="0,35.5903271692745"
+                    Point3="4,35.5903271692745" />
+                  <mssgle:LineSegment
+                    End="137.166666666667,35.5903271692745" />
+                  <mssgle:CubicBezierSegment
+                    Point1="137.166666666667,35.5903271692745"
+                    Point2="141.166666666667,35.5903271692745"
+                    Point3="141.166666666667,39.5903271692745" />
+                  <mssgle:LineSegment
+                    End="141.166666666667,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populating Miejsce.Paths[Sort Output2]"
           TopLeft="139.5,353.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -13525,11 +13930,13 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populating Miejsce.Paths[Sort Output]"
+          Id="Package\populating Miejsce.Paths[Sort Output1]"
           TopLeft="346.5,353.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -13559,7 +13966,9 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13581,7 +13990,9 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13615,7 +14026,141 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populating Miejsce.Paths[OLE DB Command Output]"
+          TopLeft="405.5,965.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="125.166666666667,60"
+              Start="0,0"
+              End="125.166666666667,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5301794453507" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.5301794453507"
+                    Point2="0,35.5301794453507"
+                    Point3="4,35.5301794453507" />
+                  <mssgle:LineSegment
+                    End="121.166666666667,35.5301794453507" />
+                  <mssgle:CubicBezierSegment
+                    Point1="121.166666666667,35.5301794453507"
+                    Point2="125.166666666667,35.5301794453507"
+                    Point3="125.166666666667,39.5301794453507" />
+                  <mssgle:LineSegment
+                    End="125.166666666667,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populating Miejsce.Paths[New Output]"
+          TopLeft="583,761.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-14.6666666666666,264"
+              Start="0,0"
+              End="-14.6666666666666,256.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,127.104705383637" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,127.104705383637"
+                    Point2="0,131.104705383637"
+                    Point3="-4,131.104705383637" />
+                  <mssgle:LineSegment
+                    End="-10.6666666666666,131.104705383637" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-10.6666666666666,131.104705383637"
+                    Point2="-14.6666666666666,131.104705383637"
+                    Point3="-14.6666666666666,135.104705383637" />
+                  <mssgle:LineSegment
+                    End="-14.6666666666666,256.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-34.4247200520833,136.104705383637,54.1827734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populating Miejsce.Paths[Merge Join Output]"
+          TopLeft="346.5,455.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="40.0000000000001,60"
+              Start="0,0"
+              End="40.0000000000001,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="4,30" />
+                  <mssgle:LineSegment
+                    End="36.0000000000001,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="36.0000000000001,30"
+                    Point2="40.0000000000001,30"
+                    Point3="40.0000000000001,34" />
+                  <mssgle:LineSegment
+                    End="40.0000000000001,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populating Miejsce.Paths[Merge Join Output1]"
+          TopLeft="549.5,659.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13654,399 +14199,48 @@ where [refTable].[nr_zlecenie] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\populating Miejsce.Paths[Excel Source Output]"
-          TopLeft="584.5,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\populating Miejsce.Paths[Derived Column Output]"
-          TopLeft="549.5,455.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\populating Miejsce.Paths[Data Conversion Output]"
-          TopLeft="584.5,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="107,42"
-          Id="Package\populating Miejsce\Sort 1"
-          TopLeft="333,515.5" />
-        <EdgeLayout
-          Id="Package\populating Miejsce.Paths[Merge Join Output]"
-          TopLeft="346.5,455.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="40.0000000000001,60"
-              Start="0,0"
-              End="40.0000000000001,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26"
-                    Point2="0,30"
-                    Point3="4,30" />
-                  <mssgle:LineSegment
-                    End="36.0000000000001,30" />
-                  <mssgle:CubicBezierSegment
-                    Point1="36.0000000000001,30"
-                    Point2="40.0000000000001,30"
-                    Point3="40.0000000000001,34" />
-                  <mssgle:LineSegment
-                    End="40.0000000000001,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="139,42"
-          Id="Package\populating Miejsce\Merge Join 1"
-          TopLeft="480,617.5" />
-        <EdgeLayout
-          Id="Package\populating Miejsce.Paths[Sort Output2]"
-          TopLeft="386.5,557.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="141.166666666667,60"
-              Start="0,0"
-              End="141.166666666667,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5903271692745" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.5903271692745"
-                    Point2="0,35.5903271692745"
-                    Point3="4,35.5903271692745" />
-                  <mssgle:LineSegment
-                    End="137.166666666667,35.5903271692745" />
-                  <mssgle:CubicBezierSegment
-                    Point1="137.166666666667,35.5903271692745"
-                    Point2="141.166666666667,35.5903271692745"
-                    Point3="141.166666666667,39.5903271692745" />
-                  <mssgle:LineSegment
-                    End="141.166666666667,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\populating Miejsce.Paths[Sort Output3]"
-          TopLeft="549.5,557.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="21.8333333333334,60"
-              Start="0,0"
-              End="21.8333333333334,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5903271692745" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.5903271692745"
-                    Point2="0,35.5903271692745"
-                    Point3="4,35.5903271692745" />
-                  <mssgle:LineSegment
-                    End="17.8333333333334,35.5903271692745" />
-                  <mssgle:CubicBezierSegment
-                    Point1="17.8333333333334,35.5903271692745"
-                    Point2="21.8333333333334,35.5903271692745"
-                    Point3="21.8333333333334,39.5903271692745" />
-                  <mssgle:LineSegment
-                    End="21.8333333333334,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\populating Miejsce.Paths[Merge Join Output1]"
-          TopLeft="549.5,659.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="163,42"
-          Id="Package\populating Miejsce\Derived Column 1"
-          TopLeft="325,821.5" />
-        <EdgeLayout
-          Id="Package\populating Miejsce.Paths[Historical Attribute Inserts Output]"
-          TopLeft="516,761.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-109.5,60"
-              Start="0,0"
-              End="-109.5,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.2735042735043" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.2735042735043"
-                    Point2="0,24.2735042735043"
-                    Point3="-4,24.2735042735043" />
-                  <mssgle:LineSegment
-                    End="-105.5,24.2735042735043" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-105.5,24.2735042735043"
-                    Point2="-109.5,24.2735042735043"
-                    Point3="-109.5,28.2735042735043" />
-                  <mssgle:LineSegment
-                    End="-109.5,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-129.80638671875,29.2735042735043,150.1127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="166,42"
-          Id="Package\populating Miejsce\OLE DB Command"
-          TopLeft="322.5,923.5" />
-        <EdgeLayout
-          Id="Package\populating Miejsce.Paths[Derived Column Output1]"
-          TopLeft="406,863.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="121,42"
-          Id="Package\populating Miejsce\Union All"
-          TopLeft="489,1025.5" />
-        <EdgeLayout
-          Id="Package\populating Miejsce.Paths[New Output]"
-          TopLeft="583,761.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-14.6666666666666,264"
-              Start="0,0"
-              End="-14.6666666666666,256.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,127.104705383637" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,127.104705383637"
-                    Point2="0,131.104705383637"
-                    Point3="-4,131.104705383637" />
-                  <mssgle:LineSegment
-                    End="-10.6666666666666,131.104705383637" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-10.6666666666666,131.104705383637"
-                    Point2="-14.6666666666666,131.104705383637"
-                    Point3="-14.6666666666666,135.104705383637" />
-                  <mssgle:LineSegment
-                    End="-14.6666666666666,256.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-34.4247200520833,136.104705383637,54.1827734375,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\populating Miejsce.Paths[OLE DB Command Output]"
-          TopLeft="405.5,965.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="125.166666666667,60"
-              Start="0,0"
-              End="125.166666666667,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5301794453507" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.5301794453507"
-                    Point2="0,35.5301794453507"
-                    Point3="4,35.5301794453507" />
-                  <mssgle:LineSegment
-                    End="121.166666666667,35.5301794453507" />
-                  <mssgle:CubicBezierSegment
-                    Point1="121.166666666667,35.5301794453507"
-                    Point2="125.166666666667,35.5301794453507"
-                    Point3="125.166666666667,39.5301794453507" />
-                  <mssgle:LineSegment
-                    End="125.166666666667,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="163,42"
-          Id="Package\populating Miejsce\Derived Column 2"
-          TopLeft="468,1127.5" />
-        <EdgeLayout
-          Id="Package\populating Miejsce.Paths[Union All Output 1]"
-          TopLeft="549.5,1067.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="163,42"
-          Id="Package\populating Miejsce\Insert Destination"
-          TopLeft="468,1229.5" />
-        <EdgeLayout
-          Id="Package\populating Miejsce.Paths[Derived Column Output2]"
-          TopLeft="549.5,1169.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\populating Miejsce\OLE DB Source Adres">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\populating Miejsce\OLE DB Source Sortownia">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\populating Miejsce\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\populating Miejsce\Slowly Changing Dimension">
     <Properties>
@@ -14108,45 +14302,6 @@ where [refTable].[nr_zlecenie] = ?</property>
   &lt;DateVariable&gt;System::CreationDate&lt;/DateVariable&gt;
   &lt;EnableInferredSupport&gt;false&lt;/EnableInferredSupport&gt;
 &lt;/SCDWizardMetadata&gt;</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\populating Miejsce\OLE DB Source Adres">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\populating Miejsce\OLE DB Source Sortownia">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\populating Miejsce\Excel Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -14802,7 +14957,7 @@ where [refTable].[nr_zlecenie] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\inserting into Etap\retriving Sortownia ID">
+    design-time-name="Package\inserting into Etap\retriving Paczka">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -14812,7 +14967,30 @@ where [refTable].[nr_zlecenie] = ?</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[Sortownia]</Value>
+          type="q3:string">[dbo].[paczka]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\inserting into Etap\retriving Paczka ID">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Zlecenie]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
