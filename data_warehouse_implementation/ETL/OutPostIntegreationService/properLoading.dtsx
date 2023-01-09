@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="94"
-  DTS:VersionGUID="{D75FE957-7920-4E65-AB33-6A5AF872EDC7}">
+  DTS:VersionBuild="104"
+  DTS:VersionGUID="{DC0AC5E2-132F-4426-BB65-F0720E230C9A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2367,7 +2367,7 @@ where [refTable].[nr_miejse] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\inserting into Etap\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID_adresu]};</property>
+                  name="ParameterMap">#{Package\inserting into Etap\retriving Sortownia ID.Outputs[Lookup Match Output].Columns[id_sortownia]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2391,10 +2391,10 @@ where [refTable].[nr_miejse] = ?</property>
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\inserting into Etap\retriving Miejsce.Inputs[Lookup Input].Columns[ID_adresu]"
+                      refId="Package\inserting into Etap\retriving Miejsce.Inputs[Lookup Input].Columns[id_sortownia]"
                       cachedDataType="i4"
-                      cachedName="ID_adresu"
-                      lineageId="Package\inserting into Etap\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID_adresu]">
+                      cachedName="id_sortownia"
+                      lineageId="Package\inserting into Etap\retriving Sortownia ID.Outputs[Lookup Match Output].Columns[id_sortownia]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -2461,6 +2461,164 @@ where [refTable].[nr_miejse] = ?</property>
                       refId="Package\inserting into Etap\retriving Miejsce.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\inserting into Etap\retriving Miejsce.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\inserting into Etap\retriving Sortownia ID"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="retriving Sortownia ID"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[Sortownia]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[Sortownia]) [refTable]
+where [refTable].[ID_adresu] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ID_adresu" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Region" dataType="DT_STR" length="30" precision="0" scale="0" codePage="1250"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\inserting into Etap\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID_adresu]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\inserting into Etap\retriving Sortownia ID.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-46GI6A46.HDlabDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-46GI6A46.HDlabDB]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\inserting into Etap\retriving Sortownia ID.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\inserting into Etap\retriving Sortownia ID.Inputs[Lookup Input].Columns[ID_adresu]"
+                      cachedDataType="i4"
+                      cachedName="ID_adresu"
+                      lineageId="Package\inserting into Etap\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID_adresu]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">ID_adresu</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\inserting into Etap\retriving Sortownia ID.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\inserting into Etap\retriving Sortownia ID.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\inserting into Etap\retriving Sortownia ID.Outputs[Lookup Match Output].Columns[id_sortownia]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\inserting into Etap\retriving Sortownia ID.Outputs[Lookup Match Output].Columns[id_sortownia]"
+                      name="id_sortownia"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">ID</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\inserting into Etap\retriving Sortownia ID.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\inserting into Etap\retriving Sortownia ID.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\inserting into Etap\retriving Sortownia ID.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\inserting into Etap\retriving Sortownia ID.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\inserting into Etap\retriving Sortownia ID.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\inserting into Etap\retriving Sortownia ID.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\inserting into Etap\retriving Sortownia ID.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\inserting into Etap\retriving Sortownia ID.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -5325,55 +5483,55 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               name="Derived Column Output"
               startId="Package\inserting into Etap\Derived Column.Outputs[Derived Column Output]" />
             <path
-              refId="Package\inserting into Etap.Paths[Lookup Match Output]"
-              endId="Package\inserting into Etap\retreving Data.Inputs[Lookup Input]"
+              refId="Package\inserting into Etap.Paths[Lookup Match Output5]"
+              endId="Package\inserting into Etap\retriving Sortownia ID.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\inserting into Etap\retrieveing Pracownik.Outputs[Lookup Match Output]" />
             <path
+              refId="Package\inserting into Etap.Paths[Lookup Match Output4]"
+              endId="Package\inserting into Etap\retriving Zlecenie.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\inserting into Etap\retriving Typ.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\inserting into Etap.Paths[Lookup Match Output3]"
+              endId="Package\inserting into Etap\retriveing Paczka.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\inserting into Etap\retriving Zlecenie.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\inserting into Etap.Paths[Lookup Match Output6]"
+              endId="Package\inserting into Etap\retreving Data.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\inserting into Etap\retriving Sortownia ID.Outputs[Lookup Match Output]" />
+            <path
               refId="Package\inserting into Etap.Paths[Lookup Match Output1]"
+              endId="Package\inserting into Etap\retriving Miejsce.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\inserting into Etap\retreving Data.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\inserting into Etap.Paths[Lookup Match Output]"
               endId="Package\inserting into Etap\Sort 3.Inputs[Sort Input]"
               name="Lookup Match Output"
               startId="Package\inserting into Etap\retriving Miejsce.Outputs[Lookup Match Output]" />
             <path
               refId="Package\inserting into Etap.Paths[Lookup Match Output2]"
-              endId="Package\inserting into Etap\retriving Miejsce.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\inserting into Etap\retreving Data.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\inserting into Etap.Paths[Lookup Match Output3]"
               endId="Package\inserting into Etap\retrieveing Pracownik.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\inserting into Etap\retriveing Paczka.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\inserting into Etap.Paths[Lookup Match Output4]"
-              endId="Package\inserting into Etap\retriveing Paczka.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\inserting into Etap\retriving Zlecenie.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\inserting into Etap.Paths[Lookup Match Output5]"
-              endId="Package\inserting into Etap\retriving Zlecenie.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\inserting into Etap\retriving Typ.Outputs[Lookup Match Output]" />
             <path
               refId="Package\inserting into Etap.Paths[Lookup No Match Output]"
               endId="Package\inserting into Etap\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Lookup No Match Output"
               startId="Package\inserting into Etap\Lookup.Outputs[Lookup No Match Output]" />
             <path
-              refId="Package\inserting into Etap.Paths[Merge Join Output1]"
+              refId="Package\inserting into Etap.Paths[Merge Join Output]"
               endId="Package\inserting into Etap\Lookup.Inputs[Lookup Input]"
               name="Merge Join Output"
               startId="Package\inserting into Etap\Merge Join 1.Outputs[Merge Join Output]" />
             <path
-              refId="Package\inserting into Etap.Paths[Merge Join Output]"
+              refId="Package\inserting into Etap.Paths[Merge Join Output1]"
               endId="Package\inserting into Etap\Sort.Inputs[Sort Input]"
               name="Merge Join Output"
               startId="Package\inserting into Etap\Merge Join.Outputs[Merge Join Output]" />
-            <path
-              refId="Package\inserting into Etap.Paths[OLE DB Source Output]"
-              endId="Package\inserting into Etap\Sort 2.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\inserting into Etap\OLE DB Source Etap.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\inserting into Etap.Paths[OLE DB Source Output1]"
               endId="Package\inserting into Etap\Derived Column.Inputs[Derived Column Input]"
@@ -5385,6 +5543,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               name="OLE DB Source Output"
               startId="Package\inserting into Etap\OLE DB Source Adres.Outputs[OLE DB Source Output]" />
             <path
+              refId="Package\inserting into Etap.Paths[OLE DB Source Output]"
+              endId="Package\inserting into Etap\Sort 2.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\inserting into Etap\OLE DB Source Etap.Outputs[OLE DB Source Output]" />
+            <path
               refId="Package\inserting into Etap.Paths[Output 0]"
               endId="Package\inserting into Etap\Sort 4.Inputs[Sort Input]"
               name="Output 0"
@@ -5395,25 +5558,25 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               name="proper Etap"
               startId="Package\inserting into Etap\Conditional Split.Outputs[proper Etap]" />
             <path
-              refId="Package\inserting into Etap.Paths[Sort Output3]"
-              endId="Package\inserting into Etap\Merge Join 1.Inputs[Merge Join Left Input]"
-              name="Sort Output"
-              startId="Package\inserting into Etap\Sort 3.Outputs[Sort Output]" />
-            <path
               refId="Package\inserting into Etap.Paths[Sort Output]"
-              endId="Package\inserting into Etap\Merge Join 1.Inputs[Merge Join Right Input]"
-              name="Sort Output"
-              startId="Package\inserting into Etap\Sort 4.Outputs[Sort Output]" />
-            <path
-              refId="Package\inserting into Etap.Paths[Sort Output1]"
               endId="Package\inserting into Etap\Merge Join.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\inserting into Etap\Sort 2.Outputs[Sort Output]" />
             <path
-              refId="Package\inserting into Etap.Paths[Sort Output2]"
+              refId="Package\inserting into Etap.Paths[Sort Output1]"
               endId="Package\inserting into Etap\Script Component.Inputs[Input 0]"
               name="Sort Output"
               startId="Package\inserting into Etap\Sort.Outputs[Sort Output]" />
+            <path
+              refId="Package\inserting into Etap.Paths[Sort Output2]"
+              endId="Package\inserting into Etap\Merge Join 1.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\inserting into Etap\Sort 3.Outputs[Sort Output]" />
+            <path
+              refId="Package\inserting into Etap.Paths[Sort Output3]"
+              endId="Package\inserting into Etap\Merge Join 1.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\inserting into Etap\Sort 4.Outputs[Sort Output]" />
             <path
               refId="Package\inserting into Etap.Paths[Sort Output4]"
               endId="Package\inserting into Etap\Merge Join.Inputs[Merge Join Right Input]"
@@ -5489,10 +5652,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   name="Aggregate Input 1">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\populating Miejsce\Aggregate.Inputs[Aggregate Input 1].Columns[id]"
+                      refId="Package\populating Miejsce\Aggregate.Inputs[Aggregate Input 1].Columns[sortownia]"
                       cachedDataType="i4"
-                      cachedName="id"
-                      lineageId="Package\populating Miejsce\Data Conversion.Outputs[Data Conversion Output].Columns[id]" />
+                      cachedName="sortownia"
+                      lineageId="Package\populating Miejsce\Data Conversion.Outputs[Data Conversion Output].Columns[sortownia]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -5540,16 +5703,16 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\populating Miejsce\Aggregate.Outputs[Aggregate Output 1].Columns[id]"
+                      refId="Package\populating Miejsce\Aggregate.Outputs[Aggregate Output 1].Columns[sortownia]"
                       dataType="i4"
-                      lineageId="Package\populating Miejsce\Aggregate.Outputs[Aggregate Output 1].Columns[id]"
-                      name="id">
+                      lineageId="Package\populating Miejsce\Aggregate.Outputs[Aggregate Output 1].Columns[sortownia]"
+                      name="sortownia">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\populating Miejsce\Data Conversion.Outputs[Data Conversion Output].Columns[id]}</property>
+                          name="AggregationColumnId">#{Package\populating Miejsce\Data Conversion.Outputs[Data Conversion Output].Columns[sortownia]}</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the type of aggregation."
@@ -5676,6 +5839,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       cachedDataType="r8"
                       cachedName="id_2"
                       lineageId="Package\populating Miejsce\Excel Source.Outputs[Excel Source Output].Columns[id_2]" />
+                    <inputColumn
+                      refId="Package\populating Miejsce\Data Conversion.Inputs[Data Conversion Input].Columns[sortownia 2]"
+                      cachedDataType="r8"
+                      cachedName="sortownia 2"
+                      lineageId="Package\populating Miejsce\Excel Source.Outputs[Excel Source Output].Columns[sortownia 2]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -5701,6 +5869,26 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
                           name="SourceInputColumnLineageID">#{Package\populating Miejsce\Excel Source.Outputs[Excel Source Output].Columns[id_2]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\populating Miejsce\Data Conversion.Outputs[Data Conversion Output].Columns[sortownia]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\populating Miejsce\Data Conversion.Outputs[Data Conversion Output].Columns[sortownia]"
+                      name="sortownia"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\populating Miejsce\Excel Source.Outputs[Excel Source Output].Columns[sortownia 2]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -6051,13 +6239,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       name="id_2"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\populating Miejsce\Excel Source.Outputs[Excel Source Output].Columns[sortownia]"
+                      refId="Package\populating Miejsce\Excel Source.Outputs[Excel Source Output].Columns[sortownia 2]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\populating Miejsce\Excel Source.Outputs[Excel Source Output].ExternalColumns[sortownia]"
-                      lineageId="Package\populating Miejsce\Excel Source.Outputs[Excel Source Output].Columns[sortownia]"
-                      name="sortownia"
+                      lineageId="Package\populating Miejsce\Excel Source.Outputs[Excel Source Output].Columns[sortownia 2]"
+                      name="sortownia 2"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\populating Miejsce\Excel Source.Outputs[Excel Source Output].Columns[data zwolnienia]"
@@ -6417,6 +6605,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       cachedLength="30"
                       cachedName="Region"
                       lineageId="Package\populating Miejsce\Sort by ID_adresu.Outputs[Sort Output].Columns[Region]" />
+                    <inputColumn
+                      refId="Package\populating Miejsce\Merge Join.Inputs[Merge Join Right Input].Columns[ID]"
+                      cachedDataType="i4"
+                      cachedName="ID"
+                      lineageId="Package\populating Miejsce\Sort by ID_adresu.Outputs[Sort Output].Columns[ID]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -6424,23 +6617,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               <outputs>
                 <output
                   refId="Package\populating Miejsce\Merge Join.Outputs[Merge Join Output]"
-                  isSorted="true"
                   name="Merge Join Output">
                   <outputColumns>
-                    <outputColumn
-                      refId="Package\populating Miejsce\Merge Join.Outputs[Merge Join Output].Columns[ID]"
-                      dataType="i4"
-                      lineageId="Package\populating Miejsce\Merge Join.Outputs[Merge Join Output].Columns[ID]"
-                      name="ID"
-                      sortKeyPosition="1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\populating Miejsce\Merge Join.Inputs[Merge Join Left Input].Columns[ID]}</property>
-                      </properties>
-                    </outputColumn>
                     <outputColumn
                       refId="Package\populating Miejsce\Merge Join.Outputs[Merge Join Output].Columns[Miasto]"
                       codePage="1250"
@@ -6497,6 +6675,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                           name="InputColumnID">#{Package\populating Miejsce\Merge Join.Inputs[Merge Join Left Input].Columns[Geolokalizacja_szerokosc]}</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\populating Miejsce\Merge Join.Outputs[Merge Join Output].Columns[ID]"
+                      dataType="i4"
+                      lineageId="Package\populating Miejsce\Merge Join.Outputs[Merge Join Output].Columns[ID]"
+                      name="ID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\populating Miejsce\Merge Join.Inputs[Merge Join Right Input].Columns[ID]}</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -6539,31 +6730,21 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       cachedDataType="i4"
                       cachedName="ID"
                       cachedSortKeyPosition="1"
-                      lineageId="Package\populating Miejsce\Merge Join.Outputs[Merge Join Output].Columns[ID]" />
+                      lineageId="Package\populating Miejsce\Sort 1.Outputs[Sort Output].Columns[ID]" />
                     <inputColumn
                       refId="Package\populating Miejsce\Merge Join 1.Inputs[Merge Join Left Input].Columns[Miasto]"
                       cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="30"
                       cachedName="Miasto"
-                      lineageId="Package\populating Miejsce\Merge Join.Outputs[Merge Join Output].Columns[Miasto]" />
+                      lineageId="Package\populating Miejsce\Sort 1.Outputs[Sort Output].Columns[Miasto]" />
                     <inputColumn
                       refId="Package\populating Miejsce\Merge Join 1.Inputs[Merge Join Left Input].Columns[Region]"
                       cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="30"
                       cachedName="Region"
-                      lineageId="Package\populating Miejsce\Merge Join.Outputs[Merge Join Output].Columns[Region]" />
-                    <inputColumn
-                      refId="Package\populating Miejsce\Merge Join 1.Inputs[Merge Join Left Input].Columns[Geolokalizacja_dlugosc]"
-                      cachedDataType="r8"
-                      cachedName="Geolokalizacja_dlugosc"
-                      lineageId="Package\populating Miejsce\Merge Join.Outputs[Merge Join Output].Columns[Geolokalizacja_dlugosc]" />
-                    <inputColumn
-                      refId="Package\populating Miejsce\Merge Join 1.Inputs[Merge Join Left Input].Columns[Geolokalizacja_szerokosc]"
-                      cachedDataType="r8"
-                      cachedName="Geolokalizacja_szerokosc"
-                      lineageId="Package\populating Miejsce\Merge Join.Outputs[Merge Join Output].Columns[Geolokalizacja_szerokosc]" />
+                      lineageId="Package\populating Miejsce\Sort 1.Outputs[Sort Output].Columns[Region]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -6573,18 +6754,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   name="Merge Join Right Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\populating Miejsce\Merge Join 1.Inputs[Merge Join Right Input].Columns[id]"
+                      refId="Package\populating Miejsce\Merge Join 1.Inputs[Merge Join Right Input].Columns[sortownia]"
                       cachedDataType="i4"
-                      cachedName="id"
+                      cachedName="sortownia"
                       cachedSortKeyPosition="1"
-                      lineageId="Package\populating Miejsce\Sort.Outputs[Sort Output].Columns[id]" />
-                    <inputColumn
-                      refId="Package\populating Miejsce\Merge Join 1.Inputs[Merge Join Right Input].Columns[Ilosc_pracownikow_category]"
-                      cachedCodepage="1250"
-                      cachedDataType="str"
-                      cachedLength="10"
-                      cachedName="Ilosc_pracownikow_category"
-                      lineageId="Package\populating Miejsce\Sort.Outputs[Sort Output].Columns[Ilosc_pracownikow_category]" />
+                      lineageId="Package\populating Miejsce\Sort.Outputs[Sort Output].Columns[sortownia]" />
                     <inputColumn
                       refId="Package\populating Miejsce\Merge Join 1.Inputs[Merge Join Right Input].Columns[typ]"
                       cachedCodepage="1250"
@@ -6592,6 +6766,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       cachedLength="10"
                       cachedName="typ"
                       lineageId="Package\populating Miejsce\Sort.Outputs[Sort Output].Columns[typ]" />
+                    <inputColumn
+                      refId="Package\populating Miejsce\Merge Join 1.Inputs[Merge Join Right Input].Columns[Ilosc_pracownikow_category]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Ilosc_pracownikow_category"
+                      lineageId="Package\populating Miejsce\Sort.Outputs[Sort Output].Columns[Ilosc_pracownikow_category]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -6647,29 +6828,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\populating Miejsce\Merge Join 1.Outputs[Merge Join Output].Columns[Geolokalizacja_dlugosc]"
-                      dataType="r8"
-                      lineageId="Package\populating Miejsce\Merge Join 1.Outputs[Merge Join Output].Columns[Geolokalizacja_dlugosc]"
-                      name="Geolokalizacja_dlugosc">
+                      refId="Package\populating Miejsce\Merge Join 1.Outputs[Merge Join Output].Columns[typ]"
+                      codePage="1250"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\populating Miejsce\Merge Join 1.Outputs[Merge Join Output].Columns[typ]"
+                      name="typ">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\populating Miejsce\Merge Join 1.Inputs[Merge Join Left Input].Columns[Geolokalizacja_dlugosc]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\populating Miejsce\Merge Join 1.Outputs[Merge Join Output].Columns[Geolokalizacja_szerokosc]"
-                      dataType="r8"
-                      lineageId="Package\populating Miejsce\Merge Join 1.Outputs[Merge Join Output].Columns[Geolokalizacja_szerokosc]"
-                      name="Geolokalizacja_szerokosc">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\populating Miejsce\Merge Join 1.Inputs[Merge Join Left Input].Columns[Geolokalizacja_szerokosc]}</property>
+                          name="InputColumnID">#{Package\populating Miejsce\Merge Join 1.Inputs[Merge Join Right Input].Columns[typ]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -6685,21 +6855,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                           dataType="System.Int32"
                           description="The input column associated with this output column"
                           name="InputColumnID">#{Package\populating Miejsce\Merge Join 1.Inputs[Merge Join Right Input].Columns[Ilosc_pracownikow_category]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\populating Miejsce\Merge Join 1.Outputs[Merge Join Output].Columns[typ]"
-                      codePage="1250"
-                      dataType="str"
-                      length="10"
-                      lineageId="Package\populating Miejsce\Merge Join 1.Outputs[Merge Join Output].Columns[typ]"
-                      name="typ">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\populating Miejsce\Merge Join 1.Inputs[Merge Join Right Input].Columns[typ]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -7427,10 +7582,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   name="Sort Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\populating Miejsce\Sort.Inputs[Sort Input].Columns[id]"
+                      refId="Package\populating Miejsce\Sort.Inputs[Sort Input].Columns[sortownia]"
                       cachedDataType="i4"
-                      cachedName="id"
-                      lineageId="Package\populating Miejsce\Aggregate.Outputs[Aggregate Output 1].Columns[id]">
+                      cachedName="sortownia"
+                      lineageId="Package\populating Miejsce\Aggregate.Outputs[Aggregate Output 1].Columns[sortownia]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -7449,6 +7604,22 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       cachedLength="10"
                       cachedName="Ilosc_pracownikow_category"
                       lineageId="Package\populating Miejsce\Derived Column.Outputs[Derived Column Output].Columns[Ilosc_pracownikow_category]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\populating Miejsce\Sort.Inputs[Sort Input].Columns[Number_of_pracownik]"
+                      cachedDataType="ui8"
+                      cachedName="Number_of_pracownik"
+                      lineageId="Package\populating Miejsce\Aggregate.Outputs[Aggregate Output 1].Columns[Number_of_pracownik]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -7489,17 +7660,17 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   name="Sort Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\populating Miejsce\Sort.Outputs[Sort Output].Columns[id]"
+                      refId="Package\populating Miejsce\Sort.Outputs[Sort Output].Columns[sortownia]"
                       dataType="i4"
-                      lineageId="Package\populating Miejsce\Sort.Outputs[Sort Output].Columns[id]"
-                      name="id"
+                      lineageId="Package\populating Miejsce\Sort.Outputs[Sort Output].Columns[sortownia]"
+                      name="sortownia"
                       sortKeyPosition="1">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\populating Miejsce\Aggregate.Outputs[Aggregate Output 1].Columns[id]}</property>
+                          name="SortColumnId">#{Package\populating Miejsce\Aggregate.Outputs[Aggregate Output 1].Columns[sortownia]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -7518,6 +7689,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       </properties>
                     </outputColumn>
                     <outputColumn
+                      refId="Package\populating Miejsce\Sort.Outputs[Sort Output].Columns[Number_of_pracownik]"
+                      dataType="ui8"
+                      lineageId="Package\populating Miejsce\Sort.Outputs[Sort Output].Columns[Number_of_pracownik]"
+                      name="Number_of_pracownik">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\populating Miejsce\Aggregate.Outputs[Aggregate Output 1].Columns[Number_of_pracownik]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
                       refId="Package\populating Miejsce\Sort.Outputs[Sort Output].Columns[typ]"
                       codePage="1250"
                       dataType="str"
@@ -7530,6 +7714,198 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
                           name="SortColumnId">#{Package\populating Miejsce\Derived Column.Outputs[Derived Column Output].Columns[typ]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\populating Miejsce\Sort 1"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\populating Miejsce\Sort 1.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\populating Miejsce\Sort 1.Inputs[Sort Input].Columns[Miasto]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="Miasto"
+                      lineageId="Package\populating Miejsce\Merge Join.Outputs[Merge Join Output].Columns[Miasto]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\populating Miejsce\Sort 1.Inputs[Sort Input].Columns[Region]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="Region"
+                      lineageId="Package\populating Miejsce\Merge Join.Outputs[Merge Join Output].Columns[Region]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\populating Miejsce\Sort 1.Inputs[Sort Input].Columns[Geolokalizacja_dlugosc]"
+                      cachedDataType="r8"
+                      cachedName="Geolokalizacja_dlugosc"
+                      lineageId="Package\populating Miejsce\Merge Join.Outputs[Merge Join Output].Columns[Geolokalizacja_dlugosc]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\populating Miejsce\Sort 1.Inputs[Sort Input].Columns[Geolokalizacja_szerokosc]"
+                      cachedDataType="r8"
+                      cachedName="Geolokalizacja_szerokosc"
+                      lineageId="Package\populating Miejsce\Merge Join.Outputs[Merge Join Output].Columns[Geolokalizacja_szerokosc]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\populating Miejsce\Sort 1.Inputs[Sort Input].Columns[ID]"
+                      cachedDataType="i4"
+                      cachedName="ID"
+                      lineageId="Package\populating Miejsce\Merge Join.Outputs[Merge Join Output].Columns[ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\populating Miejsce\Sort 1.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\populating Miejsce\Sort 1.Outputs[Sort Output].Columns[Miasto]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\populating Miejsce\Sort 1.Outputs[Sort Output].Columns[Miasto]"
+                      name="Miasto">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\populating Miejsce\Merge Join.Outputs[Merge Join Output].Columns[Miasto]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\populating Miejsce\Sort 1.Outputs[Sort Output].Columns[Region]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\populating Miejsce\Sort 1.Outputs[Sort Output].Columns[Region]"
+                      name="Region">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\populating Miejsce\Merge Join.Outputs[Merge Join Output].Columns[Region]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\populating Miejsce\Sort 1.Outputs[Sort Output].Columns[Geolokalizacja_dlugosc]"
+                      dataType="r8"
+                      lineageId="Package\populating Miejsce\Sort 1.Outputs[Sort Output].Columns[Geolokalizacja_dlugosc]"
+                      name="Geolokalizacja_dlugosc">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\populating Miejsce\Merge Join.Outputs[Merge Join Output].Columns[Geolokalizacja_dlugosc]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\populating Miejsce\Sort 1.Outputs[Sort Output].Columns[Geolokalizacja_szerokosc]"
+                      dataType="r8"
+                      lineageId="Package\populating Miejsce\Sort 1.Outputs[Sort Output].Columns[Geolokalizacja_szerokosc]"
+                      name="Geolokalizacja_szerokosc">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\populating Miejsce\Merge Join.Outputs[Merge Join Output].Columns[Geolokalizacja_szerokosc]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\populating Miejsce\Sort 1.Outputs[Sort Output].Columns[ID]"
+                      dataType="i4"
+                      lineageId="Package\populating Miejsce\Sort 1.Outputs[Sort Output].Columns[ID]"
+                      name="ID"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\populating Miejsce\Merge Join.Outputs[Merge Join Output].Columns[ID]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -7945,29 +8321,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\populating Miejsce\Union All.Inputs[Union All Input 1].Columns[Geolokalizacja_dlugosc]"
-                      cachedDataType="r8"
-                      cachedName="Geolokalizacja_dlugosc"
-                      lineageId="Package\populating Miejsce\Merge Join 1.Outputs[Merge Join Output].Columns[Geolokalizacja_dlugosc]">
+                      refId="Package\populating Miejsce\Union All.Inputs[Union All Input 1].Columns[typ]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="typ"
+                      lineageId="Package\populating Miejsce\Merge Join 1.Outputs[Merge Join Output].Columns[typ]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\populating Miejsce\Union All.Outputs[Union All Output 1].Columns[Geolokalizacja_dlugosc]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\populating Miejsce\Union All.Inputs[Union All Input 1].Columns[Geolokalizacja_szerokosc]"
-                      cachedDataType="r8"
-                      cachedName="Geolokalizacja_szerokosc"
-                      lineageId="Package\populating Miejsce\Merge Join 1.Outputs[Merge Join Output].Columns[Geolokalizacja_szerokosc]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\populating Miejsce\Union All.Outputs[Union All Output 1].Columns[Geolokalizacja_szerokosc]}</property>
+                          name="OutputColumnLineageID">#{Package\populating Miejsce\Union All.Outputs[Union All Output 1].Columns[typ]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -7983,21 +8348,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                           dataType="System.Int32"
                           description="Output column lineage ID"
                           name="OutputColumnLineageID">#{Package\populating Miejsce\Union All.Outputs[Union All Output 1].Columns[Ilosc_pracownikow_category]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\populating Miejsce\Union All.Inputs[Union All Input 1].Columns[typ]"
-                      cachedCodepage="1250"
-                      cachedDataType="str"
-                      cachedLength="10"
-                      cachedName="typ"
-                      lineageId="Package\populating Miejsce\Merge Join 1.Outputs[Merge Join Output].Columns[typ]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\populating Miejsce\Union All.Outputs[Union All Output 1].Columns[typ]}</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -8053,29 +8403,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\populating Miejsce\Union All.Inputs[Union All Input 2].Columns[Geolokalizacja_dlugosc]"
-                      cachedDataType="r8"
-                      cachedName="Geolokalizacja_dlugosc"
-                      lineageId="Package\populating Miejsce\Merge Join 1.Outputs[Merge Join Output].Columns[Geolokalizacja_dlugosc]">
+                      refId="Package\populating Miejsce\Union All.Inputs[Union All Input 2].Columns[typ]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="typ"
+                      lineageId="Package\populating Miejsce\Merge Join 1.Outputs[Merge Join Output].Columns[typ]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\populating Miejsce\Union All.Outputs[Union All Output 1].Columns[Geolokalizacja_dlugosc]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\populating Miejsce\Union All.Inputs[Union All Input 2].Columns[Geolokalizacja_szerokosc]"
-                      cachedDataType="r8"
-                      cachedName="Geolokalizacja_szerokosc"
-                      lineageId="Package\populating Miejsce\Merge Join 1.Outputs[Merge Join Output].Columns[Geolokalizacja_szerokosc]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\populating Miejsce\Union All.Outputs[Union All Output 1].Columns[Geolokalizacja_szerokosc]}</property>
+                          name="OutputColumnLineageID">#{Package\populating Miejsce\Union All.Outputs[Union All Output 1].Columns[typ]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -8091,21 +8430,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                           dataType="System.Int32"
                           description="Output column lineage ID"
                           name="OutputColumnLineageID">#{Package\populating Miejsce\Union All.Outputs[Union All Output 1].Columns[Ilosc_pracownikow_category]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\populating Miejsce\Union All.Inputs[Union All Input 2].Columns[typ]"
-                      cachedCodepage="1250"
-                      cachedDataType="str"
-                      cachedLength="10"
-                      cachedName="typ"
-                      lineageId="Package\populating Miejsce\Merge Join 1.Outputs[Merge Join Output].Columns[typ]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\populating Miejsce\Union All.Outputs[Union All Output 1].Columns[typ]}</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -8144,15 +8468,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       lineageId="Package\populating Miejsce\Union All.Outputs[Union All Output 1].Columns[ID]"
                       name="ID" />
                     <outputColumn
-                      refId="Package\populating Miejsce\Union All.Outputs[Union All Output 1].Columns[Geolokalizacja_dlugosc]"
-                      dataType="r8"
-                      lineageId="Package\populating Miejsce\Union All.Outputs[Union All Output 1].Columns[Geolokalizacja_dlugosc]"
-                      name="Geolokalizacja_dlugosc" />
-                    <outputColumn
-                      refId="Package\populating Miejsce\Union All.Outputs[Union All Output 1].Columns[Geolokalizacja_szerokosc]"
-                      dataType="r8"
-                      lineageId="Package\populating Miejsce\Union All.Outputs[Union All Output 1].Columns[Geolokalizacja_szerokosc]"
-                      name="Geolokalizacja_szerokosc" />
+                      refId="Package\populating Miejsce\Union All.Outputs[Union All Output 1].Columns[typ]"
+                      codePage="1250"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\populating Miejsce\Union All.Outputs[Union All Output 1].Columns[typ]"
+                      name="typ" />
                     <outputColumn
                       refId="Package\populating Miejsce\Union All.Outputs[Union All Output 1].Columns[Ilosc_pracownikow_category]"
                       codePage="1250"
@@ -8160,13 +8481,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       length="10"
                       lineageId="Package\populating Miejsce\Union All.Outputs[Union All Output 1].Columns[Ilosc_pracownikow_category]"
                       name="Ilosc_pracownikow_category" />
-                    <outputColumn
-                      refId="Package\populating Miejsce\Union All.Outputs[Union All Output 1].Columns[typ]"
-                      codePage="1250"
-                      dataType="str"
-                      length="10"
-                      lineageId="Package\populating Miejsce\Union All.Outputs[Union All Output 1].Columns[typ]"
-                      name="typ" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -8185,11 +8499,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               name="Data Conversion Output"
               startId="Package\populating Miejsce\Data Conversion.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\populating Miejsce.Paths[Derived Column Output]"
-              endId="Package\populating Miejsce\Sort.Inputs[Sort Input]"
-              name="Derived Column Output"
-              startId="Package\populating Miejsce\Derived Column.Outputs[Derived Column Output]" />
-            <path
               refId="Package\populating Miejsce.Paths[Derived Column Output1]"
               endId="Package\populating Miejsce\OLE DB Command.Inputs[OLE DB Command Input]"
               name="Derived Column Output"
@@ -8199,6 +8508,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               endId="Package\populating Miejsce\Insert Destination.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
               startId="Package\populating Miejsce\Derived Column 2.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\populating Miejsce.Paths[Derived Column Output]"
+              endId="Package\populating Miejsce\Sort.Inputs[Sort Input]"
+              name="Derived Column Output"
+              startId="Package\populating Miejsce\Derived Column.Outputs[Derived Column Output]" />
             <path
               refId="Package\populating Miejsce.Paths[Excel Source Output]"
               endId="Package\populating Miejsce\Data Conversion.Inputs[Data Conversion Input]"
@@ -8221,7 +8535,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               startId="Package\populating Miejsce\Merge Join 1.Outputs[Merge Join Output]" />
             <path
               refId="Package\populating Miejsce.Paths[Merge Join Output]"
-              endId="Package\populating Miejsce\Merge Join 1.Inputs[Merge Join Left Input]"
+              endId="Package\populating Miejsce\Sort 1.Inputs[Sort Input]"
               name="Merge Join Output"
               startId="Package\populating Miejsce\Merge Join.Outputs[Merge Join Output]" />
             <path
@@ -8256,6 +8570,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               startId="Package\populating Miejsce\Sort by ID.Outputs[Sort Output]" />
             <path
               refId="Package\populating Miejsce.Paths[Sort Output2]"
+              endId="Package\populating Miejsce\Merge Join 1.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\populating Miejsce\Sort 1.Outputs[Sort Output]" />
+            <path
+              refId="Package\populating Miejsce.Paths[Sort Output3]"
               endId="Package\populating Miejsce\Merge Join 1.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\populating Miejsce\Sort.Outputs[Sort Output]" />
@@ -12243,7 +12562,7 @@ where [refTable].[nr_zlecenie] = ?</property>
         <NodeLayout
           Size="146,42"
           Id="Package\inserting into Etap\retreving Data"
-          TopLeft="583.129247269431,573.574229676555" />
+          TopLeft="580.129247269431,603.574229676555" />
         <NodeLayout
           Size="155,42"
           Id="Package\inserting into Etap\Data Conversion"
@@ -12259,7 +12578,7 @@ where [refTable].[nr_zlecenie] = ?</property>
         <NodeLayout
           Size="180,42"
           Id="Package\inserting into Etap\retrieveing Pracownik"
-          TopLeft="568.462580602765,468.907563009889" />
+          TopLeft="567.462580602765,456.907563009889" />
         <NodeLayout
           Size="98,42"
           Id="Package\inserting into Etap\Sort"
@@ -12300,28 +12619,6 @@ where [refTable].[nr_zlecenie] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\inserting into Etap.Paths[Merge Join Output1]"
-          TopLeft="486.684802824987,880.907563009889">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,39.111111111111"
-              Start="0,0"
-              End="0,31.611111111111">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.611111111111" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\inserting into Etap.Paths[Merge Join Output]"
           TopLeft="296.286394901028,500.49449458927">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12334,6 +12631,28 @@ where [refTable].[nr_zlecenie] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,44.8999987237596" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\inserting into Etap.Paths[Merge Join Output]"
+          TopLeft="486.684802824987,880.907563009889">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.111111111111"
+              Start="0,0"
+              End="0,31.611111111111">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.611111111111" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -12367,7 +12686,7 @@ where [refTable].[nr_zlecenie] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\inserting into Etap.Paths[Lookup Match Output5]"
+          Id="Package\inserting into Etap.Paths[Lookup Match Output4]"
           TopLeft="661.705445104971,233.209712511977">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12391,7 +12710,7 @@ where [refTable].[nr_zlecenie] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\inserting into Etap.Paths[Lookup Match Output4]"
+          Id="Package\inserting into Etap.Paths[Lookup Match Output3]"
           TopLeft="664.26813615832,332.463118565444">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12415,55 +12734,67 @@ where [refTable].[nr_zlecenie] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\inserting into Etap.Paths[Lookup Match Output3]"
-          TopLeft="661.934802824987,429.796451898778">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,39.1111111111111"
-              Start="0,0"
-              End="0,31.6111111111111">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.6111111111111" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,10.0008680555556,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\inserting into Etap.Paths[Lookup Match Output2]"
-          TopLeft="657.684802824987,615.574229676555">
+          TopLeft="661.434802824987,429.796451898778">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,46.888888888889"
+              EndConnector="0,27.111111111111"
               Start="0,0"
-              End="0,39.388888888889">
+              End="0,19.611111111111">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,39.388888888889" />
+                    End="0,19.611111111111" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,13.8897569444445,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,4.00086805555549,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\inserting into Etap.Paths[Lookup Match Output1]"
+          TopLeft="580.129247269431,624.574229676555">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="1.111111111112,58.888888888889"
+              Start="0,0"
+              End="-6.388888888888,58.888888888889">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-18.5,0"
+                    Point2="-22.5,0"
+                    Point3="-22.5,4" />
+                  <mssgle:LineSegment
+                    End="-22.5,54.888888888889" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-22.5,54.888888888889"
+                    Point2="-22.5,58.888888888889"
+                    Point3="-18.5,58.888888888889" />
+                  <mssgle:LineSegment
+                    End="-6.388888888888,58.888888888889" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-70.69138671875,-17.609375,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\inserting into Etap.Paths[Lookup Match Output]"
           TopLeft="659.045913936098,704.463118565444">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12483,30 +12814,6 @@ where [refTable].[nr_zlecenie] = ?</property>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="-48.19138671875,11.000868055556,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\inserting into Etap.Paths[Lookup Match Output]"
-          TopLeft="657.295913936098,510.907563009889">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,62.6666666666665"
-              Start="0,0"
-              End="0,55.1666666666665">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,55.1666666666665" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,21.7786458333333,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -12596,6 +12903,40 @@ where [refTable].[nr_zlecenie] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\inserting into Etap.Paths[Sort Output3]"
+          TopLeft="306.629247269431,784.240896343222">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="157.5,54.6666666666667"
+              Start="0,0"
+              End="157.5,47.1666666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.4267425320057" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.4267425320057"
+                    Point2="0,32.4267425320057"
+                    Point3="4,32.4267425320057" />
+                  <mssgle:LineSegment
+                    End="153.5,32.4267425320057" />
+                  <mssgle:CubicBezierSegment
+                    Point1="153.5,32.4267425320057"
+                    Point2="157.5,32.4267425320057"
+                    Point3="157.5,36.4267425320057" />
+                  <mssgle:LineSegment
+                    End="157.5,47.1666666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\inserting into Etap.Paths[Sort Output2]"
           TopLeft="658.851469491654,787.574229676556">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12629,7 +12970,7 @@ where [refTable].[nr_zlecenie] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\inserting into Etap.Paths[Sort Output2]"
+          Id="Package\inserting into Etap.Paths[Sort Output1]"
           TopLeft="296.557821149092,594.49449331303">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12651,7 +12992,7 @@ where [refTable].[nr_zlecenie] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\inserting into Etap.Paths[Sort Output1]"
+          Id="Package\inserting into Etap.Paths[Sort Output]"
           TopLeft="163.972109387451,401.229787237632">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12676,40 +13017,6 @@ where [refTable].[nr_zlecenie] = ?</property>
                     Point3="134.671430760987,32.8323536758191" />
                   <mssgle:LineSegment
                     End="134.671430760987,50.1647073516382" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\inserting into Etap.Paths[Sort Output]"
-          TopLeft="306.629247269431,784.240896343222">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="157.5,54.6666666666667"
-              Start="0,0"
-              End="157.5,47.1666666666667">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.4267425320057" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,28.4267425320057"
-                    Point2="0,32.4267425320057"
-                    Point3="4,32.4267425320057" />
-                  <mssgle:LineSegment
-                    End="153.5,32.4267425320057" />
-                  <mssgle:CubicBezierSegment
-                    Point1="153.5,32.4267425320057"
-                    Point2="157.5,32.4267425320057"
-                    Point3="157.5,36.4267425320057" />
-                  <mssgle:LineSegment
-                    End="157.5,47.1666666666667" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -12820,6 +13127,82 @@ where [refTable].[nr_zlecenie] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="183,42"
+          Id="Package\inserting into Etap\retriving Sortownia ID"
+          TopLeft="744,534" />
+        <EdgeLayout
+          Id="Package\inserting into Etap.Paths[Lookup Match Output5]"
+          TopLeft="657.462580602765,498.907563009889">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="178.037419397235,35.092436990111"
+              Start="0,0"
+              End="178.037419397235,27.592436990111">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.5462184950555" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.5462184950555"
+                    Point2="0,17.5462184950555"
+                    Point3="4,17.5462184950555" />
+                  <mssgle:LineSegment
+                    End="174.037419397235,17.5462184950555" />
+                  <mssgle:CubicBezierSegment
+                    Point1="174.037419397235,17.5462184950555"
+                    Point2="178.037419397235,17.5462184950555"
+                    Point3="178.037419397235,21.5462184950555" />
+                  <mssgle:LineSegment
+                    End="178.037419397235,27.592436990111" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="40.8273229798675,22.5462184950555,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\inserting into Etap.Paths[Lookup Match Output6]"
+          TopLeft="835.5,576">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-182.370752730569,27.574229676555"
+              Start="0,0"
+              End="-182.370752730569,20.074229676555">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,9.78711483827749" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9.78711483827749"
+                    Point2="0,13.7871148382775"
+                    Point3="-4,13.7871148382775" />
+                  <mssgle:LineSegment
+                    End="-178.370752730569,13.7871148382775" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-178.370752730569,13.7871148382775"
+                    Point2="-182.370752730569,13.7871148382775"
+                    Point3="-182.370752730569,17.7871148382775" />
+                  <mssgle:LineSegment
+                    End="-182.370752730569,20.074229676555" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-139.376763084035,18.7871148382775,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -12924,7 +13307,7 @@ where [refTable].[nr_zlecenie] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -13044,78 +13427,54 @@ where [refTable].[nr_zlecenie] = ?</property>
         <NodeLayout
           Size="156,42"
           Id="Package\populating Miejsce\Data Conversion"
-          TopLeft="492.5,107.5" />
-        <NodeLayout
-          Size="163,42"
-          Id="Package\populating Miejsce\Insert Destination"
-          TopLeft="450,1229.5" />
-        <NodeLayout
-          Size="163,42"
-          Id="Package\populating Miejsce\Derived Column 2"
-          TopLeft="450,1127.5" />
+          TopLeft="506.5,107.5" />
         <NodeLayout
           Size="130,42"
           Id="Package\populating Miejsce\Merge Join"
-          TopLeft="291.5,515.5" />
+          TopLeft="281.5,413.5" />
         <NodeLayout
           Size="155,42"
           Id="Package\populating Miejsce\Conditional Split"
-          TopLeft="493,209.5" />
-        <NodeLayout
-          Size="127,42"
-          Id="Package\populating Miejsce\Sort by ID"
-          TopLeft="293,413.5" />
-        <NodeLayout
-          Size="163,42"
-          Id="Package\populating Miejsce\Derived Column 1"
-          TopLeft="307,821.5" />
-        <NodeLayout
-          Size="165,42"
-          Id="Package\populating Miejsce\Sort by ID_adresu"
-          TopLeft="67.0000000000001,413.5" />
-        <NodeLayout
-          Size="180,42"
-          Id="Package\populating Miejsce\OLE DB Source Adres"
-          TopLeft="266.5,311.5" />
-        <NodeLayout
-          Size="200,42"
-          Id="Package\populating Miejsce\OLE DB Source Sortownia"
-          TopLeft="5.50000000000006,311.5" />
-        <NodeLayout
-          Size="98,42"
-          Id="Package\populating Miejsce\Sort"
-          TopLeft="482.5,515.5" />
-        <NodeLayout
-          Size="139,42"
-          Id="Package\populating Miejsce\Merge Join 1"
-          TopLeft="462,617.5" />
-        <NodeLayout
-          Size="139,42"
-          Id="Package\populating Miejsce\Excel Source"
-          TopLeft="501,5.5" />
-        <NodeLayout
-          Size="154,42"
-          Id="Package\populating Miejsce\Derived Column"
-          TopLeft="480.5,413.5" />
-        <NodeLayout
-          Size="166,42"
-          Id="Package\populating Miejsce\OLE DB Command"
-          TopLeft="304.5,923.5" />
+          TopLeft="507,209.5" />
         <NodeLayout
           Size="209,42"
           Id="Package\populating Miejsce\Slowly Changing Dimension"
-          TopLeft="427,719.5" />
+          TopLeft="445,719.5" />
         <NodeLayout
-          Size="121,42"
-          Id="Package\populating Miejsce\Union All"
-          TopLeft="471,1025.5" />
+          Size="180,42"
+          Id="Package\populating Miejsce\OLE DB Source Adres"
+          TopLeft="5.50000000000006,209.5" />
+        <NodeLayout
+          Size="200,42"
+          Id="Package\populating Miejsce\OLE DB Source Sortownia"
+          TopLeft="246.5,209.5" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\populating Miejsce\Derived Column"
+          TopLeft="472.5,413.5" />
+        <NodeLayout
+          Size="127,42"
+          Id="Package\populating Miejsce\Sort by ID"
+          TopLeft="76.0000000000001,311.5" />
+        <NodeLayout
+          Size="165,42"
+          Id="Package\populating Miejsce\Sort by ID_adresu"
+          TopLeft="264,311.5" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\populating Miejsce\Excel Source"
+          TopLeft="515,5.5" />
         <NodeLayout
           Size="127,42"
           Id="Package\populating Miejsce\Aggregate"
-          TopLeft="507,311.5" />
+          TopLeft="490,311.5" />
+        <NodeLayout
+          Size="98,42"
+          Id="Package\populating Miejsce\Sort"
+          TopLeft="500.5,515.5" />
         <EdgeLayout
-          Id="Package\populating Miejsce.Paths[Union All Output 1]"
-          TopLeft="531.5,1067.5">
+          Id="Package\populating Miejsce.Paths[Aggregate Output 1]"
+          TopLeft="551.5,353.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -13136,76 +13495,8 @@ where [refTable].[nr_zlecenie] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populating Miejsce.Paths[Sort Output2]"
-          TopLeft="531.5,557.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="21.8333333333334,60"
-              Start="0,0"
-              End="21.8333333333334,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5903271692745" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.5903271692745"
-                    Point2="0,35.5903271692745"
-                    Point3="4,35.5903271692745" />
-                  <mssgle:LineSegment
-                    End="17.8333333333334,35.5903271692745" />
-                  <mssgle:CubicBezierSegment
-                    Point1="17.8333333333334,35.5903271692745"
-                    Point2="21.8333333333334,35.5903271692745"
-                    Point3="21.8333333333334,39.5903271692745" />
-                  <mssgle:LineSegment
-                    End="21.8333333333334,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\populating Miejsce.Paths[Sort Output1]"
-          TopLeft="356.5,455.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="20.3333333333334,60"
-              Start="0,0"
-              End="20.3333333333334,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5623100303951" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.5623100303951"
-                    Point2="0,35.5623100303951"
-                    Point3="4,35.5623100303951" />
-                  <mssgle:LineSegment
-                    End="16.3333333333334,35.5623100303951" />
-                  <mssgle:CubicBezierSegment
-                    Point1="16.3333333333334,35.5623100303951"
-                    Point2="20.3333333333334,35.5623100303951"
-                    Point3="20.3333333333334,39.5623100303951" />
-                  <mssgle:LineSegment
-                    End="20.3333333333334,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\populating Miejsce.Paths[Sort Output]"
-          TopLeft="149.5,455.5">
+          TopLeft="139.5,353.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -13238,8 +13529,64 @@ where [refTable].[nr_zlecenie] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\populating Miejsce.Paths[Sort Output]"
+          TopLeft="346.5,353.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="20.3333333333333,60"
+              Start="0,0"
+              End="20.3333333333333,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5623100303951" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.5623100303951"
+                    Point2="0,35.5623100303951"
+                    Point3="4,35.5623100303951" />
+                  <mssgle:LineSegment
+                    End="16.3333333333333,35.5623100303951" />
+                  <mssgle:CubicBezierSegment
+                    Point1="16.3333333333333,35.5623100303951"
+                    Point2="20.3333333333333,35.5623100303951"
+                    Point3="20.3333333333333,39.5623100303951" />
+                  <mssgle:LineSegment
+                    End="20.3333333333333,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\populating Miejsce.Paths[OLE DB Source Output1]"
-          TopLeft="105.5,353.5">
+          TopLeft="346.5,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populating Miejsce.Paths[OLE DB Source Output]"
+          TopLeft="95.5000000000001,251.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -13272,8 +13619,44 @@ where [refTable].[nr_zlecenie] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populating Miejsce.Paths[OLE DB Source Output]"
-          TopLeft="356.5,353.5">
+          Id="Package\populating Miejsce.Paths[Is_current]"
+          TopLeft="584.5,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-31,60"
+              Start="0,0"
+              End="-31,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="-4,30" />
+                  <mssgle:LineSegment
+                    End="-27,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-27,30"
+                    Point2="-31,30"
+                    Point3="-31,34" />
+                  <mssgle:LineSegment
+                    End="-31,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-38.87798828125,35,46.7559765625,10.7353515625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populating Miejsce.Paths[Excel Source Output]"
+          TopLeft="584.5,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -13294,31 +13677,19 @@ where [refTable].[nr_zlecenie] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populating Miejsce.Paths[OLE DB Command Output]"
-          TopLeft="387.5,965.5">
+          Id="Package\populating Miejsce.Paths[Derived Column Output]"
+          TopLeft="549.5,455.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="125.166666666667,60"
+              EndConnector="0,60"
               Start="0,0"
-              End="125.166666666667,52.5">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.5301794453507" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.5301794453507"
-                    Point2="0,35.5301794453507"
-                    Point3="4,35.5301794453507" />
-                  <mssgle:LineSegment
-                    End="121.166666666667,35.5301794453507" />
-                  <mssgle:CubicBezierSegment
-                    Point1="121.166666666667,35.5301794453507"
-                    Point2="125.166666666667,35.5301794453507"
-                    Point3="125.166666666667,39.5301794453507" />
-                  <mssgle:LineSegment
-                    End="125.166666666667,52.5" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13328,8 +13699,232 @@ where [refTable].[nr_zlecenie] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\populating Miejsce.Paths[Data Conversion Output]"
+          TopLeft="584.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="107,42"
+          Id="Package\populating Miejsce\Sort 1"
+          TopLeft="333,515.5" />
+        <EdgeLayout
+          Id="Package\populating Miejsce.Paths[Merge Join Output]"
+          TopLeft="346.5,455.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="40.0000000000001,60"
+              Start="0,0"
+              End="40.0000000000001,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="4,30" />
+                  <mssgle:LineSegment
+                    End="36.0000000000001,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="36.0000000000001,30"
+                    Point2="40.0000000000001,30"
+                    Point3="40.0000000000001,34" />
+                  <mssgle:LineSegment
+                    End="40.0000000000001,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="139,42"
+          Id="Package\populating Miejsce\Merge Join 1"
+          TopLeft="480,617.5" />
+        <EdgeLayout
+          Id="Package\populating Miejsce.Paths[Sort Output2]"
+          TopLeft="386.5,557.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="141.166666666667,60"
+              Start="0,0"
+              End="141.166666666667,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5903271692745" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.5903271692745"
+                    Point2="0,35.5903271692745"
+                    Point3="4,35.5903271692745" />
+                  <mssgle:LineSegment
+                    End="137.166666666667,35.5903271692745" />
+                  <mssgle:CubicBezierSegment
+                    Point1="137.166666666667,35.5903271692745"
+                    Point2="141.166666666667,35.5903271692745"
+                    Point3="141.166666666667,39.5903271692745" />
+                  <mssgle:LineSegment
+                    End="141.166666666667,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populating Miejsce.Paths[Sort Output3]"
+          TopLeft="549.5,557.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="21.8333333333334,60"
+              Start="0,0"
+              End="21.8333333333334,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5903271692745" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.5903271692745"
+                    Point2="0,35.5903271692745"
+                    Point3="4,35.5903271692745" />
+                  <mssgle:LineSegment
+                    End="17.8333333333334,35.5903271692745" />
+                  <mssgle:CubicBezierSegment
+                    Point1="17.8333333333334,35.5903271692745"
+                    Point2="21.8333333333334,35.5903271692745"
+                    Point3="21.8333333333334,39.5903271692745" />
+                  <mssgle:LineSegment
+                    End="21.8333333333334,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populating Miejsce.Paths[Merge Join Output1]"
+          TopLeft="549.5,659.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="163,42"
+          Id="Package\populating Miejsce\Derived Column 1"
+          TopLeft="325,821.5" />
+        <EdgeLayout
+          Id="Package\populating Miejsce.Paths[Historical Attribute Inserts Output]"
+          TopLeft="516,761.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-109.5,60"
+              Start="0,0"
+              End="-109.5,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.2735042735043" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.2735042735043"
+                    Point2="0,24.2735042735043"
+                    Point3="-4,24.2735042735043" />
+                  <mssgle:LineSegment
+                    End="-105.5,24.2735042735043" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-105.5,24.2735042735043"
+                    Point2="-109.5,24.2735042735043"
+                    Point3="-109.5,28.2735042735043" />
+                  <mssgle:LineSegment
+                    End="-109.5,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-129.80638671875,29.2735042735043,150.1127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="166,42"
+          Id="Package\populating Miejsce\OLE DB Command"
+          TopLeft="322.5,923.5" />
+        <EdgeLayout
+          Id="Package\populating Miejsce.Paths[Derived Column Output1]"
+          TopLeft="406,863.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="121,42"
+          Id="Package\populating Miejsce\Union All"
+          TopLeft="489,1025.5" />
+        <EdgeLayout
           Id="Package\populating Miejsce.Paths[New Output]"
-          TopLeft="565,761.5">
+          TopLeft="583,761.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -13364,8 +13959,46 @@ where [refTable].[nr_zlecenie] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populating Miejsce.Paths[Merge Join Output1]"
-          TopLeft="531.5,659.5">
+          Id="Package\populating Miejsce.Paths[OLE DB Command Output]"
+          TopLeft="405.5,965.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="125.166666666667,60"
+              Start="0,0"
+              End="125.166666666667,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5301794453507" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.5301794453507"
+                    Point2="0,35.5301794453507"
+                    Point3="4,35.5301794453507" />
+                  <mssgle:LineSegment
+                    End="121.166666666667,35.5301794453507" />
+                  <mssgle:CubicBezierSegment
+                    Point1="121.166666666667,35.5301794453507"
+                    Point2="125.166666666667,35.5301794453507"
+                    Point3="125.166666666667,39.5301794453507" />
+                  <mssgle:LineSegment
+                    End="125.166666666667,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="163,42"
+          Id="Package\populating Miejsce\Derived Column 2"
+          TopLeft="468,1127.5" />
+        <EdgeLayout
+          Id="Package\populating Miejsce.Paths[Union All Output 1]"
+          TopLeft="549.5,1067.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -13385,125 +14018,13 @@ where [refTable].[nr_zlecenie] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\populating Miejsce.Paths[Merge Join Output]"
-          TopLeft="356.5,557.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="153.166666666667,60"
-              Start="0,0"
-              End="153.166666666667,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5903271692745" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.5903271692745"
-                    Point2="0,35.5903271692745"
-                    Point3="4,35.5903271692745" />
-                  <mssgle:LineSegment
-                    End="149.166666666667,35.5903271692745" />
-                  <mssgle:CubicBezierSegment
-                    Point1="149.166666666667,35.5903271692745"
-                    Point2="153.166666666667,35.5903271692745"
-                    Point3="153.166666666667,39.5903271692745" />
-                  <mssgle:LineSegment
-                    End="153.166666666667,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\populating Miejsce.Paths[Is_current]"
-          TopLeft="570.5,251.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-23.37798828125,20.88232421875,46.7559765625,10.7353515625"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\populating Miejsce.Paths[Historical Attribute Inserts Output]"
-          TopLeft="498,761.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-109.5,60"
-              Start="0,0"
-              End="-109.5,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.2735042735043" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.2735042735043"
-                    Point2="0,24.2735042735043"
-                    Point3="-4,24.2735042735043" />
-                  <mssgle:LineSegment
-                    End="-105.5,24.2735042735043" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-105.5,24.2735042735043"
-                    Point2="-109.5,24.2735042735043"
-                    Point3="-109.5,28.2735042735043" />
-                  <mssgle:LineSegment
-                    End="-109.5,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-129.80638671875,29.2735042735043,150.1127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\populating Miejsce.Paths[Excel Source Output]"
-          TopLeft="570.5,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="163,42"
+          Id="Package\populating Miejsce\Insert Destination"
+          TopLeft="468,1229.5" />
         <EdgeLayout
           Id="Package\populating Miejsce.Paths[Derived Column Output2]"
-          TopLeft="531.5,1169.5">
+          TopLeft="549.5,1169.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -13515,118 +14036,6 @@ where [refTable].[nr_zlecenie] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\populating Miejsce.Paths[Derived Column Output1]"
-          TopLeft="388,863.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\populating Miejsce.Paths[Derived Column Output]"
-          TopLeft="557.5,455.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-26,60"
-              Start="0,0"
-              End="-26,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26"
-                    Point2="0,30"
-                    Point3="-4,30" />
-                  <mssgle:LineSegment
-                    End="-22,30" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-22,30"
-                    Point2="-26,30"
-                    Point3="-26,34" />
-                  <mssgle:LineSegment
-                    End="-26,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\populating Miejsce.Paths[Data Conversion Output]"
-          TopLeft="570.5,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\populating Miejsce.Paths[Aggregate Output 1]"
-          TopLeft="570.5,353.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-12.9999999999999,60"
-              Start="0,0"
-              End="-12.9999999999999,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26"
-                    Point2="0,30"
-                    Point3="-4,30" />
-                  <mssgle:LineSegment
-                    End="-8.99999999999989,30" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-8.99999999999989,30"
-                    Point2="-12.9999999999999,30"
-                    Point3="-12.9999999999999,34" />
-                  <mssgle:LineSegment
-                    End="-12.9999999999999,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13638,45 +14047,6 @@ where [refTable].[nr_zlecenie] = ?</property>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\populating Miejsce\OLE DB Source Adres">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\populating Miejsce\OLE DB Source Sortownia">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\populating Miejsce\Excel Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\populating Miejsce\Slowly Changing Dimension">
     <Properties>
@@ -13741,6 +14111,45 @@ where [refTable].[nr_zlecenie] = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\populating Miejsce\OLE DB Source Adres">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\populating Miejsce\OLE DB Source Sortownia">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\populating Miejsce\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\populating Paczka">
     <LayoutInfo>
@@ -13781,7 +14190,9 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13827,7 +14238,9 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -13888,14 +14301,6 @@ where [refTable].[nr_zlecenie] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="121,42"
-          Id="Package\populating Pracownik\Union All"
-          TopLeft="172,821.5" />
-        <NodeLayout
-          Size="133,42"
-          Id="Package\populating Pracownik\CEO's excel"
-          TopLeft="166,5.5" />
-        <NodeLayout
           Size="163,42"
           Id="Package\populating Pracownik\Insert Destination"
           TopLeft="151,1025.5" />
@@ -13904,9 +14309,17 @@ where [refTable].[nr_zlecenie] = ?</property>
           Id="Package\populating Pracownik\Derived Column"
           TopLeft="17.5000000000001,617.5" />
         <NodeLayout
-          Size="163,42"
-          Id="Package\populating Pracownik\Derived Column 1"
-          TopLeft="151,923.5" />
+          Size="218,42"
+          Id="Package\populating Pracownik\Slowly Changing Dimension 1"
+          TopLeft="123.5,515.5" />
+        <NodeLayout
+          Size="133,42"
+          Id="Package\populating Pracownik\CEO's excel"
+          TopLeft="166,5.5" />
+        <NodeLayout
+          Size="121,42"
+          Id="Package\populating Pracownik\Union All"
+          TopLeft="172,821.5" />
         <NodeLayout
           Size="166,42"
           Id="Package\populating Pracownik\OLE DB Command"
@@ -13916,61 +14329,17 @@ where [refTable].[nr_zlecenie] = ?</property>
           Id="Package\populating Pracownik\ranges"
           TopLeft="177,415.5" />
         <NodeLayout
-          Size="153,42"
-          Id="Package\populating Pracownik\calculating wiek"
-          TopLeft="156,311.5" />
-        <NodeLayout
-          Size="218,42"
-          Id="Package\populating Pracownik\Slowly Changing Dimension 1"
-          TopLeft="123.5,515.5" />
+          Size="163,42"
+          Id="Package\populating Pracownik\Derived Column 1"
+          TopLeft="151,923.5" />
         <NodeLayout
           Size="156,42"
           Id="Package\populating Pracownik\Data Conversion"
           TopLeft="154.5,107.5" />
-        <EdgeLayout
-          Id="Package\populating Pracownik.Paths[Union All Output 1]"
-          TopLeft="232.5,863.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\populating Pracownik.Paths[Output 0]"
-          TopLeft="232.5,457.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,58"
-              Start="0,0"
-              End="0,50.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,50.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="153,42"
+          Id="Package\populating Pracownik\calculating wiek"
+          TopLeft="156,311.5" />
         <EdgeLayout
           Id="Package\populating Pracownik.Paths[OLE DB Command Output]"
           TopLeft="88.5000000000001,761.5">
@@ -14002,7 +14371,9 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14096,7 +14467,9 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14118,7 +14491,9 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14140,7 +14515,9 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14162,7 +14539,9 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14184,25 +14563,62 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populating Pracownik.Paths[Union All Output 1]"
+          TopLeft="232.5,863.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populating Pracownik.Paths[Output 0]"
+          TopLeft="232.5,457.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58"
+              Start="0,0"
+              End="0,50.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\populating Pracownik\CEO's excel">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\populating Pracownik\Slowly Changing Dimension 1">
     <Properties>
@@ -14252,6 +14668,19 @@ where [refTable].[nr_zlecenie] = ?</property>
   &lt;DateVariable&gt;System::CreationDate&lt;/DateVariable&gt;
   &lt;EnableInferredSupport&gt;false&lt;/EnableInferredSupport&gt;
 &lt;/SCDWizardMetadata&gt;</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\populating Pracownik\CEO's excel">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -14366,6 +14795,29 @@ where [refTable].[nr_zlecenie] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\inserting into Etap\retriving Sortownia ID">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Sortownia]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
