@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="19"
-  DTS:VersionGUID="{3E394411-C878-420A-8C56-351A502FEBB3}">
+  DTS:VersionBuild="20"
+  DTS:VersionGUID="{DCD98392-34BD-4303-B1A3-AF018BB559F1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -100,11 +100,11 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="161.6,41.6"
+          Size="162,42"
           Id="Package\SQL insert into data"
           TopLeft="327.142862714067,181.235296659404" />
         <NodeLayout
-          Size="166.4,41.6"
+          Size="166,42"
           Id="Package\SQL insert into typ"
           TopLeft="510.714294411698,180.470590766326" />
       </GraphLayout>
