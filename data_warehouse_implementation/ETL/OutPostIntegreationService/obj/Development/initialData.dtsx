@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="20"
-  DTS:VersionGUID="{DCD98392-34BD-4303-B1A3-AF018BB559F1}">
+  DTS:VersionBuild="21"
+  DTS:VersionGUID="{767C65ED-B1F8-4911-9B7A-3E028EE5820F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -83,7 +83,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{303E0267-D024-45FA-AE3F-1A38DDF323FC}"
-          SQLTask:SqlStatementSource="INSERT INTO typ SELECT t FROM &#xA;&#x9;(VALUES ('Paczka odebrana w sortowni'), ('Paczka zatwierdzona w sortowni'), ('Paczka przygotowana do transportu'), ('Paczka wydana do transportu'))&#xA;&#x9; AS Typ(t);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="INSERT INTO typ SELECT t FROM &#xA;&#x9;(VALUES ('Paczka odebrana w sortowni'), ('Paczka zatwierdzona w sortowni'), ('Paczka przygotowana do transportu'), ('Paczka wydana do transportu'), ('Paczka odebrana przez kuriera'), ('Paczka w trasie'), ('Paczka dostarczona do celu'))&#xA;&#x9; AS Typ(t);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>

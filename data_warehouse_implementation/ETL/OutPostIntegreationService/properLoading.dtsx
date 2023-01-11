@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="113"
-  DTS:VersionGUID="{5F646C5D-6064-4882-999B-C9C67774959B}">
+  DTS:VersionBuild="125"
+  DTS:VersionGUID="{9E3C5614-D1E7-4ECE-8C55-6334DCB15C36}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -136,13 +136,13 @@
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">#{Package\inserting into Etap\Data Conversion.Outputs[Data Conversion Output].Columns[Typ]} == "Paczka wydana do transportu" || #{Package\inserting into Etap\Data Conversion.Outputs[Data Conversion Output].Columns[Typ]} == "Paczka odebrana w sortowni" || #{Package\inserting into Etap\Data Conversion.Outputs[Data Conversion Output].Columns[Typ]} == "Paczka zatwierdzona w sortowni" || #{Package\inserting into Etap\Data Conversion.Outputs[Data Conversion Output].Columns[Typ]} == "Paczka przygotowana do transportu"</property>
+                      name="Expression">#{Package\inserting into Etap\Data Conversion.Outputs[Data Conversion Output].Columns[Typ]} == "Paczka wydana do transportu" || #{Package\inserting into Etap\Data Conversion.Outputs[Data Conversion Output].Columns[Typ]} == "Paczka odebrana w sortowni" || #{Package\inserting into Etap\Data Conversion.Outputs[Data Conversion Output].Columns[Typ]} == "Paczka zatwierdzona w sortowni" || #{Package\inserting into Etap\Data Conversion.Outputs[Data Conversion Output].Columns[Typ]} == "Paczka przygotowana do transportu" || #{Package\inserting into Etap\Data Conversion.Outputs[Data Conversion Output].Columns[Typ]} == "Paczka odebrana przez kuriera" || #{Package\inserting into Etap\Data Conversion.Outputs[Data Conversion Output].Columns[Typ]} == "Paczka w trasie" || #{Package\inserting into Etap\Data Conversion.Outputs[Data Conversion Output].Columns[Typ]} == "Paczka dostarczona do celu"</property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the friendly version of the expression. This expression version uses column names."
                       expressionType="Notify"
-                      name="FriendlyExpression">Typ == "Paczka wydana do transportu" || Typ == "Paczka odebrana w sortowni" || Typ == "Paczka zatwierdzona w sortowni" || Typ == "Paczka przygotowana do transportu"</property>
+                      name="FriendlyExpression">Typ == "Paczka wydana do transportu" || Typ == "Paczka odebrana w sortowni" || Typ == "Paczka zatwierdzona w sortowni" || Typ == "Paczka przygotowana do transportu" || Typ == "Paczka odebrana przez kuriera" || Typ == "Paczka w trasie" || Typ == "Paczka dostarczona do celu"</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
@@ -888,15 +888,15 @@ where [refTable].[id_typ] = ? and [refTable].[id_zlecenie] = ? and [refTable].[i
                       cachedSortKeyPosition="1"
                       lineageId="Package\inserting into Etap\Sort 4.Outputs[Sort Output].Columns[ID]" />
                     <inputColumn
-                      refId="Package\inserting into Etap\Merge Join 1.Inputs[Merge Join Right Input].Columns[pokonana_odleglosc]"
+                      refId="Package\inserting into Etap\Merge Join 1.Inputs[Merge Join Right Input].Columns[pokonanaOdleglosc]"
                       cachedDataType="r8"
-                      cachedName="pokonana_odleglosc"
-                      lineageId="Package\inserting into Etap\Sort 4.Outputs[Sort Output].Columns[pokonana_odleglosc]" />
+                      cachedName="pokonanaOdleglosc"
+                      lineageId="Package\inserting into Etap\Sort 4.Outputs[Sort Output].Columns[pokonanaOdleglosc]" />
                     <inputColumn
-                      refId="Package\inserting into Etap\Merge Join 1.Inputs[Merge Join Right Input].Columns[czas_realizacji]"
+                      refId="Package\inserting into Etap\Merge Join 1.Inputs[Merge Join Right Input].Columns[czasRealizacji]"
                       cachedDataType="r8"
-                      cachedName="czas_realizacji"
-                      lineageId="Package\inserting into Etap\Sort 4.Outputs[Sort Output].Columns[czas_realizacji]" />
+                      cachedName="czasRealizacji"
+                      lineageId="Package\inserting into Etap\Sort 4.Outputs[Sort Output].Columns[czasRealizacji]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -985,29 +985,29 @@ where [refTable].[id_typ] = ? and [refTable].[id_zlecenie] = ? and [refTable].[i
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\inserting into Etap\Merge Join 1.Outputs[Merge Join Output].Columns[pokonana_odleglosc]"
+                      refId="Package\inserting into Etap\Merge Join 1.Outputs[Merge Join Output].Columns[pokonanaOdleglosc]"
                       dataType="r8"
-                      lineageId="Package\inserting into Etap\Merge Join 1.Outputs[Merge Join Output].Columns[pokonana_odleglosc]"
-                      name="pokonana_odleglosc">
+                      lineageId="Package\inserting into Etap\Merge Join 1.Outputs[Merge Join Output].Columns[pokonanaOdleglosc]"
+                      name="pokonanaOdleglosc">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\inserting into Etap\Merge Join 1.Inputs[Merge Join Right Input].Columns[pokonana_odleglosc]}</property>
+                          name="InputColumnID">#{Package\inserting into Etap\Merge Join 1.Inputs[Merge Join Right Input].Columns[pokonanaOdleglosc]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\inserting into Etap\Merge Join 1.Outputs[Merge Join Output].Columns[czas_realizacji]"
+                      refId="Package\inserting into Etap\Merge Join 1.Outputs[Merge Join Output].Columns[czasRealizacji]"
                       dataType="r8"
-                      lineageId="Package\inserting into Etap\Merge Join 1.Outputs[Merge Join Output].Columns[czas_realizacji]"
-                      name="czas_realizacji">
+                      lineageId="Package\inserting into Etap\Merge Join 1.Outputs[Merge Join Output].Columns[czasRealizacji]"
+                      name="czasRealizacji">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\inserting into Etap\Merge Join 1.Inputs[Merge Join Right Input].Columns[czas_realizacji]}</property>
+                          name="InputColumnID">#{Package\inserting into Etap\Merge Join 1.Inputs[Merge Join Right Input].Columns[czasRealizacji]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1088,12 +1088,6 @@ where [refTable].[id_typ] = ? and [refTable].[id_zlecenie] = ? and [refTable].[i
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\inserting into Etap\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[czas_realizacji]"
-                      cachedDataType="r8"
-                      cachedName="czas_realizacji"
-                      externalMetadataColumnId="Package\inserting into Etap\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[czas_realizacji]"
-                      lineageId="Package\inserting into Etap\Merge Join 1.Outputs[Merge Join Output].Columns[czas_realizacji]" />
-                    <inputColumn
                       refId="Package\inserting into Etap\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Typ DW id]"
                       cachedDataType="i4"
                       cachedName="Typ DW id"
@@ -1130,11 +1124,17 @@ where [refTable].[id_typ] = ? and [refTable].[id_zlecenie] = ? and [refTable].[i
                       externalMetadataColumnId="Package\inserting into Etap\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_data]"
                       lineageId="Package\inserting into Etap\Merge Join 1.Outputs[Merge Join Output].Columns[Data DW id]" />
                     <inputColumn
-                      refId="Package\inserting into Etap\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[pokonana_odleglosc]"
+                      refId="Package\inserting into Etap\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[czasRealizacji]"
                       cachedDataType="r8"
-                      cachedName="pokonana_odleglosc"
+                      cachedName="czasRealizacji"
+                      externalMetadataColumnId="Package\inserting into Etap\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[czas_realizacji]"
+                      lineageId="Package\inserting into Etap\Merge Join 1.Outputs[Merge Join Output].Columns[czasRealizacji]" />
+                    <inputColumn
+                      refId="Package\inserting into Etap\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[pokonanaOdleglosc]"
+                      cachedDataType="r8"
+                      cachedName="pokonanaOdleglosc"
                       externalMetadataColumnId="Package\inserting into Etap\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[odleglosc]"
-                      lineageId="Package\inserting into Etap\Merge Join 1.Outputs[Merge Join Output].Columns[pokonana_odleglosc]" />
+                      lineageId="Package\inserting into Etap\Merge Join 1.Outputs[Merge Join Output].Columns[pokonanaOdleglosc]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3118,77 +3118,17 @@ where [refTable].[nr_zlecenie] = ?</property>
                   <arrayElements
                     arrayElementCount="30">
                     <arrayElement
-                      dataType="System.String"><![CDATA[ComponentWrapper.cs]]></arrayElement>
+                      dataType="System.String"><![CDATA[Properties\Settings.settings]]></arrayElement>
                     <arrayElement
                       dataType="System.String"><![CDATA[UTF8]]></arrayElement>
                     <arrayElement
-                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
-*  Microsoft SQL Server Integration Services component wrapper
-*  This module defines the base class for your component
-*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
-
-using System;
-using System.Data;
-using Microsoft.SqlServer.Dts.Pipeline;
-using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
-using Microsoft.SqlServer.Dts.Runtime.Wrapper;
-
-public class UserComponent: ScriptComponent
-{
-    public Connections Connections;
-    public Variables Variables;
-    public UserComponent()
-    {
-        Connections = new Connections(this);
-        Variables = new Variables(this);
-    }
-
-    public override void ProcessInput(int InputID, string InputName, PipelineBuffer Buffer, OutputNameMap OutputMap)
-    {
-
-        if (InputName.Equals(@"Input 0", StringComparison.Ordinal))
-        {
-            Input0_ProcessInput(new Input0Buffer(Buffer, GetColumnIndexes(InputID), OutputMap));
-        }
-
-    }
-
-    public virtual void Input0_ProcessInput(Input0Buffer Buffer)
-    {
-        while (Buffer.NextRow())
-        {
-            Input0_ProcessInputRow(Buffer);
-        }
-    }
-
-    public virtual void Input0_ProcessInputRow(Input0Buffer Row)
-    {
-    }
-
-}
-
-public class Connections
-{
-    ScriptComponent ParentComponent;
-
-    public Connections(ScriptComponent Component)
-    {
-        ParentComponent = Component;
-    }
-
-}
-
-public class Variables
-{
-    ScriptComponent ParentComponent;
-
-    public Variables(ScriptComponent Component)
-    {
-        ParentComponent = Component;
-    }
-
-}
-]]></arrayElement>
+                      dataType="System.String"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></arrayElement>
                     <arrayElement
                       dataType="System.String"><![CDATA[Properties\Resources.resx]]></arrayElement>
                     <arrayElement
@@ -3399,11 +3339,11 @@ public class ScriptMain : UserComponent
     ///
     /// You can remove this method if you don't need to do anything here.
     /// </summary>
-
     private DateTime prevDateTime;
     private int prevId = -1;
     private double prevLon;
     private double prevLat;
+    private int prevIDadres = -1;
     public override void PreExecute()
     {
         base.PreExecute();
@@ -3440,18 +3380,29 @@ public class ScriptMain : UserComponent
         DateTime rowDateTime = Row.Data.Add(Row.Czas);
         if (prevId == Row.IDzlecenia)
         {
-            Row.czasrealizacji = (prevDateTime - rowDateTime).TotalSeconds;
-            double lat1 = Row.Geolokalizacjaszerokosc;
-            double lon1 = Row.Geolokalizacjadlugosc;
-            double lat2 = prevLat;
-            double lon2 = prevLon;
-            Row.pokonanaodleglosc = Math.Acos(Math.Sin(lat1) * Math.Sin(lat2) + Math.Cos(lat1) * Math.Cos(lat2) * Math.Cos(lon2 - lon1)) * 6371000;
+            Row.czasRealizacji = (prevDateTime - rowDateTime).TotalSeconds;
+
+            if (Row.IDadresu != prevIDadres)
+            {
+                double rad = Math.PI / 180;
+                int r = 6371000; //m
+                double rowLat = Row.Geolokalizacjaszerokosc;
+                double rowLon = Row.Geolokalizacjadlugosc;
+                double a = 0.5 - Math.Cos((prevLat - rowLat) * rad) / 2 + Math.Cos(prevLat * rad) * Math.Cos(rowLat * rad) * (1 - Math.Cos((prevLon - rowLon) * rad)) / 2;
+                double distance = 2 * r * Math.Asin(Math.Sqrt(a));
+                Row.pokonanaOdleglosc = distance;
+
+            }
+            else
+            {
+                Row.pokonanaOdleglosc = 0;
+            }
         }
         prevDateTime = rowDateTime;
         prevId = Row.IDzlecenia;
         prevLat = Row.Geolokalizacjaszerokosc;
         prevLon = Row.Geolokalizacjadlugosc;
-        
+        prevIDadres = Row.IDadresu;
     }
 
 }
@@ -3556,20 +3507,50 @@ public class Input0Buffer: ScriptBuffer
         }
     }
 
-    public Double pokonanaodleglosc
+    public Int32 ID
+    {
+        get
+        {
+            return Buffer.GetInt32(BufferColumnIndexes[5]);
+        }
+    }
+    public bool ID_IsNull
+    {
+        get
+        {
+            return IsNull(5);
+        }
+    }
+
+    public Int32 IDadresu
+    {
+        get
+        {
+            return Buffer.GetInt32(BufferColumnIndexes[6]);
+        }
+    }
+    public bool IDadresu_IsNull
+    {
+        get
+        {
+            return IsNull(6);
+        }
+    }
+
+    public Double czasRealizacji
     {
         set
         {
-            this[5] = value;
+            this[7] = value;
         }
     }
-    public bool pokonanaodleglosc_IsNull
+    public bool czasRealizacji_IsNull
     {
         set
         {
             if (value)
             {
-                SetNull(5);
+                SetNull(7);
             }
             else
             {
@@ -3578,20 +3559,20 @@ public class Input0Buffer: ScriptBuffer
         }
     }
 
-    public Double czasrealizacji
+    public Double pokonanaOdleglosc
     {
         set
         {
-            this[6] = value;
+            this[8] = value;
         }
     }
-    public bool czasrealizacji_IsNull
+    public bool pokonanaOdleglosc_IsNull
     {
         set
         {
             if (value)
             {
-                SetNull(6);
+                SetNull(8);
             }
             else
             {
@@ -3626,10 +3607,10 @@ public class Input0Buffer: ScriptBuffer
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_917886acb6964f0d838ad077eaa68de0.Properties.Settings.get_Default():SC_917886acb6964f0d838ad077eaa68de0.Properties.Sett" +
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_192bd113eeb2482a8165e5b97f40649e.Properties.Settings.get_Default():SC_192bd113eeb2482a8165e5b97f40649e.Properties.Sett" +
     "ings")]
 
-namespace SC_917886acb6964f0d838ad077eaa68de0.Properties {
+namespace SC_192bd113eeb2482a8165e5b97f40649e.Properties {
     
     
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
@@ -3646,7 +3627,104 @@ namespace SC_917886acb6964f0d838ad077eaa68de0.Properties {
 }
 ]]></arrayElement>
                     <arrayElement
-                      dataType="System.String"><![CDATA[SC_917886acb6964f0d838ad077eaa68de0.csproj]]></arrayElement>
+                      dataType="System.String"><![CDATA[ComponentWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services component wrapper
+*  This module defines the base class for your component
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+
+public class UserComponent: ScriptComponent
+{
+    public Connections Connections;
+    public Variables Variables;
+    public UserComponent()
+    {
+        Connections = new Connections(this);
+        Variables = new Variables(this);
+    }
+
+    public override void ProcessInput(int InputID, string InputName, PipelineBuffer Buffer, OutputNameMap OutputMap)
+    {
+
+        if (InputName.Equals(@"Input 0", StringComparison.Ordinal))
+        {
+            Input0_ProcessInput(new Input0Buffer(Buffer, GetColumnIndexes(InputID), OutputMap));
+        }
+
+    }
+
+    public virtual void Input0_ProcessInput(Input0Buffer Buffer)
+    {
+        while (Buffer.NextRow())
+        {
+            Input0_ProcessInputRow(Buffer);
+        }
+    }
+
+    public virtual void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+    }
+
+}
+
+public class Connections
+{
+    ScriptComponent ParentComponent;
+
+    public Connections(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+
+public class Variables
+{
+    ScriptComponent ParentComponent;
+
+    public Variables(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Project]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
+  <msb:PropertyGroup>
+    <msb:CodeName>SC_192bd113eeb2482a8165e5b97f40649e</msb:CodeName>
+    <msb:Language>msBuild</msb:Language>
+    <msb:DisplayName>SC_192bd113eeb2482a8165e5b97f40649e</msb:DisplayName>
+    <msb:ProjectId>{BD97856C-823A-47C6-8D53-CD71790C1802}</msb:ProjectId>
+  </msb:PropertyGroup>
+  <msb:ItemGroup>
+    <msb:Project Include="SC_192bd113eeb2482a8165e5b97f40649e.csproj" />
+    <msb:File Include="Properties\Settings.settings" />
+    <msb:File Include="Properties\AssemblyInfo.cs" />
+    <msb:File Include="Properties\Settings.Designer.cs" />
+    <msb:File Include="main.cs" />
+    <msb:File Include="BufferWrapper.cs" />
+    <msb:File Include="ComponentWrapper.cs" />
+    <msb:File Include="Properties\Resources.resx" />
+    <msb:File Include="Properties\Resources.Designer.cs" />
+  </msb:ItemGroup>
+</c:Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_192bd113eeb2482a8165e5b97f40649e.csproj]]></arrayElement>
                     <arrayElement
                       dataType="System.String"><![CDATA[UTF8]]></arrayElement>
                     <arrayElement
@@ -3658,11 +3736,11 @@ namespace SC_917886acb6964f0d838ad077eaa68de0.Properties {
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{f8940149-3bac-452e-af05-cda05ff30e02}</ProjectGuid>
+    <ProjectGuid>{f1aa2a59-92f1-40f4-a7fd-25f3dab2b654}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SC_917886acb6964f0d838ad077eaa68de0</RootNamespace>
-    <AssemblyName>SC_917886acb6964f0d838ad077eaa68de0</AssemblyName>
+    <RootNamespace>SC_192bd113eeb2482a8165e5b97f40649e</RootNamespace>
+    <AssemblyName>SC_192bd113eeb2482a8165e5b97f40649e</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
@@ -3729,7 +3807,7 @@ namespace SC_917886acb6964f0d838ad077eaa68de0.Properties {
     <VisualStudio>
       <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
         <ProjectProperties HostName="ScriptComponent" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoExeName="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
-        <Host Name="ScriptComponent" GeneratedNamespace="SC_917886acb6964f0d838ad077eaa68de0" IconIndex="0"></Host>
+        <Host Name="ScriptComponent" GeneratedNamespace="SC_192bd113eeb2482a8165e5b97f40649e" IconIndex="0"></Host>
         <ProjectClient>
           <HostIdentifier>SSIS_SC150</HostIdentifier>
         </ProjectClient>
@@ -3737,31 +3815,6 @@ namespace SC_917886acb6964f0d838ad077eaa68de0.Properties {
     </VisualStudio>
   </ProjectExtensions>
 </Project>]]></arrayElement>
-                    <arrayElement
-                      dataType="System.String"><![CDATA[Project]]></arrayElement>
-                    <arrayElement
-                      dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
-                    <arrayElement
-                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
-<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
-  <msb:PropertyGroup>
-    <msb:CodeName>SC_917886acb6964f0d838ad077eaa68de0</msb:CodeName>
-    <msb:Language>msBuild</msb:Language>
-    <msb:DisplayName>SC_917886acb6964f0d838ad077eaa68de0</msb:DisplayName>
-    <msb:ProjectId>{402FBD0D-D4C5-4771-B9BF-B75068A8DDF3}</msb:ProjectId>
-  </msb:PropertyGroup>
-  <msb:ItemGroup>
-    <msb:Project Include="SC_917886acb6964f0d838ad077eaa68de0.csproj" />
-    <msb:File Include="Properties\Settings.settings" />
-    <msb:File Include="Properties\AssemblyInfo.cs" />
-    <msb:File Include="Properties\Settings.Designer.cs" />
-    <msb:File Include="main.cs" />
-    <msb:File Include="BufferWrapper.cs" />
-    <msb:File Include="ComponentWrapper.cs" />
-    <msb:File Include="Properties\Resources.resx" />
-    <msb:File Include="Properties\Resources.Designer.cs" />
-  </msb:ItemGroup>
-</c:Project>]]></arrayElement>
                     <arrayElement
                       dataType="System.String"><![CDATA[Properties\AssemblyInfo.cs]]></arrayElement>
                     <arrayElement
@@ -3775,11 +3828,11 @@ using System.Runtime.CompilerServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 //
-[assembly: AssemblyTitle("SC_917886acb6964f0d838ad077eaa68de0")]
+[assembly: AssemblyTitle("SC_192bd113eeb2482a8165e5b97f40649e")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SC_917886acb6964f0d838ad077eaa68de0")]
+[assembly: AssemblyProduct("SC_192bd113eeb2482a8165e5b97f40649e")]
 [assembly: AssemblyCopyright("Copyright @  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -3797,18 +3850,6 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyVersion("1.0.0.0")]
 ]]></arrayElement>
                     <arrayElement
-                      dataType="System.String"><![CDATA[Properties\Settings.settings]]></arrayElement>
-                    <arrayElement
-                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
-                    <arrayElement
-                      dataType="System.String"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></arrayElement>
-                    <arrayElement
                       dataType="System.String"><![CDATA[Properties\Resources.Designer.cs]]></arrayElement>
                     <arrayElement
                       dataType="System.String"><![CDATA[UTF8]]></arrayElement>
@@ -3822,14 +3863,14 @@ using System.Runtime.CompilerServices;
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_917886acb6964f0d838ad077eaa68de0.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_192bd113eeb2482a8165e5b97f40649e.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
     "rceManager")]
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_917886acb6964f0d838ad077eaa68de0.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_192bd113eeb2482a8165e5b97f40649e.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
     "fo")]
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_917886acb6964f0d838ad077eaa68de0.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_192bd113eeb2482a8165e5b97f40649e.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
     "):Void")]
 
-namespace SC_917886acb6964f0d838ad077eaa68de0.Properties {
+namespace SC_192bd113eeb2482a8165e5b97f40649e.Properties {
     
     
     /// <summary>
@@ -3857,7 +3898,7 @@ namespace SC_917886acb6964f0d838ad077eaa68de0.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if ((resourceMan == null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SC_917886acb6964f0d838ad077eaa68de0.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SC_192bd113eeb2482a8165e5b97f40649e.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -3891,124 +3932,124 @@ namespace SC_917886acb6964f0d838ad077eaa68de0.Properties {
                   <arrayElements
                     arrayElementCount="2">
                     <arrayElement
-                      dataType="System.String"><![CDATA[SC_917886acb6964f0d838ad077eaa68de0.dll]]></arrayElement>
+                      dataType="System.String"><![CDATA[SC_192bd113eeb2482a8165e5b97f40649e.dll]]></arrayElement>
                     <arrayElement
                       dataType="System.String"><![CDATA[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
-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
+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
-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
+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
-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
+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
-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
-AGIBvgQGAJcBzwUGAHMDiwQGAMoAiwQGAAkFiwQGAGwDiwQGACMFiwQGADUBiwQGANEAiwQGAJ8H
-9wQAAAAALgAAAAAAAQABAAEAEACrBAAAEAABAAEAAQAQAFgFAABBAAUABQABABAA/AYAAE0ABQAW
-AAEAEADABgAAUQAHABoAAQAQAIEGAABRAAgAGwAAABAA9gVSBlEACQAcAAABEACwBlIGaQALACAA
-AQD/AK8AAQCsALMAAQC2BLYAAQDVBrYABgDABrkABgCBBr0AAQAKB8EAAQAKB8EAEQCSBMUAEQBS
-AckAEQC3AM0AUCAAAAAAxgA1AwYAAQBYIAAAAADGAEADBgABAGAgAAAAAMYAfAfRAAEAMCEAAAAA
-hhiVBQYAAgA/IQAAAACGGJUFQQACAEohAAAAAIYIPwDXAAUAXyEAAAAAhgjJA3QABQBoIQAAAACG
-CE4A2wAFAH0hAAAAAIYI3wN0AAUAhiEAAAAAhgiiBeAABQCbIQAAAACGCGoEdAAFAKQhAAAAAIYI
-YAA4AAUAuSEAAAAAhgjvA3QABQDCIQAAAACGCHoAOAAFANchAAAAAIYIEAR0AAUA4CEAAAAAhgiW
-AOUABQDvIQAAAACGCDME6gAGAAYiAAAAAIYIeAPlAAcAFSIAAAAAhghQBOoACAAsIgAAAACGAJMH
-dAAJADQiAAAAAIYA5AZ0AAkAPCIAAAAAhhiVBQYACQBcIgAAAADGAG8H7wAJAIEiAAAAAMYBaAfR
-AA0AlCIAAAAAxgF8B9EADgCWIgAAAACGGJUF+QAPAKUiAAAAAIYYlQX5ABAAtCIAAAAAgxiVBQYA
-EQC8IgAAAACTCIEF/wARAOgiAAAAAJMIOgEEAREA7yIAAAAAkwhGAQkBEQD3IgAAAACWCPAGDwES
-AP4iAAAAAIYYlQUGABIABiMAAAAAkRibBRQBEgAAAAEAlwcAAAEAegUAAAIAiwYAAAMATgUAAAEA
-TAMAAAEATAMAAAEATAMAAAEATAMAAAEANwAAAAIA9QAAAAMAegUAAAQATgUAAAEAegUAAAEAlwcA
-AAEAIAcAAAEAIAcAAAEATAMJAJUFAQARAJUFBgAZAJUFCgApAJUFEAAxAJUFEAA5AJUFEABBAJUF
-EABJAJUFEABRAJUFEABZAJUFEABhAJUFEABpAJUFBgCpAJUFBgDJAJUFFQDZAJUFBgCZADUDBgCZ
-AEADBgBxALMAKABxAOgELwB5AL4FOADhAKcEPADhAMwGPADhANAGPACBAJUFQQCBAHoFSwCBAIsG
-TwCJACUAUwCBAHMEWACJAHoBXQCJAAwBYwCJAMcAaQCBAIIEbgCBAHoEAQDxAJUFEACBAJMHdACB
-AOQGdACZAJUFBgD5ALkGeACZAJ8GgAChAJUFBgAJAeMAhgAJAZsHjwCxAJUFlQDRAJUFBgAuAAsA
-PQEuABMARgEuABsAZQEuACMAbgEuACsAlwEuADMAlwEuADsAlwEuAEMAbgEuAEsAnQEuAFMAlwEu
-AFsAtAFDAGMA/gHjAGsA/gFhAXsA/gHpAXMAZQEJAnMAZQEbAAMAAQAHAA8ACAARAAAAQwAYAQAA
-zQMcAQAAUgAgAQAA4wMcAQAApgUlAQAAbgQcAQAAZAAqAQAA8wMcAQAAfgAqAQAAFAQcAQAAmgAq
-AQAANwQcAQAAfAMqAQAAVAQcAQAAhQUuAQAAWgEzAQAA9AY4AQIABgADAAIABwAFAAIACAAHAAIA
-CQAJAAIACgALAAIACwANAAIADAAPAAIADQARAAIADgATAAIADwAVAAEAEAAXAAEAEQAZAAEAEgAb
-AAEAEwAdAAIAHQAfAAIAHgAhAAEAHwAhAAIAIAAjAASAAAABAAAAAAAAAAAAAAAAAAEAAAAEAAAA
-AAAAAAAAAACdAFcAAAAAAA8AAAAAAAAAAAAAAKYAKgcAAAAADwAAAAAAAAAAAAAApgBHBwAAAAAE
-AAAAAAAAAAAAAACdAIsEAAAAAAAAAAABAAAAAAYAAAAAAFNDXzkxNzg4NmFjYjY5NjRmMGQ4Mzhh
-ZDA3N2VhYTY4ZGUwAEdldEludDMyADxNb2R1bGU+AElucHV0SUQAZ2V0X0lEemxlY2VuaWEAZ2V0
-X0RhdGEAbXNjb3JsaWIAZ2V0X0dlb2xva2FsaXphY2phZGx1Z29zYwBnZXRfR2VvbG9rYWxpemFj
-amFzemVyb2tvc2MAc2V0X3Bva29uYW5hb2RsZWdsb3NjAHByZXZJZABBZGQAZGVmYXVsdEluc3Rh
-bmNlAEdldERvdWJsZQBSdW50aW1lVHlwZUhhbmRsZQBHZXRUeXBlRnJvbUhhbmRsZQBJbnB1dE5h
-bWUAcHJldkRhdGVUaW1lAEdldFRpbWUATWljcm9zb2Z0LlNxbFNlcnZlci5EdHMuUGlwZWxpbmUA
-VHlwZQBnZXRfQ3VsdHVyZQBzZXRfQ3VsdHVyZQByZXNvdXJjZUN1bHR1cmUAQXBwbGljYXRpb25T
-ZXR0aW5nc0Jhc2UAR2V0RGF0ZQBFZGl0b3JCcm93c2FibGVTdGF0ZQBDb21waWxlckdlbmVyYXRl
-ZEF0dHJpYnV0ZQBEZWJ1Z2dlck5vblVzZXJDb2RlQXR0cmlidXRlAERlYnVnZ2FibGVBdHRyaWJ1
-dGUARWRpdG9yQnJvd3NhYmxlQXR0cmlidXRlAEFzc2VtYmx5VGl0bGVBdHRyaWJ1dGUAQXNzZW1i
-bHlUcmFkZW1hcmtBdHRyaWJ1dGUAVGFyZ2V0RnJhbWV3b3JrQXR0cmlidXRlAEFzc2VtYmx5Q29u
-ZmlndXJhdGlvbkF0dHJpYnV0ZQBBc3NlbWJseURlc2NyaXB0aW9uQXR0cmlidXRlAENvbXBpbGF0
-aW9uUmVsYXhhdGlvbnNBdHRyaWJ1dGUAQXNzZW1ibHlQcm9kdWN0QXR0cmlidXRlAEFzc2VtYmx5
-Q29weXJpZ2h0QXR0cmlidXRlAFNTSVNTY3JpcHRDb21wb25lbnRFbnRyeVBvaW50QXR0cmlidXRl
-AEFzc2VtYmx5Q29tcGFueUF0dHJpYnV0ZQBSdW50aW1lQ29tcGF0aWJpbGl0eUF0dHJpYnV0ZQBQ
-cmVFeGVjdXRlAFBvc3RFeGVjdXRlAHZhbHVlAFN5c3RlbS5SdW50aW1lLlZlcnNpb25pbmcAU3Ry
-aW5nAE1hdGgAc2V0X2N6YXNyZWFsaXphY2ppAFN5c3RlbS5Db21wb25lbnRNb2RlbABTQ185MTc4
-ODZhY2I2OTY0ZjBkODM4YWQwNzdlYWE2OGRlMC5kbGwAZ2V0X0lEemxlY2VuaWFfSXNOdWxsAGdl
-dF9EYXRhX0lzTnVsbABnZXRfR2VvbG9rYWxpemFjamFkbHVnb3NjX0lzTnVsbABnZXRfR2VvbG9r
-YWxpemFjamFzemVyb2tvc2NfSXNOdWxsAHNldF9wb2tvbmFuYW9kbGVnbG9zY19Jc051bGwAc2V0
-X2N6YXNyZWFsaXphY2ppX0lzTnVsbABnZXRfQ3phc19Jc051bGwAU2V0TnVsbABzZXRfSXRlbQBT
-eXN0ZW0AcmVzb3VyY2VNYW4AVGltZVNwYW4AU2luAFNjcmlwdE1haW4AcHJldkxvbgBTeXN0ZW0u
-Q29uZmlndXJhdGlvbgBTeXN0ZW0uR2xvYmFsaXphdGlvbgBvcF9TdWJ0cmFjdGlvbgBTeXN0ZW0u
-UmVmbGVjdGlvbgBJbnZhbGlkT3BlcmF0aW9uRXhjZXB0aW9uAFN0cmluZ0NvbXBhcmlzb24AQ3Vs
-dHVyZUluZm8AT3V0cHV0TmFtZU1hcABPdXRwdXRNYXAASW5wdXQwQnVmZmVyAFBpcGVsaW5lQnVm
-ZmVyAFNjcmlwdEJ1ZmZlcgBnZXRfUmVzb3VyY2VNYW5hZ2VyAC5jdG9yAC5jY3RvcgBnZXRfQ3ph
-cwBTeXN0ZW0uRGlhZ25vc3RpY3MAZ2V0X1RvdGFsU2Vjb25kcwBTeXN0ZW0uUnVudGltZS5Db21w
-aWxlclNlcnZpY2VzAFN5c3RlbS5SZXNvdXJjZXMAU0NfOTE3ODg2YWNiNjk2NGYwZDgzOGFkMDc3
-ZWFhNjhkZTAuUHJvcGVydGllcy5SZXNvdXJjZXMucmVzb3VyY2VzAERlYnVnZ2luZ01vZGVzAFND
-XzkxNzg4NmFjYjY5NjRmMGQ4MzhhZDA3N2VhYTY4ZGUwLlByb3BlcnRpZXMAVmFyaWFibGVzAEJ1
-ZmZlckNvbHVtbkluZGV4ZXMAR2V0Q29sdW1uSW5kZXhlcwBTZXR0aW5ncwBFcXVhbHMAQ29ubmVj
-dGlvbnMAQ29zAEFjb3MAcHJldkxhdABPYmplY3QARW5kT2ZSb3dzZXQAZ2V0X0RlZmF1bHQAVXNl
-ckNvbXBvbmVudABQYXJlbnRDb21wb25lbnQAU2NyaXB0Q29tcG9uZW50AE1pY3Jvc29mdC5TcWxT
-ZXJ2ZXIuVHhTY3JpcHQATWljcm9zb2Z0LlNxbFNlcnZlci5QaXBlbGluZUhvc3QASW5wdXQwX1By
-b2Nlc3NJbnB1dABJbnB1dDBfUHJvY2Vzc0lucHV0Um93AE5leHRSb3cAZ2V0X0Fzc2VtYmx5AACA
-m0kAcwBOAHUAbABsACAAcAByAG8AcABlAHIAdAB5ACAAYwBhAG4AbgBvAHQAIABiAGUAIABzAGUA
-dAAgAHQAbwAgAEYAYQBsAHMAZQAuACAAQQBzAHMAaQBnAG4AIABhACAAdgBhAGwAdQBlACAAdABv
-ACAAdABoAGUAIABjAG8AbAB1AG0AbgAgAGkAbgBzAHQAZQBhAGQALgAAD0kAbgBwAHUAdAAgADAA
-AHFTAEMAXwA5ADEANwA4ADgANgBhAGMAYgA2ADkANgA0AGYAMABkADgAMwA4AGEAZAAwADcANwBl
-AGEAYQA2ADgAZABlADAALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMA
-ACj1KhQthktKgxaGp//IGCUABCABAQgDIAABBSABARERBCABAQ4FIAEBEWEMBwcRORE5DQ0NDRE9
-BiABETkRPQgAAhE9ETkROQMgAA0EAAENDQkgAwESRR0IEkkDBhJFAwYdCAQgAQgIBCABAggFIAER
-OQgFIAERPQgEIAENCAUgAgEIHAMgAAIHIAICDhGAgQUgAR0ICAgAARKAhRGAiQUgABKAjQcgAgEO
-EoCNCLd6XFYZNOCJCImEXc2AgMyRAwYROQIGCAIGDQMGEhQDBhIYAwYSTQMGElkDBhJdAwYSIAUg
-AQESDAMgAAgEIAAROQQgABE9BCABAQ0EIAEBAgkgBAEIDhJFEkkFIAEBEk0EAAASWQQAABJdBQAB
-ARJdBAAAEiADAAABAygACAMoAAIEKAAROQQoABE9AygADQQIABJZBAgAEl0ECAASIAgBAAgAAAAA
-AB4BAAEAVAIWV3JhcE5vbkV4Y2VwdGlvblRocm93cwEIAQACAAAAAAAoAQAjU0NfOTE3ODg2YWNi
-Njk2NGYwZDgzOGFkMDc3ZWFhNjhkZTAAAAUBAAAAABYBABFDb3B5cmlnaHQgQCAgMjAyMwAASQEA
-Gi5ORVRGcmFtZXdvcmssVmVyc2lvbj12NC43AQBUDhRGcmFtZXdvcmtEaXNwbGF5TmFtZRIuTkVU
-IEZyYW1ld29yayA0LjcEAQAAAAC0AAAAzsrvvgEAAACRAAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVz
-b3VyY2VSZWFkZXIsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwg
-UHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OSNTeXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVS
-ZXNvdXJjZVNldAIAAAAAAAAAAAAAAFBBRFBBRFC0AAAAHDYAAAAAAAAAAAAANjYAAAAgAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAACg2AAAAAAAAAAAAAAAAX0NvckRsbE1haW4AbXNjb3JlZS5kbGwAAAAA
-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
+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
+AL8FFQDZAL8FBgCZADwDBgCZAEcDBgBxAJYAKgBxABIFMQB5AOgFOgDhAAIHPgDhAHgHPgDhANsE
+PgCBAL8FQwCBAKQFTQCBAMEGUQCJAAEAVQCBAJwEWgCJAIEBXwCJABMBZQCJAM4AawCBAKsEcACB
+AKMEAQDxAL8FEACBANYHdgCBABUHdgCZAL8FBgD5AO8GegCZANUGggChAL8FBgAJAeoAiAAJAd4H
+kQCxAL8FlwDRAL8FBgAuAAsAPwEuABMASAEuABsAZwEuACMAcAEuACsAmQEuADMAmQEuADsAmQEu
+AEMAcAEuAEsAnwEuAFMAmQEuAFsAtgFDAGMAAALjAGsAAAKBAXsAAAJpAnMAZwGJAnMAZwEbAAMA
+AQAHABMACAAVAAAAJgAaAQAA4gMeAQAANQAiAQAA+AMeAQAA0AUnAQAAgwQeAQAARwAsAQAACAQe
+AQAAYQAsAQAAKQQeAQAAHwAaAQAA1AMeAQAAtgcaAQAAkwQeAQAAgwMsAQAAaQQeAQAAfQAsAQAA
+TAQeAQAArwUwAQAAYQE1AQAAJQc6AQIABgADAAIABwAFAAIACAAHAAIACQAJAAIACgALAAIACwAN
+AAIADAAPAAIADQARAAIADgATAAIADwAVAAIAEAAXAAIAEQAZAAIAEgAbAAIAEwAdAAEAFAAfAAEA
+FQAhAAEAFgAjAAEAFwAlAAIAIQAnAAIAIgApAAEAIwApAAIAJAArAASAAAABAAAAAAAAAAAAAAAA
+AJoAAAAEAAAAAAAAAAAAAACfADoAAAAAAA8AAAAAAAAAAAAAAKgAWwcAAAAADwAAAAAAAAAAAAAA
+qAB9BwAAAAAEAAAAAAAAAAAAAACfALQEAAAAAAAAAAABAAAAKgYAAAAAAAAAR2V0SW50MzIAPE1v
+ZHVsZT4AZ2V0X0lEAElucHV0SUQAZ2V0X0lEemxlY2VuaWEAZ2V0X0RhdGEAbXNjb3JsaWIAZ2V0
+X0dlb2xva2FsaXphY2phZGx1Z29zYwBnZXRfR2VvbG9rYWxpemFjamFzemVyb2tvc2MAc2V0X3Bv
+a29uYW5hT2RsZWdsb3NjAHByZXZJZABBZGQAU0NfMTkyYmQxMTNlZWIyNDgyYTgxNjVlNWI5N2Y0
+MDY0OWUAZGVmYXVsdEluc3RhbmNlAEdldERvdWJsZQBSdW50aW1lVHlwZUhhbmRsZQBHZXRUeXBl
+RnJvbUhhbmRsZQBJbnB1dE5hbWUAcHJldkRhdGVUaW1lAEdldFRpbWUATWljcm9zb2Z0LlNxbFNl
+cnZlci5EdHMuUGlwZWxpbmUAVHlwZQBnZXRfQ3VsdHVyZQBzZXRfQ3VsdHVyZQByZXNvdXJjZUN1
+bHR1cmUAQXBwbGljYXRpb25TZXR0aW5nc0Jhc2UAR2V0RGF0ZQBFZGl0b3JCcm93c2FibGVTdGF0
+ZQBDb21waWxlckdlbmVyYXRlZEF0dHJpYnV0ZQBEZWJ1Z2dlck5vblVzZXJDb2RlQXR0cmlidXRl
+AERlYnVnZ2FibGVBdHRyaWJ1dGUARWRpdG9yQnJvd3NhYmxlQXR0cmlidXRlAEFzc2VtYmx5VGl0
+bGVBdHRyaWJ1dGUAQXNzZW1ibHlUcmFkZW1hcmtBdHRyaWJ1dGUAVGFyZ2V0RnJhbWV3b3JrQXR0
+cmlidXRlAEFzc2VtYmx5Q29uZmlndXJhdGlvbkF0dHJpYnV0ZQBBc3NlbWJseURlc2NyaXB0aW9u
+QXR0cmlidXRlAENvbXBpbGF0aW9uUmVsYXhhdGlvbnNBdHRyaWJ1dGUAQXNzZW1ibHlQcm9kdWN0
+QXR0cmlidXRlAEFzc2VtYmx5Q29weXJpZ2h0QXR0cmlidXRlAFNTSVNTY3JpcHRDb21wb25lbnRF
+bnRyeVBvaW50QXR0cmlidXRlAEFzc2VtYmx5Q29tcGFueUF0dHJpYnV0ZQBSdW50aW1lQ29tcGF0
+aWJpbGl0eUF0dHJpYnV0ZQBQcmVFeGVjdXRlAFBvc3RFeGVjdXRlAHZhbHVlAFN5c3RlbS5SdW50
+aW1lLlZlcnNpb25pbmcAU3RyaW5nAE1hdGgAc2V0X2N6YXNSZWFsaXphY2ppAFN5c3RlbS5Db21w
+b25lbnRNb2RlbABTQ18xOTJiZDExM2VlYjI0ODJhODE2NWU1Yjk3ZjQwNjQ5ZS5kbGwAZ2V0X0lE
+X0lzTnVsbABnZXRfSUR6bGVjZW5pYV9Jc051bGwAZ2V0X0RhdGFfSXNOdWxsAGdldF9HZW9sb2th
+bGl6YWNqYWRsdWdvc2NfSXNOdWxsAGdldF9HZW9sb2thbGl6YWNqYXN6ZXJva29zY19Jc051bGwA
+c2V0X3Bva29uYW5hT2RsZWdsb3NjX0lzTnVsbABzZXRfY3phc1JlYWxpemFjamlfSXNOdWxsAGdl
+dF9DemFzX0lzTnVsbABnZXRfSURhZHJlc3VfSXNOdWxsAFNldE51bGwAc2V0X0l0ZW0AU3lzdGVt
+AHJlc291cmNlTWFuAFRpbWVTcGFuAFNjcmlwdE1haW4AQXNpbgBwcmV2TG9uAFN5c3RlbS5Db25m
+aWd1cmF0aW9uAFN5c3RlbS5HbG9iYWxpemF0aW9uAG9wX1N1YnRyYWN0aW9uAFN5c3RlbS5SZWZs
+ZWN0aW9uAEludmFsaWRPcGVyYXRpb25FeGNlcHRpb24AU3RyaW5nQ29tcGFyaXNvbgBDdWx0dXJl
+SW5mbwBPdXRwdXROYW1lTWFwAE91dHB1dE1hcABJbnB1dDBCdWZmZXIAUGlwZWxpbmVCdWZmZXIA
+U2NyaXB0QnVmZmVyAGdldF9SZXNvdXJjZU1hbmFnZXIALmN0b3IALmNjdG9yAGdldF9DemFzAFN5
+c3RlbS5EaWFnbm9zdGljcwBnZXRfVG90YWxTZWNvbmRzAFN5c3RlbS5SdW50aW1lLkNvbXBpbGVy
+U2VydmljZXMAU3lzdGVtLlJlc291cmNlcwBTQ18xOTJiZDExM2VlYjI0ODJhODE2NWU1Yjk3ZjQw
+NjQ5ZS5Qcm9wZXJ0aWVzLlJlc291cmNlcy5yZXNvdXJjZXMARGVidWdnaW5nTW9kZXMAU0NfMTky
+YmQxMTNlZWIyNDgyYTgxNjVlNWI5N2Y0MDY0OWUuUHJvcGVydGllcwBWYXJpYWJsZXMAcHJldklE
+YWRyZXMAQnVmZmVyQ29sdW1uSW5kZXhlcwBHZXRDb2x1bW5JbmRleGVzAFNldHRpbmdzAEVxdWFs
+cwBDb25uZWN0aW9ucwBDb3MAcHJldkxhdABPYmplY3QARW5kT2ZSb3dzZXQAZ2V0X0RlZmF1bHQA
+VXNlckNvbXBvbmVudABQYXJlbnRDb21wb25lbnQAU2NyaXB0Q29tcG9uZW50AE1pY3Jvc29mdC5T
+cWxTZXJ2ZXIuVHhTY3JpcHQAU3FydABNaWNyb3NvZnQuU3FsU2VydmVyLlBpcGVsaW5lSG9zdABJ
+bnB1dDBfUHJvY2Vzc0lucHV0AGdldF9JRGFkcmVzdQBJbnB1dDBfUHJvY2Vzc0lucHV0Um93AE5l
+eHRSb3cAZ2V0X0Fzc2VtYmx5AAAAgJtJAHMATgB1AGwAbAAgAHAAcgBvAHAAZQByAHQAeQAgAGMA
+YQBuAG4AbwB0ACAAYgBlACAAcwBlAHQAIAB0AG8AIABGAGEAbABzAGUALgAgAEEAcwBzAGkAZwBu
+ACAAYQAgAHYAYQBsAHUAZQAgAHQAbwAgAHQAaABlACAAYwBvAGwAdQBtAG4AIABpAG4AcwB0AGUA
+YQBkAC4AAA9JAG4AcAB1AHQAIAAwAABxUwBDAF8AMQA5ADIAYgBkADEAMQAzAGUAZQBiADIANAA4
+ADIAYQA4ADEANgA1AGUANQBiADkANwBmADQAMAA2ADQAOQBlAC4AUAByAG8AcABlAHIAdABpAGUA
+cwAuAFIAZQBzAG8AdQByAGMAZQBzAADgeuu1vFXvRrghZ7nV+a+fAAQgAQEIAyAAAQUgAQEREQQg
+AQEOBSABARFhDgcJETkRORE9DQgNDQ0NBiABETkRPQgAAhE9ETkROQMgAA0EAAENDQkgAwESRR0I
+EkkDBhJFAwYdCAQgAQgIBCABAggFIAEROQgFIAERPQgEIAENCAUgAgEIHAMgAAIHIAICDhGAgQUg
+AR0ICAgAARKAhRGAiQUgABKAjQcgAgEOEoCNCLd6XFYZNOCJCImEXc2AgMyRAwYROQIGCAIGDQMG
+EhQDBhIYAwYSTQMGElkDBhJdAwYSIAUgAQESDAMgAAgEIAAROQQgABE9BCABAQ0EIAEBAgkgBAEI
+DhJFEkkFIAEBEk0EAAASWQQAABJdBQABARJdBAAAEiADAAABAygACAMoAAIEKAAROQQoABE9AygA
+DQQIABJZBAgAEl0ECAASIAgBAAgAAAAAAB4BAAEAVAIWV3JhcE5vbkV4Y2VwdGlvblRocm93cwEI
+AQACAAAAAAAoAQAjU0NfMTkyYmQxMTNlZWIyNDgyYTgxNjVlNWI5N2Y0MDY0OWUAAAUBAAAAABYB
+ABFDb3B5cmlnaHQgQCAgMjAyMwAASQEAGi5ORVRGcmFtZXdvcmssVmVyc2lvbj12NC43AQBUDhRG
+cmFtZXdvcmtEaXNwbGF5TmFtZRIuTkVUIEZyYW1ld29yayA0LjcEAQAAAAAAALQAAADOyu++AQAA
+AJEAAABsU3lzdGVtLlJlc291cmNlcy5SZXNvdXJjZVJlYWRlciwgbXNjb3JsaWIsIFZlcnNpb249
+NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5
+I1N5c3RlbS5SZXNvdXJjZXMuUnVudGltZVJlc291cmNlU2V0AgAAAAAAAAAAAAAAUEFEUEFEULQA
+AACMNwAAAAAAAAAAAACmNwAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmDcAAAAAAAAAAAAAAABf
+Q29yRGxsTWFpbgBtc2NvcmVlLmRsbAAAAAAA/yUAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAEAEAAAABgAAIAAAAAAAAAAAAAAAAAAAAEAAQAAADAAAIAAAAAAAAAAAAAAAAAAAAEAAAAAAEgA
 AABYQAAA7AMAAAAAAAAAAAAA7AM0AAAAVgBTAF8AVgBFAFIAUwBJAE8ATgBfAEkATgBGAE8AAAAA
@@ -4017,16 +4058,16 @@ AQBWAGEAcgBGAGkAbABlAEkAbgBmAG8AAAAAACQABAAAAFQAcgBhAG4AcwBsAGEAdABpAG8AbgAA
 AAAAAACwBEwDAAABAFMAdAByAGkAbgBnAEYAaQBsAGUASQBuAGYAbwAAACgDAAABADAAMAAwADAA
 MAA0AGIAMAAAABoAAQABAEMAbwBtAG0AZQBuAHQAcwAAAAAAAAAiAAEAAQBDAG8AbQBwAGEAbgB5
 AE4AYQBtAGUAAAAAAAAAAABwACQAAQBGAGkAbABlAEQAZQBzAGMAcgBpAHAAdABpAG8AbgAAAAAA
-UwBDAF8AOQAxADcAOAA4ADYAYQBjAGIANgA5ADYANABmADAAZAA4ADMAOABhAGQAMAA3ADcAZQBh
-AGEANgA4AGQAZQAwAAAAMAAIAAEARgBpAGwAZQBWAGUAcgBzAGkAbwBuAAAAAAAxAC4AMAAuADAA
-LgAwAAAAcAAoAAEASQBuAHQAZQByAG4AYQBsAE4AYQBtAGUAAABTAEMAXwA5ADEANwA4ADgANgBh
-AGMAYgA2ADkANgA0AGYAMABkADgAMwA4AGEAZAAwADcANwBlAGEAYQA2ADgAZABlADAALgBkAGwA
+UwBDAF8AMQA5ADIAYgBkADEAMQAzAGUAZQBiADIANAA4ADIAYQA4ADEANgA1AGUANQBiADkANwBm
+ADQAMAA2ADQAOQBlAAAAMAAIAAEARgBpAGwAZQBWAGUAcgBzAGkAbwBuAAAAAAAxAC4AMAAuADAA
+LgAwAAAAcAAoAAEASQBuAHQAZQByAG4AYQBsAE4AYQBtAGUAAABTAEMAXwAxADkAMgBiAGQAMQAx
+ADMAZQBlAGIAMgA0ADgAMgBhADgAMQA2ADUAZQA1AGIAOQA3AGYANAAwADYANAA5AGUALgBkAGwA
 bAAAAEgAEgABAEwAZQBnAGEAbABDAG8AcAB5AHIAaQBnAGgAdAAAAEMAbwBwAHkAcgBpAGcAaAB0
 ACAAQAAgACAAMgAwADIAMwAAACoAAQABAEwAZQBnAGEAbABUAHIAYQBkAGUAbQBhAHIAawBzAAAA
-AAAAAAAAeAAoAAEATwByAGkAZwBpAG4AYQBsAEYAaQBsAGUAbgBhAG0AZQAAAFMAQwBfADkAMQA3
-ADgAOAA2AGEAYwBiADYAOQA2ADQAZgAwAGQAOAAzADgAYQBkADAANwA3AGUAYQBhADYAOABkAGUA
-MAAuAGQAbABsAAAAaAAkAAEAUAByAG8AZAB1AGMAdABOAGEAbQBlAAAAAABTAEMAXwA5ADEANwA4
-ADgANgBhAGMAYgA2ADkANgA0AGYAMABkADgAMwA4AGEAZAAwADcANwBlAGEAYQA2ADgAZABlADAA
+AAAAAAAAeAAoAAEATwByAGkAZwBpAG4AYQBsAEYAaQBsAGUAbgBhAG0AZQAAAFMAQwBfADEAOQAy
+AGIAZAAxADEAMwBlAGUAYgAyADQAOAAyAGEAOAAxADYANQBlADUAYgA5ADcAZgA0ADAANgA0ADkA
+ZQAuAGQAbABsAAAAaAAkAAEAUAByAG8AZAB1AGMAdABOAGEAbQBlAAAAAABTAEMAXwAxADkAMgBi
+AGQAMQAxADMAZQBlAGIAMgA0ADgAMgBhADgAMQA2ADUAZQA1AGIAOQA3AGYANAAwADYANAA5AGUA
 AAA0AAgAAQBQAHIAbwBkAHUAYwB0AFYAZQByAHMAaQBvAG4AAAAxAC4AMAAuADAALgAwAAAAOAAI
 AAEAQQBzAHMAZQBtAGIAbAB5ACAAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -4036,7 +4077,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAADAAAAEg2AAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAADAAAALg3AAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -4052,7 +4093,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   dataType="System.String"
                   description="Specifies the name of the Microsoft Visual Studio Tools for Applications project. Project names must be unique within a package."
                   name="VSTAProjectName"
-                  typeConverter="NOTBROWSABLE">SC_917886acb6964f0d838ad077eaa68de0</property>
+                  typeConverter="NOTBROWSABLE">SC_192bd113eeb2482a8165e5b97f40649e</property>
                 <property
                   dataType="System.String"
                   description="Specifies the programming language used by the script."
@@ -4081,7 +4122,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   dataType="System.String"
                   description="Checksum to match component metedata against compiled codes."
                   name="MetadataChecksum140"
-                  typeConverter="NOTBROWSABLE">CE</property>
+                  typeConverter="NOTBROWSABLE">43</property>
                 <property
                   dataType="System.String"
                   name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
@@ -4121,6 +4162,16 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       cachedDataType="r8"
                       cachedName="Geolokalizacja_szerokosc"
                       lineageId="Package\inserting into Etap\Sort.Outputs[Sort Output].Columns[Geolokalizacja_szerokosc]" />
+                    <inputColumn
+                      refId="Package\inserting into Etap\Script Component.Inputs[Input 0].Columns[ID]"
+                      cachedDataType="i4"
+                      cachedName="ID"
+                      lineageId="Package\inserting into Etap\Sort.Outputs[Sort Output].Columns[ID]" />
+                    <inputColumn
+                      refId="Package\inserting into Etap\Script Component.Inputs[Input 0].Columns[ID_adresu]"
+                      cachedDataType="i4"
+                      cachedName="ID_adresu"
+                      lineageId="Package\inserting into Etap\Sort.Outputs[Sort Output].Columns[ID_adresu]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -4132,15 +4183,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   synchronousInputId="Package\inserting into Etap\Script Component.Inputs[Input 0]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\inserting into Etap\Script Component.Outputs[Output 0].Columns[pokonana_odleglosc]"
+                      refId="Package\inserting into Etap\Script Component.Outputs[Output 0].Columns[czasRealizacji]"
                       dataType="r8"
-                      lineageId="Package\inserting into Etap\Script Component.Outputs[Output 0].Columns[pokonana_odleglosc]"
-                      name="pokonana_odleglosc" />
+                      lineageId="Package\inserting into Etap\Script Component.Outputs[Output 0].Columns[czasRealizacji]"
+                      name="czasRealizacji" />
                     <outputColumn
-                      refId="Package\inserting into Etap\Script Component.Outputs[Output 0].Columns[czas_realizacji]"
+                      refId="Package\inserting into Etap\Script Component.Outputs[Output 0].Columns[pokonanaOdleglosc]"
                       dataType="r8"
-                      lineageId="Package\inserting into Etap\Script Component.Outputs[Output 0].Columns[czas_realizacji]"
-                      name="czas_realizacji" />
+                      lineageId="Package\inserting into Etap\Script Component.Outputs[Output 0].Columns[pokonanaOdleglosc]"
+                      name="pokonanaOdleglosc" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -5449,10 +5500,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\inserting into Etap\Sort 4.Inputs[Sort Input].Columns[pokonana_odleglosc]"
+                      refId="Package\inserting into Etap\Sort 4.Inputs[Sort Input].Columns[czasRealizacji]"
                       cachedDataType="r8"
-                      cachedName="pokonana_odleglosc"
-                      lineageId="Package\inserting into Etap\Script Component.Outputs[Output 0].Columns[pokonana_odleglosc]">
+                      cachedName="czasRealizacji"
+                      lineageId="Package\inserting into Etap\Script Component.Outputs[Output 0].Columns[czasRealizacji]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -5465,10 +5516,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\inserting into Etap\Sort 4.Inputs[Sort Input].Columns[czas_realizacji]"
+                      refId="Package\inserting into Etap\Sort 4.Inputs[Sort Input].Columns[pokonanaOdleglosc]"
                       cachedDataType="r8"
-                      cachedName="czas_realizacji"
-                      lineageId="Package\inserting into Etap\Script Component.Outputs[Output 0].Columns[czas_realizacji]">
+                      cachedName="pokonanaOdleglosc"
+                      lineageId="Package\inserting into Etap\Script Component.Outputs[Output 0].Columns[pokonanaOdleglosc]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -5584,29 +5635,29 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\inserting into Etap\Sort 4.Outputs[Sort Output].Columns[pokonana_odleglosc]"
+                      refId="Package\inserting into Etap\Sort 4.Outputs[Sort Output].Columns[czasRealizacji]"
                       dataType="r8"
-                      lineageId="Package\inserting into Etap\Sort 4.Outputs[Sort Output].Columns[pokonana_odleglosc]"
-                      name="pokonana_odleglosc">
+                      lineageId="Package\inserting into Etap\Sort 4.Outputs[Sort Output].Columns[czasRealizacji]"
+                      name="czasRealizacji">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\inserting into Etap\Script Component.Outputs[Output 0].Columns[pokonana_odleglosc]}</property>
+                          name="SortColumnId">#{Package\inserting into Etap\Script Component.Outputs[Output 0].Columns[czasRealizacji]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\inserting into Etap\Sort 4.Outputs[Sort Output].Columns[czas_realizacji]"
+                      refId="Package\inserting into Etap\Sort 4.Outputs[Sort Output].Columns[pokonanaOdleglosc]"
                       dataType="r8"
-                      lineageId="Package\inserting into Etap\Sort 4.Outputs[Sort Output].Columns[czas_realizacji]"
-                      name="czas_realizacji">
+                      lineageId="Package\inserting into Etap\Sort 4.Outputs[Sort Output].Columns[pokonanaOdleglosc]"
+                      name="pokonanaOdleglosc">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\inserting into Etap\Script Component.Outputs[Output 0].Columns[czas_realizacji]}</property>
+                          name="SortColumnId">#{Package\inserting into Etap\Script Component.Outputs[Output 0].Columns[pokonanaOdleglosc]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -5673,14 +5724,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               startId="Package\inserting into Etap\Lookup.Outputs[Lookup No Match Output]" />
             <path
               refId="Package\inserting into Etap.Paths[Merge Join Output1]"
-              endId="Package\inserting into Etap\Sort.Inputs[Sort Input]"
-              name="Merge Join Output"
-              startId="Package\inserting into Etap\Merge Join.Outputs[Merge Join Output]" />
-            <path
-              refId="Package\inserting into Etap.Paths[Merge Join Output]"
               endId="Package\inserting into Etap\Lookup.Inputs[Lookup Input]"
               name="Merge Join Output"
               startId="Package\inserting into Etap\Merge Join 1.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\inserting into Etap.Paths[Merge Join Output]"
+              endId="Package\inserting into Etap\Sort.Inputs[Sort Input]"
+              name="Merge Join Output"
+              startId="Package\inserting into Etap\Merge Join.Outputs[Merge Join Output]" />
             <path
               refId="Package\inserting into Etap.Paths[OLE DB Source Output]"
               endId="Package\inserting into Etap\Sort 1.Inputs[Sort Input]"
@@ -5718,19 +5769,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               startId="Package\inserting into Etap\Sort 2.Outputs[Sort Output]" />
             <path
               refId="Package\inserting into Etap.Paths[Sort Output2]"
-              endId="Package\inserting into Etap\Script Component.Inputs[Input 0]"
-              name="Sort Output"
-              startId="Package\inserting into Etap\Sort.Outputs[Sort Output]" />
-            <path
-              refId="Package\inserting into Etap.Paths[Sort Output3]"
               endId="Package\inserting into Etap\Merge Join 1.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\inserting into Etap\Sort 3.Outputs[Sort Output]" />
             <path
-              refId="Package\inserting into Etap.Paths[Sort Output4]"
+              refId="Package\inserting into Etap.Paths[Sort Output3]"
               endId="Package\inserting into Etap\Merge Join 1.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\inserting into Etap\Sort 4.Outputs[Sort Output]" />
+            <path
+              refId="Package\inserting into Etap.Paths[Sort Output4]"
+              endId="Package\inserting into Etap\Script Component.Inputs[Input 0]"
+              name="Sort Output"
+              startId="Package\inserting into Etap\Sort.Outputs[Sort Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -12659,7 +12710,7 @@ where [refTable].[nr_zlecenie] = ?</property>
         <NodeLayout
           Size="162,42"
           Id="Package\inserting into Etap\Script Component"
-          TopLeft="227.986392644566,989.600375816117" />
+          TopLeft="225.510207922049,973.815128103436" />
         <NodeLayout
           Size="183,42"
           Id="Package\inserting into Etap\retriving Sortownia ID"
@@ -12668,6 +12719,10 @@ where [refTable].[nr_zlecenie] = ?</property>
           Size="139,42"
           Id="Package\inserting into Etap\Merge Join 1"
           TopLeft="426.462580602765,1169.90756300989" />
+        <NodeLayout
+          Size="106,42"
+          Id="Package\inserting into Etap\Sort 1"
+          TopLeft="376.700685268125,696.600375633797" />
         <NodeLayout
           Size="171,42"
           Id="Package\inserting into Etap\OLE DB Destination"
@@ -12687,23 +12742,23 @@ where [refTable].[nr_zlecenie] = ?</property>
         <NodeLayout
           Size="107,42"
           Id="Package\inserting into Etap\Sort 4"
-          TopLeft="263.129247269431,1073.24089634322" />
+          TopLeft="253.129247099132,1073.24089634322" />
         <NodeLayout
           Size="154,42"
           Id="Package\inserting into Etap\Derived Column"
           TopLeft="590.573691713876,102.574229676556" />
         <NodeLayout
-          Size="138,42"
+          Size="139,42"
           Id="Package\inserting into Etap\retriving Typ"
-          TopLeft="604.081642940511,350.609712511977" />
+          TopLeft="601.081642940511,344.609712511977" />
         <NodeLayout
           Size="153,42"
           Id="Package\inserting into Etap\retriving Paczka"
           TopLeft="597,642" />
         <NodeLayout
-          Size="106,42"
-          Id="Package\inserting into Etap\Sort 1"
-          TopLeft="376.700685268125,696.600375633797" />
+          Size="107,42"
+          Id="Package\inserting into Etap\Sort 3"
+          TopLeft="615.351469491654,1076.57422967656" />
         <NodeLayout
           Size="98,42"
           Id="Package\inserting into Etap\Sort"
@@ -12733,9 +12788,9 @@ where [refTable].[nr_zlecenie] = ?</property>
           Id="Package\inserting into Etap\retrieveing Pracownik"
           TopLeft="578.462580602765,736.907563009889" />
         <NodeLayout
-          Size="107,42"
-          Id="Package\inserting into Etap\Sort 3"
-          TopLeft="615.351469491654,1076.57422967656" />
+          Size="106,42"
+          Id="Package\inserting into Etap\Sort 2"
+          TopLeft="120.772109387452,690.629787237632" />
         <NodeLayout
           Size="130,42"
           Id="Package\inserting into Etap\Merge Join"
@@ -12748,58 +12803,20 @@ where [refTable].[nr_zlecenie] = ?</property>
           Size="154,42"
           Id="Package\inserting into Etap\Conditional Split"
           TopLeft="598.653074382694,268.655465293508" />
-        <NodeLayout
-          Size="106,42"
-          Id="Package\inserting into Etap\Sort 2"
-          TopLeft="120.772109387452,690.629787237632" />
-        <EdgeLayout
-          Id="Package\inserting into Etap.Paths[Data Conversion Output]"
-          TopLeft="672.22960493238,216.831934734199">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,51.823530559309"
-              Start="0,0"
-              End="0,44.323530559309">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,44.323530559309" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\inserting into Etap.Paths[Sort Output4]"
-          TopLeft="316.629247269431,1115.24089634322">
+          TopLeft="305.319728787833,925.49449331303">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="157.5,54.6666666666667"
+              EndConnector="0,48.3206347904064"
               Start="0,0"
-              End="157.5,47.1666666666667">
+              End="0,40.8206347904064">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28.4267425320056" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,28.4267425320056"
-                    Point2="0,32.4267425320056"
-                    Point3="4,32.4267425320056" />
-                  <mssgle:LineSegment
-                    End="153.5,32.4267425320056" />
-                  <mssgle:CubicBezierSegment
-                    Point1="153.5,32.4267425320056"
-                    Point2="157.5,32.4267425320056"
-                    Point3="157.5,36.4267425320056" />
-                  <mssgle:LineSegment
-                    End="157.5,47.1666666666667" />
+                    End="0,40.8206347904064" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -12810,6 +12827,40 @@ where [refTable].[nr_zlecenie] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\inserting into Etap.Paths[Sort Output3]"
+          TopLeft="306.729247099132,1114.84089634322">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="167.466666836966,55.0666666666702"
+              Start="0,0"
+              End="167.466666836966,47.5666666666702">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.6645454545476" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.6645454545476"
+                    Point2="0,32.6645454545476"
+                    Point3="4,32.6645454545476" />
+                  <mssgle:LineSegment
+                    End="163.466666836966,32.6645454545476" />
+                  <mssgle:CubicBezierSegment
+                    Point1="163.466666836966,32.6645454545476"
+                    Point2="167.466666836966,32.6645454545476"
+                    Point3="167.466666836966,36.6645454545476" />
+                  <mssgle:LineSegment
+                    End="167.466666836966,47.5666666666702" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\inserting into Etap.Paths[Sort Output2]"
           TopLeft="668.851469491654,1118.57422967656">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12834,28 +12885,6 @@ where [refTable].[nr_zlecenie] = ?</property>
                     Point3="-172.888888888889,29.6666666666667" />
                   <mssgle:LineSegment
                     End="-172.888888888889,43.8333333333335" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\inserting into Etap.Paths[Sort Output2]"
-          TopLeft="306.557821149092,925.49449331303">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,64.1058825030871"
-              Start="0,0"
-              End="0,56.6058825030871">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,56.6058825030871" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -12934,42 +12963,42 @@ where [refTable].[nr_zlecenie] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\inserting into Etap.Paths[proper Etap]"
-          TopLeft="674.367358661602,310.655465293508">
+          TopLeft="673.117358661602,310.655465293508">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,39.9542472184691"
+              EndConnector="0,33.9542472184691"
               Start="0,0"
-              End="0,32.4542472184691">
+              End="0,26.4542472184691">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,32.4542472184691" />
+                    End="0,26.4542472184691" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-26.42759765625,10.5860103279845,52.8551953125,11.2822265625"
+              BoundingBox="-26.42759765625,7.58601032798455,52.8551953125,11.2822265625"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\inserting into Etap.Paths[Output 0]"
-          TopLeft="312.807819956999,1031.60037581612">
+          TopLeft="306.719727510591,1015.41512810344">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,41.6405205271053"
+              EndConnector="0,57.8257682397839"
               Start="0,0"
-              End="0,34.1405205271053">
+              End="0,50.3257682397839">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,34.1405205271053" />
+                    End="0,50.3257682397839" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13046,28 +13075,6 @@ where [refTable].[nr_zlecenie] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\inserting into Etap.Paths[Merge Join Output1]"
-          TopLeft="306.286394901028,831.49449458927">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,52.3999987237596"
-              Start="0,0"
-              End="0,44.8999987237596">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,44.8999987237596" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\inserting into Etap.Paths[Merge Join Output]"
           TopLeft="496.684802824987,1211.90756300989">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -13080,6 +13087,28 @@ where [refTable].[nr_zlecenie] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,31.6111111111109" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\inserting into Etap.Paths[Merge Join Output]"
+          TopLeft="306.286394901028,831.49449458927">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52.3999987237596"
+              Start="0,0"
+              End="0,44.8999987237596">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.8999987237596" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13186,25 +13215,25 @@ where [refTable].[nr_zlecenie] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\inserting into Etap.Paths[Lookup Match Output4]"
-          TopLeft="670.605445104971,392.609712511977">
+          TopLeft="669.355445104971,386.609712511977">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,68.853406053467"
+              EndConnector="0,74.853406053467"
               Start="0,0"
-              End="0,61.353406053467">
+              End="0,67.353406053467">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,61.353406053467" />
+                    End="0,67.353406053467" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,24.8720155267335,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,27.8720155267335,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -13326,6 +13355,28 @@ where [refTable].[nr_zlecenie] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\inserting into Etap.Paths[Data Conversion Output]"
+          TopLeft="672.22960493238,216.831934734199">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51.823530559309"
+              Start="0,0"
+              End="0,44.323530559309">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.323530559309" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -13335,7 +13386,7 @@ where [refTable].[nr_zlecenie] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -13571,7 +13622,7 @@ where [refTable].[nr_zlecenie] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
