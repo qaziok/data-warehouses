@@ -36,7 +36,7 @@ create table zlecenie (
 create table miejsce (
 	id_miejsce int primary key identity(1,1) not null,
 	nr_miejse int not null,
-	typ varchar(20) not null CHECK (typ IN('paczkomat', 'sortownia')) DEFAULT 'sortownia',
+	typ varchar(20) CHECK (typ IN('paczkomat', 'sortownia', '')) DEFAULT 'sortownia',
 	miasto Varchar(40) not null,
 	region Varchar(40) not null,
 	ilosc_pracownikow varchar(30) CHECK (ilosc_pracownikow IN('', 'ma³a', 'œrednia', 'du¿a')) DEFAULT 'œrednia',
