@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="22"
-  DTS:VersionGUID="{691E7374-4518-4585-ADF9-F5B9A10145E8}">
+  DTS:VersionBuild="23"
+  DTS:VersionGUID="{50BF37BD-57F4-4D6E-8A4D-B859651F9F9F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -23,7 +23,7 @@
       DTS:ObjectName="insertIntoData.sql">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="C:\Users\User\Documents\sem5\HD\data-warehouses\data_warehouse_implementation\ETL\OutPostIntegreationService\Nowy folder\insertIntoData.sql" />
+          DTS:ConnectionString="D:\semestr_5\data-warehouses\data_warehouse_implementation\ETL\OutPostIntegreationService\Nowy folder\insertIntoData.sql" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -35,7 +35,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=LAPTOP-46GI6A46;Initial Catalog=HDlabDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{A9BD563B-0190-43E9-8457-C8A93A25E3AA}LAPTOP-46GI6A46.HDlabDB;" />
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=HDlabDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{A9BD563B-0190-43E9-8457-C8A93A25E3AA}LAPTOP-46GI6A46.HDlabDB;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -47,7 +47,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=LAPTOP-46GI6A46;Initial Catalog=OutPostdw;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{303E0267-D024-45FA-AE3F-1A38DDF323FC}LAPTOP-46GI6A46.OutPostdw;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=OutPostdw;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{303E0267-D024-45FA-AE3F-1A38DDF323FC}LAPTOP-46GI6A46.OutPostdw;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
