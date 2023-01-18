@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">LAPTOP-46GI6A46</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAANwFQZIeFj0KGcGywRoJQqAAAAAACAAAAAAAQZgAAAAEAACAAAABg+gB+ruK+zAyLj5Y4MCyUgtm6jCgzfRFmzeam6caq1AAAAAAOgAAAAAIAACAAAADJWnti1NaY2CL98GxoSF9/AapQhYaj5VANWnFr1UxLR5AAAAC4CRElME9JkO0rLfQQdzGi4esE/R3GSmAxJP9tE6aBeG4+UPwRCjNeYueDa1gTPDFtX3Q7MjQeFndeRrwuXPwF3GerxZ6AdYMVnYEDCVucni6uGGEb+j4gUmRCh00tiHOWzN2uTAWc5rGV0uU10nraTWBZaSK6ltw9ZO7uwq2MbLWSmnumha2xfVk+ntgK/5VAAAAAOG/FwfSiu9rJoB1kk5wZ6O0npNfhpIYzPgkk0Ni17/ueI2h5a/qkbZevA2JBUJEg06nsXNa31rtnkmOl0ewsMg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAaeC1+NxWXEiyfIJZhISiwgAAAAACAAAAAAAQZgAAAAEAACAAAAA5OlUomCTg786rwQLWUmwcw8gx0/ZukjIb0a1G00ndTwAAAAAOgAAAAAIAACAAAAAQUdt2agkr2KiwnW781uxJhnvmu0c1PhVp6xqWEVqMkpAAAAAO24nLt+JHmyidGeZIp7QJzvBngGkqZLp6RtiziWZF6fvbgTsVNvNODy/v+H+GABlLsPvaWeXqyULpnbKf3qGW//MrLScnQVdCaoQN4XpOYG+AbLuPBxh5oG1gh/R2pVCS1Z9jnlRwuo7+mRDDCY2q7k7SXzUTFlJNVjUQWQyqHAcc0vNy2Z5mbTF+i8yp32JAAAAArhNwIDDSGLwwVPdlhBpsTPB9ATsz1QfFa78GEAK9TNEQV7G5GJz72+tUlOef8+puoJJhmH9nxpWQHmsfix6aRg==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -43,10 +43,10 @@
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">22</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">23</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{691E7374-4518-4585-ADF9-F5B9A10145E8}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{50BF37BD-57F4-4D6E-8A4D-B859651F9F9F}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -79,7 +79,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">C:\Users\User\Documents\sem5\HD\data-warehouses\data_warehouse_implementation\ETL\OutPostIntegreationService\Nowy folder\insertIntoData.sql</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">D:\semestr_5\data-warehouses\data_warehouse_implementation\ETL\OutPostIntegreationService\Nowy folder\insertIntoData.sql</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -109,7 +109,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Data Source=LAPTOP-46GI6A46;Initial Catalog=HDlabDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{A9BD563B-0190-43E9-8457-C8A93A25E3AA}LAPTOP-46GI6A46.HDlabDB;</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Data Source=localhost;Initial Catalog=HDlabDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{A9BD563B-0190-43E9-8457-C8A93A25E3AA}LAPTOP-46GI6A46.HDlabDB;</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -213,7 +213,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">LAPTOP-46GI6A46</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">localhost</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -257,7 +257,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Data Source=LAPTOP-46GI6A46;Initial Catalog=OutPostdw;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{303E0267-D024-45FA-AE3F-1A38DDF323FC}LAPTOP-46GI6A46.OutPostdw;Auto Translate=False;</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Data Source=localhost;Initial Catalog=OutPostdw;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{303E0267-D024-45FA-AE3F-1A38DDF323FC}LAPTOP-46GI6A46.OutPostdw;</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -361,7 +361,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">LAPTOP-46GI6A46</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">localhost</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -387,10 +387,10 @@
                 <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">156</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">157</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{98FE4AA4-018C-4BA8-B5F2-3E458E95B552}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{AC5D272D-69CB-4418-B353-0850E259F488}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -423,7 +423,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\User\Documents\sem5\HD\data-warehouses\database_schema\dataSources\T1_T2\workers_T1_T2.xls;Extended Properties="EXCEL 8.0;HDR=YES";</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\semestr_5\data-warehouses\database_schema\dataSources\T0_T1\workers_T0_T1.xls;Extended Properties="EXCEL 8.0;HDR=YES";</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -438,7 +438,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">C:\Users\User\Documents\sem5\HD\data-warehouses\database_schema\dataSources\T1_T2\workers_T1_T2.xls</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">D:\semestr_5\data-warehouses\database_schema\dataSources\T0_T1\workers_T0_T1.xls</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -511,7 +511,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">C:\Users\User\Documents\sem5\HD\data-warehouses\database_schema\dataSources\T1_T2\workers_T1_T2.xls</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">D:\semestr_5\data-warehouses\database_schema\dataSources\T0_T1\workers_T0_T1.xls</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
