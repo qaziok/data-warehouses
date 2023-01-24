@@ -22,6 +22,7 @@ DBCC CHECKIDENT ('Osoba', RESEED, 0);
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 BULK INSERT Adres FROM 'D:\semestr_5\data-warehouses\data_generator\data\T0_T1\addresses_T0_T1.bulk' WITH (CODEPAGE = 'ACP',FIELDTERMINATOR='|')
 BULK INSERT Osoba FROM 'D:\semestr_5\data-warehouses\data_generator\data\T0_T1\people_T0_T1.bulk' WITH (CODEPAGE = 'ACP',FIELDTERMINATOR='|')
 BULK INSERT Paczka FROM 'D:\semestr_5\data-warehouses\data_generator\data\T0_T1\packages_T0_T1.bulk' WITH (CODEPAGE = 'ACP',FIELDTERMINATOR='|')
@@ -34,6 +35,8 @@ BULK INSERT Etap FROM 'D:\semestr_5\data-warehouses\data_generator\data\T0_T1\st
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 BULK INSERT Adres FROM 'C:\Users\User\Documents\sem5\HD\data-warehouses\database_schema\dataSources\T1_T2\addresses_T1_T2.bulk' WITH (CODEPAGE = 'ACP',FIELDTERMINATOR='|')
 BULK INSERT Osoba FROM 'C:\Users\User\Documents\sem5\HD\data-warehouses\database_schema\dataSources\T1_T2\people_T1_T2.bulk' WITH (CODEPAGE = 'ACP',FIELDTERMINATOR='|')
 BULK INSERT Paczka FROM 'C:\Users\User\Documents\sem5\HD\data-warehouses\database_schema\dataSources\T1_T2\packages_T1_T2.bulk' WITH (CODEPAGE = 'ACP',FIELDTERMINATOR='|')
@@ -44,6 +47,9 @@ BULK INSERT Uzytkownik FROM 'C:\Users\User\Documents\sem5\HD\data-warehouses\dat
 BULK INSERT Zlecenie FROM 'C:\Users\User\Documents\sem5\HD\data-warehouses\database_schema\dataSources\T1_T2\orders_T1_T2.bulk' WITH (CODEPAGE = 'ACP',FIELDTERMINATOR='|', KEEPNULLS )
 BULK INSERT Etap FROM 'C:\Users\User\Documents\sem5\HD\data-warehouses\database_schema\dataSources\T1_T2\stages_T1_T2.bulk' WITH (CODEPAGE = 'ACP',FIELDTERMINATOR='|', KEEPNULLS)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
