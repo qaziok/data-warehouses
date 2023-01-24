@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 ﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="6c2dc1e8-d768-4baf-8bcb-cded6c5bb822" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+=======
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="ce6f1964-6d02-4bc6-ba78-b627d5835962" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+>>>>>>> Stashed changes
   <ID>Data</ID>
   <Name>Data</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -68,47 +72,109 @@
   </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
+<<<<<<< Updated upstream
   <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="6032ff2f-6d73-43d0-b006-172895b1417b">
     <DataSourceViewID>Out Postdw</DataSourceViewID>
   </Source>
   <ErrorConfiguration dwd:design-time-name="5abc28ef-7473-46c2-8a25-02a002ebd434">
+=======
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="c2ad0bfa-44c5-4556-862a-6c6c0744b418">
+    <DataSourceViewID>OutPostdw</DataSourceViewID>
+  </Source>
+  <Type>Time</Type>
+  <ErrorConfiguration dwd:design-time-name="72bf734e-a308-4f08-9167-c2a607d7b49f">
+>>>>>>> Stashed changes
     <KeyNotFound>ReportAndStop</KeyNotFound>
     <KeyDuplicate>ReportAndStop</KeyDuplicate>
     <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
   </ErrorConfiguration>
   <CurrentStorageMode>Molap</CurrentStorageMode>
   <Attributes>
+<<<<<<< Updated upstream
     <Attribute dwd:design-time-name="8b413910-4d81-4b52-8818-f7917b0fb1d3">
+=======
+    <Attribute dwd:design-time-name="c260b1ac-034d-4cd3-9fb0-838fab89d458">
+>>>>>>> Stashed changes
       <ID>Id Data</ID>
       <Name>Id Data</Name>
       <Usage>Key</Usage>
+      <EstimatedCount>11323</EstimatedCount>
       <KeyColumns>
+<<<<<<< Updated upstream
         <KeyColumn dwd:design-time-name="df5dd1c2-e5b6-41bf-87c9-bb8be043c83f">
           <DataType>Integer</DataType>
           <Source xsi:type="ColumnBinding" dwd:design-time-name="7a7d8c35-6df6-49bb-88b0-b516ceb81884">
+=======
+        <KeyColumn dwd:design-time-name="6c23e2b7-f950-4166-844b-0d50e54cfb26">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1e7f0a26-09b3-41e5-8a3d-579eeff66c28">
+>>>>>>> Stashed changes
             <TableID>dbo_data</TableID>
             <ColumnID>id_data</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
       <AttributeRelationships>
+<<<<<<< Updated upstream
         <AttributeRelationship dwd:design-time-name="ad3bf241-e34d-4612-9148-68ab181758ce">
           <AttributeID>Miesiac</AttributeID>
           <Name>Miesiac</Name>
         </AttributeRelationship>
+=======
+        <AttributeRelationship dwd:design-time-name="246aa621-42b9-46ef-a141-b9903f5a7ffb">
+          <AttributeID>Rok</AttributeID>
+          <Name>Rok</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d321e8fb-2ab5-4626-86a2-7aca45238bfb">
+          <AttributeID>Miesiac</AttributeID>
+          <Name>Miesiac</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9e820830-493a-4bb8-94fc-bd6a57c6e5fd">
+          <AttributeID>Dzien</AttributeID>
+          <Name>Dzien</Name>
+        </AttributeRelationship>
+>>>>>>> Stashed changes
       </AttributeRelationships>
       <OrderBy>Key</OrderBy>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
+<<<<<<< Updated upstream
     <Attribute dwd:design-time-name="aaf55268-c12b-4497-9511-82a6bc4d32d3">
+=======
+    <Attribute dwd:design-time-name="fdd2543e-36a5-494b-9f11-81ad2fd9dbff">
+      <ID>Rok</ID>
+      <Name>Rok</Name>
+      <Type>Years</Type>
+      <EstimatedCount>31</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="feece071-a6bd-4d0f-97d7-e55b2ed7a474">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c517f291-2e85-4f8e-ad29-b639f926532f">
+            <TableID>dbo_data</TableID>
+            <ColumnID>rok</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b45746d4-5572-40af-9b99-313c6b66a0f5">
+>>>>>>> Stashed changes
       <ID>Miesiac</ID>
       <Name>Miesiac</Name>
       <KeyColumns>
+<<<<<<< Updated upstream
         <KeyColumn dwd:design-time-name="84763df9-e77a-4ae5-992f-7db58102e4e9">
           <DataType>WChar</DataType>
           <DataSize>20</DataSize>
           <Source xsi:type="ColumnBinding" dwd:design-time-name="71a95de9-4d7f-4308-afd0-2e3c2dfb8d92">
+=======
+        <KeyColumn dwd:design-time-name="c5b9726e-203f-4093-9f44-b804dfad4bff">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="23f33363-b6c1-4362-9bdd-cb76bf74e87c">
+>>>>>>> Stashed changes
             <TableID>dbo_data</TableID>
             <ColumnID>miesiac</ColumnID>
           </Source>
@@ -117,6 +183,48 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
+<<<<<<< Updated upstream
   </Attributes>
+=======
+    <Attribute dwd:design-time-name="96da9183-3587-49ec-aa5c-6b3dd72af0a8">
+      <ID>Dzien</ID>
+      <Name>Dzien</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e26eca20-78fc-4691-940e-2a4e20b7be56">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="169ff0f4-9174-4028-ac93-0c34684b0b28">
+            <TableID>dbo_data</TableID>
+            <ColumnID>dzien</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="5d516ccb-1b56-44fc-a614-6df98d224b9b">
+      <ID>Hierarchy</ID>
+      <Name>hierarhia_daty</Name>
+      <Levels>
+        <Level dwd:design-time-name="5383d4a7-a97c-4bac-a63a-8acd0a46613a">
+          <ID>Rok</ID>
+          <Name>Rok</Name>
+          <SourceAttributeID>Rok</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="14252648-4102-4b1d-9b63-31a745364465">
+          <ID>Miesiac</ID>
+          <Name>Miesiac</Name>
+          <SourceAttributeID>Miesiac</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="e0319ef8-98f2-4967-8746-39ff4caa886c">
+          <ID>Dzien</ID>
+          <Name>Dzien</Name>
+          <SourceAttributeID>Dzien</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+>>>>>>> Stashed changes
   <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
 </Dimension>

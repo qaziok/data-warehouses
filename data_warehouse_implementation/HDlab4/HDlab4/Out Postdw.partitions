@@ -1,45 +1,797 @@
+<<<<<<< Updated upstream:data_warehouse_implementation/HDlab4/HDlab4/Out Postdw.partitions
 ﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="44516442-39e8-47d1-b0ea-f1ba2018e6b8" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Out Postdw</ID>
+=======
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="f4b4d39e-4886-4f79-ba10-ea82ef637f45" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>OutPostdw</ID>
+>>>>>>> Stashed changes:data_warehouse_implementation/HDlab4/HDlab4/OutPostdw.partitions
   <MeasureGroups>
     <MeasureGroup>
       <ID>Etap</ID>
       <Partitions>
+<<<<<<< Updated upstream:data_warehouse_implementation/HDlab4/HDlab4/Out Postdw.partitions
         <Partition dwd:design-time-name="080550c5-6bc8-4832-bb94-9b29f9b64d6c">
+=======
+        <Partition dwd:design-time-name="93028f0b-186c-42fd-ad23-6f1b4ba0d179">
+>>>>>>> Stashed changes:data_warehouse_implementation/HDlab4/HDlab4/OutPostdw.partitions
           <ID>Etap</ID>
           <Name>Etap</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
+<<<<<<< Updated upstream:data_warehouse_implementation/HDlab4/HDlab4/Out Postdw.partitions
           <Source xsi:type="DsvTableBinding" dwd:design-time-name="75f78869-3a47-40f8-974e-24518e6d1ede">
             <DataSourceViewID>Out Postdw</DataSourceViewID>
+=======
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="738619b5-12ca-4458-85d1-a33f28b7c57f">
+            <DataSourceViewID>OutPostdw</DataSourceViewID>
+>>>>>>> Stashed changes:data_warehouse_implementation/HDlab4/HDlab4/OutPostdw.partitions
             <TableID>dbo_etap</TableID>
           </Source>
-          <StorageMode>Molap</StorageMode>
+          <StorageMode>Rolap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
+          <EstimatedRows>38362</EstimatedRows>
+          <AggregationDesignID>AggregationDesign</AggregationDesignID>
         </Partition>
       </Partitions>
+      <AggregationDesigns>
+        <AggregationDesign>
+          <ID>AggregationDesign</ID>
+          <Name>AggregationDesign</Name>
+          <CreatedTimestamp>2023-01-24T00:32:33.78Z</CreatedTimestamp>
+          <LastSchemaUpdate>2023-01-24T00:32:33.78Z</LastSchemaUpdate>
+          <EstimatedRows>38362</EstimatedRows>
+          <Dimensions>
+            <Dimension>
+              <CubeDimensionID>Miejsce</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Id Miejsce</AttributeID>
+                  <EstimatedCount>2877</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Nr Miejse</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Typ</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Miasto</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Region</AttributeID>
+                  <EstimatedCount>9</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Ilosc Pracownikow</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Data Wstawienia</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Data Deaktywacji</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Typ</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Id Typ</AttributeID>
+                  <EstimatedCount>7</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Zlecenie</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Id Zlecenie</AttributeID>
+                  <EstimatedCount>900000</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Pracownik</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Id Pracownik</AttributeID>
+                  <EstimatedCount>931</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Wiek</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Wynagrodzenie</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Nr Pracownika</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Paczka</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Id Paczka</AttributeID>
+                  <EstimatedCount>900000</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Nr Paczki</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Waga</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Rozmiar</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Data</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Id Data</AttributeID>
+                  <EstimatedCount>11323</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Rok</AttributeID>
+                  <EstimatedCount>31</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Miesiac</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Dzien</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+          </Dimensions>
+          <Aggregations>
+            <Aggregation>
+              <ID>Aggregation 0</ID>
+              <Name>Aggregation 0</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Miejsce</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Region</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Typ</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Id Typ</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Zlecenie</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Pracownik</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Paczka</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 1</ID>
+              <Name>Aggregation 1</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Miejsce</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Typ</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Zlecenie</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Pracownik</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Paczka</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 2</ID>
+              <Name>Aggregation 2</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Miejsce</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Typ</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Zlecenie</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Pracownik</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Id Pracownik</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Paczka</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 3</ID>
+              <Name>Aggregation 3</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Miejsce</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Region</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Typ</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Id Typ</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Zlecenie</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Pracownik</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Paczka</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Rok</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 4</ID>
+              <Name>Aggregation 4</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Miejsce</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Typ</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Id Typ</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Zlecenie</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Pracownik</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Paczka</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Rok</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+          </Aggregations>
+        </AggregationDesign>
+      </AggregationDesigns>
     </MeasureGroup>
     <MeasureGroup>
       <ID>Podsumowanie Mies</ID>
       <Partitions>
+<<<<<<< Updated upstream:data_warehouse_implementation/HDlab4/HDlab4/Out Postdw.partitions
         <Partition dwd:design-time-name="983a9261-a9d7-4abd-a7e8-cf241383b22e">
+=======
+        <Partition dwd:design-time-name="f53989e1-35e3-4c84-b373-e60c118163fc">
+>>>>>>> Stashed changes:data_warehouse_implementation/HDlab4/HDlab4/OutPostdw.partitions
           <ID>Podsumowanie Mies</ID>
           <Name>Podsumowanie Mies</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
+<<<<<<< Updated upstream:data_warehouse_implementation/HDlab4/HDlab4/Out Postdw.partitions
           <Source xsi:type="DsvTableBinding" dwd:design-time-name="3c0eb35f-1932-4877-b133-6e5d5d05aaaa">
             <DataSourceViewID>Out Postdw</DataSourceViewID>
+=======
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="ff0aeaf1-c401-409d-9972-ddf053c8861e">
+            <DataSourceViewID>OutPostdw</DataSourceViewID>
+>>>>>>> Stashed changes:data_warehouse_implementation/HDlab4/HDlab4/OutPostdw.partitions
             <TableID>dbo_podsumowanie_mies</TableID>
           </Source>
-          <StorageMode>Molap</StorageMode>
+          <StorageMode>Rolap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
+          <EstimatedRows>46363</EstimatedRows>
+          <AggregationDesignID>AggregationDesign</AggregationDesignID>
         </Partition>
       </Partitions>
+      <AggregationDesigns>
+        <AggregationDesign>
+          <ID>AggregationDesign</ID>
+          <Name>AggregationDesign</Name>
+          <CreatedTimestamp>2023-01-24T00:32:57.683333Z</CreatedTimestamp>
+          <LastSchemaUpdate>2023-01-24T00:32:57.683333Z</LastSchemaUpdate>
+          <EstimatedRows>46363</EstimatedRows>
+          <Dimensions>
+            <Dimension>
+              <CubeDimensionID>Miejsce</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Id Miejsce</AttributeID>
+                  <EstimatedCount>2877</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Nr Miejse</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Typ</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Miasto</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Region</AttributeID>
+                  <EstimatedCount>9</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Ilosc Pracownikow</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Data Wstawienia</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Data Deaktywacji</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Pracownik</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Id Pracownik</AttributeID>
+                  <EstimatedCount>931</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Wiek</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Wynagrodzenie</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Nr Pracownika</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Data</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Id Data</AttributeID>
+                  <EstimatedCount>11323</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Rok</AttributeID>
+                  <EstimatedCount>31</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Miesiac</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Dzien</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+          </Dimensions>
+          <Aggregations>
+            <Aggregation>
+              <ID>Aggregation 0</ID>
+              <Name>Aggregation 0</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Miejsce</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Region</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Pracownik</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Rok</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 1</ID>
+              <Name>Aggregation 1</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Miejsce</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Region</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Pracownik</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 2</ID>
+              <Name>Aggregation 2</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Miejsce</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Pracownik</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Id Pracownik</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+          </Aggregations>
+        </AggregationDesign>
+      </AggregationDesigns>
     </MeasureGroup>
+<<<<<<< Updated upstream:data_warehouse_implementation/HDlab4/HDlab4/Out Postdw.partitions
+=======
+    <MeasureGroup>
+      <ID>Etap 1</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="1ea602ff-8b12-455b-b441-fc2890844eaa">
+          <ID>Etap</ID>
+          <Name>Etap</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="b85117fb-c49d-47cb-b362-281ae1b0eaf4">
+            <DataSourceViewID>OutPostdw</DataSourceViewID>
+            <TableID>dbo_etap</TableID>
+          </Source>
+          <StorageMode>Rolap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <EstimatedRows>38362</EstimatedRows>
+          <AggregationDesignID>AggregationDesign</AggregationDesignID>
+        </Partition>
+      </Partitions>
+      <AggregationDesigns>
+        <AggregationDesign>
+          <ID>AggregationDesign</ID>
+          <Name>AggregationDesign</Name>
+          <CreatedTimestamp>2023-01-24T00:33:23.95Z</CreatedTimestamp>
+          <LastSchemaUpdate>2023-01-24T00:33:23.95Z</LastSchemaUpdate>
+          <EstimatedRows>38362</EstimatedRows>
+          <Dimensions>
+            <Dimension>
+              <CubeDimensionID>Miejsce</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Id Miejsce</AttributeID>
+                  <EstimatedCount>2877</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Nr Miejse</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Typ</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Miasto</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Region</AttributeID>
+                  <EstimatedCount>9</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Ilosc Pracownikow</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Data Wstawienia</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Data Deaktywacji</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Typ</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Id Typ</AttributeID>
+                  <EstimatedCount>7</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Zlecenie</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Id Zlecenie</AttributeID>
+                  <EstimatedCount>900000</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Pracownik</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Id Pracownik</AttributeID>
+                  <EstimatedCount>931</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Wiek</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Wynagrodzenie</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Nr Pracownika</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Paczka</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Id Paczka</AttributeID>
+                  <EstimatedCount>900000</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Nr Paczki</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Waga</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Rozmiar</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Data</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Id Data</AttributeID>
+                  <EstimatedCount>11323</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Rok</AttributeID>
+                  <EstimatedCount>31</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Miesiac</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Dzien</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+          </Dimensions>
+          <Aggregations>
+            <Aggregation>
+              <ID>Aggregation 0</ID>
+              <Name>Aggregation 0</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Miejsce</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Region</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Typ</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Id Typ</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Zlecenie</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Pracownik</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Paczka</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 1</ID>
+              <Name>Aggregation 1</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Miejsce</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Typ</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Zlecenie</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Pracownik</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Paczka</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 2</ID>
+              <Name>Aggregation 2</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Miejsce</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Typ</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Zlecenie</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Pracownik</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Id Pracownik</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Paczka</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 3</ID>
+              <Name>Aggregation 3</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Miejsce</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Region</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Typ</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Id Typ</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Zlecenie</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Pracownik</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Paczka</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Rok</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 4</ID>
+              <Name>Aggregation 4</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Miejsce</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Typ</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Id Typ</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Zlecenie</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Pracownik</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Paczka</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Rok</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+          </Aggregations>
+        </AggregationDesign>
+      </AggregationDesigns>
+    </MeasureGroup>
+>>>>>>> Stashed changes:data_warehouse_implementation/HDlab4/HDlab4/OutPostdw.partitions
   </MeasureGroups>
 </Cube>

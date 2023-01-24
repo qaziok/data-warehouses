@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 ﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="f7b022dd-6e1b-4c9b-8743-33f562af872a" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+=======
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="0963885f-207e-41a2-a282-9df0bd62268b" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+>>>>>>> Stashed changes
   <ID>Pracownik</ID>
   <Name>Pracownik</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -42,33 +46,118 @@
   </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
+<<<<<<< Updated upstream
   <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="23332c49-7c41-4171-bd1d-cece15f8d4ad">
     <DataSourceViewID>Out Postdw</DataSourceViewID>
   </Source>
   <ErrorConfiguration dwd:design-time-name="d7f34155-9ca8-4e04-b74f-0a7a40f86287">
+=======
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="7181b4ab-a8aa-4303-94e8-803c3d4ca21b">
+    <DataSourceViewID>OutPostdw</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="8f5040c9-2f29-4a29-9ae2-f20a05bd802a">
+>>>>>>> Stashed changes
     <KeyNotFound>ReportAndStop</KeyNotFound>
     <KeyDuplicate>ReportAndStop</KeyDuplicate>
     <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
   </ErrorConfiguration>
   <CurrentStorageMode>Molap</CurrentStorageMode>
   <Attributes>
+<<<<<<< Updated upstream
     <Attribute dwd:design-time-name="a299b120-94b4-452a-b84b-dfa370ba3527">
+=======
+    <Attribute dwd:design-time-name="8899d7ae-f1c4-48c4-9284-4a58d8c2ad69">
+>>>>>>> Stashed changes
       <ID>Id Pracownik</ID>
       <Name>Id Pracownik</Name>
       <Usage>Key</Usage>
+      <EstimatedCount>931</EstimatedCount>
       <KeyColumns>
+<<<<<<< Updated upstream
         <KeyColumn dwd:design-time-name="281276ce-c78b-4096-aad8-ab6b9bee2812">
           <DataType>Integer</DataType>
           <Source xsi:type="ColumnBinding" dwd:design-time-name="9a2801da-71fe-4216-b384-081896bf90c2">
+=======
+        <KeyColumn dwd:design-time-name="22d15939-8485-4fff-a66e-aa52ed624583">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1697542b-0829-4d43-9b77-bf62a1c5f54d">
+>>>>>>> Stashed changes
             <TableID>dbo_pracownik</TableID>
             <ColumnID>id_pracownik</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
+<<<<<<< Updated upstream
+=======
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="f6560dda-9fbe-443b-9300-a4b24694ddc0">
+          <AttributeID>Wiek</AttributeID>
+          <Name>Wiek</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="847b41fc-ad3e-46a6-a929-1e0fc26c7b1c">
+          <AttributeID>Wynagrodzenie</AttributeID>
+          <Name>Wynagrodzenie</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="183a6205-f982-4c63-a632-8bf5c255d4fb">
+          <AttributeID>Nr Pracownika</AttributeID>
+          <Name>Nr Pracownika</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+>>>>>>> Stashed changes
       <OrderBy>Key</OrderBy>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
+<<<<<<< Updated upstream
+=======
+    <Attribute dwd:design-time-name="f4873ba6-bd0c-4689-87d4-0cad38388d65">
+      <ID>Wiek</ID>
+      <Name>Wiek</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5fc6b36d-fc9c-4ee3-95df-48206fba9920">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a40d68f4-8222-4e85-afff-be5fc4706501">
+            <TableID>dbo_pracownik</TableID>
+            <ColumnID>wiek</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3d75afd7-435e-4221-8cfd-5002ee146b07">
+      <ID>Wynagrodzenie</ID>
+      <Name>Wynagrodzenie</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c463a6c8-80a8-4319-9b81-0869c4e5bf51">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6b869b03-81fc-4f4f-95c8-dabc4fc19d90">
+            <TableID>dbo_pracownik</TableID>
+            <ColumnID>wynagrodzenie</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a172bfd6-feb5-4f29-b759-02c431e1fc2a">
+      <ID>Nr Pracownika</ID>
+      <Name>Nr Pracownika</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e29c373f-b8a4-4289-94a2-4fd0dca21c5e">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5577b3c7-ced5-4992-aa9b-031ba4085a20">
+            <TableID>dbo_pracownik</TableID>
+            <ColumnID>nr_pracownika</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+>>>>>>> Stashed changes
   </Attributes>
   <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
 </Dimension>

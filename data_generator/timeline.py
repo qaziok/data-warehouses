@@ -3,7 +3,7 @@ import datetime
 from database import Database
 from helpful.functions import random_hour, days
 
-T0 = datetime.datetime(2020, 1, 1)
+T0 = datetime.datetime(2015, 1, 1)
 T1 = datetime.datetime(2021, 1, 1)
 T2 = datetime.datetime(2022, 1, 1)
 
@@ -26,11 +26,11 @@ def loop(db, iterator):
 if __name__ == '__main__':
     db = Database(T0)
 
-    loop(db, days(T0, T1, orders=1000, to_employ=300, to_dismiss=250))
+    loop(db, days(T0, T1, orders=600000, to_employ=400, to_dismiss=250))
 
     db.export_data("T0_T1")
 
-    loop(db, days(T1, T2, orders=500, to_employ=100, to_dismiss=150))
+    loop(db, days(T1, T2, orders=300000, to_employ=200, to_dismiss=190))
 
     db.export_data("T1_T2")
 
