@@ -5,6 +5,7 @@ umieszczenia jej w paczkomacie przez nadawcę, do momentu
 umieszczenia paczki w sortowni docelowej zmniejszy się o 10%.
     * value
     ```
+    
     [Measures].[sredni_czas_realizacji]
     ```
     * goal
