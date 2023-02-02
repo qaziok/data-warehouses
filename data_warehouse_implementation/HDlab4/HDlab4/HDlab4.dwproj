@@ -8,32 +8,24 @@
   </Database>
   <Cubes>
     <ProjectItem>
-      <Name>Out Postdw.cube</Name>
-      <FullPath>Out Postdw.cube</FullPath>
+      <Name>OutPostdw.cube</Name>
+      <FullPath>OutPostdw.cube</FullPath>
       <Dependencies>
         <ProjectItem>
-          <Name>Out Postdw.partitions</Name>
-          <FullPath>Out Postdw.partitions</FullPath>
+          <Name>OutPostdw.partitions</Name>
+          <FullPath>OutPostdw.partitions</FullPath>
         </ProjectItem>
       </Dependencies>
     </ProjectItem>
   </Cubes>
   <Dimensions>
     <ProjectItem>
-      <Name>Data.dim</Name>
-      <FullPath>Data.dim</FullPath>
+      <Name>Miejsce 1.dim</Name>
+      <FullPath>Miejsce 1.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Paczka.dim</Name>
-      <FullPath>Paczka.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Miejsce.dim</Name>
-      <FullPath>Miejsce.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Typ.dim</Name>
-      <FullPath>Typ.dim</FullPath>
+      <Name>Typ 1.dim</Name>
+      <FullPath>Typ 1.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Zlecenie.dim</Name>
@@ -42,6 +34,14 @@
     <ProjectItem>
       <Name>Pracownik.dim</Name>
       <FullPath>Pracownik.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Paczka 1.dim</Name>
+      <FullPath>Paczka 1.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Data.dim</Name>
+      <FullPath>Data.dim</FullPath>
     </ProjectItem>
   </Dimensions>
   <DataSources>
@@ -52,8 +52,8 @@
   </DataSources>
   <DataSourceViews>
     <ProjectItem>
-      <Name>Out Postdw.dsv</Name>
-      <FullPath>Out Postdw.dsv</FullPath>
+      <Name>OutPostdw.dsv</Name>
+      <FullPath>OutPostdw.dsv</FullPath>
     </ProjectItem>
   </DataSourceViews>
   <Configurations>
@@ -64,7 +64,7 @@
           <ConfigurationSetting>
             <Id>Out Postdw</Id>
             <Name>Out Postdw</Name>
-            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=LAPTOP-46GI6A46;Integrated Security=SSPI;Initial Catalog=OutPostdw</Value>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=localhost;Integrated Security=SSPI;Initial Catalog=OutPostdw</Value>
           </ConfigurationSetting>
         </ConnectionMappings>
         <ConnectionSecurityMappings>

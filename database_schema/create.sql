@@ -1,4 +1,4 @@
-USE HDlab
+USE HDlabDB
 
 GO
 DROP TABLE Etap

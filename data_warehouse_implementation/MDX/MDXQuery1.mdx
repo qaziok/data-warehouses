@@ -1,0 +1,49 @@
+-- Porównaj zlecenia paczek na podstawie czasu i odleg³oœci pokonanych na ka¿dym etapie transportu, z rozdzieleniem na rozmiary paczek.
+SELECT NON EMPTY { [Zlecenie].[Id Zlecenie].children*[Paczka].[Rozmiar].children*[Paczka].[Waga].children  } ON ROWS,
+{ [Measures].[Czas Realizacji], [Measures].[Odleglosc] } ON COLUMNS
+FROM [OutPostdw]
+
+-- Jaki wp³yw ma wiek pracownika na czas realizacji etapu?
+SELECT { [Pracownik].[Wiek].children } ON ROWS,
+{ [Measures].[sredni_czas_obslugi_paczki] } ON COLUMNS FROM [OutPostdw]
+
+-- Jaki wp³yw ma wynagrodzenie pracownika na czas realizacji etapu?
+SELECT { [Pracownik].[Wynagrodzenie].children } ON ROWS,
+{ [Measures].[sredni_czas_obslugi_paczki] } ON COLUMNS FROM [OutPostdw]
+
+-- Jaki wp³yw ma rozmiar paczek na czas realizacji etapu?
+SELECT { [Paczka].[Rozmiar].children } ON ROWS,
+{ [Measures].[sredni_czas_obslugi_paczki] } ON COLUMNS FROM [OutPostdw]
+
+-- Jaki wp³yw ma masa paczek na czas realizacji etapu?
+SELECT { [Paczka].[Waga].children } ON ROWS,
+{ [Measures].[sredni_czas_obslugi_paczki] } ON COLUMNS FROM [OutPostdw]
+
+
+-- Porównaj najczêœciej transportowane rozmiary paczek w okreœlonych regionach.
+SELECT { (EXCEPT( [Miejsce].[Region].children, {[Miejsce].[Region].&[None]}), [Measures].[ilosc_paczek]) } ON ROWS,
+{ [Paczka].[Rozmiar].children } ON COLUMNS FROM [OutPostdw]
+
+-- Które sortownie maj¹ najwiêkszy œredni czas obs³ugi paczki?
+SELECT { TOPCOUNT([Miejsce].[Nr Miejse].children,3,[Measures].[sredni_czas_obslugi_paczki]) } ON ROWS,
+{ [Measures].[sredni_czas_obslugi_paczki] } ON COLUMNS
+FROM [OutPostdw] WHERE [Miejsce].[Typ].&[sortownia]
+
+-- Które sortownie obs³uguj¹ najwiêcej paczek?
+SELECT { TOPCOUNT([Miejsce].[Nr Miejse].children,3,[Measures].[ilosc_paczek]) } ON ROWS,
+{ [Measures].[ilosc_paczek] } ON COLUMNS
+FROM [OutPostdw] WHERE [Miejsce].[Typ].&[sortownia]
+
+-- Które sortownie maj¹ najwiêkszy œredni sta¿ pracownika?
+SELECT { TOPCOUNT([Miejsce].[Nr Miejse].children,3,[Measures].[sredni_staz_pracownika]) } ON ROWS,
+{ [Measures].[sredni_staz_pracownika] } ON COLUMNS
+FROM [OutPostdw] WHERE [Miejsce].[Typ].&[sortownia]
+
+-- Które sortownie obs³uguj¹ najwiêcej paczek w stosunku do iloœci pracowników?
+WITH
+MEMBER [Measures].[Stosunek] AS '[Measures].[liczba_pracownikow] / [Measures].[ilosc_paczek]'
+SELECT { TOPCOUNT([Miejsce].[Nr Miejse].children,3,[Measures].[Stosunek]) } ON ROWS,
+{ [Measures].[Stosunek], [Measures].[liczba_pracownikow], [Measures].[ilosc_paczek] } ON COLUMNS
+FROM [OutPostdw] WHERE [Miejsce].[Typ].&[sortownia]
+
+
