@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>OutPostIntegreationService</Name>
-    <LastWriteTime>2023-01-16T11:56:10.1212702Z</LastWriteTime>
+    <LastWriteTime>2023-01-18T20:03:51.8206562Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -13,7 +13,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>properLoading.dtsx</Name>
-      <LastWriteTime>2023-01-16T11:56:10.0733156Z</LastWriteTime>
+      <LastWriteTime>2023-01-18T20:03:51.8039742Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

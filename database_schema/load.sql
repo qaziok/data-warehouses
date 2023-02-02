@@ -29,16 +29,3 @@ BULK INSERT Paczkomat FROM 'C:\Users\User\Documents\sem5\HD\data-warehouses\data
 BULK INSERT Uzytkownik FROM 'C:\Users\User\Documents\sem5\HD\data-warehouses\database_schema\dataSources\T1_T2\users_T1_T2.bulk' WITH (CODEPAGE = 'ACP',FIELDTERMINATOR='|')
 BULK INSERT Zlecenie FROM 'C:\Users\User\Documents\sem5\HD\data-warehouses\database_schema\dataSources\T1_T2\orders_T1_T2.bulk' WITH (CODEPAGE = 'ACP',FIELDTERMINATOR='|', KEEPNULLS )
 BULK INSERT Etap FROM 'C:\Users\User\Documents\sem5\HD\data-warehouses\database_schema\dataSources\T1_T2\stages_T1_T2.bulk' WITH (CODEPAGE = 'ACP',FIELDTERMINATOR='|', KEEPNULLS)
-
-
-
-
- 
-
-
-
-
-
-
-
-

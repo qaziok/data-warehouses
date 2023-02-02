@@ -19,7 +19,6 @@ SELECT { [Paczka].[Rozmiar].children } ON ROWS,
 SELECT { [Paczka].[Waga].children } ON ROWS,
 { [Measures].[sredni_czas_obslugi_paczki] } ON COLUMNS FROM [OutPostdw]
 
-
 -- Porównaj najczêœciej transportowane rozmiary paczek w okreœlonych regionach.
 SELECT { (EXCEPT( [Miejsce].[Region].children, {[Miejsce].[Region].&[None]}), [Measures].[ilosc_paczek]) } ON ROWS,
 { [Paczka].[Rozmiar].children } ON COLUMNS FROM [OutPostdw]
@@ -46,4 +45,45 @@ SELECT { TOPCOUNT([Miejsce].[Nr Miejse].children,3,[Measures].[Stosunek]) } ON R
 { [Measures].[Stosunek], [Measures].[liczba_pracownikow], [Measures].[ilosc_paczek] } ON COLUMNS
 FROM [OutPostdw] WHERE [Miejsce].[Typ].&[sortownia]
 
+-- Extra
+with member [Measures].[Œrednia liczba przepracowanych dni w regionie] as
+AVG( [Miejsce].[hierarhia_lokalizacji_miejsca].CurrentMember.children, [Measures].[liczba_przepracowanuch_dni_w_sortowni] )
+SELECT {  [Measures].[Œrednia liczba przepracowanych dni w regionie] } on rows,
+{ [Miejsce].[hierarhia_lokalizacji_miejsca].[Region] } on columns from [OutPostdw] where [Miejsce].[Typ].&[sortownia]
 
+select NON EMPTY [Pracownik].[Nr Pracownika].children*[Data].[Miesiac].children on rows,
+[Measures].[liczba_przepracowanuch_dni_w_sortowni] on columns
+from  [OutPostdw]
+
+-- KPI
+
+-- 2.
+with 
+member [Measures].[ilosc paczek w poprzednim roku] as
+([Measures].[ilosc_paczek],[Data].[hierarhia_daty].currentMember.lag(12))
+
+member [Measures].[Goal] as '[Measures].[ilosc paczek w poprzednim roku] * 1.08'
+
+member [Measures].[Status] as iif([Measures].[ilosc_paczek] > [Measures].[Goal] ,1,-1)
+
+member [Measures].[Trend] as iif([Measures].[ilosc_paczek] > [Measures].[ilosc paczek w poprzednim roku] ,1,-1)
+
+select {[Measures].[ilosc_paczek],[Measures].[Goal], [Measures].[Status], [Measures].[Trend] } on columns,
+{([Data].[Rok].&[2015]:[Data].[Rok].&[2020])*[Data].[hierarhia_daty].[Miesiac].members} on rows
+from [OutPostdw]
+where [Data].[Miesiac].&[czerwiec]
+
+-- 1.
+with
+member  [Measures].[sredni_czas_realizacji_w_poprzednim_roku] as 
+([Measures].[sredni_czas_realizacji],[Data].[hierarhia_daty].currentMember.prevMember)
+
+member [Measures].[Goal] as '[Measures].[sredni_czas_realizacji_w_poprzednim_roku] * 0.9'
+
+member [Measures].[Status] as iif([Measures].[sredni_czas_realizacji] < [Measures].[Goal] ,1,-1)
+
+member [Measures].[Trend] as iif([Measures].[sredni_czas_realizacji] < [Measures].[sredni_czas_realizacji_w_poprzednim_roku] ,1,-1)
+
+select {[Measures].[sredni_czas_realizacji],[Measures].[Goal],[Measures].[Status],[Measures].[Trend]} on columns,
+{[Data].[hierarhia_daty].[Rok].&[2015]:[Data].[hierarhia_daty].[Rok].&[2021]} on rows
+from [OutPostdw]

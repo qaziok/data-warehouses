@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="157"
-  DTS:VersionGUID="{AC5D272D-69CB-4418-B353-0850E259F488}">
+  DTS:VersionBuild="163"
+  DTS:VersionGUID="{3B76EEEE-8664-401C-96EB-36BE2A2196CE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,7 +25,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="0"
           DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\semestr_5\data-warehouses\database_schema\dataSources\T0_T1\workers_T0_T1.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\semestr_5\data-warehouses\data_generator\data\T0_T1\workers_T0_T1.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -5645,14 +5645,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               startId="Package\inserting into Etap\Lookup.Outputs[Lookup No Match Output]" />
             <path
               refId="Package\inserting into Etap.Paths[Merge Join Output1]"
-              endId="Package\inserting into Etap\Lookup.Inputs[Lookup Input]"
-              name="Merge Join Output"
-              startId="Package\inserting into Etap\Merge Join 1.Outputs[Merge Join Output]" />
-            <path
-              refId="Package\inserting into Etap.Paths[Merge Join Output]"
               endId="Package\inserting into Etap\Sort.Inputs[Sort Input]"
               name="Merge Join Output"
               startId="Package\inserting into Etap\Merge Join.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\inserting into Etap.Paths[Merge Join Output]"
+              endId="Package\inserting into Etap\Lookup.Inputs[Lookup Input]"
+              name="Merge Join Output"
+              startId="Package\inserting into Etap\Merge Join 1.Outputs[Merge Join Output]" />
             <path
               refId="Package\inserting into Etap.Paths[OLE DB Source Output]"
               endId="Package\inserting into Etap\Sort 1.Inputs[Sort Input]"
@@ -8807,24 +8807,24 @@ where [refTable].[ID_adresu] = ?</property>
               startId="Package\inserting into Podsumowanie\Derived Column.Outputs[Derived Column Output]" />
             <path
               refId="Package\inserting into Podsumowanie.Paths[Lookup Match Output3]"
-              endId="Package\inserting into Podsumowanie\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              endId="Package\inserting into Podsumowanie\Lookup 3.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\inserting into Podsumowanie\Lookup 2.Outputs[Lookup Match Output]" />
+              startId="Package\inserting into Podsumowanie\Lookup.Outputs[Lookup Match Output]" />
             <path
               refId="Package\inserting into Podsumowanie.Paths[Lookup Match Output2]"
-              endId="Package\inserting into Podsumowanie\Lookup 2.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\inserting into Podsumowanie\Lookup 1.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\inserting into Podsumowanie.Paths[Lookup Match Output]"
               endId="Package\inserting into Podsumowanie\Derived Column 2.Inputs[Derived Column Input]"
               name="Lookup Match Output"
               startId="Package\inserting into Podsumowanie\taking etap only in sortownia.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\inserting into Podsumowanie.Paths[Lookup Match Output1]"
-              endId="Package\inserting into Podsumowanie\Lookup 3.Inputs[Lookup Input]"
+              refId="Package\inserting into Podsumowanie.Paths[Lookup Match Output]"
+              endId="Package\inserting into Podsumowanie\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Lookup Match Output"
-              startId="Package\inserting into Podsumowanie\Lookup.Outputs[Lookup Match Output]" />
+              startId="Package\inserting into Podsumowanie\Lookup 2.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\inserting into Podsumowanie.Paths[Lookup Match Output1]"
+              endId="Package\inserting into Podsumowanie\Lookup 2.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\inserting into Podsumowanie\Lookup 1.Outputs[Lookup Match Output]" />
             <path
               refId="Package\inserting into Podsumowanie.Paths[Lookup No Match Output]"
               endId="Package\inserting into Podsumowanie\Lookup 1.Inputs[Lookup Input]"
@@ -8847,19 +8847,19 @@ where [refTable].[ID_adresu] = ?</property>
               startId="Package\inserting into Podsumowanie\OLE DB Source.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\inserting into Podsumowanie.Paths[Sort Output2]"
+              endId="Package\inserting into Podsumowanie\Merge Join.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\inserting into Podsumowanie\Sort 1.Outputs[Sort Output]" />
+            <path
+              refId="Package\inserting into Podsumowanie.Paths[Sort Output]"
               endId="Package\inserting into Podsumowanie\Merge Join.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\inserting into Podsumowanie\Sort 2.Outputs[Sort Output]" />
             <path
-              refId="Package\inserting into Podsumowanie.Paths[Sort Output]"
+              refId="Package\inserting into Podsumowanie.Paths[Sort Output1]"
               endId="Package\inserting into Podsumowanie\Derived Column 1.Inputs[Derived Column Input]"
               name="Sort Output"
               startId="Package\inserting into Podsumowanie\Sort.Outputs[Sort Output]" />
-            <path
-              refId="Package\inserting into Podsumowanie.Paths[Sort Output1]"
-              endId="Package\inserting into Podsumowanie\Merge Join.Inputs[Merge Join Left Input]"
-              name="Sort Output"
-              startId="Package\inserting into Podsumowanie\Sort 1.Outputs[Sort Output]" />
             <path
               refId="Package\inserting into Podsumowanie.Paths[until now]"
               endId="Package\inserting into Podsumowanie\Derived Column 3.Inputs[Derived Column Input]"
@@ -14511,44 +14511,44 @@ where [refTable].[ID_adresu] = ?</property>
               startId="Package\populating Miejsce\OLE DB Source Sortownia.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\populating Miejsce.Paths[Sort Output7]"
-              endId="Package\populating Miejsce\Merge Join 1.Inputs[Merge Join Right Input]"
+              endId="Package\populating Miejsce\Merge Join 1.Inputs[Merge Join Left Input]"
               name="Sort Output"
-              startId="Package\populating Miejsce\Sort.Outputs[Sort Output]" />
+              startId="Package\populating Miejsce\Sort 1.Outputs[Sort Output]" />
             <path
               refId="Package\populating Miejsce.Paths[Sort Output6]"
-              endId="Package\populating Miejsce\Merge Join 2.Inputs[Merge Join Left Input]"
-              name="Sort Output"
-              startId="Package\populating Miejsce\Sort 3.Outputs[Sort Output]" />
-            <path
-              refId="Package\populating Miejsce.Paths[Sort Output5]"
-              endId="Package\populating Miejsce\Merge Join.Inputs[Merge Join Right Input]"
-              name="Sort Output"
-              startId="Package\populating Miejsce\Sort by ID_adresu.Outputs[Sort Output]" />
-            <path
-              refId="Package\populating Miejsce.Paths[Sort Output4]"
-              endId="Package\populating Miejsce\Merge Join 2.Inputs[Merge Join Right Input]"
-              name="Sort Output"
-              startId="Package\populating Miejsce\Sort 2.Outputs[Sort Output]" />
-            <path
-              refId="Package\populating Miejsce.Paths[Sort Output1]"
-              endId="Package\populating Miejsce\Merge Join 3.Inputs[Merge Join Right Input]"
-              name="Sort Output"
-              startId="Package\populating Miejsce\Sort 4.Outputs[Sort Output]" />
-            <path
-              refId="Package\populating Miejsce.Paths[Sort Output2]"
-              endId="Package\populating Miejsce\Merge Join.Inputs[Merge Join Left Input]"
-              name="Sort Output"
-              startId="Package\populating Miejsce\Sort by ID.Outputs[Sort Output]" />
-            <path
-              refId="Package\populating Miejsce.Paths[Sort Output]"
               endId="Package\populating Miejsce\Merge Join 3.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\populating Miejsce\Sort 5.Outputs[Sort Output]" />
             <path
-              refId="Package\populating Miejsce.Paths[Sort Output3]"
-              endId="Package\populating Miejsce\Merge Join 1.Inputs[Merge Join Left Input]"
+              refId="Package\populating Miejsce.Paths[Sort Output5]"
+              endId="Package\populating Miejsce\Merge Join.Inputs[Merge Join Left Input]"
               name="Sort Output"
-              startId="Package\populating Miejsce\Sort 1.Outputs[Sort Output]" />
+              startId="Package\populating Miejsce\Sort by ID.Outputs[Sort Output]" />
+            <path
+              refId="Package\populating Miejsce.Paths[Sort Output4]"
+              endId="Package\populating Miejsce\Merge Join 3.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\populating Miejsce\Sort 4.Outputs[Sort Output]" />
+            <path
+              refId="Package\populating Miejsce.Paths[Sort Output1]"
+              endId="Package\populating Miejsce\Merge Join 2.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\populating Miejsce\Sort 3.Outputs[Sort Output]" />
+            <path
+              refId="Package\populating Miejsce.Paths[Sort Output2]"
+              endId="Package\populating Miejsce\Merge Join.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\populating Miejsce\Sort by ID_adresu.Outputs[Sort Output]" />
+            <path
+              refId="Package\populating Miejsce.Paths[Sort Output]"
+              endId="Package\populating Miejsce\Merge Join 1.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\populating Miejsce\Sort.Outputs[Sort Output]" />
+            <path
+              refId="Package\populating Miejsce.Paths[Sort Output3]"
+              endId="Package\populating Miejsce\Merge Join 2.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\populating Miejsce\Sort 2.Outputs[Sort Output]" />
             <path
               refId="Package\populating Miejsce.Paths[Union All Output 1]"
               endId="Package\populating Miejsce\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]"
@@ -18518,11 +18518,11 @@ where [refTable].[nr_zlecenie] = ?</property>
           Id="Package\inserting into Etap\Sort 1"
           TopLeft="376.700685268125,696.600375633797" />
         <NodeLayout
-          Size="139,42"
+          Size="138.666666666667,42"
           Id="Package\inserting into Etap\retriving Typ"
           TopLeft="601.081642940511,344.609712511977" />
         <NodeLayout
-          Size="139,42"
+          Size="138.666666666667,42"
           Id="Package\inserting into Etap\Merge Join 1"
           TopLeft="426.462580602765,1169.90756300989" />
         <NodeLayout
@@ -18530,7 +18530,7 @@ where [refTable].[nr_zlecenie] = ?</property>
           Id="Package\inserting into Etap\Sort"
           TopLeft="255.129249653617,883.89449331303" />
         <NodeLayout
-          Size="171,42"
+          Size="170.666666666667,42"
           Id="Package\inserting into Etap\OLE DB Destination"
           TopLeft="416.462580602765,1334.35200745433" />
         <NodeLayout
@@ -18542,7 +18542,7 @@ where [refTable].[nr_zlecenie] = ?</property>
           Id="Package\inserting into Etap\OLE DB Source"
           TopLeft="589.795928411512,22.2521015451029" />
         <NodeLayout
-          Size="179,42"
+          Size="178.666666666667,42"
           Id="Package\inserting into Etap\OLE DB Source Adres"
           TopLeft="337.721092767572,602.213819688212" />
         <NodeLayout
@@ -18554,11 +18554,11 @@ where [refTable].[nr_zlecenie] = ?</property>
           Id="Package\inserting into Etap\retriving Zlecenie"
           TopLeft="588.129247269431,461.463118565444" />
         <NodeLayout
-          Size="153,42"
+          Size="153.333333333334,42"
           Id="Package\inserting into Etap\retriving Paczka"
           TopLeft="597,642" />
         <NodeLayout
-          Size="107,42"
+          Size="106.666666666667,42"
           Id="Package\inserting into Etap\Sort 3"
           TopLeft="615.351469491654,1076.57422967656" />
         <NodeLayout
@@ -18574,7 +18574,7 @@ where [refTable].[nr_zlecenie] = ?</property>
           Id="Package\inserting into Etap\retreving Data"
           TopLeft="584.129247269431,856.574229676555" />
         <NodeLayout
-          Size="155,42"
+          Size="154.666666666667,42"
           Id="Package\inserting into Etap\Data Conversion"
           TopLeft="591.306135482066,174.831934734199" />
         <NodeLayout
@@ -18594,7 +18594,7 @@ where [refTable].[nr_zlecenie] = ?</property>
           Id="Package\inserting into Etap\Merge Join"
           TopLeft="243.843540148438,789.89449458927" />
         <NodeLayout
-          Size="113,42"
+          Size="113.333333333334,42"
           Id="Package\inserting into Etap\Lookup"
           TopLeft="440.907025047209,1251.018674121" />
         <NodeLayout
@@ -18602,7 +18602,7 @@ where [refTable].[nr_zlecenie] = ?</property>
           Id="Package\inserting into Etap\Conditional Split"
           TopLeft="598.653074382694,268.655465293508" />
         <NodeLayout
-          Size="107,42"
+          Size="106.666666666667,42"
           Id="Package\inserting into Etap\Sort 4"
           TopLeft="253.129247099132,1073.24089634322" />
         <EdgeLayout
@@ -18636,9 +18636,7 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -18672,9 +18670,7 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -18708,9 +18704,7 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -18744,9 +18738,7 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -18768,9 +18760,7 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -18816,9 +18806,7 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -18840,9 +18828,7 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -18864,9 +18850,7 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -18888,37 +18872,11 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\inserting into Etap.Paths[Merge Join Output1]"
-          TopLeft="496.684802824987,1211.90756300989">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,39.1111111111109"
-              Start="0,0"
-              End="0,31.6111111111109">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.6111111111109" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\inserting into Etap.Paths[Merge Join Output]"
           TopLeft="306.286394901028,831.49449458927">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -18936,9 +18894,29 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\inserting into Etap.Paths[Merge Join Output]"
+          TopLeft="496.684802824987,1211.90756300989">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.1111111111109"
+              Start="0,0"
+              End="0,31.6111111111109">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.6111111111109" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -19176,9 +19154,7 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -19200,9 +19176,7 @@ where [refTable].[nr_zlecenie] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -19404,7 +19378,7 @@ where [refTable].[nr_zlecenie] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -19555,42 +19529,6 @@ where [refTable].[nr_zlecenie] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\inserting into Podsumowanie.Paths[Sort Output2]"
-          TopLeft="350.5,636">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="156.166666666667,55"
-              Start="0,0"
-              End="156.166666666667,47.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.5987841945289" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,28.5987841945289"
-                    Point2="0,32.5987841945289"
-                    Point3="4,32.5987841945289" />
-                  <mssgle:LineSegment
-                    End="152.166666666667,32.5987841945289" />
-                  <mssgle:CubicBezierSegment
-                    Point1="152.166666666667,32.5987841945289"
-                    Point2="156.166666666667,32.5987841945289"
-                    Point3="156.166666666667,36.5987841945289" />
-                  <mssgle:LineSegment
-                    End="156.166666666667,47.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\inserting into Podsumowanie.Paths[Sort Output1]"
           TopLeft="668.5,553">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -19626,7 +19564,7 @@ where [refTable].[nr_zlecenie] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\inserting into Podsumowanie.Paths[Sort Output]"
+          Id="Package\inserting into Podsumowanie.Paths[Sort Output1]"
           TopLeft="358.5,325">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -19639,6 +19577,42 @@ where [refTable].[nr_zlecenie] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,26" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\inserting into Podsumowanie.Paths[Sort Output]"
+          TopLeft="350.5,636">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="156.166666666667,55"
+              Start="0,0"
+              End="156.166666666667,47.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5987841945289" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.5987841945289"
+                    Point2="0,32.5987841945289"
+                    Point3="4,32.5987841945289" />
+                  <mssgle:LineSegment
+                    End="152.166666666667,32.5987841945289" />
+                  <mssgle:CubicBezierSegment
+                    Point1="152.166666666667,32.5987841945289"
+                    Point2="156.166666666667,32.5987841945289"
+                    Point3="156.166666666667,36.5987841945289" />
+                  <mssgle:LineSegment
+                    End="156.166666666667,47.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -19747,54 +19721,6 @@ where [refTable].[nr_zlecenie] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\inserting into Podsumowanie.Paths[Lookup Match Output3]"
-          TopLeft="521.75,1087">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,47"
-              Start="0,0"
-              End="0,39.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,39.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,13.9453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\inserting into Podsumowanie.Paths[Lookup Match Output2]"
-          TopLeft="525,996">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,49"
-              Start="0,0"
-              End="0,41.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,41.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,14.9453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\inserting into Podsumowanie.Paths[Lookup Match Output1]"
           TopLeft="525.25,815">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -19818,7 +19744,7 @@ where [refTable].[nr_zlecenie] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\inserting into Podsumowanie.Paths[Lookup Match Output]"
+          Id="Package\inserting into Podsumowanie.Paths[Lookup Match Output2]"
           TopLeft="670,177">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -19838,6 +19764,54 @@ where [refTable].[nr_zlecenie] = ?</property>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="-48.19138671875,16.4453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\inserting into Podsumowanie.Paths[Lookup Match Output1]"
+          TopLeft="525,996">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,49"
+              Start="0,0"
+              End="0,41.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,14.9453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\inserting into Podsumowanie.Paths[Lookup Match Output]"
+          TopLeft="521.75,1087">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47"
+              Start="0,0"
+              End="0,39.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,13.9453125,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -20357,150 +20331,6 @@ where [refTable].[nr_zlecenie] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\populating Miejsce.Paths[Sort Output7]"
-          TopLeft="401.5,557.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="141.166666666667,60"
-              Start="0,0"
-              End="141.166666666667,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5903271692745" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.5903271692745"
-                    Point2="0,35.5903271692745"
-                    Point3="4,35.5903271692745" />
-                  <mssgle:LineSegment
-                    End="137.166666666667,35.5903271692745" />
-                  <mssgle:CubicBezierSegment
-                    Point1="137.166666666667,35.5903271692745"
-                    Point2="141.166666666667,35.5903271692745"
-                    Point3="141.166666666667,39.5903271692745" />
-                  <mssgle:LineSegment
-                    End="141.166666666667,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\populating Miejsce.Paths[Sort Output6]"
-          TopLeft="776.5,251.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-21.6666666666666,60"
-              Start="0,0"
-              End="-21.6666666666666,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5873925501433" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.5873925501433"
-                    Point2="0,35.5873925501433"
-                    Point3="-4,35.5873925501433" />
-                  <mssgle:LineSegment
-                    End="-17.6666666666666,35.5873925501433" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-17.6666666666666,35.5873925501433"
-                    Point2="-21.6666666666666,35.5873925501433"
-                    Point3="-21.6666666666666,39.5873925501433" />
-                  <mssgle:LineSegment
-                    End="-21.6666666666666,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\populating Miejsce.Paths[Sort Output5]"
-          TopLeft="357.5,353.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="186.666666666667,60"
-              Start="0,0"
-              End="186.666666666667,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5623100303952" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.5623100303952"
-                    Point2="0,35.5623100303952"
-                    Point3="4,35.5623100303952" />
-                  <mssgle:LineSegment
-                    End="182.666666666667,35.5623100303952" />
-                  <mssgle:CubicBezierSegment
-                    Point1="182.666666666667,35.5623100303952"
-                    Point2="186.666666666667,35.5623100303952"
-                    Point3="186.666666666667,39.5623100303952" />
-                  <mssgle:LineSegment
-                    End="186.666666666667,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\populating Miejsce.Paths[Sort Output4]"
-          TopLeft="943.5,251.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-145.333333333333,60"
-              Start="0,0"
-              End="-145.333333333333,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5873925501433" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.5873925501433"
-                    Point2="0,35.5873925501433"
-                    Point3="-4,35.5873925501433" />
-                  <mssgle:LineSegment
-                    End="-141.333333333333,35.5873925501433" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-141.333333333333,35.5873925501433"
-                    Point2="-145.333333333333,35.5873925501433"
-                    Point3="-145.333333333333,39.5873925501433" />
-                  <mssgle:LineSegment
-                    End="-145.333333333333,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\populating Miejsce.Paths[Sort Output3]"
           TopLeft="564.5,557.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -20536,7 +20366,43 @@ where [refTable].[nr_zlecenie] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populating Miejsce.Paths[Sort Output2]"
+          Id="Package\populating Miejsce.Paths[Sort Output6]"
+          TopLeft="776.5,455.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-21.8333333333334,60"
+              Start="0,0"
+              End="-21.8333333333334,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5903271692745" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.5903271692745"
+                    Point2="0,35.5903271692745"
+                    Point3="-4,35.5903271692745" />
+                  <mssgle:LineSegment
+                    End="-17.8333333333334,35.5903271692745" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-17.8333333333334,35.5903271692745"
+                    Point2="-21.8333333333334,35.5903271692745"
+                    Point3="-21.8333333333334,39.5903271692745" />
+                  <mssgle:LineSegment
+                    End="-21.8333333333334,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populating Miejsce.Paths[Sort Output5]"
           TopLeft="564.5,353.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -20572,7 +20438,7 @@ where [refTable].[nr_zlecenie] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populating Miejsce.Paths[Sort Output1]"
+          Id="Package\populating Miejsce.Paths[Sort Output4]"
           TopLeft="943.5,455.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -20608,14 +20474,122 @@ where [refTable].[nr_zlecenie] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\populating Miejsce.Paths[Sort Output]"
-          TopLeft="776.5,455.5">
+          Id="Package\populating Miejsce.Paths[Sort Output3]"
+          TopLeft="943.5,251.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-21.8333333333334,60"
+              EndConnector="-145.333333333333,60"
               Start="0,0"
-              End="-21.8333333333334,52.5">
+              End="-145.333333333333,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5873925501433" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.5873925501433"
+                    Point2="0,35.5873925501433"
+                    Point3="-4,35.5873925501433" />
+                  <mssgle:LineSegment
+                    End="-141.333333333333,35.5873925501433" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-141.333333333333,35.5873925501433"
+                    Point2="-145.333333333333,35.5873925501433"
+                    Point3="-145.333333333333,39.5873925501433" />
+                  <mssgle:LineSegment
+                    End="-145.333333333333,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populating Miejsce.Paths[Sort Output2]"
+          TopLeft="357.5,353.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="186.666666666667,60"
+              Start="0,0"
+              End="186.666666666667,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5623100303952" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.5623100303952"
+                    Point2="0,35.5623100303952"
+                    Point3="4,35.5623100303952" />
+                  <mssgle:LineSegment
+                    End="182.666666666667,35.5623100303952" />
+                  <mssgle:CubicBezierSegment
+                    Point1="182.666666666667,35.5623100303952"
+                    Point2="186.666666666667,35.5623100303952"
+                    Point3="186.666666666667,39.5623100303952" />
+                  <mssgle:LineSegment
+                    End="186.666666666667,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populating Miejsce.Paths[Sort Output1]"
+          TopLeft="776.5,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-21.6666666666666,60"
+              Start="0,0"
+              End="-21.6666666666666,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5873925501433" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.5873925501433"
+                    Point2="0,35.5873925501433"
+                    Point3="-4,35.5873925501433" />
+                  <mssgle:LineSegment
+                    End="-17.6666666666666,35.5873925501433" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-17.6666666666666,35.5873925501433"
+                    Point2="-21.6666666666666,35.5873925501433"
+                    Point3="-21.6666666666666,39.5873925501433" />
+                  <mssgle:LineSegment
+                    End="-21.6666666666666,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\populating Miejsce.Paths[Sort Output]"
+          TopLeft="401.5,557.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="141.166666666667,60"
+              Start="0,0"
+              End="141.166666666667,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -20624,15 +20598,15 @@ where [refTable].[nr_zlecenie] = ?</property>
                   <mssgle:CubicBezierSegment
                     Point1="0,31.5903271692745"
                     Point2="0,35.5903271692745"
-                    Point3="-4,35.5903271692745" />
+                    Point3="4,35.5903271692745" />
                   <mssgle:LineSegment
-                    End="-17.8333333333334,35.5903271692745" />
+                    End="137.166666666667,35.5903271692745" />
                   <mssgle:CubicBezierSegment
-                    Point1="-17.8333333333334,35.5903271692745"
-                    Point2="-21.8333333333334,35.5903271692745"
-                    Point3="-21.8333333333334,39.5903271692745" />
+                    Point1="137.166666666667,35.5903271692745"
+                    Point2="141.166666666667,35.5903271692745"
+                    Point3="141.166666666667,39.5903271692745" />
                   <mssgle:LineSegment
-                    End="-21.8333333333334,52.5" />
+                    End="141.166666666667,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
